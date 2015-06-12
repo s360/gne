@@ -1,0 +1,252 @@
+/**
+ * Custom style for APATT
+ */
+
+/**
+ ===========================================
+ ================== INDEX ==================
+ ===========================================
+ 1. Body
+ 2. Header
+ 3. Content
+ 3a. Slider Page Themes
+ 3b. homepage
+ 4. Footer
+ 5. Utility
+ */
+
+/**
+ ===========================================
+ ================= 1. Body =================
+ ===========================================
+ */
+
+
+
+/**
+ ===========================================
+ ================ 2. Header ================
+ ===========================================
+ */
+.btn-donate, .btn-donate:focus, .btn-donate:hover{
+    color: #ffffff;
+    background: #f20016;
+    text-align: center;
+    float: right;
+    margin-top: 7px;
+    padding: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.navbar-default{
+    background-color: transparent;
+    border: 0px;
+    padding: 0px 20px;
+}
+.navbar-header{
+    float: left;
+}
+#homepage .logo img{
+    width: 212px;
+}
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background: transparent;
+    border: 0px;
+    margin-right: 0px;
+    z-index: 999;
+    outline: none;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #ffffff;
+}
+.slider-nav{
+    float: right;
+    width: 225px;
+}
+.slider-nav .block-views{}
+.slider-nav .view-slider-nav{}
+.slider-nav .slick-slide{
+    float: none !important;
+    width: 100% !important;
+}
+.slider-nav .slick-list{
+    padding: 0px !important;
+    overflow: visible;
+    left: -30px;
+    width: 127% !important;
+}
+.slider-nav .slick-track{
+    left: -105px;
+    width: 100% !important;
+    margin-left: -30px;
+}
+.slider-nav .views-field-title{}
+.top-navigation{
+    display: block;
+    float: left;
+    margin-top: -500px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    color: #ffffff;
+    background: #000000;
+    padding: 0px 30px !important;
+    position: absolute;
+    top: 0px;
+}
+.top-navigation.in{
+    margin-top: 0px;
+}
+.slider-nav .block-title{
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-top: 13px !important;
+    margin-bottom: 30px;
+}
+.slider-nav .field-content{}
+.slider-nav .field-content a, .slider-nav .field-content a:hover, .slider-nav .field-content a:focus{
+    color: #ffffff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+}
+.slider-nav .views-row{
+    padding: 10px 32px;
+    border-top: 1px solid #cccccc;
+}
+.slider-nav .views-row:hover, .slider-nav .views-row.slick-active, .slider-nav .views-row.slick-center{
+    background: #cccccc;
+}
+.slider-nav .slick-slider{
+    margin-bottom: 0px !important;
+}
+/*.slider-nav{
+    transition: 1s;
+    -webkit-transition: 1s;
+    color: #ffffff;
+    background: #000000;
+    padding: 0px 30px 30px !important;
+}*/
+
+/**
+ ===========================================
+ ================ 3. Content ===============
+ ===========================================
+ */
+
+
+
+/**
+ ===========================================
+ ========== 3a. Slider Page Themes =========
+ ===========================================
+ */
+#scrolling-page
+{
+    overflow: hidden;
+}
+
+#scrolling-page-container
+{
+    display: block;
+}
+
+.scrolling-page-row
+{
+
+}
+
+#next-scrolling-page,
+#prev-scrolling-page
+{
+    cursor: pointer;
+}
+
+/**
+ ===========================================
+ ========== 3b. homepage ===================
+ ===========================================
+ */
+
+#homepage{
+    width: 100%;
+    background: #cccccc;
+    position: relative;
+}
+#container-slide-home{
+    margin-bottom: 0px;
+}
+#container-slide-home .node-slider-page{
+    padding: 30px 20px;
+    padding-top: 51px;
+}
+#homepage .slick-prev{
+    left: 20px;
+}
+#homepage .slick-next {
+    right: 20px;
+}
+/**
+ ===========================================
+ ================ 4. Footer ================
+ ===========================================
+ */
+#footer{
+    background-color: #000000;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+.copyright {
+
+}
+.copyright  ul{
+    padding: 0px;
+    float: left;
+    list-style: none;
+    margin-top: 13px;
+    margin-right: 20px;
+}
+.copyright ul li{
+    float: left;
+    padding-left: 16px;
+}
+.copyright ul li a{
+    color: #ffffff;
+}
+
+/**
+ ===========================================
+ ================ 5. Utility ===============
+ ===========================================
+ */
+
+/*
+=================== 1.Media (min-width: 768px) =
+*/
+@media (max-width: 500px){
+    .top-navigation{
+        right: 20px;
+    }
+    .btn-donate{
+        display: none;
+    }
+}
+@media (min-width: 768px){
+     /*.slider-nav{
+        width: 300px;
+        margin-top: -350px;
+    }
+     .slider-nav{
+        margin-top: 0px;
+    }*/
+    .btn-donate{
+        display: block;
+    }
+    .top-navigation{
+        right: 115px;
+    }
+}
+/* END */
