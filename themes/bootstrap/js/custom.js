@@ -135,21 +135,30 @@ jQuery(document).ready(function() {
     jQuery('#container-slide-home').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '.slider-nav .view-content'
+        asNavFor: '#homepage .slider-nav .view-content'
 
     });
 
     jQuery('#container-slide-press').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '.slider-nav .view-content'
+        asNavFor: '.slider-nav .view-press .view-content ul'
 
     });
 
-    jQuery('.slider-nav .view-content').slick({
+    jQuery('.slider-nav .view-press .view-content ul').slick({
         slidesToShow: 20,
         slidesToScroll: 20,
-        asNavFor: ['#container-slide-home', '#container-slide-press'],
+        asNavFor: ['#container-slide-press', ''],
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
+
+    jQuery('#homepage .slider-nav .view-content').slick({
+        slidesToShow: 20,
+        slidesToScroll: 20,
+        asNavFor: ['#container-slide-home', ''],
         dots: true,
         centerMode: true,
         focusOnSelect: true
