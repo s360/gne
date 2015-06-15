@@ -6,7 +6,7 @@
 
 jQuery(document).ready(function() {
 
-    jQuery.fn.reverse = [].reverse;
+    /*jQuery.fn.reverse = [].reverse;
 
     jQuery.fn.sliderPage = function() {
 
@@ -104,7 +104,7 @@ jQuery(document).ready(function() {
 
     };
 
-    jQuery('#scrolling-page').sliderPage();
+    jQuery('#scrolling-page').sliderPage()*/;
 
     //homepage fullpag
     var toolbar = 64;
