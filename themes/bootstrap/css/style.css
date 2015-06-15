@@ -380,6 +380,9 @@ h2 a{
     bottom: 0px;
     width: 100%;
 }
+#social-footer {
+	height: 20px;
+}
 .copyright {
 
 }
@@ -415,11 +418,19 @@ h2 a{
  ========== 6. About =======================
  ===========================================
  **/
+.col-sm-4.about-left {
+	height: 100%;
+	background: url('../images/About_Classroom.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -800px;
+}
 .col-sm-5.about {
 	background-color: #ffffff;
+	height: 100%;
 }
 .about-container {
-	padding: 50px 20px;
+	padding: 70px 20px;
 	background-color: #ffffff;	
 	width: 80%;
 }
@@ -427,18 +438,25 @@ h2 a{
 	padding-left: 25px;
 }
 .about-header {
-	font-size: 30px;
+	font-size: 34px;
 	color: steelblue;
 	margin-top: 0;
 	text-transform: uppercase;
 }
 
 .about-subheader {
-	margin-bottom: 0;
+	margin-bottom: 10px;
 	font-size: 20px;
 	color: red;
 	text-transform: uppercase;
 	font-family: eames, georgia bold, serif bold;
+}
+
+.about-copy {
+	line-height: 1.8;
+}
+.about-copy.first {
+	line-height: 2.5;
 }
 
 /*
