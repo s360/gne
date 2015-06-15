@@ -419,14 +419,13 @@ h2 a{
 	background-color: #ffffff;
 }
 .about-container {
-/*	padding: 50px 100px 50px 20px;
-*/	
+	padding: 50px 20px;
 	background-color: #ffffff;	
 	width: 80%;
 }
 .about-content {
-/*	padding-left: 50px;
-*/}
+	padding-left: 25px;
+}
 .about-header {
 	font-size: 30px;
 	color: steelblue;
@@ -435,10 +434,11 @@ h2 a{
 }
 
 .about-subheader {
-	font-size: 20px;
 	margin-bottom: 0;
+	font-size: 20px;
 	color: red;
 	text-transform: uppercase;
+	font-family: eames, georgia bold, serif bold;
 }
 
 /*
