@@ -14,6 +14,7 @@
  4. Footer
  5. Utility
  6. About
+ 7. Act
  */
 
 /* COLORS
@@ -439,6 +440,115 @@ h2 a{
 	color: red;
 	text-transform: uppercase;
 	font-family: eames, georgia bold, serif bold;
+}
+
+/**
+ ===========================================
+ ========== 7. Act ===================
+ ===========================================
+ */
+
+.act{
+    overflow-y: auto;
+    height: 100vh;
+    background: white;
+}
+
+.act .col-md-4.act-content{
+
+    padding: 50px;
+}
+
+.crowd{
+    background:url(../images/IMG_classroom.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    margin-top: -154px;
+}
+
+.btn-content, .btn-content:focus, .btn-content:hover{
+    color: #ffffff;
+    background: #f20016;
+    text-align: center;
+    margin-top: 7px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 50px;
+    font-family: oswald, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+
+.body-copy{
+    margin: 20px 0 60px 0;
+    line-height: 30px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+}
+
+.act h1{
+    letter-spacing: 4px;
+    font-size: 4.8em;
+    margin-bottom: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    color: red;
+    font-family: Ultra, georgia bold, serif bold;
+    float: right;
+    padding-left: 20%;
+    margin-top: 50px;
+}
+
+.act-content h4{
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: red;
+    font-family: Ultra, georgia bold, serif bold;
+}
+
+.act-content form{
+    height: auto;
+
+}
+
+
+.act-content form .zip_sub{
+    color: #ffffff;
+    background: #f20016;
+    text-align: center;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: oswald, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    border: none;
+    margin-bottom: 120px;
+}
+
+.act-content form .zipcode{
+    border: 2px solid #999;
+    padding: 14px;
+    background: none;
+    margin-right: 10px;
+    color: #999;
+    text-align: left;
+    font-size: 1em;
+    font-family: open sans, sans-serif;
+    text-transform:none;
+    font-style: italic;
+}
+
+.pusher{
+    width: 100%;
+    height: 120px;
 }
 
 /*
