@@ -192,10 +192,10 @@ function bootstrap_js_alter(&$js) {
   }
 
   // Always add bootstrap.js last.
- /* $bootstrap = $theme_path . '/js/bootstrap.js';
+  $bootstrap = $theme_path . '/js/bootstrap.js';
   $js[$bootstrap] = drupal_js_defaults($bootstrap);
   $js[$bootstrap]['group'] = JS_THEME;
-  $js[$bootstrap]['scope'] = 'footer';*/
+  $js[$bootstrap]['scope'] = 'footer';
 
   $custom = $theme_path . '/js/custom.js';
   $js[$custom] = drupal_js_defaults($custom);
@@ -241,12 +241,12 @@ function bootstrap_js_alter(&$js) {
 
   // Add CDN.
   if (theme_get_setting('bootstrap_cdn')) {
-    /*$cdn = '//maxcdn.bootstrapcdn.com/bootstrap/' . theme_get_setting('bootstrap_cdn')  . '/js/bootstrap.min.js';
+    $cdn = '//maxcdn.bootstrapcdn.com/bootstrap/' . theme_get_setting('bootstrap_cdn')  . '/js/bootstrap.min.js';
     $js[$cdn] = drupal_js_defaults();
     $js[$cdn]['data'] = $cdn;
     $js[$cdn]['type'] = 'external';
     $js[$cdn]['every_page'] = TRUE;
-    $js[$cdn]['weight'] = -100;*/
+    $js[$cdn]['weight'] = -100;
   }
 }
 
