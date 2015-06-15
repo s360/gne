@@ -10,6 +10,12 @@
  * @see page.tpl.php
  */
 function bootstrap_preprocess_page(&$variables) {
+
+    if (isset($variables['node']->type)) {
+        $nodetype = $variables['node']->type;
+        $variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
+    }
+
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = ' class="col-sm-6"';

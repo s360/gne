@@ -58,7 +58,7 @@ h2 a{
 .navbar-header{
     float: left;
 }
-#homepage .logo img{
+.logo img{
     width: 212px;
 }
 .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
@@ -71,6 +71,10 @@ h2 a{
 .navbar-default .navbar-toggle .icon-bar{
     background-color: #ffffff;
 }
+#wrap-page .navbar-default .navbar-toggle .icon-bar{
+    background-color: #666666;
+}
+
 .slider-nav{
     float: right;
     width: 225px;
@@ -239,6 +243,39 @@ h2 a{
 }
 /**
  ===========================================
+ ========== 3c. press ===================
+ ===========================================
+ */
+
+#container-slide-press .node-press-release{
+    padding: 30px 20px;
+    padding-top: 51px;
+}
+
+#wrap-page.slick-prev{
+    left: 20px;
+}
+#wrap-page .slick-next {
+    right: 20px;
+}
+.region-nav-press ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.node-press-release h2{
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.node-press-release .content{
+    margin-top: 64px;
+}
+.node-press-release p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    line-height: 42px;
+}
+/**
+ ===========================================
  ================ 4. Footer ================
  ===========================================
  */
@@ -272,6 +309,10 @@ h2 a{
  ================ 5. Utility ===============
  ===========================================
  */
+
+#wrap-page{
+    overflow: hidden;
+}
 
 /*
 =================== 1.Media (min-width: 768px) =

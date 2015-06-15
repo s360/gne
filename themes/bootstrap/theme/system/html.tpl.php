@@ -51,7 +51,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/style-ie.css" />
     <![endif]-->

@@ -117,10 +117,18 @@ jQuery(document).ready(function() {
         jQuery("#homepage").css({"height": window_height_2});
         jQuery("#container-slide-home").css({"height": window_height_2});
         jQuery(".node-slider-page").css({"height": window_height_2});
+
+        jQuery("#wrap-page").css({"height": window_height_2});
+        jQuery("#container-slide-press").css({"height": window_height_2});
+        jQuery(".node-press-release").css({"height": window_height_2});
     }else{
         jQuery("#homepage").css({"height": window_height});
         jQuery("#container-slide-home").css({"height": window_height});
         jQuery(".node-slider-page").css({"height": window_height});
+
+        jQuery("#wrap-page").css({"height": window_height});
+        jQuery("#container-slide-press").css({"height": window_height});
+        jQuery(".node-press-release").css({"height": window_height});
     }
 
     // homepage carausel
@@ -131,10 +139,17 @@ jQuery(document).ready(function() {
 
     });
 
+    jQuery('#container-slide-press').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-nav .view-content'
+
+    });
+
     jQuery('.slider-nav .view-content').slick({
         slidesToShow: 20,
         slidesToScroll: 20,
-        asNavFor: '#container-slide-home',
+        asNavFor: ['#container-slide-home', '#container-slide-press'],
         dots: true,
         centerMode: true,
         focusOnSelect: true
