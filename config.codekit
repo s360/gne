@@ -320,6 +320,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/bootstrap\/images\/About_Classroom.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.01684e+06,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Classroom.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Classroom.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/Adriana_01_small.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -364,6 +375,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/FB-button.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3530,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/FB-button.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/FB-button.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/gne_logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -382,6 +404,17 @@
 		"initialSize": 178328,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_classroom.jpg",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_classroom.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/TW-button.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4195,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/TW-button.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/TW-button.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
