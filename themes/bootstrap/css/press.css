@@ -1,0 +1,55 @@
+/**
+ ===========================================
+ ========== 3c. Press ===================
+ ===========================================
+ */
+
+#container-slide-press .node-press-release{
+    padding: 30px 20px;
+    padding-top: 51px;
+}
+
+#wrap-page.slick-prev{
+    left: 20px;
+}
+#wrap-page .slick-next {
+    right: 20px;
+}
+.region-nav-press ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.node-press-release h2{
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.node-press-release .content{
+    margin-top: 64px;
+}
+.node-press-release p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    line-height: 42px;
+}
+.node-readmore.first.last{
+    display: none;
+}
+
+.psa_video video{
+    width: 100%;
+}
+
+.col-md-4.banner img{
+    width: 50%;
+    margin: 0 25%;
+}
+
+.col-md-4.print img{
+    width: 70%;
+    margin: 0 15%;
+}
+
+.col-md-4.animation img{
+    width: 80%;
+    margin: 0 10%;
+}

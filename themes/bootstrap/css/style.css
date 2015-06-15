@@ -314,7 +314,7 @@ h2 a{
 }
 /**
  ===========================================
- ========== 3c. press ===================
+ ========== 3c. Press ===================
  ===========================================
  */
 
@@ -347,6 +347,25 @@ h2 a{
 }
 .node-readmore.first.last{
     display: none;
+}
+
+.psa_video video{
+    width: 100%;
+}
+
+.col-md-4.banner img{
+    width: 50%;
+    margin: 0 25%;
+}
+
+.col-md-4.print img{
+    width: 70%;
+    margin: 0 15%;
+}
+
+.col-md-4.animation img{
+    width: 80%;
+    margin: 0 10%;
 }
 /**
  ===========================================
