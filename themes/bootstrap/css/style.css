@@ -274,6 +274,9 @@ h2 a{
     font-size: 21px;
     line-height: 42px;
 }
+.node-readmore.first.last{
+    display: none;
+}
 /**
  ===========================================
  ================ 4. Footer ================
