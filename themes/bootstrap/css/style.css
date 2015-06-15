@@ -13,6 +13,7 @@
  3b. homepage
  4. Footer
  5. Utility
+ 6. About
  */
 
 /* COLORS
@@ -407,6 +408,39 @@ h2 a{
     overflow: hidden;
 }
 
+
+
+/**
+ ===========================================
+ ========== 6. About =======================
+ ===========================================
+ **/
+.col-sm-5.about {
+	background-color: #ffffff;
+}
+.about-container {
+/*	padding: 50px 100px 50px 20px;
+*/	
+	background-color: #ffffff;	
+	width: 80%;
+}
+.about-content {
+/*	padding-left: 50px;
+*/}
+.about-header {
+	font-size: 30px;
+	color: steelblue;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+.about-subheader {
+	font-size: 20px;
+	margin-bottom: 0;
+	color: red;
+	text-transform: uppercase;
+}
+
 /*
 =================== 1.Media (min-width: 768px) =
 */
@@ -433,4 +467,5 @@ h2 a{
         right: 115px;
     }
 }
+
 /* END */
