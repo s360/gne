@@ -23,6 +23,7 @@
  ================= 1. Body =================
  ===========================================
  */
+html,body { height: 100% }
 body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
@@ -30,6 +31,15 @@ body {
 h2 a{
   font-family: Oswald, Impact, Charcoal, sans-serif;
   text-transform: uppercase;
+}
+
+@font-face {
+  font-family: 'knockout';
+  src: url('../../../fonts/Knockout-30.otf');
+}
+@font-face {
+  font-family: 'eames';
+  src: url('../../../fonts/EamesCenturyModern-Black.otf');
 }
 
 
@@ -149,6 +159,56 @@ h2 a{
  ===========================================
  */
 
+.col-sm-3.story-col {
+	position: absolute;
+	height: 100%;
+	padding-left: 0;
+	bottom: 50px;
+}
+.background-story {
+	background-image:url(../images/Adriana_01_small.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: top;
+  height: 100%;
+}
+.background-story.two {
+	background-image:url(../images/Adriana_02_small.jpg);
+}
+.story-container {
+	position: absolute;
+	bottom: 0;
+}
+
+.story-title {
+	margin-bottom: 20px;
+	text-align: right;
+	text-transform: uppercase;
+	color: red;
+	font-family: eames, georgia bold, serif bold;
+}
+
+.story-copy-container {
+	padding: 25px;
+	background-color: rgba(0, 0, 0, 0.8);
+	clear: both;
+}
+
+.story-copy {
+	color: white;
+	font-family: open-sans, sans-serif;
+	font-weight: 300;
+}
+
+.story-copy.two.quote {
+	color: steelblue;
+	margin-left: 50px;
+}
+
+.story-two-quote {
+	color: steelblue;
+	text-align: right;
+}
 
 
 /**
@@ -192,8 +252,11 @@ h2 a{
     margin-bottom: 0px;
 }
 #container-slide-home .node-slider-page{
-    padding: 30px 20px;
-    padding-top: 51px;
+/*    padding: 30px 20px;
+    padding-top: 51px;*/
+    /*Can't find where padding is being overridden style.css?npq5w*/
+    padding: 0!important;
+    position: relative;
 }
 #homepage .slick-prev{
     left: 20px;
@@ -235,9 +298,17 @@ h2 a{
 }
 .col-sm-4.onethird {
 	height: 100%;
-	border: 1px solid steelblue!important;
 }
-
+.col-sm-4.onethird.one {
+}
+.col-sm-4.onethird.two {
+	background: url('../images/Adriana_04.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.col-sm-4.onethird.three {
+}
 .col-sm-4.page1-btn-container {
 	margin-top: 50px;
 }
