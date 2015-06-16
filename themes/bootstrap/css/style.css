@@ -163,10 +163,10 @@ h2 a{
  ================ 3. Content ===============
  ===========================================
  */
-.slick-list {
+/*.slick-list {
 	overflow-y: auto!important;
 }
-.col-sm-3.story-col {
+*/.col-sm-3.story-col {
 	position: absolute;
 	height: 100%;
 	padding-left: 0;
@@ -951,11 +951,13 @@ h2 a{
 	float: right;
 }
 .petition-header {
+	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	color: steelblue;
 }
 .petition-cta {
+	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	color: cyan;	
@@ -972,8 +974,10 @@ h2 a{
 .petition-label {
 	color: steelblue;
 }
-
+ 
 .petition-submit {
+	font-family: 'oswald', sans-serif;
+	padding: 15px 30px;
 	color: #ffffff;
 	background: #f20016;
 	text-align: center;
@@ -981,7 +985,9 @@ h2 a{
 	font-weight: bold;
 	border: 0px;
 	outline: none;	
-	padding: 13px;
+	white-space: nowrap;
+	font-size: 1.1em;
+	letter-spacing: 2px;
 }
 .petition-submit:focus {
 	outline: none;
@@ -1006,6 +1012,7 @@ h2 a{
 	}
 	
 	.petition-subheader {
+		font-family: 'open sans', sans-serif;
 		text-align: center;
 	}
 	
