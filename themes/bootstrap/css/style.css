@@ -972,13 +972,11 @@ h2 a{
 	}
 	
 	.petition-cta {
-		margin-bottom: 35px;
+		margin-bottom: 35px;	
 	}
 
 	.petition-input {
 		width: 90%;
-		
-		font-size: 18px;
 	}
 	
 	.petition-label {
@@ -1018,6 +1016,12 @@ h2 a{
 	.petition-input {
 		width: 50%;
 		border-bottom: 1px solid steelblue;
+	}
+	.petition-cta {
+		font-size: 18px;
+	}
+	.petition-submit {
+		font-size: 12px;
 	}
 	#petition-zip {
 		width: 12%;
