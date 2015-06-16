@@ -597,6 +597,20 @@ h2 a{
 	line-height: 2.5;
 }
 
+.graphic-slogan{
+    width: 10%;
+}
+
+.graphic-slogan img{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+@media screen and(max-width: 500px){
+
+}
+
 /*
 =================== 1.Media (min-width: 768px) =
 */

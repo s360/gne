@@ -433,6 +433,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/grphc_slogan.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30315,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/grphc_slogan.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/grphc_slogan.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/IMG_classroom.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
