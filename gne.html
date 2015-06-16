@@ -230,6 +230,8 @@
 <div id="petition-overlay-container" class="petition-overlay-container hidden">
 	<div class="petition-container">
 		<span id="close-petition" class="close-petition">X</span>
+		<div class="logo-container-mobile visible-xs"><img id="petition-logo" src="http://apatt.upward.st/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
+		
 		<h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
 		<p class="petition-subheader hidden-xs">Hunger exists in every community and affects 1 in 6 Americans.</p>
 		<p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
@@ -473,6 +475,7 @@
 </html>
 
 <script type="text/javascript">
+// TODO: if petition showing and mobile - header should hide
 	var petitionOverlay = document.getElementById('petition-overlay-container');
 	var petitionClose 	= document.getElementById('close-petition');
 	var petitionButton  = document.getElementById('donate-nav');
@@ -482,6 +485,4 @@
 	petitionClose.addEventListener('click', function() {
 		petitionOverlay.classList.add('hidden');
 	});
-
-
 </script>
