@@ -221,6 +221,28 @@ h2 a{
 	text-align: right;
 }
 
+@media (max-width: 768px){
+.col-sm-3.story-col {
+    position: relative;
+    bottom: 0px;
+}
+.story-title {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 2em;
+}
+
+.story-copy {
+   line-height: 15px;
+}
+
+.story-copy-container {
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    clear: both;
+}
+}
+
 
 /**
  ===========================================
