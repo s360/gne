@@ -163,7 +163,9 @@ h2 a{
  ================ 3. Content ===============
  ===========================================
  */
-
+.slick-list {
+	overflow-y: auto!important;
+}
 .col-sm-3.story-col {
 	position: absolute;
 	height: 100%;
@@ -444,8 +446,7 @@ h2 a{
  */
 
 #wrap-page{
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow:hidden;
 }
 
 

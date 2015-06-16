@@ -42,14 +42,17 @@
 .col-md-4.banner img{
     width: 50%;
     margin: 0 25%;
+    margin-bottom: 20px;
 }
 
 .col-md-4.print img{
     width: 70%;
     margin: 0 15%;
+    margin-bottom: 20px;
 }
 
 .col-md-4.animation img{
     width: 80%;
     margin: 0 10%;
+    margin-bottom: 20px;
 }
