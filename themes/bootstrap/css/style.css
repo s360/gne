@@ -15,6 +15,8 @@
  5. Utility
  6. About
  7. Act
+ 8. Donation
+ 9. Petition
  */
 
 /* COLORS
@@ -190,7 +192,7 @@ h2 a{
 	margin-bottom: 20px;
 	text-align: right;
 	text-transform: uppercase;
-	color: red;
+	color: #f20016;
 	font-family: eames, georgia bold, serif bold;
 }
 
@@ -481,7 +483,7 @@ h2 a{
 .about-subheader {
 	margin-bottom: 10px;
 	font-size: 20px;
-	color: red;
+	color: #f20016;
 	text-transform: uppercase;
 	font-family: eames, georgia bold, serif bold;
 }
@@ -541,7 +543,7 @@ h2 a{
     margin-bottom: 20px;
     width: 100%;
     text-transform: uppercase;
-    color: red;
+    color: #f20016;
     font-family: Ultra, georgia bold, serif bold;
     float: right;
     padding-left: 20%;
@@ -552,7 +554,7 @@ h2 a{
     letter-spacing: 1px;
     margin-bottom: 20px;
     text-transform: uppercase;
-    color: red;
+    color: #f20016;
     font-family: Ultra, georgia bold, serif bold;
 }
 
@@ -597,6 +599,369 @@ h2 a{
 	line-height: 2.5;
 }
 
+/**
+ ===========================================
+ ========== 6. About =======================
+ ===========================================
+ **/
+.donation-overlay{
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;    
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 8;
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
+}
+/*.donation-overlay-image {
+	@extend .donation-overlay;   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("images/bg_rural.jpg"); 
+  z-index: 7;
+}*/
+
+/*.donate-link{
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.donation-container{
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  width: 80%;
+  height: 85%;
+  margin: auto;
+  margin-top: 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 11;
+  border: 1px solid #ffffff;
+}
+.donation-copy-container{
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 5vw;
+  padding-left: 3vw;
+  text-align: left;
+}
+.donate-title{
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+}
+.donate-copy1{
+  margin-top: 3vw;
+  color: gray;
+} 
+ 
+.donation-dynamic-container{
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.donate-close{
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  margin-right: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+  position: absolute;
+}
+
+.donate-page-selector{
+  margin-top: 5vw;
+  cursor: pointer;
+}
+.amount,.billing,.cc-info{
+  margin: 0 2vw;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  border: 1px solid;
+  border-radius: 50%;
+  position: relative;
+}
+.amount.active,
+.billing.active,
+.cc-info.active{
+  background-color: steelblue;
+  border-color: steelblue;
+}
+    
+.donate-amount-header{
+  color: white;
+}
+.billing-info-header{
+  color: white;
+}
+.cc-info-header{
+  color: white;
+}
+.next-step1,
+.next-step2{
+  float: right;
+  margin-right: 3vw;
+  cursor: pointer;
+}
+.prev-step1,
+.prev-step2{
+  float: left;
+  margin-left: 3vw;
+  cursor: pointer;
+}
+
+/*style for generated html from convio-start.js */
+/*.static-donation-container{
+  font-family: 'Open Sans', sans-serif;
+  color: #f7f7f7;
+  width: 80%;
+  height: 8%;
+  margin: auto;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 11;
+}
+.donate-amount-container{
+  font-family: 'Open Sans', sans-serif;
+  color: #f7f7f7;
+  width: 80%;
+  height: 73%;
+  margin: auto;
+  margin-top: 0%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 11;
+}
+.donate-amount-container.well.donation-loading, div.well{
+  border-radius: 0;
+  color: steelblue;
+}
+.donate-amount-container.alert.alert-success{
+  border-radius: 0;
+}
+
+.donate-amount-ul.li{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 2%;
+}
+.donate-amount-ul.label,input{
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.donate-amount-ul.input[type="radio"]{
+  opacity: 0.011;
+  z-index: 100;
+}
+.donate-amount-ul.input[type="radio"]:checked + label{
+  background-color: steelblue;
+  border-color: steelblue;
+}
+.donate-amount-ul.label{
+  padding-top: 35%;
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.donate-amount-ul.label:hover{
+  background-color: steelblue;
+  border-color: steelblue;
+}
+.donate-amount-ul.level-other{
+  padding-top: 35%;
+}
+.donate-amount-ul.other-input-li{
+  display: block;
+  position: inherit;
+  width: inherit;
+  margin: 0px;
+}
+.donate-amount-ul.other-input-liinput{
+  position: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+.donate-amount-ul.#other-amount:disabled{
+  display:none;
+}
+.donate-amount-ul.div.donate-amount-seperator.col-md-12{
+  float:none!important;
+}
+
+.donate-amount-form{
+  padding: 3%;
+}
+
+.donate-billing-info.input,select{
+  padding-left: 10px;
+  margin-bottom: 5px;
+  height: 3vw;
+}
+.donate-billing-info.input-full{
+  width: 99%;
+}
+.donate-billing-info.input-half{
+  width: 49%;
+}
+
+
+.donate-cc-info.input{
+  padding-left: 10px;
+  height: 3vw;
+}
+.donate-cc-info.card-number{
+  width: 80%;
+}
+.donate-cc-info.card-cvv{
+  width: 15%;
+}
+.donate-cc-info.btn.btn-success.complete-donation{
+  margin-top: 10px;
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(0,0,0,0);
+  border-radius: 0px;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.donate-cc-info.btn.btn-success.complete-donation:hover{
+  background-color: steelblue;
+  border-color: steelblue;
+}*/
+
+/**
+ ===========================================
+ ========== 9. Petition ====================
+ ===========================================
+ **/
+
+.petition-overlay-container {
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	height: 75%;
+ 	width: 70%;
+ 	margin: auto;
+ 	background-color: #ffffff;
+ 	position: absolute;
+ 	border: 3px solid #f20016;
+}
+.petition-container {
+	padding: 10px 70px;
+}
+
+.close-petition {
+	font-size: 30px;
+	cursor: pointer;
+	float: right;
+}
+.petition-header {
+	margin-bottom: 25px;
+	margin-top: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	color: steelblue;
+}
+
+.petition-subheader {
+	text-align: center;
+}
+
+.petition-subheader.two {
+	margin-bottom: 40px;
+}
+
+.petition-cta {
+	margin-bottom: 35px;
+	text-align: center;
+	text-transform: uppercase;
+	color: cyan;
+}
+
+.petition-form-container {
+	text-align: center
+}
+
+.petition-input {
+	width: 90%;
+	padding-left: 5px;
+	font-size: 18px;
+	font-family: 'La Belle Aurore', cursive;
+  border: none;
+  background-color: #ffffff;
+}
+
+.petition-label {
+	text-align: left;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: steelblue;
+}
+
+.petition-label.zip {
+
+}
+
+.petition-submit {
+	display:inline-block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+  padding: 13px;
+  color: #ffffff;
+  background: #f20016;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0px;
+  outline: none;
+}
+.petition-submit:focus {
+	outline: none;
+}
+
+.petition-x {
+	color: steelblue;
+}
 /*
 =================== 1.Media (min-width: 768px) =
 */
