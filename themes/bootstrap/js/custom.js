@@ -171,6 +171,16 @@ jQuery(document).ready(function() {
 
     jQuery(".slider-nav .view-content a").removeAttr("href").css("cursor","pointer");
 
-    jQuery("#homepage .slick-prev").addClass("arrow_left");
-    jQuery("#homepage .slick-next").addClass("arrow_right");
+    jQuery(".slick-prev").addClass("arrow_left");
+    jQuery(".slick-next").addClass("arrow_right");
+
+    //set url
+    var title = jQuery('.body-content').map( function() {
+        return jQuery(this).attr('title');
+    }).get();
+
+    //var title = jQuery(".views-row .body-content").attr('title');
+    //title = title.replace(/\s+/g, '_');
+
+    console.log(title);
 });
