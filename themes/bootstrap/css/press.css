@@ -20,8 +20,13 @@
     padding-left: 0px;
 }
 .node-press-release h2{
-    font-size: 36px;
     text-transform: uppercase;
+    text-align: center; 
+    width: 100%; 
+    font-family: "Ultra";
+    letter-spacing: 3px;
+    color: red;
+    font-size: 1.2em;
 }
 .node-press-release .content{
     margin-top: 64px;
