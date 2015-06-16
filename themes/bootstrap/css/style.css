@@ -163,7 +163,9 @@ h2 a{
  ================ 3. Content ===============
  ===========================================
  */
-
+.slick-list {
+	overflow-y: auto!important;
+}
 .col-sm-3.story-col {
 	position: absolute;
 	height: 100%;
@@ -478,7 +480,11 @@ h2 a{
 .copyright ul li a{
     color: #ffffff;
 }
-
+@media(max-width: 600px){
+	#copyright {
+		font-size: 10px;
+	}	
+}
 /**
  ===========================================
  ================ 5. Utility ===============
@@ -486,8 +492,7 @@ h2 a{
  */
 
 #wrap-page{
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow:hidden;
 }
 
 
@@ -1009,13 +1014,11 @@ h2 a{
 	}
 	
 	.petition-cta {
-		margin-bottom: 35px;
+		margin-bottom: 35px;	
 	}
 
 	.petition-input {
 		width: 90%;
-		
-		font-size: 18px;
 	}
 	
 	.petition-label {
@@ -1055,6 +1058,12 @@ h2 a{
 	.petition-input {
 		width: 50%;
 		border-bottom: 1px solid steelblue;
+	}
+	.petition-cta {
+		font-size: 18px;
+	}
+	.petition-submit {
+		font-size: 12px;
 	}
 	#petition-zip {
 		width: 12%;
