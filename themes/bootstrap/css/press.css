@@ -56,3 +56,9 @@
     margin: 0 10%;
     margin-bottom: 20px;
 }
+
+@media(max-width: 600px){
+	#copyright {
+		font-size: 12px;
+	}	
+}

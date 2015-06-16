@@ -438,7 +438,11 @@ h2 a{
 .copyright ul li a{
     color: #ffffff;
 }
-
+@media(max-width: 600px){
+	#copyright {
+		font-size: 12px;
+	}	
+}
 /**
  ===========================================
  ================ 5. Utility ===============
