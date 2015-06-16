@@ -30,6 +30,7 @@
 html,body { height: 100% }
 body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	overflow-y: auto;
 }
   
 h2 a{
@@ -443,7 +444,8 @@ h2 a{
  */
 
 #wrap-page{
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
