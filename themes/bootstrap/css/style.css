@@ -871,90 +871,52 @@ h2 a{
  ========== 9. Petition ====================
  ===========================================
  **/
-
 .petition-overlay-container {
  	top: 0;
  	left: 0;
  	right: 0;
  	bottom: 0;
- 	height: 75%;
- 	width: 70%;
- 	margin: auto;
  	background-color: #ffffff;
  	position: absolute;
  	border: 3px solid #f20016;
 }
-.petition-container {
-	padding: 50px 70px 10px 70px;
-}
-
 .close-petition {
 	font-size: 30px;
 	cursor: pointer;
 	float: right;
 }
 .petition-header {
-	margin-bottom: 25px;
-	margin-top: 50px;
 	text-align: center;
 	text-transform: uppercase;
 	color: steelblue;
 }
-
-.petition-subheader {
-	text-align: center;
-}
-
-.petition-subheader.two {
-	margin-bottom: 40px;
-}
-
 .petition-cta {
-	margin-bottom: 35px;
 	text-align: center;
 	text-transform: uppercase;
-	color: cyan;
+	color: cyan;	
 }
-
 .petition-form-container {
 	text-align: center
 }
-
 .petition-input {
-	width: 90%;
-	padding-left: 5px;
-	font-size: 18px;
 	font-family: 'La Belle Aurore', cursive;
-  border: none;
-  background-color: #ffffff;
+	border: none;
+	background-color: #ffffff;
+	padding-left: 5px;
 }
-
 .petition-label {
-	padding-left: 15px;
-	text-align: left;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	color: steelblue;
 }
 
-.petition-label.zip {
-
-}
-
 .petition-submit {
-	display:inline-block;
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-  padding: 13px;
-  color: #ffffff;
-  background: #f20016;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 0px;
-  outline: none;
+	color: #ffffff;
+	background: #f20016;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 0px;
+	outline: none;	
+	padding: 13px;
 }
 .petition-submit:focus {
 	outline: none;
@@ -963,6 +925,80 @@ h2 a{
 .petition-x {
 	color: steelblue;
 }
+@media (min-width: 768px){
+	.petition-overlay-container {
+	 	height: 75%;
+	 	width: 70%;
+	 	margin: auto;
+	}
+	.petition-container {
+		padding: 50px 70px 10px 70px;
+	}
+
+	.petition-header {
+		margin-bottom: 25px;
+		margin-top: 50px;
+	}
+	
+	.petition-subheader {
+		text-align: center;
+	}
+	
+	.petition-subheader.two {
+		margin-bottom: 40px;
+	}
+	
+	.petition-cta {
+		margin-bottom: 35px;
+	}
+
+	.petition-input {
+		width: 90%;
+		
+		font-size: 18px;
+	}
+	
+	.petition-label {
+		padding-left: 15px;
+		text-align: left;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.petition-label.zip {
+	
+	}
+	
+	.petition-submit {
+		display:inline-block;
+		margin-top: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+@media (max-width: 768px){
+	.petition-overlay-container{
+		width: 100%;
+		top: 55px;
+	}
+	.petition-container {
+		padding: 10px 20px;
+	}
+	.col-sm-4.col-xs-12.zip {
+		clear: both;
+	}
+	.petition-label {
+		display: block;
+	}
+	.petition-input {
+		width: 50%;
+		border-bottom: 1px solid steelblue;
+	}
+	#petition-zip {
+		width: 12%;
+	}
 /*
 =================== 1.Media (min-width: 768px) =
 */
