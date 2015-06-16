@@ -52,12 +52,18 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
+    <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='/sites/all/fonts/fonts.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
 
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/style-ie.css" />
     <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/arrows.css" />
 
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->

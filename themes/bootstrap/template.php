@@ -56,3 +56,8 @@ function bootstrap_theme(&$existing, $type, $theme, $path) {
 bootstrap_include('bootstrap', 'theme/alter.inc');
 
 
+function bootstrap_preprocess_node(&$variables){
+    if ($variables['node']->type == 'slider-page') {
+        $variables['title'] = FALSE;
+    }
+}

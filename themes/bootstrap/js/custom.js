@@ -116,7 +116,7 @@ jQuery(document).ready(function() {
     if(jQuery('body').hasClass('toolbar-drawer')){
         jQuery("#homepage").css({"height": window_height_2});
         jQuery("#container-slide-home").css({"height": window_height_2});
-        jQuery(".node-slider-page").css({"height": window_height_2});
+        jQuery("#container-slide-home .views-row").css({"height": window_height_2});
 
         jQuery("#wrap-page").css({"height": window_height_2});
         jQuery("#container-slide-press").css({"height": window_height_2});
@@ -124,7 +124,7 @@ jQuery(document).ready(function() {
     }else{
         jQuery("#homepage").css({"height": window_height});
         jQuery("#container-slide-home").css({"height": window_height});
-        jQuery(".node-slider-page").css({"height": window_height});
+        jQuery("#container-slide-home .views-row").css({"height": window_height});
 
         jQuery("#wrap-page").css({"height": window_height});
         jQuery("#container-slide-press").css({"height": window_height});
@@ -135,7 +135,7 @@ jQuery(document).ready(function() {
     jQuery('#container-slide-home').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '#homepage .slider-nav .view-content'
+        asNavFor: '#homepage .slider-nav .view-content ul'
 
     });
 
@@ -155,7 +155,7 @@ jQuery(document).ready(function() {
         focusOnSelect: true
     });
 
-    jQuery('#homepage .slider-nav .view-content').slick({
+    jQuery('#homepage .slider-nav .view-content ul').slick({
         slidesToShow: 20,
         slidesToScroll: 20,
         asNavFor: ['#container-slide-home', ''],
@@ -170,4 +170,7 @@ jQuery(document).ready(function() {
     });
 
     jQuery(".slider-nav .view-content a").removeAttr("href").css("cursor","pointer");
+
+    jQuery("#homepage .slick-prev").addClass("arrow_left");
+    jQuery("#homepage .slick-next").addClass("arrow_right");
 });

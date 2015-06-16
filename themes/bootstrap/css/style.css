@@ -167,16 +167,20 @@ h2 a{
 	padding-left: 0;
 	bottom: 50px;
 }
-.background-story {
-	background-image:url(../images/Adriana_01_small.jpg);
+.body-content{
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+}
+.background-story, .body-content {
+  /*background-image:url(../images/Adriana_01_small.jpg);*/
   background-repeat:no-repeat;
   background-size:cover;
   background-position: top;
   height: 100%;
 }
-.background-story.two {
-	background-image:url(../images/Adriana_02_small.jpg);
-}
+
 .story-container {
 	position: absolute;
 	bottom: 0;
@@ -260,11 +264,36 @@ h2 a{
     padding: 0!important;
     position: relative;
 }
+.node-slider-page>h2{
+    display: none;
+}
 #homepage .slick-prev{
     left: 20px;
+    width: 50px;
+    height: 50px;
+    border-left: solid 2px #000;
+    border-bottom: solid 2px #000;
+    margin: 10px;
+    background: none;
 }
 #homepage .slick-next {
     right: 20px;
+    width: 50px;
+    height: 50px;
+    border-right: solid 2px #000;
+    border-top: solid 2px #000;
+    margin: 10px;
+    background: none;
+}
+#homepage .slick-prev, #homepage .slick-next{
+    top: 42%;
+}
+#homepage .slick-prev:before, #homepage .slick-next:before{
+    display: none;
+}
+#homepage .slider-nav ul{
+    list-style: none;
+    padding: 0px;
 }
 .page1-container {
 	height: 100vh;
