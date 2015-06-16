@@ -77,6 +77,7 @@
 <?php
 drupal_add_css($directory.'/js/slick/slick.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEME, 'every_page' => FALSE));
+drupal_add_css($directory.'/css/press.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 ?>
 <div id="wrap-page">
     <header id="header" role="banner" class="">
@@ -90,12 +91,14 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
             </div>
             <div class="pull-right">
+                <!--
                 <a class="btn-donate" href="#">Donate</a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="display: block">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                -->
                 <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
                     <div class="top-navigation">
                         <nav role="navigation">
@@ -126,9 +129,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <div class="social pull-left"></div>
         <div class="copyright pull-right">
             <ul>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy</a></li>
+                <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
+                <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
+                <li><a target="_blank" href="http://greatnationseat.org/privacy.html">Privacy</a></li>
                 <li><a href="#">&copy; 2015 GreatNationsEat.org</a></li>
             </ul>
         </div>

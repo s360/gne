@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Eames-Century-Modern-Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Eames-Century-Modern-Black'), url('/sites/all/fonts/EamesCenturyModern-Black.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Knockout-30';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Eames-Century-Modern-Black'), url('/sites/all/fonts/Knockout-30.otf') format('truetype');
+}
+
