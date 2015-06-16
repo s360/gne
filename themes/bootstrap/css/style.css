@@ -420,6 +420,7 @@ h2 a{
  ===========================================
  **/
 .col-sm-4.about-left {
+	margin-top: -5px;
 	height: 100%;
 	background: url('../images/About_Classroom.jpg');
 	background-repeat: no-repeat;
