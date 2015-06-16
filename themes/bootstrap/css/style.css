@@ -163,10 +163,10 @@ h2 a{
  ================ 3. Content ===============
  ===========================================
  */
-.slick-list {
+/*.slick-list {
 	overflow-y: auto!important;
 }
-.col-sm-3.story-col {
+*/.col-sm-3.story-col {
 	position: absolute;
 	height: 100%;
 	padding-left: 0;
