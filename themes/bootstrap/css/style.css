@@ -960,7 +960,7 @@ h2 a{
 	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
-	color: cyan;	
+	color: #00aeef;	
 }
 .petition-form-container {
 	text-align: center
@@ -998,7 +998,7 @@ h2 a{
 }
 @media (min-width: 768px){
 	.petition-overlay-container {
-	 	height: 75%;
+	 	height: 60%;
 	 	width: 70%;
 	 	margin: auto;
 	}
@@ -1049,9 +1049,18 @@ h2 a{
 
 }
 @media (max-width: 768px){
+	#petition-logo {
+		height: 30px;
+	}
 	.petition-overlay-container{
 		width: 100%;
-		top: 55px;
+		height: 75%;
+		top: 0;
+		z-index: 10000;
+	}
+	.logo-container-mobile {
+		text-align:center;
+		clear: both;
 	}
 	.petition-container {
 		padding: 10px 20px;
