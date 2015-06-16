@@ -885,7 +885,7 @@ h2 a{
  	border: 3px solid #f20016;
 }
 .petition-container {
-	padding: 10px 70px;
+	padding: 50px 70px 10px 70px;
 }
 
 .close-petition {
@@ -930,6 +930,7 @@ h2 a{
 }
 
 .petition-label {
+	padding-left: 15px;
 	text-align: left;
 	display: block;
 	margin-left: auto;
