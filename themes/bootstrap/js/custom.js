@@ -193,6 +193,8 @@ jQuery(document).ready(function() {
 
     }).get();
 
+    //var attrActive = jQuery('#container-slide-home .slick-slide').find('.body-content ').attr('title');
+
     function gotohash(e) {
         var lochash = window.location.hash;
         if (lochash){
@@ -204,12 +206,14 @@ jQuery(document).ready(function() {
     var slidetoHash = title;
 
     jQuery(".arrow_left").click( function() {
+
         jQuery("#container-slide-home").slick('slickPrev');
+
     });
+
     jQuery(".arrow_right").click(function() {
         jQuery("#container-slide-home").slick('slickNext');
-        event.preventDefault();
-        window.location.hash ='';
+
     });
 
     jQuery( document ).ready( gotohash );

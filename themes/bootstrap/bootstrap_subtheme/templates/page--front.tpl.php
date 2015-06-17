@@ -89,8 +89,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </div>
        <div class="pull-right">
 
-           <a id="donate-nav" class="btn-donate" href="">Donate</a>
-           <a id="join" class="btn-donate" href="" style="margin-right: 5px">Join</a>
+           <a id="donate-nav" class="btn-donate" style="cursor: pointer">Donate</a>
+           <a id="join" class="btn-donate" style="margin-right: 5px;cursor: pointer;">Join</a>
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="display: block">
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
