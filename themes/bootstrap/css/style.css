@@ -558,6 +558,7 @@ h2 a{
 
 
 .about-header {
+	font-family: 'oswald', open-sans;
 	color: steelblue;
 	margin-top: 0;
 	text-transform: uppercase;
@@ -613,7 +614,7 @@ h2 a{
 	}
 	.about-container {
 		background-color: transparent;
-		padding-top: 55px;
+		padding: 40px 30px 0 30px;
 	}
 	.about-header {
 		font-size: 24px;
@@ -748,7 +749,7 @@ h2 a{
 
 /**
  ===========================================
- ========== 6. About =======================
+ ========== 7. Donation ====================
  ===========================================
  **/
 .donation-overlay{
