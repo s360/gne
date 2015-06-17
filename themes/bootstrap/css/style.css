@@ -36,7 +36,6 @@ a:hover {
 html,body { height: 100% }
 body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	overflow-y: auto;
 }
   
 h2 a{
