@@ -306,6 +306,23 @@ h2 a{
 .node-slider-page>h2{
     display: none;
 }
+.btn-nav{
+    position: absolute;
+    top: 42%;
+    color: transparent;
+    width: 100%;
+    padding: 0px 20px;
+}
+.btn-nav .arrow_left{
+    display: block;
+    color: transparent;
+    float: left;
+}
+.btn-nav .arrow_right{
+    display: block;
+    color: transparent;
+    float: right;
+}
 @media (min-width: 768px){
 .slick-prev{
     left: 20px !important;

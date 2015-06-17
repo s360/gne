@@ -33,7 +33,8 @@
     <div class="view-content" id="block-homepage">
         <div class="view-content" id="container-slide-home">
             <?php //dsm($view->field['title']); ?>
-          <?php print $rows;?>
+          <?php print $rows;
+            print $fields['title']->content;?>
         </div>
     </div>
 

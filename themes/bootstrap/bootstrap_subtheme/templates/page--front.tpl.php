@@ -89,8 +89,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </div>
        <div class="pull-right">
 
-           <a id="donate-nav" class="btn-donate" href="#">Donate</a>
-           <a id="join" class="btn-donate" href="#">Join</a>
+           <a id="donate-nav" class="btn-donate" href="">Donate</a>
+           <a id="join" class="btn-donate" href="" style="margin-right: 5px">Join</a>
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="display: block">
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
@@ -116,6 +116,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <div class="">
             <section class="wrap-homepage">
                 <?php print render($page['content']); ?>
+                <div class="btn-nav">
+                    <button type="button" data-role="none" class="arrow_left" aria-label="prev" style="display: block;">Prev</button>
+                    <button type="button" data-role="none" class="arrow_right" aria-label="next" style="display: block;">Next</button>
+                </div>
             </section>
         </div>
 </div>

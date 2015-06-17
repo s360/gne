@@ -135,7 +135,8 @@ jQuery(document).ready(function() {
     jQuery('#container-slide-home').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '#homepage .slider-nav .view-content ul'
+        asNavFor: '#homepage .slider-nav .view-content ul',
+        appendArrows: false
 
     });
 
@@ -194,13 +195,23 @@ jQuery(document).ready(function() {
 
     function gotohash(e) {
         var lochash = window.location.hash;
-        var slideloc = slidetoHash.indexOf(lochash);
-        jQuery("#container-slide-home").slick('slickGoTo', slideloc);
+        if (lochash){
+            var slideloc = slidetoHash.indexOf(lochash);
+            jQuery("#container-slide-home").slick('slickGoTo', slideloc);
+        }
+
     }
     var slidetoHash = title;
 
-    //jQuery(".slick-prev").click( function() { event.preventDefault(); window.location.hash = ... });
-    //jQuery(".slick-next").click({ function() { event.preventDefault(); window.location.hash = ... });
+    jQuery(".arrow_left").click( function() {
+        jQuery("#container-slide-home").slick('slickPrev');
+    });
+    jQuery(".arrow_right").click(function() {
+        jQuery("#container-slide-home").slick('slickNext');
+        event.preventDefault();
+        window.location.hash ='';
+    });
+
     jQuery( document ).ready( gotohash );
     jQuery( window ).bind( 'hashchange', gotohash );
 
