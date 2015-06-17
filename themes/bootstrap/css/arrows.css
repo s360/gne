@@ -30,3 +30,30 @@
     background: none;
 }
 
+@media (max-width: 768px){
+	.arrow_left{
+	    left: 20px !important;
+	    width: 20px;
+	    height: 20px;
+	    border-left: solid 5px red !important;
+	    border-bottom: solid 5px red !important;
+	    margin: 10px;
+	    background: none;
+	}
+	.arrow_right {
+	    right: 20px !important;
+	    width: 20px;
+	    height: 20px;
+	    border-right: solid 5px red !important;
+	    border-top: solid 5px red !important;
+	    margin: 10px;
+	    background: none;
+	}
+/*	.slick-prev, .arrow_right{
+	    top: 42% !important;
+	    width: 50px !important;
+	    height: 50px !important;
+	    margin: 10px !important;
+	}*/
+}
+

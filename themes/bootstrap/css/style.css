@@ -328,32 +328,7 @@ h2 a{
     color: transparent;
     float: right;
 }
-@media (min-width: 768px){
-.slick-prev{
-    left: 20px !important;
-    width: 50px;
-    height: 50px;
-    border-left: solid 2px #000 !important;
-    border-bottom: solid 2px #000 !important;
-    margin: 10px;
-    background: none;
-}
-.slick-next {
-    right: 20px !important;
-    width: 50px;
-    height: 50px;
-    border-right: solid 2px #000 !important;
-    border-top: solid 2px #000 !important;
-    margin: 10px;
-    background: none;
-}
-.slick-prev, .slick-next{
-    top: 42% !important;
-    width: 50px !important;
-    height: 50px !important;
-    margin: 10px !important;
-}
-}
+
 .slick-prev:before, .slick-next:before{
     display: none;
 }
