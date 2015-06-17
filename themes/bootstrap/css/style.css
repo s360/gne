@@ -1151,6 +1151,7 @@ h2 a{
 	border: none;
 	background-color: #ffffff;
 	padding-left: 5px;
+	border-bottom: 1px solid steelblue;
 }
 .petition-label {
 	color: steelblue;
@@ -1256,7 +1257,6 @@ h2 a{
 	}
 	.petition-input {
 		width: 50%;
-		border-bottom: 1px solid steelblue;
 	}
 	.petition-cta {
 		font-size: 18px;
