@@ -164,14 +164,8 @@ jQuery(document).ready(function() {
         focusOnSelect: true
     });
 
-    jQuery('.slider-nav #nav-home').slick({
-        slidesToShow: 20,
-        slidesToScroll: 20,
-        asNavFor: ['#container-slide-home', ''],
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    }); jQuery('.slider-nav #nav-home').slick({
+
+    /*jQuery('.slider-nav #nav-home').slick({
         slidesToShow: 20,
         slidesToScroll: 20,
         asNavFor: ['#container-slide-home', ''],
@@ -179,35 +173,35 @@ jQuery(document).ready(function() {
         centerMode: true,
         focusOnSelect: true
     });
-
+*/
 
     jQuery( ".navbar-toggle" ).click(function() {
          jQuery('.top-navigation').toggleClass('in');
     });
 
-    //jQuery(".slider-nav .view-content a").removeAttr("href").css("cursor","pointer");
-
-    jQuery('.slider-nav a').each(function() {
-        var target = jQuery(this).attr('href').replace(/\//g,'');
-        jQuery(this).attr('href', "#!" + target);
-
-        /*jQuery(this).click(function () {
-            jQuery('#container-slide-home').slick("slickGoTo", 3);
-        });*/
-
-    });
 
 
     jQuery(".slick-prev").addClass("arrow_left");
     jQuery(".slick-next").addClass("arrow_right");
 
-    //set url
-    var title = jQuery('.body-content').map( function() {
-        return jQuery(this).attr('title');
+
+    var title = jQuery('#container-slide-home .slick-slide').map( function() {
+        if(!jQuery(this).hasClass("slick-cloned")){
+            return jQuery(this).find('.body-content ').attr('title');
+        }
+
     }).get();
 
-    //var title = jQuery(".views-row .body-content").attr('title');
-    //title = title.replace(/\s+/g, '_');
+    function gotohash(e) {
+        var lochash = window.location.hash;
+        var slideloc = slidetoHash.indexOf(lochash);
+        jQuery("#container-slide-home").slick('slickGoTo', slideloc);
+    }
+    var slidetoHash = title;
 
-    //console.log(title);
+    //jQuery(".slick-prev").click( function() { event.preventDefault(); window.location.hash = ... });
+    //jQuery(".slick-next").click({ function() { event.preventDefault(); window.location.hash = ... });
+    jQuery( document ).ready( gotohash );
+    jQuery( window ).bind( 'hashchange', gotohash );
+
 });

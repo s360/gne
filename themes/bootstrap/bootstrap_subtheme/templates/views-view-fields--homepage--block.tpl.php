@@ -42,6 +42,6 @@
     $alias = drupal_get_path_alias('node/'.$nid);
     //var_dump($alias);
     ?>
-    <a class="nav-header " id="<?php echo $alias; ?>" href="<?php echo $alias; ?>"><?php echo $title ?></a>
+    <a class="nav-header"  href="#!<?php echo $alias; ?>"><?php echo $title ?></a>
 <?php endforeach; ?>
 
