@@ -378,6 +378,10 @@ h2 a{
 	height: 100%;
 }
 .col-sm-4.onethird.one {
+	background: url('../images/Sgt-Hanno-01.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -460px;
 }
 .col-sm-4.onethird.two {
 	background: url('../images/Adriana_04.jpg');
@@ -386,6 +390,10 @@ h2 a{
 	background-position: center;
 }
 .col-sm-4.onethird.three {
+	background: url('../images/Jahnique_01.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -500px;
 }
 .col-sm-4.page1-btn-container {
 	margin-top: 50px;
@@ -771,8 +779,8 @@ h2 a{
 	}
 	.act-subheader {
   	font-size: 1.5em;
-  	margin-bottom: 20px;
-  	margin-top: 35px;
+  	margin-bottom: 5px;
+  	margin-top: 30px;
   	width: 100%;
   	text-transform: uppercase;
   	color: #f20016;
@@ -796,6 +804,7 @@ h2 a{
 	}
 
 	.zipcode {
+		width: 50%;
 		border: 2px solid #999;
 	  padding: 14px;
 	  background: none;

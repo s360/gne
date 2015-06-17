@@ -529,6 +529,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/Jahnique_01.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 543773,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_01.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_01.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/Sgt-Hanno-01.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 362172,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/TW-button.png": {
 		"fileType": 32768,
 		"ignore": 0,
