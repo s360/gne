@@ -138,9 +138,10 @@ h2 a{
 }
 .slider-nav .block-title{
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 27px;
     margin-top: 13px !important;
     margin-bottom: 30px;
+    color: #00aeef;
 
 }
 .slider-nav .field-content{}
