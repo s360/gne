@@ -419,6 +419,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/bootstrap\/images\/About_Boy.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 836612,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Boy.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Boy.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/About_Classroom.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

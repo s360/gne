@@ -559,6 +559,7 @@ h2 a{
  ========== 6. About =======================
  ===========================================
  **/
+
 .col-sm-4.about-left {
 	margin-top: -5px;
 	height: 100%;
@@ -567,33 +568,90 @@ h2 a{
 	background-size: cover;
 	background-position: -800px;
 }
+.col-sm-3.about-right {
+	margin-top: -5px;
+	height: 100%;
+	background: url('../images/About_Boy.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -320px;
+}
 .col-sm-5.about {
 	background-color: #ffffff;
 	height: 100%;
 }
-.about-container {
-	padding: 70px 20px;
-	background-color: #ffffff;	
-	width: 80%;
-}
-.about-content {
-	padding-left: 25px;
-}
+
+
 .about-header {
-	font-size: 34px;
 	color: steelblue;
 	margin-top: 0;
 	text-transform: uppercase;
 }
 
 .about-subheader {
-	margin-bottom: 10px;
-	font-size: 20px;
 	color: #f20016;
 	text-transform: uppercase;
 	font-family: eames, georgia bold, serif bold;
 }
-
+@media (min-width: 768px){
+	.about-container {
+		padding: 70px 20px;	
+		width: 80%;
+	}
+	.about-content {
+		padding-left: 25px;
+	}
+	.about-header {
+		font-size: 34px;
+	}
+	.about-subheader {
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+	.about-copy {
+		line-height: 1.8;
+	}
+	.about-copy.first {
+		line-height: 2.5;
+	}
+	.col-sm-5.about {
+		background-color: #ffffff;
+	}
+	.about-container {
+		background-color: #ffffff;
+	}
+}
+@media (max-width: 768px){
+	.col-sm-5.about {
+  	background-color: rgba(0, 0, 0, 0.8)
+	}
+	.mobile-about-overlay.visible-xs {
+		background: url('../images/About_Classroom.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+	}
+	.about-container {
+		background-color: transparent;
+		padding-top: 55px;
+	}
+	.about-header {
+		font-size: 24px;
+	}
+	.about-subheader {
+		margin: 10px 0;
+		font-size: 18px;
+	}
+	.about-copy {
+		color: #ffffff;
+		font-size: 12px;
+	}
+}
 /**
  ===========================================
  ========== 7. Act ===================
@@ -697,14 +755,6 @@ h2 a{
     text-transform:none;
     font-style: italic;
 }
-
-.about-copy {
-	line-height: 1.8;
-}
-.about-copy.first {
-	line-height: 2.5;
-}
-
 
 .graphic-slogan{
     width: 10%;
