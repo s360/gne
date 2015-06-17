@@ -183,23 +183,39 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vitae tellus nec ultricies. Maecenas consequat efficitur finibus. Vivamus auctor nibh in elementum suscipit. Praesent non dui ligula. Vivamus risus dui, mollis eget convallis eget, dignissim et elit. Maecenas laoreet nibh eget lorem elementum fermentum. Nullam condimentum diam arcu, a hendrerit nibh scelerisque vitae. Sed susci</div>  </div>
   <div class="views-row views-row-5 views-row-odd">
     <div  title="#!act"  id="act" class="body-content act" style="background-image: url('http://dev.greatnationseat.com/')">
-    <div class="act-header clearfix"><h1>Act</h1></div>
-<div class="col-md-4 act-content">
-<a class="btn-content" href="#">Add Your Voice</a>
-<p class="body-copy">If you agree that America can’t be great on an empty stomach, add your voice and help us end hunger today. Every name is a step that builds the national will to act</p>
-<a class="btn-content" href="#">Help Kids Eat Breakfast</a>
-<p class="body-copy">No Kid Hungry works to ensure that children who rely on free school lunch also have the chance to eat a healthy breakfast every day. Your contribution helps connect kids with the food they need</p>
-</div>
-<div class="col-md-4 act-content">
-<a class="btn-content" href="#">Stand Up for Families</a>
-<p class="body-copy">Change happens when each of us acts. Send an email to your elected representatives demanding they do the right thing whenit comes to making sure all americans have the food they need.</p>
-<h4 class="">Want to get Involved?</h4>
-<p>Enter your zip code to find actions you can take to end hunger in your community.</p>
-<form><input type="text" name="zipcode" class="zipcode" placeholder="Enter zip code"/>
-  <input type="submit"  class="zip_sub" value="Zip Code"/></form>
-<a href="#" class="graphic-slogan"><img src="/sites/all/themes/bootstrap/images/grphc_slogan.jpg"></a>
-</div>
-<div class="col-md-4 crowd"></div></div>  </div>
+    <div class="act-header clearfix hidden-xs"><h1>Act</h1></div>
+		<div class="col-md-4 act-content hidden-xs">
+			<a class="btn-content" href="#">Add Your Voice</a>
+			<p class="body-copy">If you agree that America can’t be great on an empty stomach, add your voice and help us end hunger today. Every name is a step that builds the national will to act</p>
+			<a class="btn-content" href="#">Help Kids Eat Breakfast</a>
+			<p class="body-copy">No Kid Hungry works to ensure that children who rely on free school lunch also have the chance to eat a healthy breakfast every day. Your contribution helps connect kids with the food they need</p>
+		</div>
+		<div class="col-md-4 act-content hidden-xs">
+			<a class="btn-content" href="#">Stand Up for Families</a>
+			<p class="body-copy">Change happens when each of us acts. Send an email to your elected representatives demanding they do the right thing whenit comes to making sure all americans have the food they need.</p>
+			<h4 class="">Want to get Involved?</h4>
+			<p>Enter your zip code to find actions you can take to end hunger in your community.</p>
+			<form><input type="text" name="zipcode" class="zipcode" placeholder="Enter zip code"/>
+  		<input type="submit"  class="zip_sub"/></form>
+			<a href="#" class="graphic-slogan"><img src="/sites/all/themes/bootstrap/images/grphc_slogan.jpg"></a>
+			</div>
+			<div class="col-md-4 crowd hidden-xs"></div>
+			<div class="col-md-12 visible-xs act">
+				<div class="act-mobile-header-container">
+					<h1 class="act-header">Act</h1>
+					<a id="join-act" class="btn-content" href="#">Add Your Voice</a>
+				</div>
+				<div class="act-content-mobile">
+					<h2 class="act-subheader">Want to get involved?</h2>
+					<p class="act-mobile-copy">Enter your zip code to find actions you can take to end hunger in your community.</p>
+					<form>
+						<input type="text" name="zipcode" class="zipcode" placeholder="Enter zip code"/>
+  					<button type="submit" class="zip_sub">ZIP CODE</button>
+  				</form>
+				</div>
+			</div>
+			<div class="act-background-mobile visible-xs"></div>
+	</div>
   <div class="views-row views-row-6 views-row-even">
     <div  title="#!partners"  id="partners" class="body-content " style="background-image: url('http://dev.greatnationseat.com/')">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vitae tellus nec ultricies. Maecenas consequat efficitur finibus. Vivamus auctor nibh in elementum suscipit. Praesent non dui ligula. Vivamus risus dui, mollis eget convallis eget, dignissim et elit. Maecenas laoreet nibh eget lorem elementum fermentum. Nullam condimentum diam arcu, a hendrerit nibh scelerisque vitae. Sed susci</div>  </div>
@@ -482,10 +498,14 @@
 
 <script type="text/javascript">
     // TODO: if petition showing and mobile - header should hide
-    var petitionOverlay = document.getElementById('petition-overlay-container');
-    var petitionClose 	= document.getElementById('close-petition');
-    var petitionButton  = document.getElementById('join');
+    var petitionOverlay  = document.getElementById('petition-overlay-container');
+    var petitionClose 	 = document.getElementById('close-petition');
+    var petitionButton   = document.getElementById('join');
+    var petitionButton2  = document.getElementById('join-act');
     petitionButton.addEventListener('click', function() {
+        petitionOverlay.classList.remove('hidden');
+    });
+    petitionButton2.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
     petitionClose.addEventListener('click', function() {

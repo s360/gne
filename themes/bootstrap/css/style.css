@@ -634,117 +634,184 @@ h2 a{
  ========== 7. Act ===================
  ===========================================
  */
-
-.act{
-    overflow-y: auto;
-    height: 100vh;
-    background: white;
+@media (min-width: 768px){
+	.act{
+	    overflow-y: auto;
+	    height: 100vh;
+	    background: white;
+	}
+	
+	.act .col-md-4.act-content{
+	
+	    padding: 50px;
+	}
+	
+	.crowd{
+	    background:url(../images/IMG_classroom.jpg);
+	    height: 100%;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: right;
+	    margin-top: -154px;
+	}
+	
+	.btn-content, .btn-content:focus, .btn-content:hover{
+	    color: #ffffff;
+	    background: #f20016;
+	    text-align: center;
+	    margin-top: 7px;
+	    padding: 15px 30px;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    text-decoration: none;
+	    margin-bottom: 50px;
+	    font-family: oswald, sans-serif;
+	    letter-spacing: 2px;
+	    font-size: 1.1em;
+	    white-space: nowrap;
+	}
+	
+	.body-copy{
+	    margin: 20px 0 60px 0;
+	    line-height: 30px;
+	    font-family: open-sans, sans-serif;
+	    font-weight: 300;
+	}
+	
+	.act h1{
+	    letter-spacing: 4px;
+	    font-size: 4.8em;
+	    margin-bottom: 20px;
+	    width: 100%;
+	    text-transform: uppercase;
+	    color: #f20016;
+	    font-family: Ultra, georgia bold, serif bold;
+	    float: right;
+	    padding-left: 20%;
+	    margin-top: 50px;
+	}
+	
+	.act-content h4{
+	    letter-spacing: 1px;
+	    margin-bottom: 20px;
+	    text-transform: uppercase;
+	    color: #f20016;
+	    font-family: Ultra, georgia bold, serif bold;
+	}
+	
+	.act-content form{
+	    height: auto;
+	
+	}
+	
+	
+	.act-content form .zip_sub{
+	    color: #ffffff;
+	    background: #f20016;
+	    text-align: center;
+	    padding: 15px 30px;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    text-decoration: none;
+	    font-family: oswald, sans-serif;
+	    letter-spacing: 2px;
+	    font-size: 1.1em;
+	    border: none;
+	    margin-bottom: 120px;
+	}
+	
+	.act-content form .zipcode{
+	    border: 2px solid #999;
+	    padding: 14px;
+	    background: none;
+	    margin-right: 10px;
+	    color: #999;
+	    text-align: left;
+	    font-size: 1em;
+	    font-family: open sans, sans-serif;
+	    text-transform:none;
+	    font-style: italic;
+	}
+	
+	.graphic-slogan{
+	    width: 10%;
+	}
+	
+	.graphic-slogan img{
+	    width: 100%;
+	    height: auto;
+	    margin-top: 30px;
+	}
 }
+@media (max-width: 768px){
+	.col-md-12.visible-xs.act {
+		background-color: rgba(0,0,0, 0.8);
+		z-index: 10;
+	}
+	.act-mobile-header-container {
+		text-align: center;
+	}
+	.act-header {
+		text-align: center;
+  	letter-spacing: 4px;
+  	font-size: 3em;
+  	margin-bottom: 20px;
+  	width: 100%;
+  	text-transform: uppercase;
+  	color: #f20016;
+  	font-family: Ultra, georgia bold, serif bold;
+  	margin-top: 50px;
+	}
+	.act-subheader {
+  	font-size: 1.5em;
+  	margin-bottom: 20px;
+  	margin-top: 35px;
+  	width: 100%;
+  	text-transform: uppercase;
+  	color: #f20016;
+  	font-family: Ultra, georgia bold, serif bold;
+	}
+	.act-mobile-copy {
+		color: #ffffff;
+	}
+	.zip_sub {
+		color: #ffffff;
+	  background: #f20016;
+	  text-align: center;
+	  padding: 15px 30px;
+	  text-transform: uppercase;
+	  font-weight: bold;
+	  text-decoration: none;
+	  font-family: oswald, sans-serif;
+	  letter-spacing: 2px;
+	  font-size: 1.1em;
+	  border: none;
+	}
 
-.act .col-md-4.act-content{
-
-    padding: 50px;
-}
-
-.crowd{
-    background:url(../images/IMG_classroom.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-    margin-top: -154px;
-}
-
-.btn-content, .btn-content:focus, .btn-content:hover{
-    color: #ffffff;
-    background: #f20016;
-    text-align: center;
-    margin-top: 7px;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 50px;
-    font-family: oswald, sans-serif;
-    letter-spacing: 2px;
-    font-size: 1.1em;
-    white-space: nowrap;
-}
-
-.body-copy{
-    margin: 20px 0 60px 0;
-    line-height: 30px;
-    font-family: open-sans, sans-serif;
-    font-weight: 300;
-}
-
-.act h1{
-    letter-spacing: 4px;
-    font-size: 4.8em;
-    margin-bottom: 20px;
-    width: 100%;
-    text-transform: uppercase;
-    color: #f20016;
-    font-family: Ultra, georgia bold, serif bold;
-    float: right;
-    padding-left: 20%;
-    margin-top: 50px;
-}
-
-.act-content h4{
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #f20016;
-    font-family: Ultra, georgia bold, serif bold;
-}
-
-.act-content form{
-    height: auto;
-
-}
-
-
-.act-content form .zip_sub{
-    color: #ffffff;
-    background: #f20016;
-    text-align: center;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    font-family: oswald, sans-serif;
-    letter-spacing: 2px;
-    font-size: 1.1em;
-    border: none;
-    margin-bottom: 120px;
-}
-
-.act-content form .zipcode{
-    border: 2px solid #999;
-    padding: 14px;
-    background: none;
-    margin-right: 10px;
-    color: #999;
-    text-align: left;
-    font-size: 1em;
-    font-family: open sans, sans-serif;
-    text-transform:none;
-    font-style: italic;
-}
-
-.graphic-slogan{
-    width: 10%;
-}
-
-.graphic-slogan img{
-    width: 100%;
-    height: auto;
-    margin-top: 30px;
-}
-
-@media screen and(max-width: 500px){
-
+	.zipcode {
+		border: 2px solid #999;
+	  padding: 14px;
+	  background: none;
+	  background-color: white;
+	  margin-right: 10px;
+	  color: #999;
+	  text-align: left;
+	  font-size: 1em;
+	  font-family: open sans, sans-serif;
+	  text-transform:none;
+	  font-style: italic;
+	}
+	.act-background-mobile.visible-xs {
+		background: url('../images/About_Classroom.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+	}
 }
 
 
@@ -1255,11 +1322,5 @@ h2 a{
 	  margin: 10px;
 	  background: none;
 	}
-/*	.slick-prev, .arrow_right{
-	    top: 42% !important;
-	    width: 50px !important;
-	    height: 50px !important;
-	    margin: 10px !important;
-	}*/
 }
 /* END */
