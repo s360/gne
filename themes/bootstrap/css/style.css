@@ -119,10 +119,19 @@ h2 a{
     transition: 1s;
     -webkit-transition: 1s;
     color: #ffffff;
-    background: #000000;
+    background: rgba(0,0,0, 0.65);
     padding: 0px 30px !important;
     position: absolute;
     top: 0px;
+    right: 9%;
+}
+.nav-header{
+    color: #ffffff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 32px;
+    border-top: 1px solid #cccccc;
 }
 .top-navigation.in{
     margin-top: 0px;
@@ -132,6 +141,7 @@ h2 a{
     font-size: 24px;
     margin-top: 13px !important;
     margin-bottom: 30px;
+
 }
 .slider-nav .field-content{}
 .slider-nav .field-content a, .slider-nav .field-content a:hover, .slider-nav .field-content a:focus{
@@ -144,8 +154,9 @@ h2 a{
     padding: 10px 32px;
     border-top: 1px solid #cccccc;
 }
-.slider-nav .views-row:hover, .slider-nav .views-row.slick-active, .slider-nav .views-row.slick-center{
+.slider-nav .nav-header:hover, .slider-nav .nav-header.slick-active, .slider-nav .nav-header.slick-center{
     background: #cccccc;
+    text-decoration: none;
 }
 .slider-nav .slick-slider{
     margin-bottom: 0px !important;

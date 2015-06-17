@@ -28,15 +28,10 @@
  */
 ?>
 
-<div class="view-scroll-page" ">
-  <?php if ($rows): ?>
-    <div class="view-content" id="block-homepage">
-        <div class="view-content" id="container-slide-home">
+<?php if ($rows): ?>
+        <div class="view-content" id="nav-home">
             <?php //dsm($view->field['title']); ?>
-          <?php print $rows;?>
+            <?php print $rows;?>
         </div>
-    </div>
 
-  <?php endif; ?>
-
-</div>
+<?php endif; ?>

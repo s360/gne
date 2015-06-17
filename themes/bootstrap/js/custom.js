@@ -164,12 +164,39 @@ jQuery(document).ready(function() {
         focusOnSelect: true
     });
 
+    jQuery('.slider-nav #nav-home').slick({
+        slidesToShow: 20,
+        slidesToScroll: 20,
+        asNavFor: ['#container-slide-home', ''],
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    }); jQuery('.slider-nav #nav-home').slick({
+        slidesToShow: 20,
+        slidesToScroll: 20,
+        asNavFor: ['#container-slide-home', ''],
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
+
 
     jQuery( ".navbar-toggle" ).click(function() {
          jQuery('.top-navigation').toggleClass('in');
     });
 
-    jQuery(".slider-nav .view-content a").removeAttr("href").css("cursor","pointer");
+    //jQuery(".slider-nav .view-content a").removeAttr("href").css("cursor","pointer");
+
+    jQuery('.slider-nav a').each(function() {
+        var target = jQuery(this).attr('href').replace(/\//g,'');
+        jQuery(this).attr('href', "#!" + target);
+
+        /*jQuery(this).click(function () {
+            jQuery('#container-slide-home').slick("slickGoTo", 3);
+        });*/
+
+    });
+
 
     jQuery(".slick-prev").addClass("arrow_left");
     jQuery(".slick-next").addClass("arrow_right");
@@ -182,5 +209,5 @@ jQuery(document).ready(function() {
     //var title = jQuery(".views-row .body-content").attr('title');
     //title = title.replace(/\s+/g, '_');
 
-    console.log(title);
+    //console.log(title);
 });
