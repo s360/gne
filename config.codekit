@@ -230,11 +230,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/delete-views-view--scrolling-page--page.tpl.php": {
+	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/node--press_release.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/delete-views-view--scrolling-page--page.tpl.php",
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/node--press_release.tpl.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -266,24 +266,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--press_release.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--press_release.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--homepage--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--homepage--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--homepage--page.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -311,65 +293,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--page.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--page.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--homepage--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--homepage--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--slider-page--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--slider-page--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--homepage--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--homepage--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--slider-page--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--slider-page--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-unformatted--scrolling-page--page.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-unformatted--scrolling-page--page.tpl.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -590,6 +518,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/custom.js",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/custom-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/themes\/bootstrap\/js\/min\/custom-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/custom-min.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/min\/custom-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

@@ -327,9 +327,6 @@ h2 a{
     margin-bottom: 0px;
 }
 #container-slide-home .node-slider-page{
-/*    padding: 30px 20px;
-    padding-top: 51px;*/
-    /*Can't find where padding is being overridden style.css?npq5w*/
     padding: 0!important;
     position: relative;
 }
@@ -418,6 +415,28 @@ h2 a{
 	margin-top: 50px;
 }
 
+/* Portrait */
+@media (max-width: 768px) and (orientation: landscape) {
+	.col-sm-4.onethird {
+		width: 33.33333333333333%;
+	}
+	.col-sm-4.col-xs-4.onethird.one {
+		background-position: -170px;
+	}
+	.col-sm-4.col-xs-4.onethird.three {
+		background-position: -200px;
+	}
+}
+
+/* Landscape */
+/*@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}*/
+
 @media (max-width: 768px){
 .slick-prev{
     left: 10px !important;
@@ -444,9 +463,9 @@ h2 a{
     margin: 5px !important;
 }
 .bottom-overlay {
-    position: absolute;
-    text-align: center;
-    overflow-y: auto;
+  position: absolute;
+  text-align: center;
+  overflow-y: auto;
   background-color: rgba(0,0,0,0.8);
   width: 100%;
   height: 100px;
