@@ -424,6 +424,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/arrows.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18753,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrows.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrows.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/donate-thank.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40091,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/donate-thank.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/donate-thank.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/FB-button.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -519,6 +541,17 @@
 		"initialSize": 8.2433e+06,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_02.jpg",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/join-thank.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39862,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/join-thank.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/join-thank.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

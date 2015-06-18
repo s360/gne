@@ -1549,3 +1549,42 @@ h2 a{
 	}
 }
 /* END */
+
+
+.thankyou-overlay-container{
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	background-color: #ffffff;
+ 	position: absolute;
+ 	border: 3px solid #f20016;
+ 	padding: 0 120px;
+}
+
+.thank-facebook-share,
+.thank-twitter-share {
+	height: 100px;
+	width: 150px;
+	background-color: blue;
+}
+.thank-twitter-share {
+
+}
+@media (min-width: 768px){
+	.thankyou-overlay-container {
+	 	height: 70%;
+	 	width: 70%;
+	 	margin: auto;
+	 	bottom: 50px;
+	}
+}
+
+@media (max-width: 768px){
+	.thankyou-overlay-container {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		z-index: 10000;
+	}
+}
