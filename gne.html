@@ -19,7 +19,7 @@
 <link rel="shortcut icon" href="http://dev.greatnationseat.com/sites/all/themes/bootstrap/favicon.ico" type="image/vnd.microsoft.icon" />
 <meta name="Generator" content="Drupal 7 (http://drupal.org)" />
 <link rel="stylesheet" type="text/css" href="themes/bootstrap/css/style.css">
-  <title>Homapage | apatt.upward.st</title>
+  <title>Homepage | apatt.upward.st</title>
 
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -154,6 +154,13 @@
     <div  title="#!hanno"  id="hanno" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida euismod nisl tincidunt tristique. Aenean efficitur, ex malesuada sagittis semper, libero libero cursus sapien, mollis bibendum elit ipsum eget neque. Vivamus sit amet tellus arcu. Integer accumsan tincidunt tortor non finibus. Suspendisse in mauris varius, fermentum orci nec, aliquam felis. Sed vel odio at metus vehicula</div>  </div>
   <div class="views-row views-row-3 views-row-odd">
+    <div  title="#!Hanno2"  id="Hanno2" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
+    Sgt. Hanno 2</div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div  title="#!hanno3"  id="hanno3" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
+    Hanno 3</div>  
+   </div>
+  <div class="views-row views-row-3 views-row-odd">
     <div  title="#!adriana"  id="adriana" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/sites/default/files/Adriana_01_small.jpg')">
     <div class="col-sm-3 story-col">
 <div class="story-container one">
@@ -206,10 +213,13 @@
 
   <div class="views-row views-row-6 views-row-even">
     <div  title="#!jahnique"  id="jahnique" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vitae tellus nec ultricies. Maecenas consequat efficitur finibus. Vivamus auctor nibh in elementum suscipit. Praesent non dui ligula. Vivamus risus dui, mollis eget convallis eget, dignissim et elit. Maecenas laoreet nibh eget lorem elementum fermentum. Nullam condimentum diam arcu, a hendrerit nibh scelerisque vitae. Sed susci</div>  </div>
-  <div class="views-row views-row-7 views-row-odd">
-    <div  title="#!danielle"  id="danielle" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vitae tellus nec ultricies. Maecenas consequat efficitur finibus. Vivamus auctor nibh in elementum suscipit. Praesent non dui ligula. Vivamus risus dui, mollis eget convallis eget, dignissim et elit. Maecenas laoreet nibh eget lorem elementum fermentum. Nullam condimentum diam arcu, a hendrerit nibh scelerisque vitae. Sed susci</div>  </div>
+    Jhnique 1</div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div  title="#!Jahnique2"  id="Jahnique2" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
+    Jahnique 2</div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div  title="#!jahnique 3"  id="jahnique 3" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
+    Jahnique 3</div>  </div>
   <div class="views-row views-row-8 views-row-even">
     <div  title="#!act"  id="act" class=" node body-content act" style="background-image: url('http://dev.greatnationseat.com/')">
     <div class="act-header clearfix hidden-xs"><h1>Act</h1></div>
@@ -244,9 +254,6 @@
 				</div>
 			</div>
 			<div class="act-background-mobile visible-xs"></div></div>  </div>
-  <div class="views-row views-row-9 views-row-odd">
-    <div  title="#!partners"  id="partners" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vitae tellus nec ultricies. Maecenas consequat efficitur finibus. Vivamus auctor nibh in elementum suscipit. Praesent non dui ligula. Vivamus risus dui, mollis eget convallis eget, dignissim et elit. Maecenas laoreet nibh eget lorem elementum fermentum. Nullam condimentum diam arcu, a hendrerit nibh scelerisque vitae. Sed susci</div>  </div>
   <div class="views-row views-row-10 views-row-even views-row-last">
     <div  title="#!about"  id="about" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
     <div class="col-sm-4 about-left hidden-xs"></div>
@@ -531,6 +538,7 @@
     var petitionClose 	 = document.getElementById('close-petition');
     var petitionButton   = document.getElementById('join');
     var petitionButton2  = document.getElementById('join-act');
+    var orientation;
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
@@ -540,6 +548,19 @@
     petitionClose.addEventListener('click', function() {
         petitionOverlay.classList.add('hidden');
     });
+
+    if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
+   	 	console.log('portrait'); 
+   	 	orientation = 'portrait';
+    }else {
+    	console.log('landscape');
+    	orientation = 'landscape';
+    }
+    window.addEventListener('orientationchange', function() {
+    	console.log('change');
+    	console.log(window.orientation);
+    }, false);
+    console.log(window.location);
 </script>  <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/slick/slick.min.js?nq38z8"></script>
 <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/custom.js?nq38z8"></script>
 <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/bootstrap.js?nq38z8"></script>
