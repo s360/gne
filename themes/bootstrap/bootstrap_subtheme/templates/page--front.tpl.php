@@ -117,8 +117,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <section class="wrap-homepage">
                 <?php print render($page['content']); ?>
                 <div class="btn-nav">
-                    <button type="button" data-role="none" class="arrow_left" aria-label="prev" style="display: block;">Prev</button>
-                    <button type="button" data-role="none" class="arrow_right" aria-label="next" style="display: block;">Next</button>
+                    <button type="button" data-role="none" class="arrow_left" aria-label="prev" >Prev</button>
+                    <button type="button" data-role="none" class="arrow_right" aria-label="next" >Next</button>
                 </div>
             </section>
         </div>

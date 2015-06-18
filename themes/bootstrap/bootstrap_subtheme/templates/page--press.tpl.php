@@ -119,6 +119,10 @@ drupal_add_css($directory.'/css/press.css', array('group' => CSS_THEME, 'every_p
         <div class="">
             <section class="wrap-content">
                 <?php print render($page['content']); ?>
+                <div class="btn-nav">
+                    <button type="button" data-role="none" class="arrow_left" aria-label="prev" >Prev</button>
+                    <button type="button" data-role="none" class="arrow_right" aria-label="next" >Next</button>
+                </div>
             </section>
         </div>
     </div>
