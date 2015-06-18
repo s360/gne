@@ -580,7 +580,10 @@ h2 a{
  ========== 3d. Story Page 3 ===============
  ===========================================
  */
-
+.petition-form-container-story {
+	padding: 0 35px;
+	text-align: center;
+}
  #adriana-3 .page3-img{
     background: url('../images/adriana-3.jpg');
     background-size: cover;
@@ -591,6 +594,7 @@ h2 a{
   #adriana-3 .col-md-7{
     background: #FBFFFF;
     height: 100%;
+    margin-top: -11px;
  }
 
  .story-cta{
@@ -612,7 +616,30 @@ h2 a{
     margin-bottom: 50px;
 }
 
-@media(max-width: 992px){
+@media (max-width: 768px) and (orientation: landscape) {
+  #adriana-3 .col-md-7{
+    width: 50%;
+    float: left;
+    margin-top: 0;
+    padding-top: 60px;
+  }
+  #adriana-3 .col-md-5{
+    width: 50%;
+    float: left;
+  }
+   #adriana-3 .page3-img{
+    background: url('../images/adriana-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+ }
+
+  #adriana-3 .col-md-7 .petition-form-container{
+    display: none;
+  }
+}
+
+@media(max-width: 992px) and (orientation: portrait) {
    #adriana-3 .page3-img{
     height: 60%;
  }
