@@ -490,6 +490,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/jahnique_02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8.2433e+06,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_02.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/Sgt-Hanno-01.png": {
 		"fileType": 32768,
 		"ignore": 0,
