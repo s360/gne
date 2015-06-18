@@ -61,6 +61,18 @@ h2 a{
  ================ 2. Header ================
  ===========================================
  */
+/*#mobile-logo {
+	display: none;
+}	
+ @media (max-width: 768px) {
+  #desktop-logo {
+		display: none;
+ 	}
+  #mobile-logo {
+		display: block;
+ 	}	
+}*/
+
 .btn-donate, .btn-donate:focus, .btn-donate:hover{
   float: right;
   margin-top: 7px;
