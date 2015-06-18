@@ -64,7 +64,7 @@
     <link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/style-ie.css" />
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/arrows.css" />
+    <!--<link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/arrows.css" />-->
 
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
