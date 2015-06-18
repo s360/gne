@@ -468,6 +468,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/Hanno_3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 651551,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Hanno_3.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Hanno_3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/Hanno_4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 617497,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Hanno_4.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Hanno_4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/IMG_classroom.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -501,13 +523,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/themes\/bootstrap\/images\/Sgt-Hanno-01.png": {
-		"fileType": 32768,
+	"\/themes\/bootstrap\/images\/Sgt-Hanno-01.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 362172,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.png",
-		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.png",
+		"initialSize": 833500,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1166,7 +1188,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Awesome Designer",
+"lastSavedByUser": "Kyle Warbis",
 "manualImportLinks": {
 	},
 "projectAttributes": {
