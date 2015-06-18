@@ -319,7 +319,9 @@ h2 a{
  ========== 3b. homepage ===================
  ===========================================
  */
-
+.portrait-link {
+	display:none;
+}
 #homepage{
     width: 100%;
     background: #cccccc;
@@ -329,9 +331,6 @@ h2 a{
     margin-bottom: 0px;
 }
 #container-slide-home .node-slider-page{
-/*    padding: 30px 20px;
-    padding-top: 51px;*/
-    /*Can't find where padding is being overridden style.css?npq5w*/
     padding: 0!important;
     position: relative;
 }
@@ -420,6 +419,75 @@ h2 a{
 	margin-top: 50px;
 }
 
+/* Landscape Phone*/
+@media (max-width: 768px) and (orientation: landscape) {
+	.col-sm-4.onethird {
+		width: 33.33333333333333%;
+	}
+	.col-sm-4.col-xs-4.onethird.one {
+		background-position: -170px;
+	}
+	.col-sm-4.col-xs-4.onethird.three {
+		background-position: -200px;
+	}
+	.page1-title {
+		font-size: 16px;
+	}
+	.col-sm-4.page1-btn-container {
+		margin-top: 10px;
+	}
+	.front-page-btn {
+		padding: 5px;
+		font-size: 0.7em;
+	}
+	.bottom-overlay {
+  	position: absolute;
+  	text-align: center;
+  	overflow-y: auto;
+  	background-color: rgba(0,0,0,0.8);
+  	width: 100%;
+  	height: 100px;
+  	bottom: 0px;
+	}
+}
+
+/* Portrait Phone */
+@media (max-width: 768px) and (orientation: portrait) {
+	.page1-title {
+		font-size: 16px;
+	}
+	.bottom-overlay {
+		height: 75px;
+  	top: 0;
+  	padding-top: 17px;
+	}
+	.col-sm-4.col-xs-4.onethird.one,
+	.col-sm-4.col-xs-4.onethird.two,
+	.col-sm-4.col-xs-4.onethird.three{
+		position: relative;
+ 	 	width: 100%;
+  	height: 30%;
+  	background-position: inherit;
+	}
+	.col-sm-4.col-xs-4.onethird.one {
+  	margin-top: 55px;	
+	}
+
+	.col-sm-4.page1-btn-container {
+		display: none;
+	}
+	.portrait-link {
+		display: block;
+		position: absolute;
+		bottom: 10px;
+		left: 100px;
+	}
+	.front-page-btn {
+		padding: 8px;
+  	font-size: 0.7em;
+	}
+}
+
 @media (max-width: 768px){
 .slick-prev{
     left: 10px !important;
@@ -445,15 +513,7 @@ h2 a{
     height: 20px;
     margin: 5px !important;
 }
-.bottom-overlay {
-    position: absolute;
-    text-align: center;
-    overflow-y: auto;
-  background-color: rgba(0,0,0,0.8);
-  width: 100%;
-  height: 100px;
-  bottom: 0px;
-}
+
     #footer{
         display: none;
     }

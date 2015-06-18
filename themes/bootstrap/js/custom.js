@@ -218,12 +218,12 @@ jQuery(document).ready(function() {
             jQuery("#container-slide-press").slick('slickGoTo', slideloc);
 
             if (slideloc == first){
-                jQuery('.arrow_left').addClass( "hide" );
+                // jQuery('.arrow_left').addClass( "hide" );
                 jQuery('.arrow_right').removeClass( "hide" );
 
             }
             else if (slideloc == last){
-                jQuery('.arrow_right').addClass( "hide" );
+                // jQuery('.arrow_right').addClass( "hide" );
                 jQuery('.arrow_left').removeClass( "hide" );
 
             }
