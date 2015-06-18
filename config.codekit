@@ -230,11 +230,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/delete-views-view--scrolling-page--page.tpl.php": {
+	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/node--press_release.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/delete-views-view--scrolling-page--page.tpl.php",
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/node--press_release.tpl.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -266,24 +266,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--press_release.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--press_release.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--homepage--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--homepage--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--homepage--page.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -311,65 +293,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--page.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--slider-page--page.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--homepage--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--homepage--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--slider-page--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-fields--slider-page--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--homepage--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--homepage--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--slider-page--block.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-list--slider-page--block.tpl.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-unformatted--scrolling-page--page.tpl.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view-unformatted--scrolling-page--page.tpl.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -441,6 +369,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/adriana-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 131072,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/adriana-3.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/adriana-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/Adriana_01_small.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -507,6 +446,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/gne_logo_white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21023,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/gne_logo_white.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/gne_logo_white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/grphc_slogan.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -558,6 +508,17 @@
 		"initialSize": 4195,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/TW-button.png",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/TW-button.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/x-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 993,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/x-icon.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/x-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1183,7 +1144,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Kyle Warbis",
+"lastSavedByUser": "Awesome Designer",
 "manualImportLinks": {
 	},
 "projectAttributes": {

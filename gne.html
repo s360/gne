@@ -164,7 +164,32 @@
 </div></div>  </div>
   <div class="views-row views-row-5 views-row-odd">
     <div  title="#!adriana-3"  id="adriana-3" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
-    Third page for Adriana</div>  </div>
+    <div class="col-md-5 page3-img"></div> 
+    <div class="col-md-7 ">
+      <div class="cta">
+        <h4 class="story-cta">Add Your Name to the list of americans that demand we do better</h4>
+      </div>
+      <div class="petition-form-container">
+            <form id="petition-form" name="petition-form">
+                <div class="col-sm-4 col-xs-6">
+                    <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input" placeholder="Judy Reeder"/>
+                    <label class="petition-label">(Name)</label>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <span class="petition-x">X</span><input id="petition-email" name="email" class="petition-input" placeholder="jreeder@hotmail.com"/>
+                    <label class="petition-label">(Email)</label>
+                </div>
+                <div class="col-sm-4 col-xs-12 zip">
+                    <span class="petition-x">X</span><input id="petition-zip" name="zip" class="petition-input" placeholder="98270" />
+                    <label class="petition-label">(Zip)</label>
+                </div>
+                <button class="petition-submit">Join The Movement</button>
+            </form>
+        </div>
+    </div> 
+  </div> 
+</div>
+
   <div class="views-row views-row-6 views-row-even">
     <div  title="#!jahnique"  id="jahnique" class=" node body-content " style="background-image: url('http://dev.greatnationseat.com/')">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vitae tellus nec ultricies. Maecenas consequat efficitur finibus. Vivamus auctor nibh in elementum suscipit. Praesent non dui ligula. Vivamus risus dui, mollis eget convallis eget, dignissim et elit. Maecenas laoreet nibh eget lorem elementum fermentum. Nullam condimentum diam arcu, a hendrerit nibh scelerisque vitae. Sed susci</div>  </div>
@@ -243,8 +268,9 @@
 
 <!-- PETITION OVERLAY -->
 <div id="petition-overlay-container" class="petition-overlay-container hidden">
+  <div class='full_overlay'></div>
     <div class="petition-container">
-        <span id="close-petition" class="close-petition">X</span>
+        <span id="close-petition" class="close-petition"></span>
         <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="http://apatt.upward.st/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
 
         <h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
