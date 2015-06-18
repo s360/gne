@@ -131,7 +131,8 @@ jQuery(document).ready(function() {
         jQuery(".node-press-release").css({"height": window_height});
     }
 
-    // homepage carausel
+    //slide
+
     jQuery('#container-slide-home').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -143,7 +144,8 @@ jQuery(document).ready(function() {
     jQuery('#container-slide-press').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '.slider-nav .view-press .view-content ul'
+        asNavFor: '.slider-nav .view-press .view-content ul',
+        appendArrows: false
 
     });
 
@@ -156,14 +158,14 @@ jQuery(document).ready(function() {
         focusOnSelect: true
     });
 
-    jQuery('#homepage .slider-nav .view-content ul').slick({
+    /*jQuery('#homepage .slider-nav .view-content ul').slick({
         slidesToShow: 20,
         slidesToScroll: 20,
         asNavFor: ['#container-slide-home', ''],
         dots: true,
         centerMode: true,
         focusOnSelect: true
-    });
+    });*/
 
 
     /*jQuery('.slider-nav #nav-home').slick({
@@ -175,6 +177,10 @@ jQuery(document).ready(function() {
         focusOnSelect: true
     });
 */
+
+    var currentSlide = jQuery('#container-slide-home').slick('slickCurrentSlide');
+
+    //console.log(currentSlide);
 
     jQuery( ".navbar-toggle" ).click(function() {
          jQuery('.top-navigation').toggleClass('in');
@@ -191,9 +197,9 @@ jQuery(document).ready(function() {
     jQuery(".slick-next").addClass("arrow_right");
 
 
-    var title = jQuery('#container-slide-home .slick-slide').map( function() {
+    var title = jQuery('.slick-slide').map( function() {
         if(!jQuery(this).hasClass("slick-cloned")){
-            return jQuery(this).find('.body-content ').attr('title');
+            return jQuery(this).find('.node ').attr('title');
         }
 
     }).get();
@@ -201,18 +207,35 @@ jQuery(document).ready(function() {
     //var attrActive = jQuery('#container-slide-home .slick-slide').find('.body-content ').attr('title');
 
     var slidetoHash = title;
-
     function gotohash(e) {
         var lochash = window.location.hash;
+        var last = slidetoHash.length-1;
+        var first = 0;
         if (lochash){
+
             var slideloc = slidetoHash.indexOf(lochash);
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
+            jQuery("#container-slide-press").slick('slickGoTo', slideloc);
+
+            if (slideloc == first){
+                jQuery('.arrow_left').addClass( "hide" );
+
+            }
+            else if (slideloc == last){
+                jQuery('.arrow_right').addClass( "hide" );
+
+            }
+            else{
+                jQuery('.arrow_left').removeClass( "hide" );
+                jQuery('.arrow_right').removeClass( "hide" );
+            }
         }
 
     }
 
     function prev(e){
         jQuery("#container-slide-home").slick('slickPrev');
+        jQuery("#container-slide-press").slick('slickPrev');
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash)-1;
         var slidehas = slidetoHash[slideloc];
@@ -221,6 +244,7 @@ jQuery(document).ready(function() {
 
     function next(e){
         jQuery("#container-slide-home").slick('slickNext');
+        jQuery("#container-slide-press").slick('slickNext');
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash)+1;
         var slidehas = slidetoHash[slideloc];
