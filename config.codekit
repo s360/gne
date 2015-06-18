@@ -435,6 +435,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/gne_logo_white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21023,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/gne_logo_white.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/gne_logo_white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/grphc_slogan.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
