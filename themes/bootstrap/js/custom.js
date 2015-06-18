@@ -200,6 +200,8 @@ jQuery(document).ready(function() {
 
     //var attrActive = jQuery('#container-slide-home .slick-slide').find('.body-content ').attr('title');
 
+    var slidetoHash = title;
+
     function gotohash(e) {
         var lochash = window.location.hash;
         if (lochash){
@@ -208,18 +210,26 @@ jQuery(document).ready(function() {
         }
 
     }
-    var slidetoHash = title;
 
-    jQuery(".arrow_left").click( function() {
-
+    function prev(e){
         jQuery("#container-slide-home").slick('slickPrev');
+        var lochash = window.location.hash;
+        var slideloc = slidetoHash.indexOf(lochash)-1;
+        var slidehas = slidetoHash[slideloc];
+        window.location.hash = slidehas;
+    }
 
-    });
-
-    jQuery(".arrow_right").click(function() {
+    function next(e){
         jQuery("#container-slide-home").slick('slickNext');
+        var lochash = window.location.hash;
+        var slideloc = slidetoHash.indexOf(lochash)+1;
+        var slidehas = slidetoHash[slideloc];
+        window.location.hash = slidehas;
+    }
 
-    });
+    jQuery(".arrow_left").click( prev );
+
+    jQuery(".arrow_right").click(next);
 
     jQuery( document ).ready( gotohash );
     jQuery( window ).bind( 'hashchange', gotohash );
