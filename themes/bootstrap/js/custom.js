@@ -219,10 +219,12 @@ jQuery(document).ready(function() {
 
             if (slideloc == first){
                 jQuery('.arrow_left').addClass( "hide" );
+                jQuery('.arrow_right').removeClass( "hide" );
 
             }
             else if (slideloc == last){
                 jQuery('.arrow_right').addClass( "hide" );
+                jQuery('.arrow_left').removeClass( "hide" );
 
             }
             else{
