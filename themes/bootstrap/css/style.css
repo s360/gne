@@ -104,6 +104,25 @@ h2 a{
     float: right;
     width: 225px;
 }
+.slider-nav .menu{
+    width: 127% !important;
+    margin-left: -30px;
+}
+.slider-nav .menu li{
+
+}
+.slider-nav .menu li a{
+    color: #ffffff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 32px;
+    border-top: 1px solid #cccccc;
+}
+.slider-nav .menu li a:hover, .slider-nav .menu li a:focus{
+    background: #cccccc;
+    text-decoration: none;
+}
 .slider-nav .block-views{}
 .slider-nav .view-slider-nav{}
 .slider-nav .slick-slide{

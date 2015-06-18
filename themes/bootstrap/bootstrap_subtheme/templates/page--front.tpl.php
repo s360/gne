@@ -371,10 +371,14 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 <script type="text/javascript">
     // TODO: if petition showing and mobile - header should hide
-    var petitionOverlay = document.getElementById('petition-overlay-container');
-    var petitionClose 	= document.getElementById('close-petition');
-    var petitionButton  = document.getElementById('donate-nav');
+    var petitionOverlay  = document.getElementById('petition-overlay-container');
+    var petitionClose 	 = document.getElementById('close-petition');
+    var petitionButton   = document.getElementById('join');
+    var petitionButton2  = document.getElementById('join-act');
     petitionButton.addEventListener('click', function() {
+        petitionOverlay.classList.remove('hidden');
+    });
+    petitionButton2.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
     petitionClose.addEventListener('click', function() {

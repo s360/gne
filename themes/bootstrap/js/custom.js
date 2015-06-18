@@ -179,6 +179,11 @@ jQuery(document).ready(function() {
     jQuery( ".navbar-toggle" ).click(function() {
          jQuery('.top-navigation').toggleClass('in');
     });
+    jQuery('.slider-nav a').each(function() {
+        var target = jQuery(this).attr('href').replace(/\//g,'');
+         jQuery(this).attr('href', "#!" + target);
+
+    });
 
 
 
