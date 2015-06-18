@@ -415,7 +415,7 @@ h2 a{
 	margin-top: 50px;
 }
 
-/* Portrait */
+/* Landscape Phone*/
 @media (max-width: 768px) and (orientation: landscape) {
 	.col-sm-4.onethird {
 		width: 33.33333333333333%;
@@ -438,14 +438,28 @@ h2 a{
 	}
 }
 
-/* Landscape */
-/*@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
+/* Portrait Phone */
+@media (max-width: 768px) and (orientation: portrait) {
+	.page1-title {
+		font-size: 16px;
+	}
+	.bottom-overlay {
+		height: 75px;
+	}
+	.col-sm-4.col-xs-4.onethird.one,
+	.col-sm-4.col-xs-4.onethird.two,
+	.col-sm-4.col-xs-4.onethird.three{
+ 	 	width: 100%;
+  	height: 30%;
+  	background-position: inherit;
+	}
+	.col-sm-4.col-xs-4.onethird.one {
+  	margin-top: 55px;	
+	}
 
-}*/
+	.col-sm-4.page1-btn-container {
+		display: none;
+	}
 
 @media (max-width: 768px){
 .slick-prev{
