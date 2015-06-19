@@ -307,7 +307,7 @@ jQuery(document).ready(function() {
 	    e.preventDefault();
 	    console.log('this');
 	    console.log(this);
-	    if(petitionOverlayForm == this){
+	    if(petitionOverlayForm == jQuery(this)){
 		  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -342,10 +342,12 @@ jQuery(document).ready(function() {
 	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
-	    }else if(storyOneForm == this) {
+	    }else if(storyOneForm == jQuery(this)) {
 	    	console.log('story one');
-	    } else {
-	    	console.log('story two or three');
+	    } else if (storyTwoForm == jQuery(this)) {
+	    	console.log('story two');
+	    }else {
+	    	console.log('story 3');
 	    }
     });
 
