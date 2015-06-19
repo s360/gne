@@ -402,7 +402,7 @@
         <p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
         <h2 class="petition-cta">Add your name to the list of americans who demand we do better.</h2>
         <div class="petition-form-container">
-            <form id="petition-form" name="petition-form" method="POST" action="//greatnationseat.org/api/convio/post.php">
+            <form id="petition-form" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
             	<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
         			<input type="hidden" name="v" id="v" value="1.0" />
         			<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
@@ -895,10 +895,10 @@
     storySubmit.addEventListener('click', function () {
         thankContainer.classList.remove('hidden');
     });
-    overlaySubmit.addEventListener('click', function () {
-        thankContainer.classList.remove('hidden');
-        petitionOverlay.classList.add('hidden');
-    });
+    // overlaySubmit.addEventListener('click', function () {
+    //     thankContainer.classList.remove('hidden');
+    //     petitionOverlay.classList.add('hidden');
+    // });
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
