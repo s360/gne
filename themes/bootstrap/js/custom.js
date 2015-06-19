@@ -282,11 +282,45 @@ jQuery(document).ready(function() {
     jQuery( document ).ready( gotohash );
     jQuery( window ).bind( 'hashchange', gotohash );
 
-    //Petition Submit
+    //Petition Overlay Submit
 
     var overlaySubmit = jQuery('#overlay-submit');
-    var petitions = jQuery('#petition-form');
-    console.log('petitions');
-    console.log(petitions);
+    var petitionOverlay = jQuery('#petition-form');
+
+    jQuery(petitionOverlay).on('submit', function(e) {
+	    e.preventDefault();
+	  	var fullName = $('.petition-input.nameOverlay').val().trim();
+	    var userLastName =  fullName.split(' ').slice(-1).join(' ');
+	    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
+	    var userEmail = $('.petition-input.emailOverlay').val();
+		  if (fullName && userEmail) {
+	      if(userFirstName) {
+	        $('#first-name-overlay').val(userFirstName);  
+	      }else{
+	        $('#first-name-overlay').val('Blank');
+	      }
+	      if(userLastName) {
+	          $('#last-name-overlay').val(userLastName);   
+	      }else{
+	          $('#last-name-overlay').val('Smith');
+	      }
+	    }
+	    // if ( validateEmail(userEmail) ) {
+	    // 	$(submit).hide();
+	    // 	$(invalidEmail).addClass('hidden');
+	    // 	$.post($(this).attr('action'),
+	    // 	$(this).serialize(),
+	    // 		function(data) {
+	    // 			$('#petition-form').hide();
+	    // 			$(thankyou).removeClass('hidden');
+	    // 		}).error(function(data) {
+	    // 			$(error).show();	
+	    // 			$('#petition-form').hide();
+	    // 		});
+    	// } else {
+    	// 	$(invalidEmail).removeClass('hidden');
+    	// }
+    });
+
 
 });
