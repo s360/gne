@@ -342,8 +342,10 @@ jQuery(document).ready(function() {
 	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
-	    }else if(this == storyOneForm) {
+	    }else if(storyOneForm == this) {
 	    	console.log('story one');
+	    } else {
+	    	console.log('story two or three');
 	    }
     });
 
