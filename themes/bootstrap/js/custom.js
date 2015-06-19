@@ -187,7 +187,7 @@ jQuery(document).ready(function() {
     });
     jQuery('.slider-nav a').each(function() {
         var target = jQuery(this).attr('href').replace(/\//g,'');
-         jQuery(this).attr('href', "#!" + target);
+         jQuery(this).attr('href', "#!/" + target);
 
     });
 
@@ -197,21 +197,21 @@ jQuery(document).ready(function() {
     jQuery(".slick-next").addClass("arrow_right");
 
 
-    var title = jQuery('.slick-slide').map( function() {
+    var dataHash = jQuery('.slick-slide').map( function() {
         if(!jQuery(this).hasClass("slick-cloned")){
-            return jQuery(this).find('.node ').attr('title');
+            return jQuery(this).find('.node ').attr('data-hash');
         }
 
     }).get();
 
     //var attrActive = jQuery('#container-slide-home .slick-slide').find('.body-content ').attr('title');
 
-    var slidetoHash = title;
+    var slidetoHash = dataHash;
     function gotohash(e) {
         var lochash = window.location.hash;
         var last = slidetoHash.length-1;
         var first = 0;
-        if (lochash){
+        if (lochash && lochash != '#!/join' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you'){
 
             var slideloc = slidetoHash.indexOf(lochash);
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
@@ -233,6 +233,21 @@ jQuery(document).ready(function() {
             }
         }
 
+
+        if(lochash == '#!/join'){
+            jQuery('#petition-overlay-container').removeClass('hidden');
+            jQuery('#close-petition').click( function(){
+                jQuery('#petition-overlay-container').AddClass('hidden');
+            });
+
+        }
+
+        if(lochash == '#!/join-thank-you' || lochash == '#!/donate-thank-you'){
+            jQuery('#thank-container').removeClass('hidden');
+            jQuery('#thank-close').click( function(){
+                jQuery('#thank-container').AddClass('hidden');
+            });
+        }
     }
 
     function prev(e){

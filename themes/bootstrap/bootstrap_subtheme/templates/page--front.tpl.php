@@ -82,15 +82,18 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 <header id="header" role="banner" class="">
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print '<img src="'.base_path() . path_to_theme() .'/images/gne_logo.png">'; ?></a>
+        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <?php print '<img  id="desktop-logo" src="'.base_path() . path_to_theme() .'/images/gne_logo.png">'; ?>
+            <!-- <?php print '<img  id="mobile-logo" src="'.base_path() . path_to_theme() .'/images/gne_logo_white.png">'; ?>-->
+        </a>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 
     </div>
        <div class="pull-right">
 
-           <a id="donate-nav" class="btn-donate" style="cursor: pointer">Donate</a>
-           <a id="join" class="btn-donate" style="margin-right: 5px;cursor: pointer;">Join</a>
+           <a href="!#/donate" id="donate-nav" class="btn-donate" style="cursor: pointer">Donate</a>
+           <a href="#!/join" id="join" class="btn-donate" style="margin-right: 5px;cursor: pointer;">Join</a>
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="display: block">
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
@@ -126,8 +129,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 <!-- PETITION OVERLAY -->
 <div id="petition-overlay-container" class="petition-overlay-container hidden">
+    <div class='full_overlay'></div>
     <div class="petition-container">
-        <span id="close-petition" class="close-petition">X</span>
+        <span id="close-petition" class="close-petition"></span>
         <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="http://apatt.upward.st/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
 
         <h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
@@ -148,7 +152,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                     <span class="petition-x">X</span><input id="petition-zip" name="zip" class="petition-input" placeholder="98270" />
                     <label class="petition-label">(Zip)</label>
                 </div>
-                <button class="petition-submit">Join The Movement</button>
+                <button id="overlay-submit" class="petition-submit">Join The Movement</button>
             </form>
         </div>
     </div>
@@ -353,6 +357,15 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <div class="donation-overlay-image" style="display:none;"></div>
 <div class="donation-overlay" style="display:none;"></div>
+<div id="thank-container" class="thankyou-overlay-container hidden">
+    <span id="thank-close">X</span>
+    <img class="thank-image" src="/sites/all/themes/bootstrap/images/join-thank.png" alt="Thank you image" />
+    <div class="thank-share-container">
+        <button class="thank-facebook-share">Facebook</button>
+        <img class="thank-arrows" src="/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
+        <button class="thank-twitter-share">Twitter</button>
+    </div>
+</div>
 
 <footer id="footer">
   <?php //print render($page['footer']); ?>
@@ -375,6 +388,21 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var petitionClose 	 = document.getElementById('close-petition');
     var petitionButton   = document.getElementById('join');
     var petitionButton2  = document.getElementById('join-act');
+    var thankContainer   = document.getElementById('thank-container');
+    var thankClose 	     = document.getElementById('thank-close');
+    var storySubmit      = document.getElementById('story-submit');
+    var overlaySubmit    = document.getElementById('overlay-submit');
+    var orientation;
+    thankClose.addEventListener('click', function() {
+        thankContainer.classList.add('hidden');
+    });
+    storySubmit.addEventListener('click', function () {
+        thankContainer.classList.remove('hidden');
+    });
+    overlaySubmit.addEventListener('click', function () {
+        thankContainer.classList.remove('hidden');
+        petitionOverlay.classList.add('hidden');
+    });
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
@@ -384,4 +412,17 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     petitionClose.addEventListener('click', function() {
         petitionOverlay.classList.add('hidden');
     });
+
+    if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
+        console.log('portrait');
+        orientation = 'portrait';
+    }else {
+        console.log('landscape');
+        orientation = 'landscape';
+    }
+    window.addEventListener('orientationchange', function() {
+        console.log('change');
+        console.log(window.orientation);
+    }, false);
+    console.log(window.location);
 </script>
