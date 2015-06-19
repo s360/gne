@@ -1563,9 +1563,19 @@ h2 a{
 
 .thank-facebook-share,
 .thank-twitter-share {
-	height: 100px;
-	width: 150px;
-	background-color: blue;
+  margin-top: 7px;
+  padding: 13px;
+  margin-left: 10px;
+  color: #ffffff;
+  background: #f20016;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: oswald, sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  border: none;
 }
 .thank-twitter-share {
 
