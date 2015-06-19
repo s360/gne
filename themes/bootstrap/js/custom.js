@@ -283,10 +283,17 @@ jQuery(document).ready(function() {
     jQuery( window ).bind( 'hashchange', gotohash );
 
     //Petition Overlay Submit
+		function validateEmail(email) {
+			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+			return validator.test(email);
+		}
 
     var overlaySubmit = jQuery('#overlay-submit');
-    var petitionOverlay = jQuery('#petition-form');
-    jQuery(petitionOverlay).on('submit', function(e) {
+    var petitionOverlayForm = jQuery('#petition-form');
+    var thankyouContainer = jQuery('#thank-container');
+
+
+    jQuery(petitionOverlayForm).on('submit', function(e) {
     	console.log('submit');
 	    //e.preventDefault();
 	  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
@@ -307,21 +314,24 @@ jQuery(document).ready(function() {
 	          jQuery('#last-name-overlay').val('Smith');
 	      }
 	    }
-	    // if ( validateEmail(userEmail) ) {
-	    // 	$(submit).hide();
-	    // 	$(invalidEmail).addClass('hidden');
-	    // 	$.post($(this).attr('action'),
-	    // 	$(this).serialize(),
-	    // 		function(data) {
-	    // 			$('#petition-form').hide();
-	    // 			$(thankyou).removeClass('hidden');
-	    // 		}).error(function(data) {
-	    // 			$(error).show();	
-	    // 			$('#petition-form').hide();
-	    // 		});
-    	// } else {
-    	// 	$(invalidEmail).removeClass('hidden');
-    	// }
+	    if ( validateEmail(userEmail) ) {
+	    	jQuery('#overlay-submit').hide();
+	    	// jQuery(invalidEmail).addClass('hidden');
+	    	jQuery.post(jQuery(this).attr('action'),
+	    	jQuery(this).serialize(),
+	    		function(data) {
+	    			jQuery('#petition-overlay-container').hide();
+	    			jQuery(thankyouContainer).show();
+	    			// jQuery(thankyou).removeClass('hidden');
+	    		}).error(function(data) {
+	    			console.log('form error');
+	    			// jQuery(error).show();	
+	    			// jQuery('#petition-form').hide();
+	    		});
+    	} else {
+    		console.log('invalid email');
+    		// jQuery(invalidEmail).removeClass('hidden');
+    	}
     });
 
 
