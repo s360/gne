@@ -305,8 +305,6 @@ jQuery(document).ready(function() {
 
     jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).on('submit', function(e) {
 	    e.preventDefault();
-	    console.log('this');
-	    console.log(this);
 	    if(jQuery(this).hasClass('overlay-form')){
 		  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
@@ -344,10 +342,46 @@ jQuery(document).ready(function() {
 	    	}
 	    }else if(jQuery(this).hasClass('petition-form-2')) {
 	    	console.log('story one');
-	    } else if (jQuery(this).hasClass('petition-form-3')) {
+		  	var fullName = jQuery('.petition-input.name2').val().trim();
+		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
+		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
+		    var userEmail = jQuery('.petition-input.email2').val();
+			  if (fullName && userEmail) {
+		      if(userFirstName) {
+		        jQuery('#first-name-2').val(userFirstName);  
+		      }else{
+		        jQuery('#first-name-2').val('Blank');
+		      }
+		      if(userLastName) {
+		          jQuery('#last-name-2').val(userLastName);   
+		      }else{
+		          jQuery('#last-name-2').val('Smith');
+		      }
+		    }
+		    if ( validateEmail(userEmail) ) {
+		    	jQuery(storyOneSubmit).hide();
+		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery.post(jQuery(this).attr('action'),
+		    	jQuery(this).serialize(),
+		    		function(data) {
+		    			jQuery(storyOneForm).hide();
+		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			// jQuery(thankyou).removeClass('hidden');
+		    		}).error(function(data) {
+		    			console.log('form error');
+		    			// jQuery(error).show();	
+		    			// jQuery('#petition-form').hide();
+		    		});
+	    	} else {
+	    		console.log('invalid email');
+	    		// jQuery(invalidEmail).removeClass('hidden');
+	    	}
+	    }else if (jQuery(this).hasClass('petition-form-3')) {
 	    	console.log('story two');
+
 	    }else {
 	    	console.log('story 3');
+
 	    }
     });
 
