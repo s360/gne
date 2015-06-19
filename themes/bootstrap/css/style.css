@@ -1549,7 +1549,9 @@ h2 a{
 	}
 }
 /* END */
-
+.thank-arrows {
+	height: 40px;
+}
 
 .thankyou-overlay-container{
  	top: 0;
@@ -1558,9 +1560,15 @@ h2 a{
  	background-color: #ffffff;
  	position: absolute;
  	border: 3px solid #f20016;
- 	padding: 0 120px;
+ 	padding: 100px 60px;
+ 	text-align: center
 }
-
+.thank-share-container {
+	padding: 10px 0;
+	margin-top: 20px;
+	border-top: 5px solid steelblue;
+	border-bottom: 5px solid steelblue;
+}
 .thank-facebook-share,
 .thank-twitter-share {
   margin-top: 7px;
@@ -1578,7 +1586,8 @@ h2 a{
   border: none;
 }
 .thank-twitter-share {
-
+}
+.thank-facebook-share {
 }
 @media (min-width: 768px){
 	.thankyou-overlay-container {
@@ -1586,6 +1595,9 @@ h2 a{
 	 	width: 70%;
 	 	margin: auto;
 	 	bottom: 50px;
+	}
+	.thank-image {
+
 	}
 }
 
@@ -1596,5 +1608,8 @@ h2 a{
 		top: 0;
 		bottom: 0;
 		z-index: 10000;
+	}
+	.thank-image {
+
 	}
 }
