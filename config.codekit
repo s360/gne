@@ -534,6 +534,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/IMG_movie-title.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15611,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_movie-title.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_movie-title.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/Jahnique_01.png": {
 		"fileType": 32768,
 		"ignore": 0,
