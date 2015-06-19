@@ -192,7 +192,7 @@
             <span class="petition-x">X</span><input id="petition-zip" name="zip" class="petition-input" placeholder="98270" />
             <label class="petition-label">(Zip)</label>
            </div>
-         <button id="story-submit" class="petition-submit">Join The Movement</button>
+         <button id="story-submit-2" class="petition-submit">Join The Movement</button>
         </form>
        </div>
       </div> </div>  </div>
@@ -243,7 +243,7 @@
 				    <span class="petition-x">X</span><input id="petition-zip" name="zip" class="petition-input" placeholder="98270" />
 				    <label class="petition-label">(Zip)</label>
 			     </div>
-			   <button id="story-submit" class="petition-submit">Join The Movement</button>
+			   <button id="story-submit-3" class="petition-submit">Join The Movement</button>
 		    </form>
 	     </div>
       </div> 
@@ -293,7 +293,7 @@
             <span class="petition-x">X</span><input id="petition-zip" name="zip" class="petition-input" placeholder="98270" />
             <label class="petition-label">(Zip)</label>
            </div>
-         <button id="story-submit" class="petition-submit">Join The Movement</button>
+         <button id="story-submit-4" class="petition-submit">Join The Movement</button>
         </form>
        </div>
       </div></div>  </div>
@@ -870,7 +870,6 @@
     var petitionButton2  = document.getElementById('join-act');
     var thankContainer   = document.getElementById('thank-container');
     var thankClose 	     = document.getElementById('thank-close');
-    var storySubmit      = document.getElementById('story-submit');
     var overlaySubmit    = document.getElementById('overlay-submit');
     var donateButton   = document.getElementById('donate-nav');
     var donateOverlay  = document.getElementById('donation-overlay-container');
@@ -892,13 +891,6 @@
     	screeningOverlay.classList.add('hidden');
     	thankContainer.classList.remove('hidden');
     });
-    storySubmit.addEventListener('click', function () {
-        thankContainer.classList.remove('hidden');
-    });
-    // overlaySubmit.addEventListener('click', function () {
-    //     thankContainer.classList.remove('hidden');
-    //     petitionOverlay.classList.add('hidden');
-    // });
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
