@@ -289,20 +289,20 @@ jQuery(document).ready(function() {
 
     jQuery(petitionOverlay).on('submit', function(e) {
 	    e.preventDefault();
-	  	var fullName = $('.petition-input.nameOverlay').val().trim();
+	  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 	    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 	    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
-	    var userEmail = $('.petition-input.emailOverlay').val();
+	    var userEmail = jQuery('.petition-input.emailOverlay').val();
 		  if (fullName && userEmail) {
 	      if(userFirstName) {
-	        $('#first-name-overlay').val(userFirstName);  
+	        jQuery('#first-name-overlay').val(userFirstName);  
 	      }else{
-	        $('#first-name-overlay').val('Blank');
+	        jQuery('#first-name-overlay').val('Blank');
 	      }
 	      if(userLastName) {
-	          $('#last-name-overlay').val(userLastName);   
+	          jQuery('#last-name-overlay').val(userLastName);   
 	      }else{
-	          $('#last-name-overlay').val('Smith');
+	          jQuery('#last-name-overlay').val('Smith');
 	      }
 	    }
 	    // if ( validateEmail(userEmail) ) {
