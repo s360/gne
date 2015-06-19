@@ -356,16 +356,19 @@ h2 a{
     color: transparent;
     width: 100%;
     padding: 0px 20px;
+    pointer-events: none;
 }
 .btn-nav .arrow_left{
     display: block;
     color: transparent;
     float: left;
+    pointer-events: all;
 }
 .btn-nav .arrow_right{
     display: block;
     color: transparent;
     float: right;
+    pointer-events: all;
 }
 
 .slick-prev:before, .slick-next:before{
