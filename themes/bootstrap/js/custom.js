@@ -283,44 +283,172 @@ jQuery(document).ready(function() {
     jQuery( window ).bind( 'hashchange', gotohash );
 
     //Petition Overlay Submit
+		function validateEmail(email) {
+			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+			return validator.test(email);
+		}
 
     var overlaySubmit = jQuery('#overlay-submit');
-    var petitionOverlay = jQuery('#petition-form');
-    console.log(petitionOverlay);
-    jQuery(petitionOverlay).on('submit', function(e) {
-    	console.log('submit');
+    var petitionOverlayForm = jQuery('#petition-form');
+
+    var storyOneForm = jQuery('#petition-form-2');
+    var storyOneSubmit = jQuery('#story-submit-2');
+
+    var storyTwoForm = jQuery('#petition-form-3');
+    var storyTwoSubmit = jQuery('#story-submit-3');
+
+    var storyThreeForm = jQuery('#petition-form-4');
+    var storyThreeSubmit = jQuery('#story-submit-4');
+
+    var thankyouContainer = jQuery('#thank-container');
+
+
+    jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).on('submit', function(e) {
 	    e.preventDefault();
-	  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
-	    var userLastName =  fullName.split(' ').slice(-1).join(' ');
-	    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
-	    var userEmail = jQuery('.petition-input.emailOverlay').val();
-		  if (fullName && userEmail) {
-	      if(userFirstName) {
-	        jQuery('#first-name-overlay').val(userFirstName);  
-	      }else{
-	        jQuery('#first-name-overlay').val('Blank');
-	      }
-	      if(userLastName) {
-	          jQuery('#last-name-overlay').val(userLastName);   
-	      }else{
-	          jQuery('#last-name-overlay').val('Smith');
-	      }
+	    if(jQuery(this).hasClass('overlay-form')){
+		  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
+		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
+		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
+		    var userEmail = jQuery('.petition-input.emailOverlay').val();
+			  if (fullName && userEmail) {
+		      if(userFirstName) {
+		        jQuery('#first-name-overlay').val(userFirstName);  
+		      }else{
+		        jQuery('#first-name-overlay').val('Blank');
+		      }
+		      if(userLastName) {
+		          jQuery('#last-name-overlay').val(userLastName);   
+		      }else{
+		          jQuery('#last-name-overlay').val('Smith');
+		      }
+		    }
+		    if ( validateEmail(userEmail) ) {
+		    	jQuery(overlaySubmit).hide();
+		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery.post(jQuery(this).attr('action'),
+		    	jQuery(this).serialize(),
+		    		function(data) {
+		    			jQuery('#petition-overlay-container').hide();
+		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			// jQuery(thankyou).removeClass('hidden');
+		    		}).error(function(data) {
+		    			console.log('form error');
+		    			// jQuery(error).show();	
+		    			// jQuery('#petition-form').hide();
+		    		});
+	    	} else {
+	    		console.log('invalid email');
+	    		// jQuery(invalidEmail).removeClass('hidden');
+	    	}
+	    }else if(jQuery(this).hasClass('petition-form-2')) {
+	    	console.log('story one');
+		  	var fullName = jQuery('.petition-input.name2').val().trim();
+		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
+		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
+		    var userEmail = jQuery('.petition-input.email2').val();
+			  if (fullName && userEmail) {
+		      if(userFirstName) {
+		        jQuery('#first-name-2').val(userFirstName);  
+		      }else{
+		        jQuery('#first-name-2').val('Blank');
+		      }
+		      if(userLastName) {
+		          jQuery('#last-name-2').val(userLastName);   
+		      }else{
+		          jQuery('#last-name-2').val('Smith');
+		      }
+		    }
+		    if ( validateEmail(userEmail) ) {
+		    	jQuery(storyOneSubmit).hide();
+		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery.post(jQuery(this).attr('action'),
+		    	jQuery(this).serialize(),
+		    		function(data) {
+		    			jQuery(storyOneForm).hide();
+		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			// jQuery(thankyou).removeClass('hidden');
+		    		}).error(function(data) {
+		    			console.log('form error');
+		    			// jQuery(error).show();	
+		    			// jQuery('#petition-form').hide();
+		    		});
+	    	} else {
+	    		console.log('invalid email');
+	    		// jQuery(invalidEmail).removeClass('hidden');
+	    	}
+	    }else if (jQuery(this).hasClass('petition-form-3')) {
+	    	console.log('story two');
+		  	var fullName = jQuery('.petition-input.name3').val().trim();
+		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
+		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
+		    var userEmail = jQuery('.petition-input.email3').val();
+			  if (fullName && userEmail) {
+		      if(userFirstName) {
+		        jQuery('#first-name-3').val(userFirstName);  
+		      }else{
+		        jQuery('#first-name-3').val('Blank');
+		      }
+		      if(userLastName) {
+		          jQuery('#last-name-3').val(userLastName);   
+		      }else{
+		          jQuery('#last-name-3').val('Smith');
+		      }
+		    }
+		    if ( validateEmail(userEmail) ) {
+		    	jQuery(storyTwoSubmit).hide();
+		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery.post(jQuery(this).attr('action'),
+		    	jQuery(this).serialize(),
+		    		function(data) {
+		    			jQuery(storyTwoForm).hide();
+		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			// jQuery(thankyou).removeClass('hidden');
+		    		}).error(function(data) {
+		    			console.log('form error');
+		    			// jQuery(error).show();	
+		    			// jQuery('#petition-form').hide();
+		    		});
+	    	} else {
+	    		console.log('invalid email');
+	    		// jQuery(invalidEmail).removeClass('hidden');
+	    	}
+	    }else {
+	    	console.log('story 3');
+		  	var fullName = jQuery('.petition-input.name4').val().trim();
+		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
+		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
+		    var userEmail = jQuery('.petition-input.email4').val();
+			  if (fullName && userEmail) {
+		      if(userFirstName) {
+		        jQuery('#first-name-4').val(userFirstName);  
+		      }else{
+		        jQuery('#first-name-4').val('Blank');
+		      }
+		      if(userLastName) {
+		          jQuery('#last-name-4').val(userLastName);   
+		      }else{
+		          jQuery('#last-name-4').val('Smith');
+		      }
+		    }
+		    if ( validateEmail(userEmail) ) {
+		    	jQuery(storyThreeSubmit).hide();
+		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery.post(jQuery(this).attr('action'),
+		    	jQuery(this).serialize(),
+		    		function(data) {
+		    			jQuery(storyThreeForm).hide();
+		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			// jQuery(thankyou).removeClass('hidden');
+		    		}).error(function(data) {
+		    			console.log('form error');
+		    			// jQuery(error).show();	
+		    			// jQuery('#petition-form').hide();
+		    		});
+	    	} else {
+	    		console.log('invalid email');
+	    		// jQuery(invalidEmail).removeClass('hidden');
+	    	}
 	    }
-	    // if ( validateEmail(userEmail) ) {
-	    // 	$(submit).hide();
-	    // 	$(invalidEmail).addClass('hidden');
-	    // 	$.post($(this).attr('action'),
-	    // 	$(this).serialize(),
-	    // 		function(data) {
-	    // 			$('#petition-form').hide();
-	    // 			$(thankyou).removeClass('hidden');
-	    // 		}).error(function(data) {
-	    // 			$(error).show();	
-	    // 			$('#petition-form').hide();
-	    // 		});
-    	// } else {
-    	// 	$(invalidEmail).removeClass('hidden');
-    	// }
     });
 
 
