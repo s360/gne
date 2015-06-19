@@ -494,11 +494,11 @@
                                 </div>
                                 <div class="wrap-amount">
                                     <input type="radio" id="100" class="radio" name="radio_amount" value="100" onclick="document.getElementById('amount').value = 100;document.getElementById('item_unit_price').value = 100;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
-                                    <label class="donation_amount" for="100" style="  padding: 30px 10px">$100</label>
+                                    <label class="donation_amount" for="100">$100</label>
                                 </div>
                                 <div class="wrap-amount">
                                     <input type="radio" id="radio_other" class="radio" name="radio_amount" value="radio" onclick="document.getElementById('txt_amount').disabled = false; document.getElementById('amount_other').style.display = 'block';" >
-                                    <label class="donation_amount" for="radio_other" style="  padding: 30px 10px;">Other</label>
+                                    <label class="donation_amount other" for="radio_other" >Other</label>
                                 </div>
                             <!-- </div> -->
                             <!-- <div class="form-group row"> -->
@@ -521,7 +521,7 @@
                                         <label class="sr-only control-label">First Name</label>
                                         <input maxlength="200" type="text"  required="required" class="form-control" placeholder="First Name*" />
                                     </div>
-                                    <div class="col-md-6 pull-right">
+                                    <div class="col-md-6">
                                         <label class="sr-only control-label">Last Name</label>
                                         <input maxlength="200" type="text" required="required"  class="form-control" placeholder="Last Name*"  />
                                     </div>
@@ -554,7 +554,7 @@
                                     <label class="sr-only control-label">State/Province*</label>
                                     <input maxlength="200" type="text"  required="required" class="form-control" placeholder="State/Province*" />
                                 </div>
-                                <div class="col-md-6 pull-right">
+                                <div class="col-md-6 ">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
                                     <input maxlength="200" type="text" required="required" class="form-control" placeholder="Zip/Postal Code"  />
                                 </div>
@@ -574,8 +574,8 @@
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <img id="" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/btn-pp.png" alt="logo" style="  width: 100%;"/>
-                                <div class="row or-line"><div class="col-md-5"><hr></div> <div class="col-md-2"><h4>OR</h4></div><div class="col-md-5"><hr></div></div>
+                             <!--    <img id="" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/btn-pp.png" alt="logo" style="  width: 100%;"/>
+                                <div class="row or-line"><div class="col-md-5"><hr></div> <div class="col-md-2"><h4>OR</h4></div><div class="col-md-5"><hr></div></div> -->
                                 <h3 style="text-align: center">Enter Your Payment</h3>
 
 
@@ -662,7 +662,7 @@
                 <fieldset class="donate-billing-info" style="display:none;">
                     <legend class="billing-info-header">Billing Info</legend>
                     <input type="text" placeholder="First Name*" name="billing.name.first" class="input-half">
-                    <input type="text" placeholder="Last Name*" name="billing.name.last" class="input-half">
+                    <input type="text" placeholder="Last Name*" name="billing.name.last" class="input-half ">
                     <input type="text" placeholder="Billing Street 1*" name="billing.address.street1" class="input-full">
                     <input type="text" placeholder="Street 2" name="billing.address.street2" class="input-full">
                     <input type="text" placeholder="City*" name="billing.address.city" class="input-full">
@@ -838,7 +838,7 @@
 <div class="donation-overlay-image" style="display:none;"></div>
 <div class="donation-overlay" style="display:none;"></div>
 <div id="thank-container" class="thankyou-overlay-container hidden">
-    <span id="thank-close">X</span>
+    <span id="thank-close"></span>
     <img class="thank-image" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/join-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
         <button class="thank-facebook-share">Facebook</button>

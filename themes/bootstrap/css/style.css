@@ -206,6 +206,15 @@ h2 a{
 .slider-nav .slick-slider{
     margin-bottom: 0px !important;
 }
+@media (max-width: 768px){
+.slider-nav .menu li a{
+    border-top: 0px solid #cccccc;
+}
+.top-navigation{
+  overflow-y: auto;
+  height: 100vh;
+}
+}
 /*.slider-nav{
     transition: 1s;
     -webkit-transition: 1s;
@@ -1466,7 +1475,7 @@ h2 a{
  	position: absolute;
  	border: 3px solid #f20016;
 }
-.close-petition {
+.close-petition, #thank-close {
 	cursor: pointer;
 	float: right;
   background: url(../images/x-icon.png);
@@ -1768,6 +1777,8 @@ h2 a{
     font-size: 24px;
     cursor: pointer;
 }
+
+
 .wrap-amount input[type="radio"]:checked + label.donation_amount{
     background: steelblue;
     color: #ffffff;
@@ -1812,6 +1823,9 @@ h2 a{
         margin-right: 64px;
         margin-bottom: 0px;
     }
+    .wrap-amount .donation_amount.other{
+  padding: 30px 0;
+}
 }
 
 @media (max-width: 1090px){
@@ -1821,9 +1835,26 @@ h2 a{
   	top: 0!important;
   	bottom: 0!important;
   	z-index: 10000!important;
+    overflow-y:auto;
 	}
-}
 
+}
+@media (max-width: 768px){
+  .wrap-amount .donation_amount{
+    width: 50px;
+    height: 50px;
+    padding: 15px 0px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    cursor: pointer;
+}
+  .wrap-amount{
+    width: 50px;
+    height: 50px;
+  }
+}
 
 /*Media*/
 
@@ -1988,4 +2019,9 @@ h2 a{
 	.thank-image {
 
 	}
+  .thankyou-overlay-container{
+
+  padding: 0px 60px;
+  text-align: center
+}
 }
