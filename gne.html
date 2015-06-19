@@ -369,7 +369,7 @@
         <img src="themes/bootstrap/images/IMG_movie-title.jpg">
         <div>
           <p><b>If another country was doing this to our children, we’d be at war.”</b> <br>Jeff Bridges, Founder of the End Hunger Network and National Spokesman for No Kid Hungry</p>
-          <a id="join-act" class="btn-content" href="#">Add Your Voice</a>
+          <a id="host-screening" class="btn-content" href="#">Host a Screening</a>
         </div>
       </div>
     </div>
@@ -869,10 +869,14 @@
     var screeningClose  = document.getElementById('screening-close');
     var screeningOverlay = document.getElementById('screening-container');
     var screeningSubmit = document.getElementById('screening-submit');
+    var screeningButton  = document.getElementById('host-screening');
     var orientation;
 
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
+    });
+    screeningButton.addEventListener('click', function() {
+    	screeningOverlay.classList.remove('hidden');
     });
     screeningSubmit.addEventListener('click', function() {
     	screeningOverlay.classList.add('hidden');
