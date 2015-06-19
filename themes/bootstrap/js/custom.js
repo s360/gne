@@ -286,8 +286,9 @@ jQuery(document).ready(function() {
 
     var overlaySubmit = jQuery('#overlay-submit');
     var petitionOverlay = jQuery('#petition-form');
-
+    console.log(petitionOverlay);
     jQuery(petitionOverlay).on('submit', function(e) {
+    	console.log('submit');
 	    e.preventDefault();
 	  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 	    var userLastName =  fullName.split(' ').slice(-1).join(' ');
