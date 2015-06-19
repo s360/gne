@@ -5,7 +5,6 @@
 'use strict';
 
 jQuery(document).ready(function() {
-
     /*jQuery.fn.reverse = [].reverse;
 
     jQuery.fn.sliderPage = function() {
@@ -282,5 +281,12 @@ jQuery(document).ready(function() {
 
     jQuery( document ).ready( gotohash );
     jQuery( window ).bind( 'hashchange', gotohash );
+
+    //Petition Submit
+
+    var overlaySubmit = jQuery('#overlay-submit');
+    var petitions = jQuery('#petition-form');
+    console.log('petitions');
+    console.log(petitions);
 
 });
