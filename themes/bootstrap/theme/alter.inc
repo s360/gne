@@ -202,10 +202,15 @@ function bootstrap_js_alter(&$js) {
   $js[$custom]['group'] = JS_THEME;
   $js[$custom]['scope'] = 'footer';
 
-  $custom = $theme_path . '/js/slick/slick.min.js';
-  $js[$custom] = drupal_js_defaults($custom);
-  $js[$custom]['group'] = JS_THEME;
-  $js[$custom]['scope'] = 'footer';
+  $slick = $theme_path . '/js/slick/slick.min.js';
+  $js[$slick] = drupal_js_defaults($slick);
+  $js[$slick]['group'] = JS_THEME;
+  $js[$slick]['scope'] = 'footer';
+
+    $donate = $theme_path . '/js/donate.js';
+    $js[$donate] = drupal_js_defaults($donate);
+    $js[$donate]['group'] = JS_THEME;
+    $js[$donate]['scope'] = 'footer';
 
   if (!empty($excludes)) {
     $js = array_diff_key($js, drupal_map_assoc($excludes));

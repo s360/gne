@@ -211,7 +211,7 @@ jQuery(document).ready(function() {
         var lochash = window.location.hash;
         var last = slidetoHash.length-1;
         var first = 0;
-        if (lochash && lochash != '#!/join' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you'){
+        if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you'){
 
             var slideloc = slidetoHash.indexOf(lochash);
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
@@ -237,7 +237,15 @@ jQuery(document).ready(function() {
         if(lochash == '#!/join'){
             jQuery('#petition-overlay-container').removeClass('hidden');
             jQuery('#close-petition').click( function(){
-                jQuery('#petition-overlay-container').AddClass('hidden');
+              //  jQuery('#petition-overlay-container').AddClass('hidden');
+            });
+
+        }
+
+        if(lochash == '#!/donate'){
+            jQuery('#donation-overlay-container').removeClass('hidden');
+            jQuery('#donate-close').click( function(){
+                //jQuery('#donation-overlay-container').AddClass('hidden');
             });
 
         }

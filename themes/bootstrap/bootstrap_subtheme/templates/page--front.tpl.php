@@ -92,7 +92,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </div>
        <div class="pull-right">
 
-           <a href="!#/donate" id="donate-nav" class="btn-donate" style="cursor: pointer">Donate</a>
+           <a href="#!/donate" id="donate-nav" class="btn-donate" style="cursor: pointer">Donate</a>
            <a href="#!/join" id="join" class="btn-donate" style="margin-right: 5px;cursor: pointer;">Join</a>
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="display: block">
                <span class="icon-bar"></span>
@@ -132,7 +132,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     <div class='full_overlay'></div>
     <div class="petition-container">
         <span id="close-petition" class="close-petition"></span>
-        <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="http://apatt.upward.st/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
+        <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
 
         <h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
         <p class="petition-subheader hidden-xs">Hunger exists in every community and affects 1 in 6 Americans.</p>
@@ -159,17 +159,198 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <!-- END PETITION OVERLAY -->
 <!-- DONATION OVERLAY -->
-<div class="donation-container" style="display: none;">
-    <div class="donation-copy-container">
-        <h1 class="donate-title">HUNGER HURTS KIDS EVERY DAY.</h1>
-        <h1 class="donate-title">YOUR DONATION HELPS FEED THEM.</h1>
-        <p class="donate-copy1">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
-        <p class="donate-copy2">Every $10 you give can provide up to 100 meals for a child who is still facing hunger.</p>
+<div id="donation-overlay-container" class="petition-overlay-container hidden">
+<div class='full_overlay'></div>
+<div class="donation-container petition-container">
+    <span id="donate-close" class="donate-close close-petition"></span>
+    <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
+    <div class="col-md-6">
+        <div class="donation-copy-container">
+            <h1 class="donate-title petition-header hidden-xs">HUNGER HURTS KIDS EVERY DAY.</h1>
+            <h1 class="donate-title petition-header hidden-xs">YOUR DONATION HELPS FEED THEM.</h1>
+            <p class="donate-copy1 petition-subheader hidden-xs">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
+            <p class="donate-copy2 petition-subheader hidden-xs">Every $10 you give can provide up to 100 meals for a child who is still facing hunger.</p>
 
+        </div>
     </div>
+    <div class="col-md-6">
     <div class="donation-dynamic-container">
         <div class="static-donation-container">
-            <span class="donate-close">X</span>
+
+            <div class="stepwizard">
+                <div class="stepwizard-row setup-panel">
+                    <div class="stepwizard-step">
+                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    </div>
+                </div>
+            </div>
+
+            <form role="form">
+                <input type="hidden" name="method" id="amount" value="" />
+                <input type="hidden" id="item_unit_price" name="item_unit_price[1]" value="">
+                <div class="row setup-content" id="step-1">
+                    <div class="col-xs-12">
+                        <div class="col-md-12">
+                            <h3 style="text-align: center;"> Select Amount</h3>
+                            <div class="form-group row">
+                                <div class="wrap-amount">
+                                    <input type="radio" id="5" class="radio" name="radio_amount" value="5" onclick="document.getElementById('amount').value = 5;document.getElementById('item_unit_price').value = 5;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <label class="donation_amount" for="5">$5</label>
+                                </div>
+                                <div class="wrap-amount">
+                                    <input type="radio" id="10" class="radio" name="radio_amount" value="10" onclick="document.getElementById('amount').value = 10;document.getElementById('item_unit_price').value = 10;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <label class="donation_amount" for="10">$10</label>
+                                </div>
+                                <div class="wrap-amount">
+                                    <input type="radio" id="20" class="radio" name="radio_amount" value="20" onclick="document.getElementById('amount').value =20;document.getElementById('item_unit_price').value = 20;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <label class="donation_amount" for="20">$20</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="wrap-amount">
+                                    <input type="radio" id="50" class="radio" name="radio_amount" value="50" onclick="document.getElementById('amount').value = 50;document.getElementById('item_unit_price').value = 50;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <label class="donation_amount" for="50">$50</label>
+                                </div>
+                                <div class="wrap-amount">
+                                    <input type="radio" id="100" class="radio" name="radio_amount" value="100" onclick="document.getElementById('amount').value = 100;document.getElementById('item_unit_price').value = 100;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <label class="donation_amount" for="100" style="  padding: 30px 10px">$100</label>
+                                </div>
+                                <div class="wrap-amount">
+                                    <input type="radio" id="radio_other" class="radio" name="radio_amount" value="radio" onclick="document.getElementById('txt_amount').disabled = false; document.getElementById('amount_other').style.display = 'block';" >
+                                    <label class="donation_amount" for="radio_other" style="  padding: 30px 10px;">Other</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div id="amount_other" style="display: none;">
+                                    <input type="text" id="txt_amount" class="text" size="5" onchange="document.getElementById('amount').value = this.value;document.getElementById('item_unit_price').value = this.value; return false;" value="" disabled="">
+                                </div>
+                            </div>
+                            <a href="#" class="nextBtn">Next Step</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row setup-content " id="step-2">
+                    <div class="col-xs-12">
+                        <div class="col-md-12">
+                            <h3 style="text-align: center">Enter your Information</h3>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="sr-only control-label">First Name</label>
+                                        <input maxlength="200" type="text"  class="form-control" placeholder="First Name*" />
+                                    </div>
+                                    <div class="col-md-6 pull-right">
+                                        <label class="sr-only control-label">Last Name</label>
+                                        <input maxlength="200" type="text"  class="form-control" placeholder="Last Name*"  />
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label class="sr-only control-label">Billing Street 1*</label>
+                                    <input maxlength="200" type="text"  class="form-control" placeholder="Billing Street 1*" />
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                <label class="sr-only control-label">Street 2*</label>
+                                <input maxlength="200" type="text"  class="form-control" placeholder="Street 2*" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                <label class="sr-only control-label">City*</label>
+                                <input maxlength="200" type="text"  class="form-control" placeholder="City*" />
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label class="sr-only control-label">State/Province*</label>
+                                    <input maxlength="200" type="text"  class="form-control" placeholder="State/Province*" />
+                                </div>
+                                <div class="col-md-6 pull-right">
+                                    <label class="sr-only control-label">Zip/Postal Code</label>
+                                    <input maxlength="200" type="text" class="form-control" placeholder="Zip/Postal Code"  />
+                                </div>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label class="sr-only control-label">Email Address*</label>
+                                    <input maxlength="200" type="email" required="required" class="form-control" placeholder="Email Address*" />
+                                </div>
+                            </div>
+                            <a href="#" class="nextBtn">Next Step</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row setup-content" id="step-3">
+                    <div class="col-xs-12">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <img id="" src="/sites/all/themes/bootstrap/images/btn-pp.png" alt="logo" style="  width: 100%;"/>
+                                <div class="row or-line"><div class="col-md-5"><hr></div> <div class="col-md-2"><h4>OR</h4></div><div class="col-md-5"><hr></div></div>
+                                <h3 style="text-align: center">Enter Your Payment</h3>
+
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label class="sr-only control-label">Credit Card Number*</label>
+                                    <input maxlength="200" type="text"  class="form-control" placeholder="Credit Card Number*" />
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <select class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="form-control">
+                                            <option>2011</option>
+                                            <option>2012</option>
+                                            <option>2013</option>
+                                            <option>2014</option>
+                                            <option>2015</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5 pull-right">
+                                        <label class="sr-only control-label">Verification Code*</label>
+                                        <input maxlength="200" type="text" class="form-control" placeholder="Verification Code*"  />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button id="donate-submit" class="petition-submit" style="width: 100%;">Donate to help end hunger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
             <nav class="donate-page-selector">
                 <div class="amount active"></div>
@@ -178,7 +359,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             </nav>
 
         </div>
-        <div class="donate-amount-container">
+        <div class="donate-amount-container" style="display: none">
             <form class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
                 <input type="hidden" name="method" id="method" value="donate" />
                 <input type="hidden" name="form_id" id="form_id" value="" />
@@ -349,11 +530,14 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 </fieldset>
         </div>
         </form>
-        <nav class="next-step1">NEXT STEP</nav>
+        <!--<nav class="next-step1">NEXT STEP</nav>
         <nav class="prev-step1" style="display:none;">PREVIOUS STEP</nav>
         <nav class="next-step2" style="display:none;">NEXT STEP</nav>
-        <nav class="prev-step2" style="display:none;">PREVIOUS STEP</nav>
+        <nav class="prev-step2" style="display:none;">PREVIOUS STEP</nav>-->
+        </div>
+
     </div>
+</div>
 </div>
 <div class="donation-overlay-image" style="display:none;"></div>
 <div class="donation-overlay" style="display:none;"></div>
@@ -392,6 +576,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var thankClose 	     = document.getElementById('thank-close');
     var storySubmit      = document.getElementById('story-submit');
     var overlaySubmit    = document.getElementById('overlay-submit');
+    var donateButton   = document.getElementById('donate-nav');
+    var donateOverlay  = document.getElementById('donation-overlay-container');
+    var donateClose 	 = document.getElementById('donate-close');
+    var donateSubmit    = document.getElementById('donate-submit');
     var orientation;
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
@@ -412,7 +600,16 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     petitionClose.addEventListener('click', function() {
         petitionOverlay.classList.add('hidden');
     });
-
+    donateButton.addEventListener('click', function() {
+        donateOverlay.classList.remove('hidden');
+    });
+    donateClose.addEventListener('click', function() {
+        donateOverlay.classList.add('hidden');
+    });
+    donateSubmit.addEventListener('click', function () {
+        thankContainer.classList.remove('hidden');
+        donateOverlay.classList.add('hidden');
+    });
     if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
         console.log('portrait');
         orientation = 'portrait';

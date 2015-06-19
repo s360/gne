@@ -1461,6 +1461,131 @@ h2 a{
 		width: 12%;
 	}
 }
+
+/**
+ ===========================================
+ ========== 9. Donation ====================
+ ===========================================
+ **/
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 66%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+    left: 100px;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.stepwizard-step p {
+    margin-top: 10px;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.wrap-amount{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 31px;
+}
+.wrap-amount input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+}
+.wrap-amount .donation_amount{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin-right: 31px;
+    padding: 30px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    cursor: pointer;
+}
+.wrap-amount input[type="radio"]:checked + label.donation_amount{
+    background: steelblue;
+    color: #ffffff;
+}
+.form-group {
+
+}
+#txt_amount{
+    width: 125px;
+    height: 32px;
+    margin-left: 118px;
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+}
+.nextBtn{
+    float: right;
+    font-family: 'Oswald', sans-serif;
+    color: #e71e25;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.setup-content{
+    margin-top: 40px;
+}
+
+.or-line{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px){
+    .form-group {
+        margin-bottom: 15px;
+        margin-left: 102px;
+        margin-top: 17px;
+    }
+    #txt_amount{
+        margin-left: 118px;
+    }
+    #step-2 .form-group, #step-3 .form-group{
+        margin-left: 72px;
+        margin-right: 64px;
+        margin-bottom: 0px;
+    }
+
+}
+
+
+
+/*Media*/
+
 /*
 =================== 1.Media (min-width: 768px) =
 */
