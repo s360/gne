@@ -30,6 +30,7 @@
  ================= 1. Body =================
  ===========================================
  */
+
 *:focus {
 	outline: none;
 }
@@ -54,7 +55,6 @@ h2 a{
   font-family: 'eames';
   src: url('../../../fonts/EamesCenturyModern-Black.otf');
 }
-
 
 /**
  ===========================================
@@ -1549,10 +1549,16 @@ h2 a{
 	}
 }
 /* END */
+#thank-close {
+	float: right;
+	cursor: pointer;
+}
 .thank-arrows {
 	height: 40px;
 }
-
+.thank-image {
+	clear:both;
+}
 .thankyou-overlay-container{
  	top: 0;
  	left: 0;
@@ -1600,7 +1606,11 @@ h2 a{
 
 	}
 }
-
+@media (max-width: 1090px){
+	.thank-image {
+		width: 100%;
+	}
+}
 @media (max-width: 768px){
 	.thankyou-overlay-container {
 		width: 100%;
