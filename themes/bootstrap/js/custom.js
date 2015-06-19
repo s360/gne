@@ -301,8 +301,6 @@ jQuery(document).ready(function() {
 	    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
 	    var userEmail = jQuery('.petition-input.emailOverlay').val();
 		  if (fullName && userEmail) {
-		  	console.log('names:')
-		  	console.log(fullName, userEmail);
 	      if(userFirstName) {
 	        jQuery('#first-name-overlay').val(userFirstName);  
 	      }else{
@@ -321,7 +319,7 @@ jQuery(document).ready(function() {
 	    	jQuery(this).serialize(),
 	    		function(data) {
 	    			jQuery('#petition-overlay-container').hide();
-	    			jQuery(thankyouContainer).show();
+	    			jQuery(thankyouContainer).removeClass('hidden');
 	    			// jQuery(thankyou).removeClass('hidden');
 	    		}).error(function(data) {
 	    			console.log('form error');
