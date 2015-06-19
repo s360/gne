@@ -307,6 +307,7 @@ jQuery(document).ready(function() {
 	    e.preventDefault();
 	    console.log('this');
 	    console.log(this);
+	    if(petitionOverlayForm == this){
 		  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -341,6 +342,9 @@ jQuery(document).ready(function() {
 	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
+	    }else if(this == storyOneForm) {
+	    	console.log('story one');
+	    }
     });
 
 
