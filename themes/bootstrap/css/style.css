@@ -603,7 +603,23 @@ h2 a{
     height: 100%;
  }
 
-  #adriana-3 .col-md-7{
+  #hanno-3 .page3-img{
+    background: url('../images/Sgt-Hanno-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: right;
+ }
+
+  #jahnique-3 .page3-img{
+    background: url('../images/Jahnique_03.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: -140px;
+ }
+
+  #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
     background: #FBFFFF;
     height: 100%;
     margin-top: -11px;
@@ -618,7 +634,7 @@ h2 a{
 
  }
 
-  #adriana-3 .cta h4{
+  #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     font-family: 'oswald', open-sans;
     color: steelblue;
     text-transform: uppercase;
@@ -629,39 +645,39 @@ h2 a{
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
-  #adriana-3 .col-md-7{
+  #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
     width: 50%;
     float: left;
     margin-top: 0;
     padding-top: 60px;
   }
-  #adriana-3 .col-md-5{
+  #adriana-3 .col-md-5, #hanno-3 .col-md-5, #jahnique-3 .col-md-5{
     width: 50%;
     float: left;
   }
-   #adriana-3 .page3-img{
+   #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
     background: url('../images/adriana-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
  }
 
-  #adriana-3 .col-md-7 .petition-form-container{
+  #adriana-3 .col-md-7 .petition-form-container, #hanno-3 .col-md-7 .petition-form-container, #jahnique-3 .col-md-7 .petition-form-container{
     display: none;
   }
 }
 
 @media(max-width: 992px) and (orientation: portrait) {
-   #adriana-3 .page3-img{
+   #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
     height: 60%;
  }
-  #adriana-3 .cta{
+  #adriana-3 .cta, #hanno-3 .cta, #jahnique-3 .cta{
     height: 40%;
     background-position: top;
 
  }
 
-   #adriana-3 .cta h4{
+   #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     cursor: pointer;
    }
 }
