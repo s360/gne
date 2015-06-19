@@ -534,13 +534,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/themes\/bootstrap\/images\/Jahnique_01.png": {
+	"\/themes\/bootstrap\/images\/IMG_movie-title.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15611,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_movie-title.jpg",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_movie-title.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/jahnique_01.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 543773,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_01.png",
-		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_01.png",
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_01.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_01.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -556,13 +567,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/themes\/bootstrap\/images\/jahnique_03.png": {
+	"\/themes\/bootstrap\/images\/Jahnique_03.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 672314,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_03.png",
-		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/jahnique_03.png",
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_03.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_03.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1254,7 +1265,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Kyle Warbis",
+"lastSavedByUser": "Awesome Designer",
 "manualImportLinks": {
 	},
 "projectAttributes": {

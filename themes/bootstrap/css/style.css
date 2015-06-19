@@ -16,6 +16,7 @@
  4. Footer
  5. Utility
  6. About
+ 6.a About Campaign
  7. Act
  8. Donation
  9. Petition
@@ -392,6 +393,7 @@ h2 a{
 .page1-title {
 	text-transform: uppercase;
 	color: #00aeef;
+  font-family: 'oswald', open-sans;
 }
 
 .front-page-btn {
@@ -768,7 +770,7 @@ h2 a{
 .about-subheader {
 	color: #f20016;
 	text-transform: uppercase;
-	font-family: eames, georgia bold, serif bold;
+	font-family: 'Ultra', georgia bold, serif bold;
 }
 @media (min-width: 768px){
 	.about-container {
@@ -829,6 +831,103 @@ h2 a{
 		font-size: 12px;
 	}
 }
+
+/**
+ ===========================================
+ ========== 6.a About Campaign =============
+ ===========================================
+ **/
+
+ .col-md-4.about-img{
+  height: 100%;
+  background: url('../images/About_Boy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -800px;
+ }
+
+.col-md-8.about-main{
+  background: white;
+  height: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.col-md-8.about-main h1{
+  font-family: 'oswald', open-sans;
+  color: steelblue;
+  margin-top: 40px;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.col-md-8.about-main b{
+  color: #f20016;
+  text-transform: uppercase;
+  font-family: 'Ultra', georgia bold, serif bold;
+  font-size: 1.4em;
+  line-height: 45px;
+}
+
+.col-md-8.about-main p{
+    padding: 10px 60px;
+    -webkit-column-count: 2; 
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 80px; 
+    -moz-column-gap: 80px;
+    column-gap: 80px;
+    line-height: 30px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    height: 50%;
+}
+
+.col-md-8.about-main .screening{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 200px;
+  background: #000;
+  margin-bottom: 40px;
+  padding: 10px 0 10px 5%;
+}
+
+.col-md-8.about-main .screening img{
+  float: left;
+  width: 20%;
+}
+
+.col-md-8.about-main .screening div{
+  float: left;
+}
+
+.col-md-8.about-main .screening p{
+  line-height: 30px;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 1em;
+  -webkit-column-count: 1; 
+  -moz-column-count: 1;
+  column-count: 1;
+}
+.col-md-8.about-main .screening p b{
+  line-height: 30px;
+  font-family: open-sans, sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 1em;
+  text-transform: none;
+  -webkit-column-count: 1; 
+  -moz-column-count: 1;
+  column-count: 1;
+}
+
+.col-md-8.about-main .screening .btn-content{
+ margin-left: 60px;
+}
+
 /**
  ===========================================
  ========== 7. Act ===================
