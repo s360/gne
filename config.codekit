@@ -11,15 +11,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/gne.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/gne.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/press.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1265,7 +1256,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Awesome Designer",
+"lastSavedByUser": "Kyle Warbis",
 "manualImportLinks": {
 	},
 "projectAttributes": {
