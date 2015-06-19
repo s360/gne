@@ -177,6 +177,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     <div class="donation-dynamic-container">
         <div class="static-donation-container">
 
+            <!-- donation form by pdf -->
+
             <div class="stepwizard">
                 <div class="stepwizard-row setup-panel">
                     <div class="stepwizard-step">
@@ -243,11 +245,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 <div class="form-group">
                                     <div class="col-md-6">
                                         <label class="sr-only control-label">First Name</label>
-                                        <input maxlength="200" type="text"  class="form-control" placeholder="First Name*" />
+                                        <input maxlength="200" type="text"  required="required" class="form-control" placeholder="First Name*" />
                                     </div>
                                     <div class="col-md-6 pull-right">
                                         <label class="sr-only control-label">Last Name</label>
-                                        <input maxlength="200" type="text"  class="form-control" placeholder="Last Name*"  />
+                                        <input maxlength="200" type="text" required="required"  class="form-control" placeholder="Last Name*"  />
                                     </div>
 
                                 </div>
@@ -256,31 +258,31 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Billing Street 1*</label>
-                                    <input maxlength="200" type="text"  class="form-control" placeholder="Billing Street 1*" />
+                                    <input maxlength="200" type="text"  required="required" class="form-control" placeholder="Billing Street 1*" />
                                 </div>
 
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                 <label class="sr-only control-label">Street 2*</label>
-                                <input maxlength="200" type="text"  class="form-control" placeholder="Street 2*" />
+                                <input maxlength="200" type="text"  required="required" class="form-control" placeholder="Street 2*" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                 <label class="sr-only control-label">City*</label>
-                                <input maxlength="200" type="text"  class="form-control" placeholder="City*" />
+                                <input maxlength="200" type="text" required="required"  class="form-control" placeholder="City*" />
                                 </div>
                             </div>
                             <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label class="sr-only control-label">State/Province*</label>
-                                    <input maxlength="200" type="text"  class="form-control" placeholder="State/Province*" />
+                                    <input maxlength="200" type="text"  required="required" class="form-control" placeholder="State/Province*" />
                                 </div>
                                 <div class="col-md-6 pull-right">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
-                                    <input maxlength="200" type="text" class="form-control" placeholder="Zip/Postal Code"  />
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Zip/Postal Code"  />
                                 </div>
                             </div>
                             </div>
@@ -351,6 +353,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                     </div>
                 </div>
             </form>
+            <!-- end donation form -->
 
             <nav class="donate-page-selector">
                 <div class="amount active"></div>
