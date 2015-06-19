@@ -1534,15 +1534,18 @@ h2 a{
 .screening-copy {
 	clear: right;
 }
-@media (min-width: 768px){
+@media (min-width: 995px){
 	.screening-overlay-container {
 	 	height: 70%;
 	 	width: 70%;
 	 	margin: auto;
 	 	bottom: 50px;
 	}
+	.screening-header {
+		margin-bottom: 50px;
+	}
 }
-@media (max-width: 768px){
+@media (max-width: 995px){
 	.screening-overlay-container {
 		width: 100%;
 		height: 100%;
