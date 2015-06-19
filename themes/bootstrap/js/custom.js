@@ -342,7 +342,7 @@ jQuery(document).ready(function() {
 	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
-	    }else if(storyOneForm == jQuery(this)) {
+	    }else if(storyOneForm.id == jQuery(this).id) {
 	    	console.log('story one');
 	    } else if (storyTwoForm == jQuery(this)) {
 	    	console.log('story two');
