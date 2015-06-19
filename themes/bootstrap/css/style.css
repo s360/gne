@@ -968,6 +968,7 @@ h2 a{
 	    letter-spacing: 2px;
 	    font-size: 1.1em;
 	    white-space: nowrap;
+	    border: none;
 	}
 	
 	.body-copy{
@@ -1577,6 +1578,84 @@ h2 a{
 	}
 }
 
+.screening-overlay-container {
+	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	background-color: #ffffff;
+ 	position: absolute;
+ 	border: 3px solid #f20016;
+}
+.screening-form {
+	clear: right;
+	margin-top: 20%;
+	text-align: center;
+}
+#screening-close {
+	cursor:pointer;
+	float: right;
+}
+.screening-input{
+	border: 2px solid #999;
+	padding: 14px;
+	background: none;
+	color: #999;
+	text-align: left;
+	font-size: 1em;
+	font-family: open sans, sans-serif;
+	text-transform:none;
+	font-style: italic;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.screening-input.half {
+	width: 47%;
+	float:left;
+}
+.screening-input.half.one {
+	margin-right: 6%;
+}
+.btn-content.screening {
+	margin-bottom: 0;
+	border: none;
+}
+.screening-header {
+	font-family: 'oswald', open-sans;
+  color: steelblue;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.screening-p {
+	line-height: 30px;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+}
+.screening-copy {
+	clear: right;
+}
+@media (min-width: 995px){
+	.screening-overlay-container {
+	 	height: 70%;
+	 	width: 70%;
+	 	margin: auto;
+	 	bottom: 50px;
+	}
+	.screening-header {
+		margin-bottom: 50px;
+	}
+}
+@media (max-width: 995px){
+	.screening-overlay-container {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		z-index: 10000;
+	}
+	.screening-form {
+		margin-top: 0;
+	}
+}
 /**
  ===========================================
  ========== 9. Donation ====================

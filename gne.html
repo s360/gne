@@ -496,11 +496,11 @@
                                     <input type="text" id="txt_amount" class="text" size="5" onchange="document.getElementById('amount').value = this.value;document.getElementById('item_unit_price').value = this.value; return false;" value="" disabled="">
                                 </div>
                             <!-- </div> -->
-                            
+                            <a href="#" class="nextBtn">Next Step</a>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="nextBtn">Next Step</a>
+                
                 <div class="row setup-content " id="step-2">
                     <div class="col-xs-12">
                         <div class="col-md-12">
@@ -806,6 +806,25 @@
     </div>
 </div>
 </div>
+<div id="screening-container" class="screening-overlay-container hidden">
+	<span id="screening-close">X</span>
+	<div class="screening-copy col-md-6">
+		<h1 class="screening-header">Host a Screening</h1>
+		<img src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/IMG_movie-title.jpg" alt="screening image"/>
+		<p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
+	</div>
+	<div class="screening-form-container col-md-6">
+		
+		<form name="screening-form" class="screening-form">
+			<input type="text" class="screening-input half one" placeholder="First Name" />
+			<input type="text" class="screening-input half" placeholder="Last Name" />
+			<input type="text" class="screening-input" placeholder="organization" />
+			<input type="text" class="screening-input" placeholder="Email Address" />
+			<input type="text" class="screening-input" placeholder="Contact Number" />
+			<button id="screening-submit" class="btn-content screening">Submit Form</button>
+		</form>
+	</div>
+</div>
 <div class="donation-overlay-image" style="display:none;"></div>
 <div class="donation-overlay" style="display:none;"></div>
 <div id="thank-container" class="thankyou-overlay-container hidden">
@@ -847,9 +866,17 @@
     var donateOverlay  = document.getElementById('donation-overlay-container');
     var donateClose 	 = document.getElementById('donate-close');
     var donateSubmit    = document.getElementById('donate-submit');
+    var screeningClose  = document.getElementById('screening-close');
+    var screeningOverlay = document.getElementById('screening-container');
+    var screeningSubmit = document.getElementById('screening-submit');
     var orientation;
+
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
+    });
+    screeningSubmit.addEventListener('click', function() {
+    	screeningOverlay.classList.add('hidden');
+    	thankContainer.classList.remove('hidden');
     });
     storySubmit.addEventListener('click', function () {
         thankContainer.classList.remove('hidden');
@@ -877,6 +904,9 @@
         thankContainer.classList.remove('hidden');
         donateOverlay.classList.add('hidden');
     });
+    screeningClose.addEventListener('click', function() {
+    	screeningOverlay.classList.add('hidden');
+    })
     if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
         console.log('portrait');
         orientation = 'portrait';
