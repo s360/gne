@@ -115,3 +115,11 @@
 .blue-arrow {
 	display: inline-block!important;
 }
+
+.node-press-release .press-page-copy {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.2em;
+	width: 75%;
+	margin: 0 auto;
+}
