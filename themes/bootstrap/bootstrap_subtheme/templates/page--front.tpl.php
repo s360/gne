@@ -200,7 +200,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center;"> Select Amount</h3>
-                            <div class="form-group row">
+                            <!-- <div class="form-group row"> -->
                                 <div class="wrap-amount">
                                     <input type="radio" id="5" class="radio" name="radio_amount" value="5" onclick="document.getElementById('amount').value = 5;document.getElementById('item_unit_price').value = 5;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
                                     <label class="donation_amount" for="5">$5</label>
@@ -213,8 +213,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <input type="radio" id="20" class="radio" name="radio_amount" value="20" onclick="document.getElementById('amount').value =20;document.getElementById('item_unit_price').value = 20;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
                                     <label class="donation_amount" for="20">$20</label>
                                 </div>
-                            </div>
-                            <div class="form-group row">
+                            <!-- </div> -->
+                            <!-- <div class="form-group row"> -->
                                 <div class="wrap-amount">
                                     <input type="radio" id="50" class="radio" name="radio_amount" value="50" onclick="document.getElementById('amount').value = 50;document.getElementById('item_unit_price').value = 50;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
                                     <label class="donation_amount" for="50">$50</label>
@@ -227,12 +227,12 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <input type="radio" id="radio_other" class="radio" name="radio_amount" value="radio" onclick="document.getElementById('txt_amount').disabled = false; document.getElementById('amount_other').style.display = 'block';" >
                                     <label class="donation_amount" for="radio_other" style="  padding: 30px 10px;">Other</label>
                                 </div>
-                            </div>
-                            <div class="form-group row">
+                            <!-- </div> -->
+                            <!-- <div class="form-group row"> -->
                                 <div id="amount_other" style="display: none;">
                                     <input type="text" id="txt_amount" class="text" size="5" onchange="document.getElementById('amount').value = this.value;document.getElementById('item_unit_price').value = this.value; return false;" value="" disabled="">
                                 </div>
-                            </div>
+                            <!-- </div> -->
                             <a href="#" class="nextBtn">Next Step</a>
                         </div>
                     </div>
@@ -300,8 +300,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <img id="" src="/sites/all/themes/bootstrap/images/btn-pp.png" alt="logo" style="  width: 100%;"/>
-                                <div class="row or-line"><div class="col-md-5"><hr></div> <div class="col-md-2"><h4>OR</h4></div><div class="col-md-5"><hr></div></div>
+                                <!--<img id="" src="/sites/all/themes/bootstrap/images/btn-pp.png" alt="logo" style="  width: 100%;"/>
+                                <div class="row or-line"><div class="col-md-5"><hr></div> <div class="col-md-2"><h4>OR</h4></div><div class="col-md-5"><hr></div></div>-->
                                 <h3 style="text-align: center">Enter Your Payment</h3>
 
 
@@ -542,6 +542,25 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </div>
 </div>
 </div>
+<div id="screening-container" class="screening-overlay-container hidden">
+    <span id="screening-close">X</span>
+    <div class="screening-copy col-md-6">
+        <h1 class="screening-header">Host a Screening</h1>
+        <img src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/IMG_movie-title.jpg" alt="screening image"/>
+        <p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
+    </div>
+    <div class="screening-form-container col-md-6">
+
+        <form name="screening-form" class="screening-form">
+            <input type="text" class="screening-input half one" placeholder="First Name" />
+            <input type="text" class="screening-input half" placeholder="Last Name" />
+            <input type="text" class="screening-input" placeholder="organization" />
+            <input type="text" class="screening-input" placeholder="Email Address" />
+            <input type="text" class="screening-input" placeholder="Contact Number" />
+            <button id="screening-submit" class="btn-content screening">Submit Form</button>
+        </form>
+    </div>
+</div>
 <div class="donation-overlay-image" style="display:none;"></div>
 <div class="donation-overlay" style="display:none;"></div>
 <div id="thank-container" class="thankyou-overlay-container hidden">
@@ -583,9 +602,20 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var donateOverlay  = document.getElementById('donation-overlay-container');
     var donateClose 	 = document.getElementById('donate-close');
     var donateSubmit    = document.getElementById('donate-submit');
+    var screeningClose  = document.getElementById('screening-close');
+    var screeningOverlay = document.getElementById('screening-container');
+    var screeningSubmit = document.getElementById('screening-submit');
+    var screeningButton  = document.getElementById('host-screening');
     var orientation;
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
+    });
+    screeningButton.addEventListener('click', function() {
+        screeningOverlay.classList.remove('hidden');
+    });
+    screeningSubmit.addEventListener('click', function() {
+        screeningOverlay.classList.add('hidden');
+        thankContainer.classList.remove('hidden');
     });
     storySubmit.addEventListener('click', function () {
         thankContainer.classList.remove('hidden');
@@ -613,6 +643,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         thankContainer.classList.remove('hidden');
         donateOverlay.classList.add('hidden');
     });
+    screeningClose.addEventListener('click', function() {
+        screeningOverlay.classList.add('hidden');
+    })
     if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
         console.log('portrait');
         orientation = 'portrait';
