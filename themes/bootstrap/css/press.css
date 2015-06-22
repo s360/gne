@@ -140,6 +140,7 @@
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	width: 60%;
+	max-width: 700px;
 	margin: 0 auto;
 	line-height: 1.4em;
 	color: #1a1a1a;
