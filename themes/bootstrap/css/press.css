@@ -72,6 +72,10 @@
 	margin-top: 0
 }
 
+.col-md-12.animation {
+	text-align: center;
+}
+
 @media(max-width: 600px){
 	#copyright {
 		font-size: 10px;
