@@ -1234,6 +1234,13 @@ h2 a{
   width: 40%;
   margin: 10px 30%;
 }
+
+@media (max-width: 768px){
+  .donation-copy-container img{
+  width: 40%;
+  margin: 10px 30%;
+}
+}
 /*.donation-overlay-image {
 	@extend .donation-overlay;   
   -webkit-background-size: cover;
@@ -1803,7 +1810,7 @@ h2 a{
     height: 100px;
     border: 1px solid #000000;
     border-radius: 50%;
-    padding: 30px;
+    padding: 30px 10px;
     font-family: 'Oswald', sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -1817,7 +1824,7 @@ h2 a{
     color: #ffffff;
 }
 .form-group {
-
+  text-align: center;
 }
 #txt_amount{
     width: 125px;
@@ -1886,6 +1893,9 @@ h2 a{
   .wrap-amount{
     width: 50px;
     height: 50px;
+  }
+  .pull_right{
+    float: none !important;
   }
 }
 
