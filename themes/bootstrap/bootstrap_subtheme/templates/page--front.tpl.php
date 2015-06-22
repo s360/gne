@@ -439,14 +439,15 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             </form>
             <!-- end donation form -->
             <?php /*
-
             <nav class="donate-page-selector">
                 <div class="amount active"></div>
                 <div class="billing"></div>
                 <div class="cc-info"></div>
             </nav>
+            */?>
 
         </div>
+        <?php /*
         <div class="donate-amount-container" style="display: none">
             <form class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
                 <input type="hidden" name="method" id="method" value="donate" />
@@ -623,12 +624,13 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <nav class="prev-step1" style="display:none;">PREVIOUS STEP</nav>
         <nav class="next-step2" style="display:none;">NEXT STEP</nav>
         <nav class="prev-step2" style="display:none;">PREVIOUS STEP</nav>-->
-        </div>
-    */?>
+        */?>
 
+        </div>
     </div>
 </div>
 </div>
+
 <div id="screening-container" class="screening-overlay-container hidden">
     <span id="screening-close">X</span>
     <div class="screening-copy col-md-6">
