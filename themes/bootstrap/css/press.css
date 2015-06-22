@@ -88,3 +88,22 @@
 .col-md-6.psa_video {
 	padding: 0 30px;
 }
+
+.landing-copy {
+	text-align: center;
+	width: 75%;
+  margin: 40px auto;
+}
+
+.landing-p {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.2em!important;
+	margin-bottom: 10px!important;
+}
+
+.col-md-6.press-page.left {
+	padding-left: 8%;
+}
+.col-md-6.press-page.right {
+	padding-right: 8%;
+}
