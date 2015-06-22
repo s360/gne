@@ -130,6 +130,25 @@ jQuery(document).ready(function() {
         jQuery(".node-press-release").css({"height": window_height});
     }
 
+    //act submit
+
+    jQuery('input.zip_sub').click(function(event) {
+        var zip = jQuery('.zipcode').val();
+        var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
+        window.location.href=url;
+        return false;
+    });
+
+    jQuery( ".navbar-toggle" ).click(function() {
+        jQuery('.top-navigation').toggleClass('in');
+    });
+    jQuery('.slider-nav a').each(function() {
+        var target = jQuery(this).attr('href').replace(/\//g,'');
+        jQuery(this).attr('href', "#!/" + target);
+
+    });
+
+
     //slide
 
     jQuery('#container-slide-home').slick({
@@ -175,63 +194,41 @@ jQuery(document).ready(function() {
         centerMode: true,
         focusOnSelect: true
     });
-*/
-
-    var currentSlide = jQuery('#container-slide-home').slick('slickCurrentSlide');
-
-    //console.log(currentSlide);
-
-    jQuery( ".navbar-toggle" ).click(function() {
-         jQuery('.top-navigation').toggleClass('in');
-    });
-    jQuery('.slider-nav a').each(function() {
-        var target = jQuery(this).attr('href').replace(/\//g,'');
-         jQuery(this).attr('href', "#!/" + target);
-
-    });
-
-
+    */
 
     jQuery(".slick-prev").addClass("arrow_left");
     jQuery(".slick-next").addClass("arrow_right");
-
 
     var dataHash = jQuery('.slick-slide').map( function() {
         if(!jQuery(this).hasClass("slick-cloned")){
             return jQuery(this).find('.node ').attr('data-hash');
         }
-
     }).get();
 
-    //var attrActive = jQuery('#container-slide-home .slick-slide').find('.body-content ').attr('title');
-
     var slidetoHash = dataHash;
+
+    console.log(slidetoHash);
+
+    var pageHome = jQuery('#container-slide-home');
+    var pagePress = jQuery('#container-slide-press');
+
+    if (pageHome.length){
+        var slid = pageHome;
+    }
+    if (pagePress.length){
+        var slid = pagePress;
+    }
+
     function gotohash(e) {
         var lochash = window.location.hash;
-        var last = slidetoHash.length-1;
-        var first = 0;
         if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you'){
 
             var slideloc = slidetoHash.indexOf(lochash);
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
             jQuery("#container-slide-press").slick('slickGoTo', slideloc);
 
-            if (slideloc == first){
-                // jQuery('.arrow_left').addClass( "hide" );
-                jQuery('.arrow_right').removeClass( "hide" );
 
-            }
-            else if (slideloc == last){
-                // jQuery('.arrow_right').addClass( "hide" );
-                jQuery('.arrow_left').removeClass( "hide" );
-
-            }
-            else{
-                jQuery('.arrow_left').removeClass( "hide" );
-                jQuery('.arrow_right').removeClass( "hide" );
-            }
         }
-
 
         if(lochash == '#!/join'){
             jQuery('#petition-overlay-container').removeClass('hidden');
@@ -257,31 +254,26 @@ jQuery(document).ready(function() {
         }
     }
 
-    //act submit
+    function hashurl(){
 
-    jQuery('input.zip_sub').click(function(event) {
-            var zip = jQuery('.zipcode').val();
-            var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
-            window.location.href=url;
-            return false;
-    });
+        var currentSlide = slid.slick('slickCurrentSlide');
+        var slidehas = slidetoHash[currentSlide];
+        window.location.hash = slidehas;
+    }
 
     function prev(e){
         jQuery("#container-slide-home").slick('slickPrev');
         jQuery("#container-slide-press").slick('slickPrev');
-        var lochash = window.location.hash;
-        var slideloc = slidetoHash.indexOf(lochash)-1;
-        var slidehas = slidetoHash[slideloc];
-        window.location.hash = slidehas;
+
+        hashurl();
+
     }
 
     function next(e){
         jQuery("#container-slide-home").slick('slickNext');
         jQuery("#container-slide-press").slick('slickNext');
-        var lochash = window.location.hash;
-        var slideloc = slidetoHash.indexOf(lochash)+1;
-        var slidehas = slidetoHash[slideloc];
-        window.location.hash = slidehas;
+
+        hashurl();
     }
 
     jQuery(".arrow_left").click( prev );
