@@ -94,11 +94,14 @@
 	width: 75%;
   margin: 40px auto;
 }
+.landing-copy-container {
+	margin-bottom: 10px;
+}
 
 .landing-p {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.2em!important;
-	margin-bottom: 10px!important;
+	display: inline!important;
 }
 
 .col-md-6.press-page.left {
@@ -106,4 +109,8 @@
 }
 .col-md-6.press-page.right {
 	padding-right: 8%;
+}
+
+.blue-arrow {
+	display: inline-block!important;
 }
