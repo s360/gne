@@ -675,7 +675,6 @@ h2 a{
     float: left;
   }
    #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
-    background: url('../images/adriana-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -901,6 +900,10 @@ h2 a{
     height: 50%;
 }
 
+.col-md-8.about-main p em{
+   font-style: normal;
+}
+
 .col-md-8.about-main .screening{
   position: absolute;
   width: 100%;
@@ -950,6 +953,7 @@ h2 a{
   .col-md-8.about-main h1{
     font-size: 1.5em;
     padding-top: 60px !important;
+    margin-bottom: 0;
 }
   .col-md-4.about-img{
     display: none;
@@ -972,13 +976,17 @@ h2 a{
     display: none;
   }
   .col-md-8.about-main p{
-    padding: 10px 15%;
+    padding: 10px 10%;
     -webkit-column-count: 1; 
     -moz-column-count: 1;
     column-count: 1;
     line-height: 18px;
     color: white;
     height: 100%;
+}
+
+  .col-md-8.about-main p em{
+    display: none;
 }
 
 .col-md-8.about-main b{
