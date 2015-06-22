@@ -193,46 +193,45 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 </div>
             </div>
 
-            <form role="form">
-                <input type="hidden" name="method" id="amount" value="" />
-                <input type="hidden" id="item_unit_price" name="item_unit_price[1]" value="">
+            <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
+                <input type="hidden" name="method" value="donate">
+                <input type="hidden" name="form_id" value="12860">
+                <input type="hidden" name="validate" value="true">
                 <div class="row setup-content" id="step-1">
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center;"> Select Amount</h3>
-                            <!-- <div class="form-group row"> -->
+                             <div class="form-group row">
                                 <div class="wrap-amount">
-                                    <input type="radio" id="5" class="radio" name="radio_amount" value="5" onclick="document.getElementById('amount').value = 5;document.getElementById('item_unit_price').value = 5;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <input type="radio" id="5" class="radio" name="level_id" value="16505">
                                     <label class="donation_amount" for="5">$5</label>
                                 </div>
                                 <div class="wrap-amount">
-                                    <input type="radio" id="10" class="radio" name="radio_amount" value="10" onclick="document.getElementById('amount').value = 10;document.getElementById('item_unit_price').value = 10;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <input type="radio" id="10" class="radio" type="radio" name="level_id" value="16506" >
                                     <label class="donation_amount" for="10">$10</label>
                                 </div>
-                                <div class="wrap-amount">
-                                    <input type="radio" id="20" class="radio" name="radio_amount" value="20" onclick="document.getElementById('amount').value =20;document.getElementById('item_unit_price').value = 20;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
-                                    <label class="donation_amount" for="20">$20</label>
+
                                 </div>
-                            <!-- </div> -->
-                            <!-- <div class="form-group row"> -->
+                                <div class="form-group row">
                                 <div class="wrap-amount">
-                                    <input type="radio" id="50" class="radio" name="radio_amount" value="50" onclick="document.getElementById('amount').value = 50;document.getElementById('item_unit_price').value = 50;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <input type="radio" id="50" class="radio" name="level_id" value="16507" >
                                     <label class="donation_amount" for="50">$50</label>
                                 </div>
                                 <div class="wrap-amount">
-                                    <input type="radio" id="100" class="radio" name="radio_amount" value="100" onclick="document.getElementById('amount').value = 100;document.getElementById('item_unit_price').value = 100;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
+                                    <input type="radio" id="100" class="radio" name="level_id" value="16508">
                                     <label class="donation_amount" for="100" style="  padding: 30px 10px">$100</label>
                                 </div>
                                 <div class="wrap-amount">
-                                    <input type="radio" id="radio_other" class="radio" name="radio_amount" value="radio" onclick="document.getElementById('txt_amount').disabled = false; document.getElementById('amount_other').style.display = 'block';" >
-                                    <label class="donation_amount" for="radio_other" style="  padding: 30px 10px;">Other</label>
+                                    <input type="radio" id="level-other" name="level_id" value="16509" >
+                                    <label class="donation_amount"  for="level-other" style="  padding: 30px 10px;" onclick="document.getElementById('other-amount').disabled = false;document.getElementById('wrap-amount_other').style.display = 'block';">Other</label>
                                 </div>
-                            <!-- </div> -->
-                            <!-- <div class="form-group row"> -->
-                                <div id="amount_other" style="display: none;">
-                                    <input type="text" id="txt_amount" class="text" size="5" onchange="document.getElementById('amount').value = this.value;document.getElementById('item_unit_price').value = this.value; return false;" value="" disabled="">
+                                 </div>
+                                <div class="form-group row">
+                                <div id="wrap-amount_other" style="display: none;">
+                                    <input type="text" id="other-amount" name="other_amount" class="other-amount" disabled />
                                 </div>
-                            <!-- </div> -->
+                                </div>
+
                             <a href="#" class="nextBtn">Next Step</a>
                         </div>
                     </div>
@@ -245,11 +244,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 <div class="form-group">
                                     <div class="col-md-6">
                                         <label class="sr-only control-label">First Name</label>
-                                        <input maxlength="200" type="text"  required="required" class="form-control" placeholder="First Name*" />
+                                        <input maxlength="200" type="text"  required="required" name="billing.name.first" class="form-control" placeholder="First Name*" />
                                     </div>
                                     <div class="col-md-6 pull-right">
                                         <label class="sr-only control-label">Last Name</label>
-                                        <input maxlength="200" type="text" required="required"  class="form-control" placeholder="Last Name*"  />
+                                        <input maxlength="200" type="text" required="required"  name="billing.name.last" class="form-control" placeholder="Last Name*"  />
                                     </div>
 
                                 </div>
@@ -258,38 +257,115 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Billing Street 1*</label>
-                                    <input maxlength="200" type="text"  required="required" class="form-control" placeholder="Billing Street 1*" />
+                                    <input maxlength="200" type="text"  required="required" name="billing.address.street1" class="form-control" placeholder="Billing Street 1*" />
                                 </div>
 
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                 <label class="sr-only control-label">Street 2*</label>
-                                <input maxlength="200" type="text"  required="required" class="form-control" placeholder="Street 2*" />
+                                <input maxlength="200" type="text"  required="required" name="billing.address.street2" class="form-control" placeholder="Street 2*" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                 <label class="sr-only control-label">City*</label>
-                                <input maxlength="200" type="text" required="required"  class="form-control" placeholder="City*" />
+                                <input maxlength="200" type="text" required="required"  name="billing.address.city" class="form-control" placeholder="City*" />
                                 </div>
                             </div>
                             <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label class="sr-only control-label">State/Province*</label>
-                                    <input maxlength="200" type="text"  required="required" class="form-control" placeholder="State/Province*" />
+                                    <select name="billing.address.state" class="input-full form-control">
+                                        <option >State</option>
+                                        <option value="AK">AK</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AR">AR</option>
+                                        <option value="AZ">AZ</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CO">CO</option>
+                                        <option value="CT">CT</option>
+                                        <option value="DC">DC</option>
+                                        <option value="DE">DE</option>
+                                        <option value="FL">FL</option>
+                                        <option value="GA">GA</option>
+                                        <option value="HI">HI</option>
+                                        <option value="IA">IA</option>
+                                        <option value="ID">ID</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IN">IN</option>
+                                        <option value="KS">KS</option>
+                                        <option value="KY">KY</option>
+                                        <option value="LA">LA</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MD">MD</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MI">MI</option>
+                                        <option value="MN">MN</option>
+                                        <option value="MO">MO</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="NC">NC</option>
+                                        <option value="ND">ND</option>
+                                        <option value="NE">NE</option>
+                                        <option value="NH">NH</option>
+                                        <option value="NJ">NJ</option>
+                                        <option value="NM">NM</option>
+                                        <option value="NV">NV</option>
+                                        <option value="NY">NY</option>
+                                        <option value="OH">OH</option>
+                                        <option value="OK">OK</option>
+                                        <option value="OR">OR</option>
+                                        <option value="PA">PA</option>
+                                        <option value="RI">RI</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SD">SD</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TX">TX</option>
+                                        <option value="UT">UT</option>
+                                        <option value="VA">VA</option>
+                                        <option value="VT">VT</option>
+                                        <option value="WA">WA</option>
+                                        <option value="WI">WI</option>
+                                        <option value="WV">WV</option>
+                                        <option value="WY">WY</option>
+                                        <option value="AS">AS</option>
+                                        <option value="FM">FM</option>
+                                        <option value="GU">GU</option>
+                                        <option value="MH">MH</option>
+                                        <option value="MP">MP</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PW">PW</option>
+                                        <option value="VI">VI</option>
+                                        <option value="AA">AA</option>
+                                        <option value="AE">AE</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AB">AB</option>
+                                        <option value="BC">BC</option>
+                                        <option value="MB">MB</option>
+                                        <option value="NB">NB</option>
+                                        <option value="NL">NL</option>
+                                        <option value="NS">NS</option>
+                                        <option value="NT">NT</option>
+                                        <option value="NU">NU</option>
+                                        <option value="ON">ON</option>
+                                        <option value="PE">PE</option>
+                                        <option value="QC">QC</option>
+                                        <option value="SK">SK</option>
+                                        <option value="YT">YT</option>
+                                        <option value="None">None</option>
+                                    </select>
                                 </div>
                                 <div class="col-md-6 pull-right">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Zip/Postal Code"  />
+                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code"  />
                                 </div>
                             </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Email Address*</label>
-                                    <input maxlength="200" type="email" required="required" class="form-control" placeholder="Email Address*" />
+                                    <input maxlength="200" type="email" required="required" name="donor.email" class="form-control" placeholder="Email Address*" />
                                 </div>
                             </div>
                             <a href="#" class="nextBtn">Next Step</a>
@@ -309,45 +385,50 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Credit Card Number*</label>
-                                    <input maxlength="200" type="text"  class="form-control" placeholder="Credit Card Number*" />
+                                    <input maxlength="200" type="text" name="card_number"  class="form-control card-number" placeholder="Credit Card Number*" />
+
                                 </div>
                             </div>
                             <div class="form-inline">
                                 <div class="form-group">
                                     <div class="col-md-3">
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-
+                                        <select name="card_exp_date_month" class="form-control">
+                                            <option>Month</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <select class="form-control">
-                                            <option>2011</option>
-                                            <option>2012</option>
-                                            <option>2013</option>
-                                            <option>2014</option>
-                                            <option>2015</option>
+                                        <select name="card_exp_date_year" class="form-control">
+                                            <option>Year</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
                                         </select>
                                     </div>
                                     <div class="col-md-5 pull-right">
                                         <label class="sr-only control-label">Verification Code*</label>
-                                        <input maxlength="200" type="text" class="form-control" placeholder="Verification Code*"  />
+                                        <input maxlength="200" type="text" name="card_cvv" class="card-cvv form-control" placeholder="Verification Code*"  />
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button id="donate-submit" class="petition-submit" style="width: 100%;">Donate to help end hunger</button>
+                                <input type="hidden" name="df_preview" value="test">
+                                <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                         </div>
                     </div>
@@ -491,7 +572,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 <fieldset class="donate-cc-info" style="display:none;">
                     <legend class="cc-info-header">Payment Information</legend>
                     <input type="text" placeholder="Card Number" name="card_number" class="card-number">
-                    <input type="text" placeholder="CVV"name="card_cvv" class="card-cvv">
+                    <input type="text" placeholder="CVV" name="card_cvv" class="card-cvv">
                     <div>
                         <label>Expiration Date:</label>
                         <div>
@@ -528,6 +609,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 
                     <div>
+                        <input type="hidden" name="df_preview" value="test">
                         <button type="submit" class="btn btn-success complete-donation" id="donate-submit">Complete Donation</button>
                     </div>
                 </fieldset>
@@ -659,3 +741,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     }, false);
     console.log(window.location);
 </script>
+
+<script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
+<script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend-examples.js"></script>
