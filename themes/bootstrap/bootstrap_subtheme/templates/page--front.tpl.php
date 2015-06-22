@@ -564,7 +564,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 <div class="donation-overlay-image" style="display:none;"></div>
 <div class="donation-overlay" style="display:none;"></div>
 <div id="thank-container" class="thankyou-overlay-container hidden">
-    <span id="thank-close">X</span>
+    <span id="thank-close"></span>
     <img class="thank-image" src="/sites/all/themes/bootstrap/images/join-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
         <button class="thank-facebook-share">Facebook</button>
