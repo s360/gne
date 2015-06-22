@@ -32,7 +32,7 @@
   text-decoration: none;
 }
 .node-press-release .content{
-    margin-top: 15px;
+    margin-top: 64px;
 }
 .node-press-release p{
     font-family: 'Open Sans', sans-serif;
@@ -106,7 +106,7 @@
 
 .landing-copy {
 	text-align: center;
-	width: 75%;
+	width:60%;
   margin: 40px auto;
 }
 .landing-copy-container {
