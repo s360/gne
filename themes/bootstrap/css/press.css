@@ -26,10 +26,11 @@
   text-transform: uppercase;
   font-family: "Ultra";
   letter-spacing: 3px;
-  color: red;
   font-size: 1em;
   cursor: default;
   text-decoration: none;
+  color: #e61e26;
+	margin-bottom: 30px
 }
 .node-press-release .content{
     margin-top: 64px;
@@ -138,7 +139,8 @@
 .node-press-release .press-page-copy {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	line-height: 1.2em;
 	width: 60%;
 	margin: 0 auto;
+	line-height: 1.4em;
+	color: #1a1a1a;
 }
