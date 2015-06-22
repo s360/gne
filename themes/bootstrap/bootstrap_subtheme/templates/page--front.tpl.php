@@ -204,33 +204,35 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                              <div class="form-group row">
                                 <div class="wrap-amount">
                                     <input type="radio" id="5" class="radio" name="level_id" value="16505">
-                                    <label class="donation_amount" for="5">$5</label>
+                                    <label class="donation_amount" for="5"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$5</label>
                                 </div>
                                 <div class="wrap-amount">
                                     <input type="radio" id="10" class="radio" type="radio" name="level_id" value="16506" >
-                                    <label class="donation_amount" for="10">$10</label>
+                                    <label class="donation_amount" for="10"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$10</label>
                                 </div>
-
+                                 <div class="wrap-amount">
+                                     <input type="radio" id="50" class="radio" name="level_id" value="16507" >
+                                     <label class="donation_amount" for="50"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$50</label>
+                                 </div>
                                 </div>
                                 <div class="form-group row">
-                                <div class="wrap-amount">
-                                    <input type="radio" id="50" class="radio" name="level_id" value="16507" >
-                                    <label class="donation_amount" for="50">$50</label>
-                                </div>
+
                                 <div class="wrap-amount">
                                     <input type="radio" id="100" class="radio" name="level_id" value="16508">
-                                    <label class="donation_amount" for="100" style="  padding: 30px 10px">$100</label>
+                                    <label class="donation_amount" for="100" style="  padding: 30px 10px" onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$100</label>
                                 </div>
                                 <div class="wrap-amount">
                                     <input type="radio" id="level-other" name="level_id" value="16509" >
                                     <label class="donation_amount"  for="level-other" style="  padding: 30px 10px;" onclick="document.getElementById('other-amount').disabled = false;document.getElementById('wrap-amount_other').style.display = 'block';">Other</label>
                                 </div>
+
                                  </div>
-                                <div class="form-group row">
-                                <div id="wrap-amount_other" style="display: none;">
+                            <div class="form-group row">
+                                <div id="wrap-amount_other" style="width: 100%; display: none;">
                                     <input type="text" id="other-amount" name="other_amount" class="other-amount" disabled />
                                 </div>
-                                </div>
+                            </div>
+
 
                             <a href="#" class="nextBtn">Next Step</a>
                         </div>
@@ -276,6 +278,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-6">
+                                    <label class="sr-only control-label">State</label>
                                     <select name="billing.address.state" class="input-full form-control">
                                         <option >State</option>
                                         <option value="AK">AK</option>
@@ -746,4 +749,3 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
 <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/convio.js"></script>
-<!-- <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend-examples.js"></script>-->
