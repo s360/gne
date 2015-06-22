@@ -97,6 +97,7 @@
 }*/
 .col-md-6.psa_video {
 	padding: 0 30px;
+	height: 35vh;
 }
 .col-md-4.psa_video.left {
 	padding-left: 30px;
@@ -144,4 +145,18 @@
 	margin: 0 auto;
 	line-height: 1.4em;
 	color: #1a1a1a;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
