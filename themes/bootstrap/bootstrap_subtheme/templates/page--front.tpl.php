@@ -722,8 +722,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         donateOverlay.classList.add('hidden');
     });
     donateSubmit.addEventListener('click', function () {
-        thankContainer.classList.remove('hidden');
-        donateOverlay.classList.add('hidden');
+       /* thankContainer.classList.remove('hidden');
+        donateOverlay.classList.add('hidden');*/
     });
     screeningClose.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
@@ -743,4 +743,4 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </script>
 
 <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
-<script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend-examples.js"></script>
+<!-- <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend-examples.js"></script>-->
