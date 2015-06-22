@@ -207,8 +207,6 @@ jQuery(document).ready(function() {
 
     var slidetoHash = dataHash;
 
-    console.log(slidetoHash);
-
     var pageHome = jQuery('#container-slide-home');
     var pagePress = jQuery('#container-slide-press');
 
