@@ -34,4 +34,6 @@ xmlrpc.php
 /profiles
 /scripts
 
+/themes/.DS_Store
+
 config.codekit
