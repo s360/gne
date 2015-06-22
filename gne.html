@@ -426,37 +426,27 @@
     <div class='full_overlay'></div>
     <div class="petition-container">
         <span id="close-petition" class="close-petition"></span>
-        <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
+        <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
 
         <h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
         <p class="petition-subheader hidden-xs">Hunger exists in every community and affects 1 in 6 Americans.</p>
         <p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
         <h2 class="petition-cta">Add your name to the list of americans who demand we do better.</h2>
         <div class="petition-form-container">
-            <form id="petition-form" class="overlay-form" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
-            	<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
-        			<input type="hidden" name="v" id="v" value="1.0" />
-        			<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
-        			<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
-        			<input type="hidden" name="login_password" id="login_password" value="test123456" /> 
-        			<input type="hidden" name="response_format" id="response_format" value="json" />
-        			<input type="hidden" name="add_group_ids" id="add_group_ids" value="103941" />
-        			<input type="hidden" name="name.first" id="first-name-overlay" />
-       				<input type="hidden" name="name.last" id="last-name-overlay" />
-							<span class="invalid-email hidden">Please enter a valid email address</span><br>
+            <form id="petition-form" name="petition-form">
                 <div class="col-sm-4 col-xs-6">
-                    <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input nameOverlay" placeholder="Judy Reeder" required/>
+                    <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input" placeholder="Judy Reeder"/>
                     <label class="petition-label">(Name)</label>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                    <span class="petition-x">X</span><input id="petition-email" name="primary_email" class="petition-input emailOverlay" placeholder="jreeder@hotmail.com" required/>
+                    <span class="petition-x">X</span><input id="petition-email" name="email" class="petition-input" placeholder="jreeder@hotmail.com"/>
                     <label class="petition-label">(Email)</label>
                 </div>
                 <div class="col-sm-4 col-xs-12 zip">
-                    <span class="petition-x">X</span><input id="petition-zip" name="primary_address.zip" class="petition-input" placeholder="98270" />
+                    <span class="petition-x">X</span><input id="petition-zip" name="zip" class="petition-input" placeholder="98270" />
                     <label class="petition-label">(Zip)</label>
                 </div>
-                <button type="submit" id="overlay-submit" class="petition-submit">Join The Movement</button>
+                <button id="overlay-submit" class="petition-submit">Join The Movement</button>
             </form>
         </div>
     </div>
@@ -467,7 +457,7 @@
 <div class='full_overlay'></div>
 <div class="donation-container petition-container">
     <span id="donate-close" class="donate-close close-petition"></span>
-    <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
+    <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
     <div class="col-md-6">
         <div class="donation-copy-container">
             <h1 class="donate-title petition-header hidden-xs">HUNGER HURTS KIDS EVERY DAY.</h1>
@@ -497,51 +487,51 @@
                 </div>
             </div>
 
-            <form role="form">
-                <input type="hidden" name="method" id="amount" value="" />
-                <input type="hidden" id="item_unit_price" name="item_unit_price[1]" value="">
+            <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
+                <input type="hidden" name="method" value="donate">
+                <input type="hidden" name="form_id" value="12860">
+                <input type="hidden" name="validate" value="true">
                 <div class="row setup-content" id="step-1">
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center;"> Select Amount</h3>
-                            <!-- <div class="form-group row"> -->
+                             <div class="form-group row">
                                 <div class="wrap-amount">
-                                    <input type="radio" id="5" class="radio" name="radio_amount" value="5" onclick="document.getElementById('amount').value = 5;document.getElementById('item_unit_price').value = 5;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
-                                    <label class="donation_amount" for="5">$5</label>
-                                </div>
-                                <div class="wrap-amount">
-                                    <input type="radio" id="10" class="radio" name="radio_amount" value="10" onclick="document.getElementById('amount').value = 10;document.getElementById('item_unit_price').value = 10;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
-                                    <label class="donation_amount" for="10">$10</label>
+                                    <input type="radio" id="5" class="radio" name="level_id" value="16505">
+                                    <label class="donation_amount" for="5"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$5</label>
                                 </div>
                                 <div class="wrap-amount">
-                                    <input type="radio" id="20" class="radio" name="radio_amount" value="20" onclick="document.getElementById('amount').value =20;document.getElementById('item_unit_price').value = 20;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
-                                    <label class="donation_amount" for="20">$20</label>
+                                    <input type="radio" id="10" class="radio" type="radio" name="level_id" value="16506" >
+                                    <label class="donation_amount" for="10"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$10</label>
                                 </div>
-                            <!-- </div> -->
-                            <!-- <div class="form-group row"> -->
+                                 <div class="wrap-amount">
+                                     <input type="radio" id="50" class="radio" name="level_id" value="16507" >
+                                     <label class="donation_amount" for="50"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$50</label>
+                                 </div>
+                                </div>
+                                <div class="form-group row">
+
                                 <div class="wrap-amount">
-                                    <input type="radio" id="50" class="radio" name="radio_amount" value="50" onclick="document.getElementById('amount').value = 50;document.getElementById('item_unit_price').value = 50;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
-                                    <label class="donation_amount" for="50">$50</label>
+                                    <input type="radio" id="100" class="radio" name="level_id" value="16508">
+                                    <label class="donation_amount" for="100" style="  padding: 30px 10px" onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$100</label>
                                 </div>
                                 <div class="wrap-amount">
-                                    <input type="radio" id="100" class="radio" name="radio_amount" value="100" onclick="document.getElementById('amount').value = 100;document.getElementById('item_unit_price').value = 100;document.getElementById('txt_amount').disabled = true; document.getElementById('amount_other').style.display = 'none';" >
-                                    <label class="donation_amount" for="100">$100</label>
+                                    <input type="radio" id="level-other" name="level_id" value="16509" >
+                                    <label class="donation_amount"  for="level-other" style="  padding: 30px 10px;" onclick="document.getElementById('other-amount').disabled = false;document.getElementById('wrap-amount_other').style.display = 'block';">Other</label>
                                 </div>
-                                <div class="wrap-amount">
-                                    <input type="radio" id="radio_other" class="radio" name="radio_amount" value="radio" onclick="document.getElementById('txt_amount').disabled = false; document.getElementById('amount_other').style.display = 'block';" >
-                                    <label class="donation_amount other" for="radio_other" >Other</label>
+
+                                 </div>
+                            <div class="form-group row">
+                                <div id="wrap-amount_other" style="width: 100%; display: none;">
+                                    <input type="text" id="other-amount" name="other_amount" class="other-amount" disabled />
                                 </div>
-                            <!-- </div> -->
-                            <!-- <div class="form-group row"> -->
-                                <div id="amount_other" style="display: none;">
-                                    <input type="text" id="txt_amount" class="text" size="5" onchange="document.getElementById('amount').value = this.value;document.getElementById('item_unit_price').value = this.value; return false;" value="" disabled="">
-                                </div>
-                            <!-- </div> -->
+                            </div>
+
+
                             <a href="#" class="nextBtn">Next Step</a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="row setup-content " id="step-2">
                     <div class="col-xs-12">
                         <div class="col-md-12">
@@ -550,11 +540,11 @@
                                 <div class="form-group">
                                     <div class="col-md-6">
                                         <label class="sr-only control-label">First Name</label>
-                                        <input maxlength="200" type="text"  required="required" class="form-control" placeholder="First Name*" />
+                                        <input maxlength="200" type="text"  required="required" name="billing.name.first" class="form-control" placeholder="First Name*" />
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 pull-right">
                                         <label class="sr-only control-label">Last Name</label>
-                                        <input maxlength="200" type="text" required="required"  class="form-control" placeholder="Last Name*"  />
+                                        <input maxlength="200" type="text" required="required"  name="billing.name.last" class="form-control" placeholder="Last Name*"  />
                                     </div>
 
                                 </div>
@@ -563,38 +553,116 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Billing Street 1*</label>
-                                    <input maxlength="200" type="text"  required="required" class="form-control" placeholder="Billing Street 1*" />
+                                    <input maxlength="200" type="text"  required="required" name="billing.address.street1" class="form-control" placeholder="Billing Street 1*" />
                                 </div>
 
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                 <label class="sr-only control-label">Street 2*</label>
-                                <input maxlength="200" type="text"  required="required" class="form-control" placeholder="Street 2*" />
+                                <input maxlength="200" type="text"  required="required" name="billing.address.street2" class="form-control" placeholder="Street 2*" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                 <label class="sr-only control-label">City*</label>
-                                <input maxlength="200" type="text" required="required"  class="form-control" placeholder="City*" />
+                                <input maxlength="200" type="text" required="required"  name="billing.address.city" class="form-control" placeholder="City*" />
                                 </div>
                             </div>
                             <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label class="sr-only control-label">State/Province*</label>
-                                    <input maxlength="200" type="text"  required="required" class="form-control" placeholder="State/Province*" />
+                                    <label class="sr-only control-label">State</label>
+                                    <select name="billing.address.state" class="input-full form-control">
+                                        <option >State</option>
+                                        <option value="AK">AK</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AR">AR</option>
+                                        <option value="AZ">AZ</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CO">CO</option>
+                                        <option value="CT">CT</option>
+                                        <option value="DC">DC</option>
+                                        <option value="DE">DE</option>
+                                        <option value="FL">FL</option>
+                                        <option value="GA">GA</option>
+                                        <option value="HI">HI</option>
+                                        <option value="IA">IA</option>
+                                        <option value="ID">ID</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IN">IN</option>
+                                        <option value="KS">KS</option>
+                                        <option value="KY">KY</option>
+                                        <option value="LA">LA</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MD">MD</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MI">MI</option>
+                                        <option value="MN">MN</option>
+                                        <option value="MO">MO</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="NC">NC</option>
+                                        <option value="ND">ND</option>
+                                        <option value="NE">NE</option>
+                                        <option value="NH">NH</option>
+                                        <option value="NJ">NJ</option>
+                                        <option value="NM">NM</option>
+                                        <option value="NV">NV</option>
+                                        <option value="NY">NY</option>
+                                        <option value="OH">OH</option>
+                                        <option value="OK">OK</option>
+                                        <option value="OR">OR</option>
+                                        <option value="PA">PA</option>
+                                        <option value="RI">RI</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SD">SD</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TX">TX</option>
+                                        <option value="UT">UT</option>
+                                        <option value="VA">VA</option>
+                                        <option value="VT">VT</option>
+                                        <option value="WA">WA</option>
+                                        <option value="WI">WI</option>
+                                        <option value="WV">WV</option>
+                                        <option value="WY">WY</option>
+                                        <option value="AS">AS</option>
+                                        <option value="FM">FM</option>
+                                        <option value="GU">GU</option>
+                                        <option value="MH">MH</option>
+                                        <option value="MP">MP</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PW">PW</option>
+                                        <option value="VI">VI</option>
+                                        <option value="AA">AA</option>
+                                        <option value="AE">AE</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AB">AB</option>
+                                        <option value="BC">BC</option>
+                                        <option value="MB">MB</option>
+                                        <option value="NB">NB</option>
+                                        <option value="NL">NL</option>
+                                        <option value="NS">NS</option>
+                                        <option value="NT">NT</option>
+                                        <option value="NU">NU</option>
+                                        <option value="ON">ON</option>
+                                        <option value="PE">PE</option>
+                                        <option value="QC">QC</option>
+                                        <option value="SK">SK</option>
+                                        <option value="YT">YT</option>
+                                        <option value="None">None</option>
+                                    </select>
                                 </div>
-                                <div class="col-md-6 ">
+                                <div class="col-md-6 pull-right">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Zip/Postal Code"  />
+                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code"  />
                                 </div>
                             </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Email Address*</label>
-                                    <input maxlength="200" type="email" required="required" class="form-control" placeholder="Email Address*" />
+                                    <input maxlength="200" type="email" required="required" name="donor.email" class="form-control" placeholder="Email Address*" />
                                 </div>
                             </div>
                             <a href="#" class="nextBtn">Next Step</a>
@@ -605,8 +673,8 @@
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <div class="form-group">
-                             <!--    <img id="" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/btn-pp.png" alt="logo" style="  width: 100%;"/>
-                                <div class="row or-line"><div class="col-md-5"><hr></div> <div class="col-md-2"><h4>OR</h4></div><div class="col-md-5"><hr></div></div> -->
+                                <!--<img id="" src="/sites/all/themes/bootstrap/images/btn-pp.png" alt="logo" style="  width: 100%;"/>
+                                <div class="row or-line"><div class="col-md-5"><hr></div> <div class="col-md-2"><h4>OR</h4></div><div class="col-md-5"><hr></div></div>-->
                                 <h3 style="text-align: center">Enter Your Payment</h3>
 
 
@@ -614,269 +682,92 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Credit Card Number*</label>
-                                    <input maxlength="200" type="text"  class="form-control" placeholder="Credit Card Number*" />
+                                    <input maxlength="200" type="text" name="card_number"  class="form-control card-number" placeholder="Credit Card Number*" />
+
                                 </div>
                             </div>
                             <div class="form-inline">
                                 <div class="form-group">
                                     <div class="col-md-3">
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-
+                                        <select name="card_exp_date_month" class="form-control">
+                                            <option>Month</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <select class="form-control">
-                                            <option>2011</option>
-                                            <option>2012</option>
-                                            <option>2013</option>
-                                            <option>2014</option>
-                                            <option>2015</option>
+                                        <select name="card_exp_date_year" class="form-control">
+                                            <option>Year</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
                                         </select>
                                     </div>
                                     <div class="col-md-5 pull-right">
                                         <label class="sr-only control-label">Verification Code*</label>
-                                        <input maxlength="200" type="text" class="form-control" placeholder="Verification Code*"  />
+                                        <input maxlength="200" type="text" name="card_cvv" class="card-cvv form-control" placeholder="Verification Code*"  />
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button id="donate-submit" class="petition-submit" style="width: 100%;">Donate to help end hunger</button>
+                               <!-- <input type="hidden" name="df_preview" value="test">-->
+                                <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
             <!-- end donation form -->
-
-            <nav class="donate-page-selector">
-                <div class="amount active"></div>
-                <div class="billing"></div>
-                <div class="cc-info"></div>
-            </nav>
-
+            
         </div>
-        <div class="donate-amount-container" style="display: none">
-            <form class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
-                <input type="hidden" name="method" id="method" value="donate" />
-                <input type="hidden" name="form_id" id="form_id" value="" />
-                <input type="hidden" name="validate" value="true" />
-                <fieldset class="donate-amount-form" id="donation_level">
-                    <legend class="donate-amount-header">Select an amount</legend>
-                    <!-- Gets overwritten by convio-start.js - used for local testing-->
-                    <ul class="donate-amount-ul">
-                        <li><input type="radio" name="level_id" value="15628" /> <label class="donate-amount">$5</label></li>
-                        <li><input type="radio" name="level_id" value="15629" /> <label class="donate-amount">$10</label></li>
-                        <li><input type="radio" name="level_id" value="15630" /> <label class="donate-amount">$20</label></li>
-                        <li><input type="radio" name="level_id" value="15631" /> <label class="donate-amount">$30</label></li>
-                        <li><input type="radio" name="level_id" value="15632" /> <label class="donate-amount">$50</label></li>
-                        <li><input type="radio" name="level_id" value="15633" /> <label class="donate-amount">$100</label></li>
-                        <li><input type="radio" name="level_id" value="15634" /> <label class="donate-amount">$200</label></li>
-                        <li><input type="radio" name="level_id" value="15635" /> <label class="donate-amount">$500</label></li>
-                        <li><input type="radio" id="level-other" name="level_id" value="15633" /><label for="level-other" class="level-other">other amount</label></li>
-                        <li class="other-input-li"><input type="text" id="other-amount" name="other_amount" class="other-amount" disabled /></li>
-                    </ul>
-
-                </fieldset>
-
-                <fieldset class="donate-billing-info" style="display:none;">
-                    <legend class="billing-info-header">Billing Info</legend>
-                    <input type="text" placeholder="First Name*" name="billing.name.first" class="input-half">
-                    <input type="text" placeholder="Last Name*" name="billing.name.last" class="input-half ">
-                    <input type="text" placeholder="Billing Street 1*" name="billing.address.street1" class="input-full">
-                    <input type="text" placeholder="Street 2" name="billing.address.street2" class="input-full">
-                    <input type="text" placeholder="City*" name="billing.address.city" class="input-full">
-
-                    <div>
-                        <select name="billing.address.state" class="input-full">
-                            <option>State</option>
-                            <option value="AK">AK</option>
-                            <option value="AL">AL</option>
-                            <option value="AR">AR</option>
-                            <option value="AZ">AZ</option>
-                            <option value="CA">CA</option>
-                            <option value="CO">CO</option>
-                            <option value="CT">CT</option>
-                            <option value="DC">DC</option>
-                            <option value="DE">DE</option>
-                            <option value="FL">FL</option>
-                            <option value="GA">GA</option>
-                            <option value="HI">HI</option>
-                            <option value="IA">IA</option>
-                            <option value="ID">ID</option>
-                            <option value="IL">IL</option>
-                            <option value="IN">IN</option>
-                            <option value="KS">KS</option>
-                            <option value="KY">KY</option>
-                            <option value="LA">LA</option>
-                            <option value="MA">MA</option>
-                            <option value="MD">MD</option>
-                            <option value="ME">ME</option>
-                            <option value="MI">MI</option>
-                            <option value="MN">MN</option>
-                            <option value="MO">MO</option>
-                            <option value="MS">MS</option>
-                            <option value="MT">MT</option>
-                            <option value="NC">NC</option>
-                            <option value="ND">ND</option>
-                            <option value="NE">NE</option>
-                            <option value="NH">NH</option>
-                            <option value="NJ">NJ</option>
-                            <option value="NM">NM</option>
-                            <option value="NV">NV</option>
-                            <option value="NY">NY</option>
-                            <option value="OH">OH</option>
-                            <option value="OK">OK</option>
-                            <option value="OR">OR</option>
-                            <option value="PA">PA</option>
-                            <option value="RI">RI</option>
-                            <option value="SC">SC</option>
-                            <option value="SD">SD</option>
-                            <option value="TN">TN</option>
-                            <option value="TX">TX</option>
-                            <option value="UT">UT</option>
-                            <option value="VA">VA</option>
-                            <option value="VT">VT</option>
-                            <option value="WA">WA</option>
-                            <option value="WI">WI</option>
-                            <option value="WV">WV</option>
-                            <option value="WY">WY</option>
-                            <option value="AS">AS</option>
-                            <option value="FM">FM</option>
-                            <option value="GU">GU</option>
-                            <option value="MH">MH</option>
-                            <option value="MP">MP</option>
-                            <option value="PR">PR</option>
-                            <option value="PW">PW</option>
-                            <option value="VI">VI</option>
-                            <option value="AA">AA</option>
-                            <option value="AE">AE</option>
-                            <option value="AP">AP</option>
-                            <option value="AB">AB</option>
-                            <option value="BC">BC</option>
-                            <option value="MB">MB</option>
-                            <option value="NB">NB</option>
-                            <option value="NL">NL</option>
-                            <option value="NS">NS</option>
-                            <option value="NT">NT</option>
-                            <option value="NU">NU</option>
-                            <option value="ON">ON</option>
-                            <option value="PE">PE</option>
-                            <option value="QC">QC</option>
-                            <option value="SK">SK</option>
-                            <option value="YT">YT</option>
-                            <option value="None">None</option>
-                        </select>
-                    </div>
-                    <input type="text" placeholder="Zip/Postal Code" name="billing.address.zip" class="input-full">
-                    <input type="text" placeholder="Email Address*" name="donor.email" class="input-full">
-
-                    <div class="checkbox-wrap">
-                        <label>
-                            <input type="checkbox" name="donor.email_opt_in" value="true" checked> Yes, I'd like to receive email from American Health Society
-                        </label>
-                    </div>
-                    <div class="checkbox-wrap">
-                        <label>
-                            <input type="checkbox" name="df_preview" value="true" checked> Test Drive?
-                        </label>
-                    </div>
-                </fieldset>
-                <fieldset class="donate-cc-info" style="display:none;">
-                    <legend class="cc-info-header">Payment Information</legend>
-                    <input type="text" placeholder="Card Number" name="card_number" class="card-number">
-                    <input type="text" placeholder="CVV"name="card_cvv" class="card-cvv">
-                    <div>
-                        <label>Expiration Date:</label>
-                        <div>
-                            <select name="card_exp_date_month">
-                                <option>Month</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
-                        <div class="small-12 large-3 pull-3 columns">
-                            <select name="card_exp_date_year">
-                                <option>Year</option>
-                                <option value="2013">2013</option>
-                                <option value="2014">2014</option>
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-
-                    <div>
-                        <button type="submit" class="btn btn-success complete-donation" id="donate-submit">Complete Donation</button>
-                    </div>
-                </fieldset>
+        
         </div>
-        </form>
-        <!--<nav class="next-step1">NEXT STEP</nav>
-        <nav class="prev-step1" style="display:none;">PREVIOUS STEP</nav>
-        <nav class="next-step2" style="display:none;">NEXT STEP</nav>
-        <nav class="prev-step2" style="display:none;">PREVIOUS STEP</nav>-->
-        </div>
-
     </div>
 </div>
 </div>
+
 <div id="screening-container" class="screening-overlay-container hidden">
-	<span id="screening-close">X</span>
-	<div class="screening-copy col-md-6">
-		<h1 class="screening-header">Host a Screening</h1>
-		<img src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/IMG_movie-title.jpg" alt="screening image"/>
-		<p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
-	</div>
-	<div class="screening-form-container col-md-6">
-		
-		<form name="screening-form" class="screening-form">
-			<input type="text" class="screening-input half one" placeholder="First Name" />
-			<input type="text" class="screening-input half" placeholder="Last Name" />
-			<input type="text" class="screening-input" placeholder="organization" />
-			<input type="text" class="screening-input" placeholder="Email Address" />
-			<input type="text" class="screening-input" placeholder="Contact Number" />
-			<button id="screening-submit" class="btn-content screening">Submit Form</button>
-		</form>
-	</div>
+    <span id="screening-close">X</span>
+    <div class="screening-copy col-md-6">
+        <h1 class="screening-header">Host a Screening</h1>
+        <img src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/IMG_movie-title.jpg" alt="screening image"/>
+        <p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
+    </div>
+    <div class="screening-form-container col-md-6">
+
+        <form name="screening-form" class="screening-form">
+            <input type="text" class="screening-input half one" placeholder="First Name" />
+            <input type="text" class="screening-input half" placeholder="Last Name" />
+            <input type="text" class="screening-input" placeholder="organization" />
+            <input type="text" class="screening-input" placeholder="Email Address" />
+            <input type="text" class="screening-input" placeholder="Contact Number" />
+            <button id="screening-submit" class="btn-content screening">Submit Form</button>
+        </form>
+    </div>
 </div>
 <div class="donation-overlay-image" style="display:none;"></div>
 <div class="donation-overlay" style="display:none;"></div>
 <div id="thank-container" class="thankyou-overlay-container hidden">
     <span id="thank-close"></span>
-    <img class="thank-image" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/join-thank.png" alt="Thank you image" />
+    <img class="thank-image" src="/sites/all/themes/bootstrap/images/join-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
-        <!-- <button class="thank-facebook-share">Facebook</button> -->
-        <div class='sp_14354 sp_fb_large' style="display: inline-block;"></div>
-        <img class="thank-arrows" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
-        <!-- <button class="thank-twitter-share">Twitter</button> -->
-        <div class='sp_14355 sp_tw_large' style="display: inline-block;"></div>
+        <button class="thank-facebook-share">Facebook</button>
+        <img class="thank-arrows" src="/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
+        <button class="thank-twitter-share">Twitter</button>
     </div>
 </div>
 
@@ -884,8 +775,8 @@
       <div class="social pull-left"></div>
     <div class="copyright pull-right">
         <ul>
-            <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><img id="social-footer" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/FB-button.png" alt="facebook"></a></li>
-            <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><img id="social-footer" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/TW-button.png" alt="Twitter"></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><img id="social-footer" src="/sites/all/themes/bootstrap/images/FB-button.png" alt="facebook"></a></li>
+            <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><img id="social-footer" src="/sites/all/themes/bootstrap/images/TW-button.png" alt="Twitter"></a></li>
             <li><a target="_blank" href="http://greatnationseat.org/privacy.html">Privacy</a></li>
             <li><a href="#">&copy; 2015 GreatNationsEat.org</a></li>
         </ul>
@@ -893,7 +784,6 @@
 </footer>
 
 </div>
-
 
 <script type="text/javascript">
     // TODO: if petition showing and mobile - header should hide
@@ -903,6 +793,7 @@
     var petitionButton2  = document.getElementById('join-act');
     var thankContainer   = document.getElementById('thank-container');
     var thankClose 	     = document.getElementById('thank-close');
+    var storySubmit      = document.getElementById('story-submit');
     var overlaySubmit    = document.getElementById('overlay-submit');
     var donateButton   = document.getElementById('donate-nav');
     var donateOverlay  = document.getElementById('donation-overlay-container');
@@ -913,16 +804,22 @@
     var screeningSubmit = document.getElementById('screening-submit');
     var screeningButton  = document.getElementById('host-screening');
     var orientation;
-
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
     });
     screeningButton.addEventListener('click', function() {
-    	screeningOverlay.classList.remove('hidden');
+        screeningOverlay.classList.remove('hidden');
     });
     screeningSubmit.addEventListener('click', function() {
-    	screeningOverlay.classList.add('hidden');
-    	thankContainer.classList.remove('hidden');
+        screeningOverlay.classList.add('hidden');
+        thankContainer.classList.remove('hidden');
+    });
+    storySubmit.addEventListener('click', function () {
+        thankContainer.classList.remove('hidden');
+    });
+    overlaySubmit.addEventListener('click', function () {
+        thankContainer.classList.remove('hidden');
+        petitionOverlay.classList.add('hidden');
     });
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
@@ -939,12 +836,12 @@
     donateClose.addEventListener('click', function() {
         donateOverlay.classList.add('hidden');
     });
-    donateSubmit.addEventListener('click', function () {
-        thankContainer.classList.remove('hidden');
-        donateOverlay.classList.add('hidden');
-    });
+   /* donateSubmit.addEventListener('click', function () {
+       *//* thankContainer.classList.remove('hidden');
+        donateOverlay.classList.add('hidden');*//*
+    });*/
     screeningClose.addEventListener('click', function() {
-    	screeningOverlay.classList.add('hidden');
+        screeningOverlay.classList.add('hidden');
     })
     if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
         console.log('portrait');
@@ -958,9 +855,11 @@
         console.log(window.orientation);
     }, false);
     console.log(window.location);
-</script> 
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/donate.js?nq6s2w"></script>
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/slick/slick.min.js?nq6s2w"></script>
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/custom.js?nq6s2w"></script>
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/bootstrap.js?nq6s2w"></script>
+</script>
+
+<script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/convio.js"></script>  <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/donate.js?nqc7jv"></script>
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/slick/slick.min.js?nqc7jv"></script>
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/custom.js?nqc7jv"></script>
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/bootstrap.js?nqc7jv"></script>
 </html>
