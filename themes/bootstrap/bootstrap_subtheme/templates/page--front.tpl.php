@@ -128,7 +128,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 
 <!-- PETITION OVERLAY -->
-<div id="petition-overlay-container" class="petition-overlay-container hidden">
+<div id="petition-overlay-container" class="petition-overlay-container">
     <div class='full_overlay'></div>
     <div class="petition-container">
         <span id="close-petition" class="close-petition"></span>
