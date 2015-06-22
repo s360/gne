@@ -887,18 +887,26 @@ h2 a{
 }
 
 .col-md-8.about-main p{
-    padding: 10px 60px;
-    -webkit-column-count: 2; 
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 80px; 
-    -moz-column-gap: 80px;
-    column-gap: 80px;
+    padding: 5px 5%;
     line-height: 30px;
     font-family: open-sans, sans-serif;
     font-weight: 300;
     height: 50%;
+    line-height: 1.8em;
 }
+
+.col-md-8.about-main img.nkh-logo{
+    width: 30%;
+    margin: 5px 10%;
+    float: left;
+}
+
+.col-md-8.about-main img.mediavest-logo{
+    width: 20%;
+    margin: 0px 15%;
+    float: left;
+}
+
 
 .col-md-8.about-main p em{
    font-style: normal;
@@ -943,6 +951,7 @@ h2 a{
   -webkit-column-count: 1; 
   -moz-column-count: 1;
   column-count: 1;
+  clear: both;
 }
 
 .col-md-8.about-main .screening .btn-content{
@@ -986,11 +995,11 @@ h2 a{
 }
 
   .col-md-8.about-main p em{
-    display: none;
+   
 }
 
 .col-md-8.about-main b{
-  display: none
+  
 }
 }
 
@@ -1219,6 +1228,11 @@ h2 a{
   -o-filter: blur(8px);
   -ms-filter: blur(8px);
   filter: blur(8px);
+}
+`
+.donation-copy-container img{
+  width: 40%;
+  margin: 10px 30%;
 }
 /*.donation-overlay-image {
 	@extend .donation-overlay;   
