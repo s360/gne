@@ -644,6 +644,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/themes\/bootstrap\/js\/convio.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/convio.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/convio-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/themes\/bootstrap\/js\/custom.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -661,6 +672,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/donate.js",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/donate-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/themes\/bootstrap\/js\/luminateExtend-examples.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/luminateExtend-examples.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/luminateExtend-examples-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/themes\/bootstrap\/js\/luminateExtend.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/luminateExtend.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/luminateExtend-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1265,7 +1298,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Awesome Designer",
+"lastSavedByUser": "Kyle Warbis",
 "manualImportLinks": {
 	},
 "projectAttributes": {
