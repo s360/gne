@@ -81,9 +81,9 @@
 	overflow-y: auto!important;
 }
 
-.col-md-4.psa_copy {
+/*.col-md-4.psa_copy {
 	padding-left: 30px;
-}
-.col-md-8.psa_video {
-	padding-right: 30px;
+}*/
+.col-md-6.psa_video {
+	padding: 0 30px;
 }
