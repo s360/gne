@@ -147,6 +147,9 @@ jQuery(document).ready(function() {
         jQuery(this).attr('href', "#!/" + target);
 
     });
+    jQuery('.slider-nav a').click(function(){
+    	jQuery('.top-navigation').removeClass('in');
+    });
 
 
     //slide
