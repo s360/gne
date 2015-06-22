@@ -257,6 +257,15 @@ jQuery(document).ready(function() {
         }
     }
 
+    //act submit
+
+    jQuery('input.zip_sub').click(function(event) {
+            var zip = jQuery('.zipcode').val();
+            var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
+            window.location.href=url;
+            return false;
+    });
+
     function prev(e){
         jQuery("#container-slide-home").slick('slickPrev');
         jQuery("#container-slide-press").slick('slickPrev');
