@@ -427,7 +427,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="hidden" name="df_preview" value="test">
+                               <!-- <input type="hidden" name="df_preview" value="test">-->
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                         </div>
@@ -435,6 +435,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 </div>
             </form>
             <!-- end donation form -->
+            <?php /*
 
             <nav class="donate-page-selector">
                 <div class="amount active"></div>
@@ -620,6 +621,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <nav class="next-step2" style="display:none;">NEXT STEP</nav>
         <nav class="prev-step2" style="display:none;">PREVIOUS STEP</nav>-->
         </div>
+    */?>
 
     </div>
 </div>
