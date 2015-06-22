@@ -59,7 +59,8 @@
     margin-bottom: 20px;
 }
 
-.col-md-4.animation img{
+.col-md-4.animation img,
+.col-md-4.animation video{
     width: 80%;
     margin: 0 10%;
     margin-top: 15vh;
