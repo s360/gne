@@ -1964,7 +1964,7 @@ nav{
 	letter-spacing: 2px;
 }
 
-@media( min-width: 952px){
+@media( min-width: 953px){
 	.sp_fb_large, .sp_tw_large {
 		display: inline-block;
 	}
@@ -1972,12 +1972,14 @@ nav{
 		display: inline-block!important;
 	}
 }
-@media( max-width: 952px){
+@media( max-width: 953px){
 	.sp_fb_large, .sp_tw_large {
 		display: block;
-
 	}
 	.sp_fb_large {
 		margin-bottom: 5px;
+	}
+	.thank-arrows.hidden-xs {
+		display: none!important;
 	}
 }
