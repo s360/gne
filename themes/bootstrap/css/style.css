@@ -733,12 +733,12 @@ nav{
   #adriana-3 .cta, #hanno-3 .cta, #jahnique-3 .cta{
     height: 40%;
     background-position: top;
-
+		padding-top: 10px;
  }
 
-   #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
+/*   #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     cursor: pointer;
-   }
+   }*/
 
    .story-cta{
     width: 70%;
@@ -1937,4 +1937,20 @@ nav{
 
 .full-width {
 	width: 100%;
+}
+
+.story-join {
+	margin: 0 auto;
+	font-family: 'oswald', sans-serif;
+	padding: 15px 30px;
+	color: #ffffff;
+	background: #f20016;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 0px;
+	outline: none;	
+	white-space: nowrap;
+	font-size: 1.1em;
+	letter-spacing: 2px;
 }
