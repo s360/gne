@@ -262,6 +262,7 @@ nav{
 	height: 100%;
 	padding-left: 0;
 	bottom: 50px;
+  width: 40%;
 }
 .body-content{
     position: relative;
@@ -1500,7 +1501,7 @@ nav{
 		padding: 10px 20px;
 	}
 	.col-sm-4.col-xs-12.zip {
-		clear: both;
+		/*clear: both;*/
 	}
 	.petition-label {
 		display: block;
