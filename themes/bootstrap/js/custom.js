@@ -332,6 +332,7 @@ jQuery(document).ready(function() {
     jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).on('submit', function(e) {
 	    e.preventDefault();
 	    if(jQuery(this).hasClass('overlay-form')){
+	    	console.log('overlay submit');
 		  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -354,6 +355,8 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
+		    			console.log('submit success');
+		    			console.log(data);
 		    			jQuery('#petition-overlay-container').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    			// jQuery(thankyou).removeClass('hidden');
@@ -367,6 +370,7 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else if(jQuery(this).hasClass('petition-form-2')) {
+	    	console.log('story 1 submit');
 		  	var fullName = jQuery('.petition-input.name2').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -389,6 +393,8 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
+		    			console.log('submit success');
+		    			console.log(data);
 		    			jQuery(storyOneForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    			// jQuery(thankyou).removeClass('hidden');
@@ -402,6 +408,7 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else if (jQuery(this).hasClass('petition-form-3')) {
+	    	console.log('story 2 submit');
 		  	var fullName = jQuery('.petition-input.name3').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -424,6 +431,8 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
+		    			console.log('submit success');
+		    			console.log(data);
 		    			jQuery(storyTwoForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    			// jQuery(thankyou).removeClass('hidden');
@@ -437,6 +446,7 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else {
+	    	console.log('story 3 submit');
 		  	var fullName = jQuery('.petition-input.name4').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -459,6 +469,8 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
+		    			console.log('submit success');
+		    			console.log(data);
 		    			jQuery(storyThreeForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    			// jQuery(thankyou).removeClass('hidden');
