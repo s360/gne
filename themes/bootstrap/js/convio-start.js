@@ -26,7 +26,7 @@
                             var donationLevel = data.getDonationFormInfoResponse.donationLevels.donationLevel[i];
                             if (donationLevel.userSpecified === "true") {
                                 html += '<div class="radio-wrap">' +
-                                '<label>' +
+                                '<label class="test">' +
                                 '<input type="radio" id="level-other" name="level_id" value="' + donationLevel.level_id + '"> Other amount:' +
                                 '</label>' +
                                 '</div>' +
@@ -40,7 +40,7 @@
                                 '</div>';
                             } else {
                                 html += '<div class="radio-wrap">' +
-                                '<label class="text">' +
+                                '<label>' +
                                 '<input type="radio" name="level_id" value="' + donationLevel.level_id + '"> ' +
                                 donationLevel.amount.formatted +
                                 '</label>' +
