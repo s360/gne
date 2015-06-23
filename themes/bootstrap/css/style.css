@@ -1349,6 +1349,7 @@ nav{
  	background-color: #ffffff;
  	position: absolute;
  	border: 3px solid #f20016;
+  z-index: 999999;
 }
 .close-petition, #thank-close {
 	cursor: pointer;

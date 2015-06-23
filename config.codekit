@@ -362,7 +362,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 615834,
+		"initialSize": 1.01684e+06,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Classroom.jpg",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Classroom.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -615,7 +615,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 615834,
+		"initialSize": 178328,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_classroom.jpg",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_classroom.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1430,7 +1430,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Kyle Warbis",
+"lastSavedByUser": "Awesome Designer",
 "manualImportLinks": {
 	},
 "projectAttributes": {
