@@ -362,7 +362,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.01684e+06,
+		"initialSize": 615834,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Classroom.jpg",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/About_Classroom.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -615,7 +615,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 178328,
+		"initialSize": 615834,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_classroom.jpg",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/IMG_classroom.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -804,6 +804,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/luminateExtend.js",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/luminateExtend-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/themes\/bootstrap\/js\/min\/convio-start-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/convio-start-min.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/min\/convio-start-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1430,7 +1441,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Awesome Designer",
+"lastSavedByUser": "Kyle Warbis",
 "manualImportLinks": {
 	},
 "projectAttributes": {
