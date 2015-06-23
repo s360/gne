@@ -26,21 +26,17 @@
                             var donationLevel = data.getDonationFormInfoResponse.donationLevels.donationLevel[i];
                             if (donationLevel.userSpecified === "true") {
                                 html += '<div class="radio-wrap wrap-amount">' +
-                                '<input type="radio" id="level-other" name="level_id" value="' + donationLevel.level_id + '"> Other amount:' +
-                                '<label class="donation_amount"></label>'+
+                                '<input type="radio" id="level-other" name="level_id" value="' + donationLevel.level_id + '">' +
+                                '<label class="donation_amount donation_amount_other " for="level-other"> Other </label>' +
                                 '</div>' +
-                                '<div>' +
-                                '<div>' +
-                                '<label for="other-amount"><span class="prefix">$</span></label>' +
-                                '<div>' +
-                                '<input type="text" id="other-amount" name="other_amount" disabled>' +
-                                '</div>' +
-                                '</div>' +
+
+                                '<div  id="wrap-amount_other" style="display: none">' +
+                                '<input type="text" id="other-amount" class="other-amount" name="other_amount" disabled>' +
                                 '</div>';
                             } else {
-                                html += '<div class="radio-wrap">' +
-                                '<label>' +
-                                '<input type="radio" name="level_id" value="' + donationLevel.level_id + '"> ' +
+                                html += '<div class="radio-wrap wrap-amount">' +
+                                '<input type="radio" id="'+ donationLevel.level_id +'" name="level_id" value="' + donationLevel.level_id + '"> ' +
+                                '<label class="donation_amount" for="'+ donationLevel.level_id +'" >' +
                                 donationLevel.amount.formatted +
                                 '</label>' +
                                 '</div>';
@@ -56,10 +52,13 @@
                     $('#other-amount').removeAttr('disabled');
                     $('#other-amount').attr('name', 'other_amount');
                     $('#other-amount').focus();
+
+                    $('#wrap-amount_other').css('display', 'inline-block');
                 }
                 else {
                     $('#other-amount').attr('disabled', 'disabled');
                     $('#other-amount').removeAttr('name');
+                    $('#wrap-amount_other').css('display', 'none');
                 }
             });
 
