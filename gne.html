@@ -70,6 +70,7 @@
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script src="//c.shpg.org/303/sp.js"></script>
   <script src="http://dev.greatnationseat.com/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
 <script src="http://dev.greatnationseat.com/misc/jquery.once.js?v=1.2"></script>
 <script src="http://dev.greatnationseat.com/misc/drupal.js?nqc7jv"></script>
@@ -108,7 +109,10 @@
 
         <h2 class="block-title">Contents</h2>
     
-  <ul class="menu nav"><li class="first leaf"><a href="/stories">Stories</a></li>
+  <ul class="menu nav">
+<li class="leaf visible-xs join"><a href="/join">Join The Movement</a></li>
+<li class="leaf visible-xs"><a href="/donate">Donate</a></li>
+<li class="first leaf"><a href="/stories">Stories</a></li>
 <li class="leaf"><a href="/hanno" class="submenu">Sgt. Hanno&#039;s Story</a></li>
 <li class="leaf"><a href="/adriana" class="submenu">Adriana story</a></li>
 <li class="leaf"><a href="/jahnique" class="submenu">Jahnique&#039;s Story</a></li>
@@ -186,12 +190,13 @@
     <div class="col-md-5 page3-img"></div> 
 <div class="col-md-7 page3-cta">
 	<div class="cta">
-	 <img class="story-cta" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/Divided_Animated.gif">
+	 <img class="story-cta hidden-xs" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/Divided_Animated.gif">
 	 <h4 class="add-voice">Add Your Name to the list of americans that demand we do better</h4>
+	 <button class="story-join visible-xs">Join The Movement</button>
 	</div>
 <div class="petition-form-container-story">
 <form id="petition-form-2" class="petition-form-2" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
-<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
+	<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
 	<input type="hidden" name="v" id="v" value="1.0" />
 	<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
 	<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
@@ -245,8 +250,9 @@
     <div class="col-md-5 page3-img"></div> 
 <div class="col-md-7 page3-cta">
   <div class="cta">
-	<img class="story-cta" src="themes/bootstrap/images/Divided_Animated.gif">
+	<img class="story-cta hidden-xs" src="themes/bootstrap/images/Divided_Animated.gif">
 	<h4 class="add-voice">Add Your Name to the list of americans that demand we do better</h4>
+	<button class="story-join visible-xs">Join The Movement</button>
   </div>
   <div class="petition-form-container-story">
 		<form id="petition-form-3" class="petition-form-3" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
@@ -302,8 +308,9 @@
     <div class="col-md-5 page3-img"></div> 
       <div class="col-md-7 page3-cta">
         <div class="cta">
-         <img class="story-cta" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/Divided_Animated.gif">
+         <img class="story-cta hidden-xs" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/Divided_Animated.gif">
          <h4 class="add-voice">Add Your Name to the list of americans that demand we do better</h4>
+         <button class="story-join visible-xs">Join The Movement</button>
         </div>
         <div class="petition-form-container-story">
           <form id="petition-form-4" class="petition-form-4" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
@@ -800,9 +807,9 @@
     <span id="thank-close"></span>
     <img class="thank-image" src="/sites/all/themes/bootstrap/images/join-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
-        <button class="thank-facebook-share">Facebook</button>
-        <img class="thank-arrows" src="/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
-        <button class="thank-twitter-share">Twitter</button>
+        <div class='sp_14354 sp_fb_large' ></div>
+        <img class="thank-arrows hidden-xs" src="/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
+        <div class='sp_14355 sp_tw_large' ></div>
     </div>
 </div>
 
@@ -821,7 +828,10 @@
 </div>
 <script type="text/javascript">
 	jQuery(document).ready(function() {
-		jQuery('.add-voice').click(function() {
+		jQuery('.leaf.visible-xs.join').click(function() {
+			jQuery('#petition-overlay-container').removeClass('hidden');
+		});
+		jQuery('.story-join').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
 	/**********DONATION HIDE COPY*********/

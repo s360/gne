@@ -24,6 +24,8 @@
                     if (data.getDonationFormInfoResponse.donationLevels && data.getDonationFormInfoResponse.donationLevels.donationLevel.length > 0) {
                         for (var i = 0; i < data.getDonationFormInfoResponse.donationLevels.donationLevel.length; i++) {
                             var donationLevel = data.getDonationFormInfoResponse.donationLevels.donationLevel[i];
+                            var donateAmount = donationLevel.amount.formatted;
+
                             if (donationLevel.userSpecified === "true") {
                                 html += '<div class="radio-wrap wrap-amount">' +
                                 '<input type="radio" id="level-other" name="level_id" value="' + donationLevel.level_id + '">' +
@@ -37,7 +39,7 @@
                                 html += '<div class="radio-wrap wrap-amount">' +
                                 '<input type="radio" id="'+ donationLevel.level_id +'" name="level_id" value="' + donationLevel.level_id + '"> ' +
                                 '<label class="donation_amount" for="'+ donationLevel.level_id +'" >' +
-                                Number(donationLevel.amount.formatted).toFixed() +
+                                donateAmount.substr(0, donateAmount.length-3) +
                                 '</label>' +
                                 '</div>';
                             }
