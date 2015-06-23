@@ -773,5 +773,5 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </script>
 
 <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
 <script src="/sites/all/themes/bootstrap/js/convio.js"></script>
-<!--<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>-->
