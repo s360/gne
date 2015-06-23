@@ -1210,6 +1210,9 @@ nav{
     width: 45%;
     font-size: 0.8em;
   }
+  .about-container {
+    padding-top: 5px;
+  }
 }
 @media (max-width: 768px){
 	.col-md-12.visible-xs.act {
