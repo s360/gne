@@ -468,6 +468,83 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-57x57.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1745,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-57x57.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-57x57.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-60x60.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1848,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-60x60.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-60x60.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-72x72.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2124,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-72x72.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-72x72.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-76x76.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2373,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-76x76.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/apple-touch-icon-76x76.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/favicon\/favicon-16x16.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1149,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/favicon-16x16.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/favicon-16x16.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/favicon\/favicon-32x32.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1123,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/favicon-32x32.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/favicon-32x32.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/favicon\/favicon-96x96.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3136,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/favicon-96x96.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/favicon\/favicon-96x96.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/FB-button.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -661,6 +738,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/bootstrap.js",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/bootstrap-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/themes\/bootstrap\/js\/convio-start.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/convio-start.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/convio-start-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

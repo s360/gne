@@ -1389,12 +1389,12 @@ nav{
 }
 @media (min-width: 768px){
 	.petition-overlay-container .petition-container {
-	 	height: 70%;
+	 	height: 75%;
 	 	width: 70%;
 	 	margin: auto;
 	 	bottom: 50px;
 	}
-	.petition-container {
+	.petition-container, .screening-overlay-container{
 		padding: 30px 70px 10px 70px;
 	}
 
@@ -1611,7 +1611,7 @@ nav{
 }
 .wrap-amount, #wrap-amount_other{
     /*float: left;*/
-    width: 100px;
+    /*width: 100px;*/
     /*height: 100px;*/
     border-radius: 50%;
     margin: 10px 10px;
@@ -1629,7 +1629,7 @@ nav{
   height: 75px;
   border: 1px solid #000000;
   border-radius: 50%;
-  padding: 22px 10px;
+  padding: 22px 0px;
   font-family: 'Oswald', sans-serif;
   text-align: center;
   text-transform: uppercase;
