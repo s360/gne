@@ -37,7 +37,7 @@
                                 html += '<div class="radio-wrap wrap-amount">' +
                                 '<input type="radio" id="'+ donationLevel.level_id +'" name="level_id" value="' + donationLevel.level_id + '"> ' +
                                 '<label class="donation_amount" for="'+ donationLevel.level_id +'" >' +
-                                Number(donationLevel.amount.formatted).toFixed() +
+                                donationLevel.amount.subtr(0, donationLevel.amount.length-3) +
                                 '</label>' +
                                 '</div>';
                             }
