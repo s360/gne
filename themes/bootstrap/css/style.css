@@ -291,6 +291,13 @@ h2 a{
 	text-align: right;
 }
 
+@media (max-width: 1300px){
+  .story-container {
+  margin-left: 60px;
+  width: 100%;
+  }
+}
+
 @media (max-width: 768px){
 .col-sm-3.story-col {
     position: relative;
@@ -311,7 +318,11 @@ h2 a{
     padding: 10px 40px;
     background-color: rgba(0, 0, 0, 0.8);
     clear: both;
-}
+  }
+    .story-container {
+  margin-left: 0px;
+  width: 100%;
+  }
 }
 
 
@@ -646,7 +657,7 @@ h2 a{
 
  .story-cta{
   width: 70%;
-  margin: 10px auto;
+  margin: 15vh auto 10px auto;
  }
 
  #adriana-3 .cta{
@@ -662,6 +673,14 @@ h2 a{
     text-align: center;
     margin-bottom: 50px;
 }
+
+@media (max-width: 1300px){
+  .page3-cta .cta, .page3-cta .petition-form-container-story{
+    margin: 10px 10%;
+    width: 80%;
+  }
+}
+
 
 @media (max-width: 768px) and (orientation: landscape) {
   #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
@@ -683,6 +702,11 @@ h2 a{
   #adriana-3 .col-md-7 .petition-form-container, #hanno-3 .col-md-7 .petition-form-container, #jahnique-3 .col-md-7 .petition-form-container{
     display: none;
   }
+
+   .story-cta{
+  width: 70%;
+  margin: 10px auto;
+ }
 }
 
 @media(max-width: 992px) and (orientation: portrait) {
@@ -698,6 +722,11 @@ h2 a{
    #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     cursor: pointer;
    }
+
+   .story-cta{
+    width: 70%;
+    margin: 10px auto;
+ }
 }
 /**
  ===========================================
@@ -932,30 +961,45 @@ h2 a{
 }
 
 .col-md-8.about-main .screening p{
-  line-height: 30px;
+  line-height: 20px;
   font-family: open-sans, sans-serif;
   font-weight: 300;
   color: white;
   font-size: 1em;
-  -webkit-column-count: 1; 
-  -moz-column-count: 1;
-  column-count: 1;
 }
 .col-md-8.about-main .screening p b{
-  line-height: 30px;
+  line-height: 20px;
   font-family: open-sans, sans-serif;
   font-weight: 700;
   color: white;
   font-size: 1em;
   text-transform: none;
-  -webkit-column-count: 1; 
-  -moz-column-count: 1;
-  column-count: 1;
+  clear: both;
+}
+
+.col-md-8.about-main .screening p i{
+  line-height: 30px;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: .75em;
+  text-transform: none;
   clear: both;
 }
 
 .col-md-8.about-main .screening .btn-content{
- margin-left: 60px;
+ margin-left:25px;
+}
+
+
+@media (max-width: 1300px){
+  .col-md-4.about-img{
+    display: none;
+  }
+
+  .col-md-8.about-main{
+    width: 100%;
+  }
 }
 
 @media (max-width: 992px){
@@ -1229,7 +1273,7 @@ h2 a{
   -ms-filter: blur(8px);
   filter: blur(8px);
 }
-`
+
 .donation-copy-container img{
   width: 40%;
   margin: 10px 30%;
@@ -1866,6 +1910,12 @@ h2 a{
     .wrap-amount .donation_amount.other{
   padding: 30px 0;
 }
+}
+@media (max-width: 1300px){
+  .donation-container {
+    width: 90%!important;
+    height: 90%!important;
+  }
 }
 
 @media (max-width: 1090px){
