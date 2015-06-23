@@ -195,14 +195,16 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             </div>
 
             <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
-                <input type="hidden" name="method" value="donate">
-                <input type="hidden" name="form_id" value="12860">
-                <input type="hidden" name="validate" value="true">
+            <input type="hidden" name="method" id="method" value="donate">
+            <input type="hidden" name="form_id" id="form_id" value="">
+            <input type="hidden" name="validate" value="true">
                 <div class="row setup-content" id="step-1">
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center;"> Select Amount</h3>
-                             <div class="form-group row">
+                            <div id="donation_level"></div>
+
+                             <!--<div class="form-group row">
                                 <div class="wrap-amount">
                                     <input type="radio" id="5" class="radio" name="level_id" value="16505">
                                     <label class="donation_amount" for="5"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$5</label>
@@ -215,8 +217,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                      <input type="radio" id="50" class="radio" name="level_id" value="16507" >
                                      <label class="donation_amount" for="50"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$50</label>
                                  </div>
-                                </div>
-                                <div class="form-group row">
+                             </div>
+                             <div class="form-group row">
 
                                 <div class="wrap-amount">
                                     <input type="radio" id="100" class="radio" name="level_id" value="16508">
@@ -227,12 +229,12 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <label class="donation_amount"  for="level-other" style="" onclick="document.getElementById('other-amount').disabled = false;document.getElementById('wrap-amount_other').style.display = 'block';">Other</label>
                                 </div>
 
-                                 </div>
-                            <div class="form-group row">
+                             </div>
+                             <div class="form-group row">
                                 <div id="wrap-amount_other" style="width: 100%; display: none;">
                                     <input type="text" id="other-amount" name="other_amount" class="other-amount" disabled />
                                 </div>
-                            </div>
+                             </div>-->
 
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             <a id="key-next-step" href="#" class="nextBtn">Next Step</a>
@@ -700,6 +702,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     });
 </script>
 <script type="text/javascript">
+
+    var formId = "12860";
+
     // TODO: if petition showing and mobile - header should hide
     var petitionOverlay  = document.getElementById('petition-overlay-container');
     var petitionClose 	 = document.getElementById('close-petition');
@@ -768,4 +773,5 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </script>
 
 <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/convio.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
