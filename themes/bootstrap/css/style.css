@@ -257,11 +257,13 @@ nav{
 /*.slick-list {
 	overflow-y: auto!important;
 }
-*/.col-sm-3.story-col {
+*/
+.col-sm-3.story-col {
 	position: absolute;
 	height: 100%;
 	padding-left: 0;
 	bottom: 50px;
+
 }
 .body-content{
     position: relative;
@@ -317,6 +319,13 @@ nav{
   margin-left: 60px;
   width: 100%;
   }
+  .story-container {
+  margin-left: 0px;
+  width: 100%;
+  width: 40%;
+  }
+
+
 }
 
 @media (max-width: 768px){
@@ -1033,8 +1042,11 @@ nav{
 @media (max-width: 992px){
   .col-md-8.about-main h1{
     font-size: 1.5em;
-    padding-top: 60px !important;
-    margin-bottom: 0;
+    /*padding-top: 60px !important;
+    margin-bottom: 0;*/
+    padding: 0 !important;
+    margin-bottom: 10px;
+    padding-left: 14% !important;
 }
   .col-md-4.about-img{
     display: none;
@@ -1045,7 +1057,8 @@ nav{
     height: 100%;
     position: relative;
     padding: 0;
-    margin-top: -40px;
+    margin-top:-40px;
+    top: 40px;
     overflow-y:auto; 
     padding-bottom:30px; 
   }
@@ -1464,7 +1477,7 @@ nav{
 	}
 	
 	.petition-label.zip {
-	
+	 clear: both;
 	}
 	
 	.petition-submit {
@@ -1500,7 +1513,7 @@ nav{
 		padding: 10px 20px;
 	}
 	.col-sm-4.col-xs-12.zip {
-		clear: both;
+		/*clear: both;*/
 	}
 	.petition-label {
 		display: block;
@@ -1979,7 +1992,11 @@ nav{
 	.sp_fb_large {
 		margin-bottom: 5px;
 	}
+<<<<<<< HEAD
 	.thank-arrows.hidden-xs {
 		display: none!important;
 	}
 }
+=======
+}
+>>>>>>> df1470bbab83965c768df3665f14288198fc1c99
