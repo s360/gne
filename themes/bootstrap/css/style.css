@@ -1859,7 +1859,7 @@ nav{
 	float: right;
 	cursor: pointer;
 }
-.thank-arrows {
+.thank-arrows.hidden-xs {
 	height: 40px;
 }
 .thank-image {
@@ -1953,4 +1953,22 @@ nav{
 	white-space: nowrap;
 	font-size: 1.1em;
 	letter-spacing: 2px;
+}
+
+@media( min-width: 952px){
+	.sp_fb_large, .sp_tw_large {
+		display: inline-block;
+	}
+	.thank-arrows.hidden-xs {
+		display: inline-block!important;
+	}
+}
+@media( max-width: 952px){
+	.sp_fb_large, .sp_tw_large {
+		display: block;
+
+	}
+	.sp_fb_large {
+		margin-bottom: 5px;
+	}
 }
