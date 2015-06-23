@@ -1232,7 +1232,7 @@ nav{
 	.col-md-12.visible-xs.act {
 		background-color: rgba(0,0,0, 0.8);
 		z-index: 10;
-		height: 100vh;
+		height: 100%;
   	margin-top: -50px;
 	}
 	.act-mobile-header-container {
