@@ -871,7 +871,7 @@ nav{
 	text-transform: uppercase;
 	font-family: 'Ultra', georgia bold, serif bold;
 }
-@media (min-width: 768px){
+@media (min-width: 769px){
 	.about-container {
 		padding: 70px 20px;	
 		width: 80%;
@@ -1128,7 +1128,7 @@ nav{
  ========== 7. Act ===================
  ===========================================
  */
-@media (min-width: 768px){
+@media (min-width: 769px){
 	.act{
 	    overflow-y: auto;
 	    height: 100vh;
@@ -1385,7 +1385,7 @@ nav{
 .donation-copy-container p{
   text-align: left;
 }
-@media (min-width: 768px){ 
+@media (min-width: 769px){ 
 	#step-3 {
 		padding: 0 10%;
 	}
@@ -1478,7 +1478,7 @@ nav{
 .petition-x {
 	color: steelblue;
 }
-@media (min-width: 768px){
+@media (min-width: 769px){
 	.petition-overlay-container .petition-container {
 	 	height: 75%;
 	 	width: 70%;
@@ -1769,7 +1769,7 @@ nav{
     margin-bottom: 20px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 769px){
     .form-group {
         margin-bottom: 0;
         margin-left: 0;
@@ -1831,14 +1831,14 @@ nav{
 /*Media*/
 
 /*
-=================== 1.Media (min-width: 768px) =
+=================== 1.Media (min-width: 769px) =
 */
 @media (max-width: 500px){
     .btn-donate{
         display: none;
     }
 }
-@media (min-width: 768px){
+@media (min-width: 769px){
      /*.slider-nav{
         width: 300px;
         margin-top: -350px;
@@ -1859,7 +1859,7 @@ nav{
  ========== 10. Arrows =====================
  ===========================================
  **/
-@media (min-width: 768px){
+@media (min-width: 769px){
  .arrow_left{
     -webkit-transform:rotate(45deg);
     -moz-transform:rotate(45deg);
@@ -1963,7 +1963,7 @@ nav{
 }
 .thank-facebook-share {
 }
-@media (min-width: 768px){
+@media (min-width: 769px){
 	.thankyou-overlay-container {
 	 	height: 70%;
 	 	width: 70%;
