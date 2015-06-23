@@ -100,14 +100,14 @@
 	padding-left: 30px;
 }*/
 .col-md-6.psa_video {
-	padding: 0 30px;
-	height: 35vh;
+	padding: 20px 30px;
+	
 }
 .col-md-6.psa_video.left {
-	padding-left: 60px;
+	
 }
 .col-md-6.psa_video.middle {
-	padding-right: 60px;
+
 }
 .col-md-4.psa_video.left {
 	padding-left: 30px;
