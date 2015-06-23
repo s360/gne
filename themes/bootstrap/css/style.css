@@ -115,6 +115,11 @@ h2 a{
     background-color: #666666;
 }
 
+nav{
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
 .slider-nav{
     float: right;
     width: 225px;
@@ -186,6 +191,7 @@ h2 a{
 }
 .slider-nav .block-title{
     text-transform: uppercase;
+    font-family: "oswald", sans-serif;
     font-size: 27px;
     margin-top: 13px !important;
     margin-bottom: 30px;
@@ -1383,7 +1389,7 @@ h2 a{
 }
 @media (min-width: 768px){
 	.petition-overlay-container .petition-container {
-	 	height: 70%;
+	 	height: 50%;
 	 	width: 70%;
 	 	margin: auto;
 	 	bottom: 50px;
