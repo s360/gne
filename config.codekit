@@ -798,6 +798,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/themes\/bootstrap\/js\/slick\/min\/slick-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/slick\/min\/slick-min.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/slick\/min\/min\/slick-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/themes\/bootstrap\/js\/slick\/slick-theme.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1309,7 +1320,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Awesome Designer",
+"lastSavedByUser": "Kyle Warbis",
 "manualImportLinks": {
 	},
 "projectAttributes": {
