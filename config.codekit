@@ -435,6 +435,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/blue-arrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24496,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/blue-arrow.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/blue-arrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/btn-pp.png": {
 		"fileType": 32768,
 		"ignore": 0,
