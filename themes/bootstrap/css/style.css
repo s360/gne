@@ -257,7 +257,8 @@ nav{
 /*.slick-list {
 	overflow-y: auto!important;
 }
-*/.col-sm-3.story-col {
+*/
+.col-sm-3.story-col {
 	position: absolute;
 	height: 100%;
 	padding-left: 0;
@@ -318,7 +319,7 @@ nav{
   margin-left: 60px;
   width: 100%;
   }
-      .story-container {
+  .story-container {
   margin-left: 0px;
   width: 100%;
   width: 40%;
@@ -1472,7 +1473,7 @@ nav{
 	}
 	
 	.petition-label.zip {
-	
+	 clear: both;
 	}
 	
 	.petition-submit {
