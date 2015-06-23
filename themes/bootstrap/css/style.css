@@ -836,7 +836,7 @@ h2 a{
 		line-height: 1.8;
 	}
 	.about-copy.first {
-		line-height: 2.5;
+		line-height: 1.8;
 	}
 	.col-sm-5.about {
 		background-color: #ffffff;
@@ -1277,6 +1277,15 @@ h2 a{
 .donation-copy-container img{
   width: 40%;
   margin: 10px 30%;
+}
+
+.donation-copy-container h1{
+  text-align: left;
+  font-size: 2em;
+}
+
+.donation-copy-container p{
+  text-align: left;
 }
 
 @media (max-width: 768px){
