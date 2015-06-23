@@ -636,7 +636,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 
 <div id="screening-container" class="screening-overlay-container hidden">
-    <span id="screening-close">X</span>
+    <span id="screening-close" class="close-petition"></span>
     <div class="screening-copy col-md-6">
         <h1 class="screening-header">Host a Screening</h1>
         <img src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/IMG_movie-title.jpg" alt="screening image"/>
@@ -723,9 +723,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
     });
-    screeningButton.addEventListener('click', function() {
+   /* screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
-    });
+    });*/
     screeningSubmit.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
         thankContainer.classList.remove('hidden');

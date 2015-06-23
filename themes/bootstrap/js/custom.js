@@ -255,6 +255,11 @@ jQuery(document).ready(function() {
                 jQuery('#thank-container').AddClass('hidden');
             });
         }
+
+        if(lochash == '#!/host-a-screening'){
+            jQuery('#screening-container').removeClass('hidden');
+
+        }
     }
 
     function hashurl(){

@@ -1394,7 +1394,7 @@ nav{
 	 	margin: auto;
 	 	bottom: 50px;
 	}
-	.petition-container {
+	.petition-container, .screening-overlay-container{
 		padding: 30px 70px 10px 70px;
 	}
 
