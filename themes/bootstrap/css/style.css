@@ -319,10 +319,10 @@ nav{
   margin-left: 60px;
   width: 100%;
   }
-  .story-container {
+  .col-sm-3.story-col{
   margin-left: 0px;
   width: 100%;
-  width: 40%;
+
   }
 
 
