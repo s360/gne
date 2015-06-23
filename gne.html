@@ -17,6 +17,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="themes/bootstrap/images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="themes/bootstrap/images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="themes/bootstrap/images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="themes/bootstrap/images/favicon/apple-touch-icon-76x76.png">
+  <link rel="icon" type="image/png" href="themes/bootstrap/images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="themes/bootstrap/images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="themes/bootstrap/images/favicon/favicon-16x16.png" sizes="16x16">
+  
 <link rel="shortcut icon" href="http://dev.greatnationseat.com/sites/all/themes/bootstrap/favicon.ico" type="image/vnd.microsoft.icon" />
 <meta name="Generator" content="Drupal 7 (http://drupal.org)" />
   <title>Homapage | apatt.upward.st</title>
@@ -354,7 +363,7 @@
         <div class="col-md-3"><img src="themes/bootstrap/images/IMG_movie-title.jpg"></div>
         <div class="col-md-9">
           <p><b>"If another country was doing this to our children, we’d be at war.”</b> <br><i>Jeff Bridges, Founder of the End Hunger Network and National Spokesman for No Kid Hungry</i></p>
-          <a id="host-screening" class="btn-content" href="#">Host a Screening</a>
+          <a id="host-screening" class="btn-content" href="#!/host-a-screening">Host a Screening</a>
         </div>
       </div>
     </div></div>  </div>
@@ -481,14 +490,26 @@
             </div>
 
             <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
-                <input type="hidden" name="method" value="donate">
-                <input type="hidden" name="form_id" value="12860">
-                <input type="hidden" name="validate" value="true">
+                <input type="hidden" name="method" id="method" value="donate">
+				<input type="hidden" name="form_id" id="form_id" value="">
+				<input type="hidden" name="validate" value="true">
                 <div class="row setup-content" id="step-1">
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center;"> Select Amount</h3>
-                             <div class="form-group row">
+							
+							<!-- AMOUNT FROM CONVIO -->
+							 <div id="donation_level">
+								<div class="radio-wrap wrap-amount"><input type="radio" id="16505" name="level_id" value="16505"> <label class="donation_amount" for="16505">$5.00</label></div>
+								<div class="radio-wrap wrap-amount"><input type="radio" id="16506" name="level_id" value="16506"> <label class="donation_amount" for="16506">$10.00</label></div>
+								<div class="radio-wrap wrap-amount"><input type="radio" id="16507" name="level_id" value="16507"> <label class="donation_amount" for="16507">$20.00</label></div>
+								<div class="radio-wrap wrap-amount"><input type="radio" id="16508" name="level_id" value="16508"> <label class="donation_amount" for="16508">$50.00</label></div>
+								<div class="radio-wrap wrap-amount"><input type="radio" id="16509" name="level_id" value="16509"> <label class="donation_amount" for="16509">$100.00</label></div>
+								<div class="radio-wrap wrap-amount"><input type="radio" id="level-other" name="level_id" value="16510"><label class="donation_amount donation_amount_other " for="level-other"> Other </label></div>
+								<div id="wrap-amount_other" style="display: none;"><input type="text" id="other-amount" class="other-amount" disabled="disabled"></div>
+							 </div>
+							 
+                             <!--<div class="form-group row">
                                 <div class="wrap-amount">
                                     <input type="radio" id="5" class="radio" name="level_id" value="16505">
                                     <label class="donation_amount" for="5"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$5</label>
@@ -519,7 +540,7 @@
                                     <input type="text" id="other-amount" name="other_amount" class="other-amount" disabled />
                                 </div>
                             </div>
-
+							-->
 
 
                             <img src="themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
@@ -555,8 +576,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                <label class="sr-only control-label">Street 2*</label>
-                                <input maxlength="200" type="text"  required="required" name="billing.address.street2" class="form-control" placeholder="Street 2*" />
+                                <label class="sr-only control-label">Street 2</label>
+                                <input maxlength="200" type="text"   name="billing.address.street2" class="form-control" placeholder="Street 2" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -680,7 +701,7 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Credit Card Number*</label>
-                                    <input maxlength="200" type="text" name="card_number"  class="form-control card-number" placeholder="Credit Card Number*" />
+                                    <input maxlength="200" type="text" name="card_number" required="required" class="form-control card-number" placeholder="Credit Card Number*" />
 
                                 </div>
                             </div>
@@ -706,8 +727,6 @@
                                     <div class="col-md-4">
                                         <select name="card_exp_date_year" class="form-control">
                                             <option>Year</option>
-                                            <option value="2013">2013</option>
-                                            <option value="2014">2014</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                             <option value="2017">2017</option>
@@ -716,8 +735,8 @@
                                         </select>
                                     </div>
                                     <div class="col-md-5 ">
-                                        <label class="sr-only control-label">Verification Code*</label>
-                                        <input maxlength="200" type="text" name="card_cvv" class="card-cvv form-control" placeholder="Verification Code*"  />
+                                        <label class="sr-only control-label">CVV Code*</label>
+                                        <input maxlength="200" type="text" required="required" name="card_cvv" class="card-cvv form-control" placeholder="CVV Code*"  />
                                     </div>
                                 </div>
                             </div>
@@ -922,7 +941,7 @@
 </div>
 
 <div id="screening-container" class="screening-overlay-container hidden">
-    <span id="screening-close">X</span>
+    <span id="screening-close"></span>
     <div class="screening-copy col-md-6">
         <h1 class="screening-header">Host a Screening</h1>
         <img src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/IMG_movie-title.jpg" alt="screening image"/>
@@ -988,6 +1007,9 @@
 </script>
 
 <script type="text/javascript">
+
+	var formId = "12860";
+
     // TODO: if petition showing and mobile - header should hide
     var petitionOverlay  = document.getElementById('petition-overlay-container');
     var petitionClose 	 = document.getElementById('close-petition');
@@ -1056,7 +1078,9 @@
 </script>
 
 <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/convio.js"></script>  <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/donate.js?nqc7jv"></script>
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/convio-start.js"></script>
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/convio.js"></script>  
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/donate.js?nqc7jv"></script>
 <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/slick/slick.min.js?nqc7jv"></script>
 <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/custom.js?nqc7jv"></script>
 <script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/bootstrap.js?nqc7jv"></script>

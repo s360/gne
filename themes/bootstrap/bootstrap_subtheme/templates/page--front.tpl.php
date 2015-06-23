@@ -164,12 +164,13 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 <div class="donation-container petition-container">
     <span id="donate-close" class="donate-close close-petition"></span>
     <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
-    <div class="col-md-6">
+    <div class="col-md-6" id="donate-copy-col">
         <div class="donation-copy-container">
             <h1 class="donate-title petition-header hidden-xs">HUNGER HURTS KIDS EVERY DAY.</h1>
-            <h1 class="donate-title petition-header hidden-xs">YOUR DONATION HELPS FEED THEM.</h1>
             <p class="donate-copy1 petition-subheader hidden-xs">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
-            <p class="donate-copy2 petition-subheader hidden-xs">Every $10 you give can provide up to 100 meals for a child who is still facing hunger.</p>
+            <p class="donate-copy2 petition-subheader hidden-xs"><b>Every $10 you give can provide up to 100 meals for a hungry child.</b></p>
+            <p class="donate-copy3 petition-subheader hidden-xs">All donations to Great Nations Eat support No Kid Hungry’s efforts to feed kids healthy food, every day.</p>
+            <img src="/sites/all/themes/bootstrap/images/nkh-logo.gif">
 
         </div>
     </div>
@@ -182,7 +183,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <div class="stepwizard">
                 <div class="stepwizard-row setup-panel">
                     <div class="stepwizard-step">
-                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                        <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
                     </div>
                     <div class="stepwizard-step">
                         <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
@@ -194,14 +195,16 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             </div>
 
             <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
-                <input type="hidden" name="method" value="donate">
-                <input type="hidden" name="form_id" value="12860">
-                <input type="hidden" name="validate" value="true">
+            <input type="hidden" name="method" id="method" value="donate">
+            <input type="hidden" name="form_id" id="form_id" value="">
+            <input type="hidden" name="validate" value="true">
                 <div class="row setup-content" id="step-1">
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center;"> Select Amount</h3>
-                             <div class="form-group row">
+                            <div id="donation_level"></div>
+
+                             <!--<div class="form-group row">
                                 <div class="wrap-amount">
                                     <input type="radio" id="5" class="radio" name="level_id" value="16505">
                                     <label class="donation_amount" for="5"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$5</label>
@@ -214,27 +217,28 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                      <input type="radio" id="50" class="radio" name="level_id" value="16507" >
                                      <label class="donation_amount" for="50"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$50</label>
                                  </div>
-                                </div>
-                                <div class="form-group row">
+                             </div>
+                             <div class="form-group row">
 
                                 <div class="wrap-amount">
                                     <input type="radio" id="100" class="radio" name="level_id" value="16508">
-                                    <label class="donation_amount" for="100" style="  padding: 30px 10px" onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$100</label>
+                                    <label class="donation_amount" for="100" style=" " onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$100</label>
                                 </div>
                                 <div class="wrap-amount">
                                     <input type="radio" id="level-other" name="level_id" value="16509" >
-                                    <label class="donation_amount"  for="level-other" style="  padding: 30px 10px;" onclick="document.getElementById('other-amount').disabled = false;document.getElementById('wrap-amount_other').style.display = 'block';">Other</label>
+                                    <label class="donation_amount"  for="level-other" style="" onclick="document.getElementById('other-amount').disabled = false;document.getElementById('wrap-amount_other').style.display = 'block';">Other</label>
                                 </div>
 
-                                 </div>
-                            <div class="form-group row">
+                             </div>
+                             <div class="form-group row">
                                 <div id="wrap-amount_other" style="width: 100%; display: none;">
                                     <input type="text" id="other-amount" name="other_amount" class="other-amount" disabled />
                                 </div>
-                            </div>
+                             </div>-->
 
-
-                            <a href="#" class="nextBtn">Next Step</a>
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            <a id="key-next-step" href="#" class="nextBtn">Next Step</a>
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                         </div>
                     </div>
                 </div>
@@ -248,7 +252,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                         <label class="sr-only control-label">First Name</label>
                                         <input maxlength="200" type="text"  required="required" name="billing.name.first" class="form-control" placeholder="First Name*" />
                                     </div>
-                                    <div class="col-md-6 pull-right">
+                                    <div class="col-md-6 ">
                                         <label class="sr-only control-label">Last Name</label>
                                         <input maxlength="200" type="text" required="required"  name="billing.name.last" class="form-control" placeholder="Last Name*"  />
                                     </div>
@@ -265,8 +269,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                <label class="sr-only control-label">Street 2*</label>
-                                <input maxlength="200" type="text"  required="required" name="billing.address.street2" class="form-control" placeholder="Street 2*" />
+                                <label class="sr-only control-label">Street 2</label>
+                                <input maxlength="200" type="text"  name="billing.address.street2" class="form-control" placeholder="Street 2" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -359,7 +363,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                         <option value="None">None</option>
                                     </select>
                                 </div>
-                                <div class="col-md-6 pull-right">
+                                <div class="col-md-6 ">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
                                     <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code"  />
                                 </div>
@@ -371,7 +375,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <input maxlength="200" type="email" required="required" name="donor.email" class="form-control" placeholder="Email Address*" />
                                 </div>
                             </div>
-                            <a href="#" class="nextBtn">Next Step</a>
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            <a id="key-next-step" href="#" class="nextBtn">Next Step</a>
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                         </div>
                     </div>
                 </div>
@@ -388,7 +394,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Credit Card Number*</label>
-                                    <input maxlength="200" type="text" name="card_number"  class="form-control card-number" placeholder="Credit Card Number*" />
+                                    <input maxlength="200" type="text" name="card_number"  required="required" class="form-control card-number" placeholder="Credit Card Number*" />
 
                                 </div>
                             </div>
@@ -414,8 +420,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <div class="col-md-4">
                                         <select name="card_exp_date_year" class="form-control">
                                             <option>Year</option>
-                                            <option value="2013">2013</option>
-                                            <option value="2014">2014</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                             <option value="2017">2017</option>
@@ -423,9 +427,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                             <option value="2019">2019</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-5 pull-right">
-                                        <label class="sr-only control-label">Verification Code*</label>
-                                        <input maxlength="200" type="text" name="card_cvv" class="card-cvv form-control" placeholder="Verification Code*"  />
+                                    <div class="col-md-5">
+                                        <label class="sr-only control-label">CVV Code*</label>
+                                        <input maxlength="200" type="text" name="card_cvv" required="required" class="card-cvv form-control" placeholder="CVV Code*"  />
                                     </div>
                                 </div>
                             </div>
@@ -632,7 +636,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 
 <div id="screening-container" class="screening-overlay-container hidden">
-    <span id="screening-close">X</span>
+    <span id="screening-close" class="close-petition"></span>
     <div class="screening-copy col-md-6">
         <h1 class="screening-header">Host a Screening</h1>
         <img src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/IMG_movie-title.jpg" alt="screening image"/>
@@ -676,8 +680,31 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </footer>
 
 </div>
-
 <script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('.add-voice').click(function() {
+            jQuery('#petition-overlay-container').removeClass('hidden');
+        });
+        /**********DONATION HIDE COPY*********/
+        var nextDonate = jQuery('#key-next-step');
+        var donateCopy = jQuery('#donate-copy-col');
+        var donateFunc = jQuery('#donate-func-col');
+        var stepOne    = jQuery('#step-one');
+
+        nextDonate.click(function() {
+            donateCopy.addClass('hidden');
+            donateFunc.addClass('full-width');
+        });
+        stepOne.click(function() {
+            donateFunc.removeClass('full-width');
+            donateCopy.removeClass('hidden');
+        });
+    });
+</script>
+<script type="text/javascript">
+
+    var formId = "12860";
+
     // TODO: if petition showing and mobile - header should hide
     var petitionOverlay  = document.getElementById('petition-overlay-container');
     var petitionClose 	 = document.getElementById('close-petition');
@@ -699,9 +726,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
     });
-    screeningButton.addEventListener('click', function() {
+   /* screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
-    });
+    });*/
     screeningSubmit.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
         thankContainer.classList.remove('hidden');
@@ -728,10 +755,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     donateClose.addEventListener('click', function() {
         donateOverlay.classList.add('hidden');
     });
-   /* donateSubmit.addEventListener('click', function () {
-       *//* thankContainer.classList.remove('hidden');
-        donateOverlay.classList.add('hidden');*//*
-    });*/
     screeningClose.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
     })
@@ -750,4 +773,5 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </script>
 
 <script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/convio.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio.js"></script>

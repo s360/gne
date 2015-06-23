@@ -114,6 +114,12 @@ jQuery(document).ready(function() {
     var window_height_2 =jQuery(window).height()-toolbar;
 
     if(jQuery('body').hasClass('toolbar-drawer')){
+        intoolbar();
+    }else{
+        notoolbar();
+    }
+
+    function intoolbar(){
         jQuery("#homepage").css({"height": window_height_2});
         jQuery("#container-slide-home").css({"height": window_height_2});
         jQuery("#container-slide-home .views-row").css({"height": window_height_2});
@@ -121,7 +127,13 @@ jQuery(document).ready(function() {
         jQuery("#wrap-page").css({"height": window_height_2});
         jQuery("#container-slide-press").css({"height": window_height_2});
         jQuery(".node-press-release").css({"height": window_height_2});
-    }else{
+
+        if (window_height <= 700){
+            jQuery('.petition-container').css({"height": "auto", "z-index": "99999"});
+        }
+    }
+
+    function notoolbar(){
         jQuery("#homepage").css({"height": window_height});
         jQuery("#container-slide-home").css({"height": window_height});
         jQuery("#container-slide-home .views-row").css({"height": window_height});
@@ -136,13 +148,19 @@ jQuery(document).ready(function() {
     jQuery('input.zip_sub').click(function(event) {
         var zip = jQuery('.zipcode').val();
         var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
-        window.location.href=url;
+        //window.location.href=url;
+        window.open(url, '_blank');
         return false;
     });
 
     jQuery( ".navbar-toggle" ).click(function() {
         jQuery('.top-navigation').toggleClass('in');
     });
+
+    jQuery(".slider-nav .menu li a").click(function(){
+        jQuery('.top-navigation').toggleClass('in');
+    });
+
     jQuery('.slider-nav a').each(function() {
         var target = jQuery(this).attr('href').replace(/\//g,'');
         jQuery(this).attr('href', "#!/" + target);
@@ -253,6 +271,11 @@ jQuery(document).ready(function() {
             jQuery('#thank-close').click( function(){
                 jQuery('#thank-container').AddClass('hidden');
             });
+        }
+
+        if(lochash == '#!/host-a-screening'){
+            jQuery('#screening-container').removeClass('hidden');
+
         }
     }
 
