@@ -1890,7 +1890,7 @@ nav{
 	    border:none;
 	    border-left: solid 5px #f20016 !important;
 	    border-bottom: solid 5px #f20016 !important;
-	    margin: 10px;
+	    margin: 0px;
 	    background: none;
       padding: none;
 	}
@@ -1904,7 +1904,7 @@ nav{
 	  border:none;
 	  border-right: solid 5px #f20016 !important;
 	  border-top: solid 5px #f20016 !important;
-	  margin: 10px;
+	  margin: 0px;
 	  background: none;
 	}
 }
