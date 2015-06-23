@@ -5,8 +5,9 @@
 'use strict';
 
 jQuery(document).ready(function() {
-    /*jQuery.fn.reverse = [].reverse;
 
+    /*jQuery.fn.reverse = [].reverse;
+		
     jQuery.fn.sliderPage = function() {
 
         var container = 'div#scrolling-page-container';
@@ -343,7 +344,6 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else if(jQuery(this).hasClass('petition-form-2')) {
-	    	console.log('story one');
 		  	var fullName = jQuery('.petition-input.name2').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -379,7 +379,6 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else if (jQuery(this).hasClass('petition-form-3')) {
-	    	console.log('story two');
 		  	var fullName = jQuery('.petition-input.name3').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -415,7 +414,6 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else {
-	    	console.log('story 3');
 		  	var fullName = jQuery('.petition-input.name4').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
