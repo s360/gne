@@ -724,7 +724,9 @@ nav{
     text-align: center;
     margin-bottom: 50px;
 }
-
+.story-join {
+	display: none;
+}
 @media (max-width: 1300px){
   .page3-cta .cta, .page3-cta .petition-form-container-story{
     margin: 10px 10%;
@@ -734,6 +736,9 @@ nav{
 
 
 @media (max-width: 992px){
+	.story-join {
+		display: block;
+	}
   #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
     width: 100%;
     float: left;
