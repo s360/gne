@@ -1811,7 +1811,7 @@ h2 a{
 .stepwizard-row {
     display: table-row;
 }
-.stepwizard-row:before {
+/*.stepwizard-row:before {
     top: 14px;
     bottom: 0;
     position: absolute;
@@ -1821,7 +1821,7 @@ h2 a{
     background-color: #ccc;
     z-order: 0;
     left: 100px;
-}
+}*/
 .stepwizard-step {
     display: table-cell;
     text-align: center;
