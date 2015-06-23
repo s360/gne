@@ -1439,6 +1439,8 @@
             _.autoPlay();
         }
 
+        $('.top-navigation').removeClass('in');
+
     };
 
     Slick.prototype.prev = Slick.prototype.slickPrev = function() {
