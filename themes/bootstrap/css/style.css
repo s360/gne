@@ -751,8 +751,8 @@ nav{
     background-position: center;
  }
 
-  #adriana-3 .col-md-7 .petition-form-container, #hanno-3 .col-md-7 .petition-form-container, #jahnique-3 .col-md-7 .petition-form-container, .story-cta{
-    display: none;
+  #adriana-3 .col-md-7 .petition-form-container-story, #hanno-3 .col-md-7 .petition-form-container-story, #jahnique-3 .col-md-7 .petition-form-container-story, .story-cta{
+    display: none!important;
   }
 }
 
