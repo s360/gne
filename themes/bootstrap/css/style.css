@@ -1193,14 +1193,22 @@ nav{
 	}
 }
 @media (max-width: 1024px) and (orientation:landscape){
+  .body-copy {
+    line-height: inherit;
+  }
   .act-content form .zip_sub{
     margin-bottom: 0;
   }
   .col-md-4.act-content.hidden-xs h4 {
-    margin-top: -40px;
+    margin-top: -35px;
   }
   .col-md-4.act-content.hidden-xs img {
     margin-top: 15px;
+  }
+  .act-content form .zipcode,
+  .act-content form .zip_sub {
+    width: 45%;
+    font-size: 0.8em;
   }
 }
 @media (max-width: 768px){
