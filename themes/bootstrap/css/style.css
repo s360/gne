@@ -1516,6 +1516,10 @@ nav{
 #screening-close {
 	cursor:pointer;
 	float: right;
+	background: url(../images/x-icon.png);
+  background-size: cover;
+  height: 30px;
+  width: 30px;
 }
 .screening-input{
 	border: 2px solid #999;
@@ -1920,5 +1924,5 @@ nav{
 }
 
 .full-width {
-	width: 100%!important;
+	width: 100%;
 }
