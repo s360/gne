@@ -40,6 +40,7 @@
                                 donationLevel.amount.formatted +
                                 '</label>' +
                                 '</div>';
+                                console.log(donationLevel);
                             }
 
                         }

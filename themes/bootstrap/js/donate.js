@@ -4,8 +4,8 @@
 
 
 jQuery(document).ready(function($) {
-	console.log('donation ammounts');
-		console.log($('donation_amount'));
+		console.log('donation ammounts');
+		console.log($('.donation_amount'));
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.setup-content'),
         allNextBtn = $('.nextBtn');
