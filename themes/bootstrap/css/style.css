@@ -936,6 +936,10 @@ nav{
     float: left;
 }
 
+.col-md-8.about-main img.nkh-logo-white{
+    display: none;
+}
+
 .col-md-8.about-main img.mediavest-logo{
     width: 20%;
     margin: 0px 15%;
@@ -1052,6 +1056,18 @@ nav{
 
 .col-md-8.about-main b{
   
+}
+
+.col-md-8.about-main img.nkh-logo{
+  
+    display: none
+}
+
+.col-md-8.about-main img.nkh-logo-white{
+    width: 30%;
+    margin: 5px 10%;
+    float: left;
+    display: block;
 }
 }
 
@@ -1728,6 +1744,9 @@ nav{
   .pull_right{
     float: none !important;
   }
+  .donate-arrow{
+  display: none;
+}
 }
 
 /*Media*/
