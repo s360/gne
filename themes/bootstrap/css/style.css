@@ -57,6 +57,13 @@ h2 a{
   src: url('../../../fonts/EamesCenturyModern-Black.otf');
 }
 
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius:0px;
+}
+
+
 /**
  ===========================================
  ================ 2. Header ================
@@ -1826,19 +1833,21 @@ nav{
     background: none;
 	}
 }
+
 @media (max-width: 768px){
 	.arrow_left{
 		  -webkit-transform:rotate(45deg);
     	-moz-transform:rotate(45deg);
     	transform:rotate(45deg);
 	    left: 20px !important;
-	    width: 20px;
-	    height: 20px;
+	    width: 20px !important;
+	    height: 20px !important;
 	    border:none;
 	    border-left: solid 5px #f20016 !important;
 	    border-bottom: solid 5px #f20016 !important;
 	    margin: 10px;
 	    background: none;
+      padding: none;
 	}
 	.arrow_right {
 		-webkit-transform:rotate(45deg);
