@@ -1389,7 +1389,7 @@ nav{
 }
 @media (min-width: 768px){
 	.petition-overlay-container .petition-container {
-	 	height: 50%;
+	 	height: 70%;
 	 	width: 70%;
 	 	margin: auto;
 	 	bottom: 50px;
@@ -1695,7 +1695,7 @@ nav{
 @media (max-width: 1300px){
   .donation-container {
     width: 90%!important;
-    height: 90%!important;
+    height: 80%!important;
   }
 }
 
