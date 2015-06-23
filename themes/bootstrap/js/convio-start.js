@@ -40,7 +40,7 @@
                                 '</div>';
                             } else {
                                 html += '<div class="radio-wrap">' +
-                                '<label>' +
+                                '<label class="text">' +
                                 '<input type="radio" name="level_id" value="' + donationLevel.level_id + '"> ' +
                                 donationLevel.amount.formatted +
                                 '</label>' +
