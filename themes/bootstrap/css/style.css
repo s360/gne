@@ -733,35 +733,30 @@ nav{
 }
 
 
-@media (max-width: 992px) and (orientation: landscape) {
+@media (max-width: 992px){
   #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
-    width: 50%;
+    width: 100%;
     float: left;
     margin-top: 0;
-    padding-top: 60px;
+    padding-top: 10px;
   }
   #adriana-3 .col-md-5, #hanno-3 .col-md-5, #jahnique-3 .col-md-5{
-    width: 50%;
+    width: 100%;
     float: left;
   }
    #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 60%;
     background-position: center;
  }
 
-  #adriana-3 .col-md-7 .petition-form-container, #hanno-3 .col-md-7 .petition-form-container, #jahnique-3 .col-md-7 .petition-form-container{
+  #adriana-3 .col-md-7 .petition-form-container, #hanno-3 .col-md-7 .petition-form-container, #jahnique-3 .col-md-7 .petition-form-container, .story-cta{
     display: none;
   }
-
-   .story-cta{
-  width: 70%;
-  margin: 10px auto;
- }
 }
 
-@media(max-width: 992px) and (orientation: portrait) {
+/*@media(max-width: 992px) and (orientation: portrait) {
    #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
     height: 60%;
     background-position: center !important;
@@ -777,11 +772,11 @@ nav{
     cursor: pointer;
    }*/
 
-   .story-cta{
+/*   .story-cta{
     width: 70%;
     margin: 10px auto;
  }
-}
+}*/
 /**
  ===========================================
  ================ 4. Footer ================
@@ -1823,9 +1818,6 @@ nav{
 =================== 1.Media (min-width: 768px) =
 */
 @media (max-width: 500px){
-    .top-navigation{
-        right: 20px;
-    }
     .btn-donate{
         display: none;
     }
