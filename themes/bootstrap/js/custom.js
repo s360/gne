@@ -114,6 +114,12 @@ jQuery(document).ready(function() {
     var window_height_2 =jQuery(window).height()-toolbar;
 
     if(jQuery('body').hasClass('toolbar-drawer')){
+        intoolbar();
+    }else{
+        notoolbar();
+    }
+
+    function intoolbar(){
         jQuery("#homepage").css({"height": window_height_2});
         jQuery("#container-slide-home").css({"height": window_height_2});
         jQuery("#container-slide-home .views-row").css({"height": window_height_2});
@@ -121,7 +127,13 @@ jQuery(document).ready(function() {
         jQuery("#wrap-page").css({"height": window_height_2});
         jQuery("#container-slide-press").css({"height": window_height_2});
         jQuery(".node-press-release").css({"height": window_height_2});
-    }else{
+
+        if (window_height <= 700){
+            jQuery('.petition-container').css({"height": "auto", "z-index": "99999"});
+        }
+    }
+
+    function notoolbar(){
         jQuery("#homepage").css({"height": window_height});
         jQuery("#container-slide-home").css({"height": window_height});
         jQuery("#container-slide-home .views-row").css({"height": window_height});

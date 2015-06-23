@@ -267,8 +267,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                <label class="sr-only control-label">Street 2*</label>
-                                <input maxlength="200" type="text"  required="required" name="billing.address.street2" class="form-control" placeholder="Street 2*" />
+                                <label class="sr-only control-label">Street 2</label>
+                                <input maxlength="200" type="text"  name="billing.address.street2" class="form-control" placeholder="Street 2" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -392,7 +392,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Credit Card Number*</label>
-                                    <input maxlength="200" type="text" name="card_number"  class="form-control card-number" placeholder="Credit Card Number*" />
+                                    <input maxlength="200" type="text" name="card_number"  required="required" class="form-control card-number" placeholder="Credit Card Number*" />
 
                                 </div>
                             </div>
@@ -418,8 +418,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <div class="col-md-4">
                                         <select name="card_exp_date_year" class="form-control">
                                             <option>Year</option>
-                                            <option value="2013">2013</option>
-                                            <option value="2014">2014</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                             <option value="2017">2017</option>
@@ -428,8 +426,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                         </select>
                                     </div>
                                     <div class="col-md-5">
-                                        <label class="sr-only control-label">Verification Code*</label>
-                                        <input maxlength="200" type="text" name="card_cvv" class="card-cvv form-control" placeholder="Verification Code*"  />
+                                        <label class="sr-only control-label">CVV Code*</label>
+                                        <input maxlength="200" type="text" name="card_cvv" required="required" class="card-cvv form-control" placeholder="CVV Code*"  />
                                     </div>
                                 </div>
                             </div>
