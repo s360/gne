@@ -78,7 +78,6 @@
         /* if the donation is successful, display a thank you message */
         /* if there is an error with the donation, display it inline */
         window.donateCallback = {
-        		console.log('donate submit');
             error: function (data) {
             		console.log('donate error');
             		console.log(data);
