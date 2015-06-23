@@ -1228,6 +1228,17 @@ nav{
 	    margin-top: 30px;
 	}
 }
+@media (max-width: 1024px) and (orientation:landscape){
+  .act-content form .zip_sub{
+    margin-bottom: 0;
+  }
+  .col-md-4.act-content.hidden-xs h4 {
+    margin-top: -40px;
+  }
+  .col-md-4.act-content.hidden-xs img {
+    margin-top: 15px;
+  }
+}
 @media (max-width: 768px){
 	.col-md-12.visible-xs.act {
 		background-color: rgba(0,0,0, 0.8);
