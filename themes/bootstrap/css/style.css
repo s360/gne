@@ -703,6 +703,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    background-position: center;
  }
 
   #adriana-3 .col-md-7 .petition-form-container, #hanno-3 .col-md-7 .petition-form-container, #jahnique-3 .col-md-7 .petition-form-container{
@@ -718,6 +719,8 @@ nav{
 @media(max-width: 992px) and (orientation: portrait) {
    #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
     height: 60%;
+    background-position: center !important;
+
  }
   #adriana-3 .cta, #hanno-3 .cta, #jahnique-3 .cta{
     height: 40%;
