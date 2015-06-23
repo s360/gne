@@ -717,7 +717,7 @@
                             </div>
                             <div class="form-group">
                                <!-- <input type="hidden" name="df_preview" value="test">-->
-                                <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
+                                <button id="donate-submit" class="petition-submit complete-donation" style="width: 50%;">Donate to help end hunger</button>
                             </div>
                         </div>
                     </div>
@@ -968,12 +968,15 @@
 		var nextDonate = jQuery('#key-next-step');
 		var donateCopy = jQuery('#donate-copy-col');
 		var donateFunc = jQuery('#donate-func-col');
-		var nextStep   = jQuery('#step-one');
-		nextStep.click(function() { 
-			donateCopy.removeClass('hidden');
-		});
+		var stepOne    = jQuery('#step-one');
+
 		nextDonate.click(function() {
 			donateCopy.addClass('hidden');
+			donateFunc.addClass('full-width');
+		});
+		stepOne.click(function() { 
+			donateFunc.removeClass('full-width');
+			donateCopy.removeClass('hidden');
 		});
 	});
 </script>

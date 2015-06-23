@@ -1846,13 +1846,13 @@ h2 a{
 .wrap-amount, #wrap-amount_other{
     /*float: left;*/
     width: 100px;
-    height: 100px;
+    /*height: 100px;*/
     border-radius: 50%;
     margin: 10px 10px;
     display: inline-block;
 }
 #wrap-amount_other #other-amount{
-    margin-top: 36px;
+    /*margin-top: 36px;*/
 }
 .wrap-amount input[type="radio"]{
     opacity: 0;
@@ -2126,4 +2126,8 @@ h2 a{
   padding: 0px 60px;
   text-align: center
 }
+}
+
+.full-width {
+	width: 100%!important;
 }
