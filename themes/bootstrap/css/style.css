@@ -1041,8 +1041,11 @@ nav{
 @media (max-width: 992px){
   .col-md-8.about-main h1{
     font-size: 1.5em;
-    padding-top: 60px !important;
-    margin-bottom: 0;
+    /*padding-top: 60px !important;
+    margin-bottom: 0;*/
+    padding: 0 !important;
+    margin-bottom: 10px;
+    padding-left: 14% !important;
 }
   .col-md-4.about-img{
     display: none;
@@ -1053,7 +1056,7 @@ nav{
     height: 100%;
     position: relative;
     padding: 0;
-    margin-top: -40px;
+    top: 40px;
     overflow-y:auto; 
     padding-bottom:30px; 
   }
