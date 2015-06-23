@@ -241,7 +241,7 @@ jQuery(document).ready(function() {
 
     function gotohash(e) {
         var lochash = window.location.hash;
-        if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you'){
+        if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you' && lochash != '#!/host-a-screening'){
 
             var slideloc = slidetoHash.indexOf(lochash);
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
