@@ -1462,6 +1462,9 @@ nav{
  	border: 3px solid #f20016;
   z-index: 999999;
 }
+.petition-container {
+  overflow-y: auto;
+}
 .close-petition, #thank-close {
 	cursor: pointer;
 	float: right;
