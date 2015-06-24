@@ -163,12 +163,20 @@ jQuery(document).ready(function() {
 
     jQuery('.slider-nav a').each(function() {
         var target = jQuery(this).attr('href').replace(/\//g,'');
-        jQuery(this).attr('href', "#!/" + target);
+        //jQuery(this).attr('href', "#!/" + target);
+        jQuery(this).attr('data-hash', "#!/" + target);
+        jQuery(this).removeAttr('href');
+        jQuery(this).css("cursor", "pointer");
 
     });
-    // jQuery('.slider-nav a').click(function(){
-    // 	jQuery('.top-navigation').removeClass('in');
-    // });
+
+    jQuery('.slider-nav a').click(function(){
+        jQuery('.top-navigation').removeClass('in');
+        var menuhash = jQuery(this).attr('data-hash');
+        setTimeout(function(){
+            window.location.hash = menuhash;
+        }, 500);
+    });
 
 
     //slide
