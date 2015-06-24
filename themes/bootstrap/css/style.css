@@ -1723,7 +1723,10 @@ nav{
 .stepwizard-row {
     display: table-row;
 }
-/*.stepwizard-row:before {
+.stepwizard-row a{
+    opacity: 1 !important;
+}
+.stepwizard-row:before {
     top: 14px;
     bottom: 0;
     position: absolute;
@@ -1733,7 +1736,7 @@ nav{
     background-color: #ccc;
     z-order: 0;
     left: 100px;
-}*/
+}
 .stepwizard-step {
     display: table-cell;
     text-align: center;
@@ -2086,4 +2089,21 @@ nav{
 	.thank-arrows.hidden-xs {
 		display: none!important;
 	}
+}
+
+@media( min-width: 1380px){
+    #donate-func-col.full-width .stepwizard-row:before{
+        left: 197px;
+    }
+
+}
+
+@media( max-width: 1380px){
+    #donate-func-col.full-width .stepwizard-row:before{
+        left: 124px;
+    }
+    #donate-func-col .stepwizard-row:before{
+        left: 75px;
+    }
+
 }

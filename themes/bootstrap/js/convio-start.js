@@ -67,6 +67,7 @@
             $('.donation-form').submit(function () {
                 window.scrollTo(0, 0);
                 $('#form_id').val(formId);
+                $('#donate-submit').prop('disabled', true);
                 $(this).hide();
                 $(this).before('<div class="well donation-loading">' +
                 'Loading ...' +
@@ -91,12 +92,13 @@
 
                 $('.donation-loading').remove();
                 $('.donation-form').show();
+		$('#donate-submit').prop('disabled', false);
             },
             success: function (data) {
             	  console.log('donate success');
             		console.log(data);
                 $('#donation-errors').remove();
-
+		$('#donate-submit').prop('disabled', false);
                 if (data.donationResponse.errors) {
                     $('.donation-form').prepend('<div id="donation-errors">' +
                     ((data.donationResponse.errors.message) ? ('<div class="alert alert-danger">' +
@@ -104,26 +106,30 @@
                     '</div>') : '') +
                     '</div>');
 
-                    if (data.donationResponse.errors.fieldError) {
+                    /*if (data.donationResponse.errors.fieldError) {
                         var fieldErrors = luminateExtend.utils.ensureArray(data.donationResponse.errors.fieldError);
                         $.each(fieldErrors, function () {
                             $('#donation-errors').append('<div class="alert alert-danger">' +
                             this +
                             '</div>');
                         });
-                    }
+                    }*/
 
                     $('.donation-loading').remove();
                     $('.donation-form').show();
                 }
                 else {
+
+                    thankContainer.classList.remove('hidden');
+                    donateOverlay.classList.add('hidden');
+
                     $('.donation-loading').remove();
                     $('.donation-form').before('<div class="alert alert-success">' +
                     'Your donation has been processed!' +
                     '</div>' +
                     '<div class="well">' +
                     '<p>Thank you for your donation of $' + data.donationResponse.donation.amount.decimal + '.</p>' +
-                    '<p>Your confirmation code is ' + data.donationResponse.donation.confirmation_code + '.</p>' +
+                    (typeof data.donationResponse.donation.confirmation_code === 'string' ? '<p>Your confirmation code is ' + data.donationResponse.donation.confirmation_code + '.</p>' : '') +
                     '</div>');
                 }
             }

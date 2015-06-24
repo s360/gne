@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.setup-content'),
         allNextBtn = $('.nextBtn');
+        btnDOnate = $('#donate-nav');
 
     allWells.hide();
 
@@ -44,5 +45,31 @@ jQuery(document).ready(function($) {
 
     $('div.setup-panel div a.btn-primary').trigger('click');
 
+
+
+
+
+    if( window.location.hash == '#!/donate'){
+        donate();
+    }
+
+    btnDOnate.click(donate);
+
+    jQuery("#donate-close").click(donate);
+
+    function donate(){
+      /*  console.log('click')
+        navListItems.has('#step-one').removeAttr("disabled")
+        navListItems.has('#step-one').addClass("btn-primary");
+        navListItems.attr("disabled", "disabled");
+        navListItems.removeClass("btn-primary");
+
+        if(allWells.has('#step-1')){
+            $(this).css('display', 'block');
+        }
+        else{
+            allWells.hide();
+        }*/
+    }
 });
 
