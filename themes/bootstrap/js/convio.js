@@ -106,6 +106,8 @@
         /* if there is an error with the donation, display it inline */
         window.donateCallback = {
             error: function(data) {
+            	console.log('error');
+            	console.log(data);
                 $('#donation-errors').remove();
 
                 $('.donation-form').prepend('<div id="donation-errors">' +
@@ -119,7 +121,8 @@
             },
             success: function(data) {
                 $('#donation-errors').remove();
-
+								console.log('success');
+            		console.log(data);
                 if(data.donationResponse.errors) {
                     $('.donation-form').prepend('<div id="donation-errors">' +
                         ((data.donationResponse.errors.message) ? ('<div class="alert alert-danger">' +
