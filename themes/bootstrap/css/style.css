@@ -997,18 +997,11 @@ nav{
 
 .col-md-8.about-main img.nkh-logo{
     width: 30%;
-    margin: 5px 10%;
-    float: left;
+    margin: 5px 35%;
 }
 
 .col-md-8.about-main img.nkh-logo-white{
     display: none;
-}
-
-.col-md-8.about-main img.mediavest-logo{
-    width: 20%;
-    margin: 0px 15%;
-    float: left;
 }
 
 
@@ -1133,9 +1126,8 @@ nav{
 }
 
 .col-md-8.about-main img.nkh-logo-white{
-    width: 30%;
-    margin: 5px 10%;
-    float: left;
+     width: 30%;
+    margin: 5px 35%;
     display: block;
 }
 }
@@ -1524,6 +1516,11 @@ nav{
 .petition-x {
 	color: steelblue;
 }
+
+  .col-sm-4.col-xs-12.petition{
+    z-index: 10;
+  }
+
 @media (min-width: 768px){
 	.petition-overlay-container .petition-container {
 	 	height: 75%;
@@ -1600,9 +1597,11 @@ nav{
 	}
 	.petition-container {
 		padding: 10px 20px;
-	}
-	.col-sm-4.col-xs-12.zip {
 
+	}
+
+	.col-sm-4.col-xs-12.zip {
+    height: auto;
 	}
 	.petition-label {
 		display: block;

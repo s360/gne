@@ -70,6 +70,14 @@
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+    <script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=d4ish0ecopwgx6vztvgmlw';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
   <script src="//c.shpg.org/303/sp.js"></script>
   <script src="http://dev.greatnationseat.com/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
 <script src="http://dev.greatnationseat.com/misc/jquery.once.js?v=1.2"></script>
@@ -374,7 +382,6 @@
          <div class="logos">
           <img class="nkh-logo" src="themes/bootstrap/images/nkh-logo.gif">
           <img class="nkh-logo-white" src="themes/bootstrap/images/nkh-logo-white.gif">
-          <img class="mediavest-logo" src="themes/bootstrap/images/MediaVest-logo.png">
         </div>
       </div>
       <div class="screening">
@@ -462,11 +469,11 @@
         		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402, 104361" />
         		<input type="hidden" name="name.first" id="first-name-overlay" />
        			<input type="hidden" name="name.last" id="last-name-overlay" />
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-6 petition">
                     <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input nameOverlay"/>
                     <label class="petition-label">Full Name</label>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-6 petition">
                     <span class="petition-x">X</span><input id="petition-email" name="primary_email" class="petition-input emailOverlay"/>
                     <label class="petition-label">Email (Required)</label>
                 </div>
