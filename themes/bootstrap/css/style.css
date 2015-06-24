@@ -70,6 +70,15 @@ input {
     -webkit-border-radius:0px;
 }
 
+p {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+h2 {
+  font-family: Oswald, Impact, Charcoal, sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
 
 /**
  ===========================================
@@ -775,7 +784,7 @@ nav{
     text-align: center;
     margin-bottom: 50px;
     font-size: 1em;
-    letter-spacing: 2em;
+    letter-spacing: 0.1em;
 }
 .story-join {
 	display: none;
