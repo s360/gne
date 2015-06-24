@@ -1966,7 +1966,7 @@ nav{
       background-color: pink;
 	    background: url(../images/arrow_left.png);
       background-repeat: no-repeat;
-      background-size: 100%; 
+      background-size: 80%; 
       background-position: center;
       padding: 0px 8px;
       -webkit-appearance: none;
@@ -1986,7 +1986,7 @@ nav{
       background-color: pink;
       background: url(../images/arrow_right.png);
       background-repeat: no-repeat;
-      background-size: 100%; 
+      background-size: 80%; 
       background-position: center;
       padding: 0px 8px;
       -webkit-appearance: none;
