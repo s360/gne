@@ -882,9 +882,11 @@ nav{
 	margin-top: 0;
 	text-transform: uppercase;
 }
-
+.red-text,
 .about-subheader {
-	color: #f20016;
+  color: #f20016;
+}
+.about-subheader {
 	text-transform: uppercase;
 	font-family: 'Ultra', georgia bold, serif bold;
 }
