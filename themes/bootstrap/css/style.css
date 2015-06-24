@@ -1228,6 +1228,9 @@ nav{
   #stories .page1-container {
     background-color: rgba(0,0,0,0.8);
   }
+  #hanno-2 {
+    background-position: 25%;
+  }
 }
 @media (max-width: 768px){
 	.col-md-12.visible-xs.act {
