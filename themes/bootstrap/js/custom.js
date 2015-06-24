@@ -234,7 +234,6 @@ jQuery(document).ready(function() {
             return jQuery(this).find('.node ').attr('data-hash');
         }
     }).get();
-    console.log(dataHash);
 
     var title = jQuery('.slick-slide').map( function() {
         if(!jQuery(this).hasClass("slick-cloned")){
@@ -242,18 +241,16 @@ jQuery(document).ready(function() {
         }
     }).get();
 
-    console.log(title);
-
     var slidetoHash = dataHash;
 
     var pageHome = jQuery('#container-slide-home');
     var pagePress = jQuery('#container-slide-press');
 
     if (pageHome.length){
-        var slid = pageHome;
+        var slide = pageHome;
     }
     if (pagePress.length){
-        var slid = pagePress;
+        var slide = pagePress;
     }
 
     function gotohash(e) {
@@ -312,15 +309,15 @@ jQuery(document).ready(function() {
 
         }
 
-
-
+        //on swipe
+        slide.on('swipe', hashurl );
 
 
     }
 
     function hashurl(){
 
-        var currentSlide = slid.slick('slickCurrentSlide');
+        var currentSlide = slide.slick('slickCurrentSlide');
         var slidehas = slidetoHash[currentSlide];
         window.location.hash = slidehas;
     }
