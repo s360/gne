@@ -1956,7 +1956,7 @@ nav{
     	-moz-transform:rotate(0deg);
     	transform:rotate(0deg);
 	    left: 0px !important;
-	    width: 30px !important;
+	    width: 44px !important;
 	    height: 100vh !important;
       top: 0px;
 	    border:none;
@@ -1966,8 +1966,8 @@ nav{
       background-color: pink;
 	    background: url(../images/arrow_left.png);
       background-repeat: no-repeat;
-      background-size: 120%; 
-      background-position: 5px;
+      background-size: 100%; 
+      background-position: center;
       padding: 0px 8px;
       -webkit-appearance: none;
 	}
@@ -1976,7 +1976,7 @@ nav{
       -moz-transform:rotate(0deg);
       transform:rotate(0deg);
       right: 0px !important;
-      width: 30px !important;
+      width: 44px !important;
       height: 100vh !important;
       top: 0px;
       border:none;
@@ -1986,8 +1986,8 @@ nav{
       background-color: pink;
       background: url(../images/arrow_right.png);
       background-repeat: no-repeat;
-      background-size: 120%; 
-      background-position: -5px;
+      background-size: 100%; 
+      background-position: center;
       padding: 0px 8px;
       -webkit-appearance: none;
 	}
