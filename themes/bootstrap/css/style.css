@@ -305,6 +305,7 @@ nav{
 .story-container {
 	position: absolute;
 	bottom: 0;
+  margin-left: 60px;
 }
 
 .story-title {
