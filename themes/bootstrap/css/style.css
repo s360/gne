@@ -23,9 +23,16 @@
  10. Arrows
  */
 
-/* COLORS
-	blue: #00aeef;
-*/
+/**
+ ===========================================
+ ================= Colours =================
+ ===========================================
+LIGHT BLUE - #00aeef
+DARK BLUE - #1268b3
+RED - #e61e26
+
+
+ */
 /**
  ===========================================
  ================= 1. Body =================
@@ -90,7 +97,6 @@ input {
   background: #f20016;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
   text-decoration: none;
   font-family: oswald, sans-serif;
   letter-spacing: 2px;
@@ -312,29 +318,40 @@ nav{
 	text-align: right;
 	text-transform: uppercase;
 	color: #f20016;
-	font-family: eames, georgia bold, serif bold;
+	font-family: 'Ultra', georgia bold, serif bold;
+  letter-spacing: .05em;
+  text-shadow: 0 0 50px rgba(255,255,255,0.2);
 }
 
 .story-copy-container {
 	padding: 25px;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.9);
 	clear: both;
 }
 
 .story-copy {
-	color: white;
+	color: #fff;
 	font-family: open-sans, sans-serif;
 	font-weight: 300;
+  font-size: 1em;
+  letter-spacing: .05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 .story-copy.two.quote {
-	color: steelblue;
+	color: #00aeef;
 	margin-left: 50px;
+  font-weight: 700;
+  font-size: .9em;
+
 }
 
 .story-two-quote {
-	color: steelblue;
+	color: #00aeef;
 	text-align: right;
+  font-size: .9em;
 }
 
 @media (max-width: 1300px){
@@ -372,7 +389,7 @@ nav{
 
 .story-copy-container {
     padding: 10px 40px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     clear: both;
   }
     .story-container {
@@ -487,19 +504,36 @@ nav{
 }
 
 .page1-title {
-	text-transform: uppercase;
 	color: #00aeef;
   font-family: 'oswald', open-sans;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: .05em;
 }
 
 .front-page-btn {
-	color: #ffffff;
+  color: #ffffff;
   background: #000;
   text-align: center;
   margin-top: 7px;
   padding: 13px;
+  font-family: 'oswald', open-sans;
+  letter-spacing: .05em;
   text-transform: uppercase;
-  font-weight: bold;
+  margin-left: 10px;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+.front-page-btn:hover{
+  color: #e61e26;
+  background: #fff;
+  text-align: center;
+  margin-top: 7px;
+  padding: 13px;
+  font-family: 'oswald', open-sans;
+  letter-spacing: .05em;
+  text-transform: uppercase;
   margin-left: 10px;
   text-decoration: none;
   border: 1px solid white;
@@ -734,12 +768,14 @@ nav{
 
   #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     font-family: 'oswald', open-sans;
-    color: steelblue;
+    color: #1268b3;
     text-transform: uppercase;
     letter-spacing: 1px;
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+    font-size: 1em;
+    letter-spacing: 2em;
 }
 .story-join {
 	display: none;
@@ -875,12 +911,13 @@ nav{
 	height: 100%;
 }
 
-
 .about-header {
 	font-family: 'oswald', open-sans;
-	color: steelblue;
+	color: #1268b3;
 	margin-top: 0;
 	text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: .05em;
 }
 .red-text,
 .about-subheader {
@@ -888,7 +925,10 @@ nav{
 }
 .about-subheader {
 	text-transform: uppercase;
-	font-family: 'Ultra', georgia bold, serif bold;
+  color: #f20016;
+  font-family: Ultra, georgia bold, serif bold;
+  font-size: 1.2em;
+  letter-spacing: .1em;
 }
 @media (min-width: 768px){
 	.about-container {
@@ -899,17 +939,25 @@ nav{
 		padding-left: 25px;
 	}
 	.about-header {
-		font-size: 34px;
+		font-size: 2.5em;
+    letter-spacing: .05em;
 	}
 	.about-subheader {
 		margin-bottom: 10px;
-		font-size: 20px;
 	}
 	.about-copy {
-		line-height: 1.8;
+    line-height: 1.5em;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: .05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
 	}
 	.about-copy.first {
-		line-height: 1.8 !important;
+		line-height: 1.5 !important;
 	}
 	.col-sm-5.about {
 		background-color: #ffffff;
@@ -938,7 +986,8 @@ nav{
 		padding: 40px 30px 0 30px;
 	}
 	.about-header {
-		font-size: 24px;
+		font-size: 1.5em;
+    letter-spacing: .05em;
 	}
 	.about-subheader {
 		margin: 10px 0;
@@ -946,7 +995,7 @@ nav{
 	}
 	.about-copy {
 		color: #ffffff;
-		font-size: 12px;
+		font-size: 1em;
 	}
 }
 
@@ -974,27 +1023,35 @@ nav{
 
 .col-md-8.about-main h1{
   font-family: 'oswald', open-sans;
-  color: steelblue;
+  color: #1268b3;
   margin-top: 40px;
   text-transform: uppercase;
   padding: 20px;
+  font-size: 2.5em;
+  letter-spacing: .05em;
 }
 
-.col-md-8.about-main b{
+.col-md-8.about-main h4{
   color: #f20016;
   text-transform: uppercase;
-  font-family: 'Ultra', georgia bold, serif bold;
-  font-size: 1.4em;
-  line-height: 45px;
+  color: #f20016;
+  font-family: Ultra, georgia bold, serif bold;
+  font-size: 1.2em;
+  letter-spacing: .1em;
+  padding: 0px 10%;
 }
 
 .col-md-8.about-main p{
     padding: 5px 10%;
-    line-height: 30px;
-    font-family: open-sans, sans-serif;
-    font-weight: 300;
     height: 50%;
     line-height: 1.5em;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: .05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 .col-md-8.about-main img.nkh-logo{
@@ -1075,6 +1132,7 @@ nav{
 @media (max-width: 992px){
   .col-md-8.about-main h1{
     font-size: 1.5em;
+    letter-spacing: .05em;
     /*padding-top: 60px !important;
     margin-bottom: 0;*/
     padding: 0 !important;
@@ -1112,14 +1170,6 @@ nav{
     line-height: 18px;
     color: white;
     height: 100%;
-}
-
-  .col-md-8.about-main p em{
-   
-}
-
-.col-md-8.about-main b{
-  
 }
 
 .col-md-8.about-main img.nkh-logo{
@@ -1168,7 +1218,6 @@ nav{
 	    margin-top: 7px;
 	    padding: 15px 30px;
 	    text-transform: uppercase;
-	    font-weight: bold;
 	    text-decoration: none;
 	    margin-bottom: 50px;
 	    font-family: oswald, sans-serif;
@@ -1179,10 +1228,15 @@ nav{
 	}
 	
 	.body-copy{
-	    margin: 20px 0 60px 0;
-	    line-height: 30px;
-	    font-family: open-sans, sans-serif;
-	    font-weight: 300;
+	   margin: 20px 0 60px 0;
+	   line-height: 1.5em;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: .05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 	}
 	
 	.act h1{
@@ -1199,11 +1253,12 @@ nav{
 	}
 	
 	.act-content h4{
-	    letter-spacing: 1px;
 	    margin-bottom: 20px;
 	    text-transform: uppercase;
 	    color: #f20016;
 	    font-family: Ultra, georgia bold, serif bold;
+      font-size: 1.2em;
+      letter-spacing: .1em;
 	}
 	
 	.act-content form{
@@ -1218,7 +1273,6 @@ nav{
 	    text-align: center;
 	    padding: 15px 30px;
 	    text-transform: uppercase;
-	    font-weight: bold;
 	    text-decoration: none;
 	    font-family: oswald, sans-serif;
 	    letter-spacing: 2px;
@@ -1340,7 +1394,6 @@ nav{
 	  text-align: center;
 	  padding: 15px 30px;
 	  text-transform: uppercase;
-	  font-weight: bold;
 	  text-decoration: none;
 	  font-family: oswald, sans-serif;
 	  letter-spacing: 2px;
@@ -1380,7 +1433,6 @@ nav{
 	  margin-top: 7px;
 	  padding: 15px 30px;
 	  text-transform: uppercase;
-	  font-weight: bold;
 	  text-decoration: none;
 	  margin-bottom: 50px;
 	  font-family: oswald, sans-serif;
@@ -1419,11 +1471,22 @@ nav{
 
 .donation-copy-container h1{
   text-align: left;
-  font-size: 2em;
+  color: #1268b3;
+  font-family: 'oswald', open-sans;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: .05em;
 }
 
 .donation-copy-container p{
   text-align: left;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: .05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 @media (min-width: 768px){ 
 	#step-3 {
@@ -1472,16 +1535,22 @@ nav{
   margin-right: -45px; 
 }
 .petition-header {
-	font-family: 'Oswald', sans-serif;
 	text-align: center;
-	text-transform: uppercase;
-	color: steelblue;
+  color: #1268b3;
+  font-family: 'oswald', open-sans;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: .05em;
 }
 .petition-cta {
-	font-family: 'Oswald', sans-serif;
-	text-align: center;
-	text-transform: uppercase;
+  text-align: center;
+  font-family: 'oswald', open-sans;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1.5em;
+  letter-spacing: .05em;
 	color: #00aeef;	
+  padding: 0 10%;
 }
 .petition-form-container {
 	text-align: center
@@ -1491,10 +1560,12 @@ nav{
 	border: none;
 	background-color: #ffffff;
 	padding-left: 5px;
-	border-bottom: 1px solid steelblue;
+	border-bottom: 1px solid #1268b3;
 }
 .petition-label {
-	color: steelblue;
+	color: #1268b3;
+  font-weight: 400;
+  text-align: center;
 }
  
 .petition-submit {
@@ -1504,7 +1575,6 @@ nav{
 	background: #f20016;
 	text-align: center;
 	text-transform: uppercase;
-	font-weight: bold;
 	border: 0px;
 	outline: none;	
 	white-space: nowrap;
@@ -1516,7 +1586,7 @@ nav{
 }
 
 .petition-x {
-	color: steelblue;
+	color: #1268b3;
 }
 
   .col-sm-4.col-xs-6.petition{
@@ -1542,6 +1612,12 @@ nav{
 	.petition-subheader {
 		font-family: 'open sans', sans-serif;
 		text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: .05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 	}
 	
 	.petition-subheader.two {
@@ -1557,8 +1633,9 @@ nav{
 	}
 	
 	.petition-label {
-		padding-left: 15px;
-		text-align: left;
+    color: #1268b3;
+    font-weight: 400;
+    text-align: center;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -1606,6 +1683,9 @@ nav{
     height: auto;
 	}
 	.petition-label {
+    color: #1268b3;
+    font-weight: 400;
+    text-align: center;
 		display: block;
 	}
 	.petition-input {
@@ -1674,7 +1754,7 @@ nav{
 }
 .screening-header {
 	font-family: 'oswald', open-sans;
-  color: steelblue;
+  color: #1268b3;
   margin-top: 0;
   text-transform: uppercase;
 }
