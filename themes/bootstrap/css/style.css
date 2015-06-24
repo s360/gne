@@ -320,6 +320,7 @@ nav{
 .story-container {
 	position: absolute;
 	bottom: 0;
+  margin-left: 60px;
 }
 
 .story-title {
@@ -566,7 +567,7 @@ nav{
 	background: url('../images/Jahnique_01.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: -500px;
+	background-position: 70% top;
 }
 .col-sm-4.page1-btn-container {
 	margin-top: 50px;
@@ -1533,6 +1534,9 @@ nav{
  	position: absolute;
  	border: 3px solid #f20016;
   z-index: 999999;
+}
+.petition-container {
+  overflow-y: auto;
 }
 .close-petition, #thank-close {
 	cursor: pointer;
