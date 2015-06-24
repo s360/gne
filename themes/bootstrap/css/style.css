@@ -1272,7 +1272,17 @@ nav{
   }
 }
 @media (max-width: 768px){
+	.join-act {
+		display: none;
+	}
+	.act-content-mobile form{
+		text-align: center;
+	}
+	.act-content-mobile form input {
+		margin-bottom: 5px;
+	}
 	.col-md-12.visible-xs.act {
+		padding-top: 35px;
 		background-color: rgba(0,0,0, 0.8);
 		z-index: 10;
 		height: 100%;
