@@ -3,7 +3,9 @@
  ========== 3c. Press ===================
  ===========================================
  */
-
+body {
+	overflow-y: auto!important;
+}
 #container-slide-press .node-press-release{
     padding: 30px 20px;
     padding-top: 51px;
@@ -115,9 +117,9 @@
   margin: 0 auto;
 }
 
-.slick-list {
+/*.slick-list {
 	overflow-y: auto!important;
-}
+}*/
 
 /*.col-md-4.psa_copy {
 	padding-left: 30px;
