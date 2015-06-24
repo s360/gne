@@ -1149,11 +1149,10 @@ nav{
 	}
 	
 	.act .col-md-4.act-content{
+	
 	    padding: 50px;
 	}
-	.col-md-4.act-content.hidden-xs.left {
-		padding-left: 60px;
-	}
+	
 	.crowd{
 	    background:url(../images/IMG_classroom.jpg);
 	    height: 100%;
@@ -1301,9 +1300,11 @@ nav{
 	}
 	.col-md-12.visible-xs.act {
 		padding: 0 50px;
+		padding-top: 35px;
 		background-color: rgba(0,0,0, 0.8);
 		z-index: 10;
 		height: 100%;
+  	margin-top: -50px; 
 	}
 	.act-mobile-header-container {
 		text-align: center;
@@ -1594,7 +1595,7 @@ nav{
 		padding: 10px 20px;
 	}
 	.col-sm-4.col-xs-12.zip {
-		clear: both;
+		/*clear: both;*/
 	}
 	.petition-label {
 		display: block;
