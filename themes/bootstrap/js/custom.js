@@ -153,6 +153,14 @@ jQuery(document).ready(function() {
         return false;
     });
 
+    jQuery('input.zip_sub.mobile').click(function(event) {
+        var zip = jQuery('.zipcode.mobile').val();
+        var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
+        //window.location.href=url;
+        window.open(url, '_blank');
+        return false;
+    });
+
     jQuery( ".navbar-toggle" ).click(function() {
         jQuery('.top-navigation').toggleClass('in');
     });

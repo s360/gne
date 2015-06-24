@@ -376,7 +376,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                                 <div class="col-md-6 ">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
-                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code"  />
+                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code*"  />
                                 </div>
                             </div>
                             </div>
@@ -610,3 +610,13 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 <script src="/sites/all/themes/bootstrap/js/convio.js"></script>
 <script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-60504111-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
