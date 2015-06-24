@@ -1924,6 +1924,7 @@ nav{
     border-bottom: solid 5px #f20016;
     margin:10px;
     background: none;
+
 	}	
 
 	.arrow_right{
@@ -1941,32 +1942,54 @@ nav{
 }
 
 @media (max-width: 768px){
+  .btn-nav{
+    position: absolute;
+    top: 0;
+    padding: 0;
+    width: 99%;
+    pointer-events:none;
+    color: transparent;
+  }
+
 	.arrow_left{
-		  -webkit-transform:rotate(45deg);
-    	-moz-transform:rotate(45deg);
-    	transform:rotate(45deg);
-	    left: 20px !important;
-	    width: 20px !important;
-	    height: 20px !important;
+		  -webkit-transform:rotate(0deg);
+    	-moz-transform:rotate(0deg);
+    	transform:rotate(0deg);
+	    left: 0px !important;
+	    width: 44px !important;
+	    height: 100vh !important;
+      top: 0px;
 	    border:none;
-	    border-left: solid 5px #f20016 !important;
-	    border-bottom: solid 5px #f20016 !important;
+	    border-left: solid 0px #f20016 !important;
+	    border-bottom: solid 0px #f20016 !important;
 	    margin: 0px;
-	    background: none;
-      padding: none;
+      background-color: pink;
+	    background: url(../images/arrow_left.png);
+      background-repeat: no-repeat;
+      background-size: 80%; 
+      background-position: center;
+      padding: 0px 8px;
+      -webkit-appearance: none;
 	}
 	.arrow_right {
-		-webkit-transform:rotate(45deg);
-    -moz-transform:rotate(45deg);
-    transform:rotate(45deg);
-	  right: 20px !important;
-	  width: 20px;
-	  height: 20px;
-	  border:none;
-	  border-right: solid 5px #f20016 !important;
-	  border-top: solid 5px #f20016 !important;
-	  margin: 0px;
-	  background: none;
+		  -webkit-transform:rotate(0deg);
+      -moz-transform:rotate(0deg);
+      transform:rotate(0deg);
+      right: 0px !important;
+      width: 44px !important;
+      height: 100vh !important;
+      top: 0px;
+      border:none;
+      border-left: solid 0px #f20016 !important;
+      border-bottom: solid 0px #f20016 !important;
+      margin: 0px;
+      background-color: pink;
+      background: url(../images/arrow_right.png);
+      background-repeat: no-repeat;
+      background-size: 80%; 
+      background-position: center;
+      padding: 0px 8px;
+      -webkit-appearance: none;
 	}
 }
 /* END */
