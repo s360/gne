@@ -234,6 +234,15 @@ jQuery(document).ready(function() {
             return jQuery(this).find('.node ').attr('data-hash');
         }
     }).get();
+    console.log(dataHash);
+
+    var title = jQuery('.slick-slide').map( function() {
+        if(!jQuery(this).hasClass("slick-cloned")){
+            return jQuery(this).find('.node ').attr('title');
+        }
+    }).get();
+
+    console.log(title);
 
     var slidetoHash = dataHash;
 
@@ -249,10 +258,14 @@ jQuery(document).ready(function() {
 
     function gotohash(e) {
         var lochash = window.location.hash;
+        var slideloc = slidetoHash.indexOf(lochash);
+        //document title
+        var docTitle = title[slideloc];
+        document.title = "Great Nations Eat | "+docTitle;
 
         if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you' && lochash != '#!/host-a-screening'){
 
-            var slideloc = slidetoHash.indexOf(lochash);
+            
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
             jQuery("#container-slide-press").slick('slickGoTo', slideloc);
 
@@ -263,6 +276,8 @@ jQuery(document).ready(function() {
             jQuery('#close-petition').click( function(){
               //  jQuery('#petition-overlay-container').AddClass('hidden');
             });
+            //doc title
+            document.title = "Great Nations Eat | Join";
 
         }
 
@@ -271,6 +286,8 @@ jQuery(document).ready(function() {
             jQuery('#donate-close').click( function(){
                 //jQuery('#donation-overlay-container').AddClass('hidden');
             });
+            //doc title
+            document.title = "Great Nations Eat | Donate";
 
         }
 
@@ -279,16 +296,20 @@ jQuery(document).ready(function() {
             jQuery('#thank-close').click( function(){
                 jQuery('#thank-container').AddClass('hidden');
             });
+            //doc title
+            document.title = "Great Nations Eat | Thank You";
         }
 
         if(lochash == '#!/host-a-screening'){
             jQuery('#screening-container').removeClass('hidden');
+            //doc title
+            document.title = "Great Nations Eat | Screening";
 
         }
 
-        //document title
 
-        
+
+
 
     }
 

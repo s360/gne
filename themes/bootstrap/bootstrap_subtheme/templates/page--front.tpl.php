@@ -539,7 +539,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             petOverlay.removeClass('hidden');
         }
 
-        function stepNumber(){}
+
 
     });
 </script>
