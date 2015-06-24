@@ -1291,6 +1291,17 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/themes\/bootstrap\/js\/tags.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/tags.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/tags-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/themes\/bootstrap\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,

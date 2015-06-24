@@ -73,6 +73,7 @@
  * @ingroup themeable
  */
 ?>
+<?php /*
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
     <div class="navbar-header">
@@ -112,8 +113,8 @@
     <?php endif; ?>
   </div>
 </header>
-
-<div class="main-container container">
+*/ ?>
+<div class="main-container container" style="  padding-top: 100px;">
 
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>

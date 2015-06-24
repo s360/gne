@@ -18,7 +18,8 @@ $body_content = $node->body['und'][0]['value'];
 $css_classes = $node->field_css_classes['und'][0]['value'];
 $nid = $node->vid;
 $alias = drupal_get_path_alias('node/'.$nid);
+$title = $node->title;
 ?>
-<div  title="<?php echo $alias ?>"  data-hash="#!/<?php echo $alias ?>" id="<?php echo $alias ?>" class=" node body-content <?php if($css_classes) echo $css_classes; ?>" style="<?php if(!empty ($img_url)): ?>background-image: url('<?php echo $img_url; ?>')<?php endif;?>">
+<div title="<?php echo $title ?>" data-hash="#!/<?php echo $alias ?>" id="<?php echo $alias ?>" class=" node body-content <?php if($css_classes) echo $css_classes; ?>" style="<?php if(!empty ($img_url)): ?>background-image: url('<?php echo $img_url; ?>')<?php endif;?>">
     <?php echo $body_content ?>
 </div>

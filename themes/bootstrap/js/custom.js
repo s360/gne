@@ -163,12 +163,20 @@ jQuery(document).ready(function() {
 
     jQuery('.slider-nav a').each(function() {
         var target = jQuery(this).attr('href').replace(/\//g,'');
-        jQuery(this).attr('href', "#!/" + target);
+        //jQuery(this).attr('href', "#!/" + target);
+        jQuery(this).attr('data-hash', "#!/" + target);
+        jQuery(this).removeAttr('href');
+        jQuery(this).css("cursor", "pointer");
 
     });
-    // jQuery('.slider-nav a').click(function(){
-    // 	jQuery('.top-navigation').removeClass('in');
-    // });
+
+    jQuery('.slider-nav a').click(function(){
+        jQuery('.top-navigation').removeClass('in');
+        var menuhash = jQuery(this).attr('data-hash');
+        setTimeout(function(){
+            window.location.hash = menuhash;
+        }, 500);
+    });
 
 
     //slide
@@ -227,26 +235,41 @@ jQuery(document).ready(function() {
         }
     }).get();
 
+    var title = jQuery('.slick-slide').map( function() {
+        if(!jQuery(this).hasClass("slick-cloned")){
+            return jQuery(this).find('.node ').attr('title');
+        }
+    }).get();
+
     var slidetoHash = dataHash;
 
     var pageHome = jQuery('#container-slide-home');
     var pagePress = jQuery('#container-slide-press');
 
     if (pageHome.length){
-        var slid = pageHome;
+        var slide = pageHome;
     }
     if (pagePress.length){
-        var slid = pagePress;
+        var slide = pagePress;
     }
 
     function gotohash(e) {
         var lochash = window.location.hash;
+        var slideloc = slidetoHash.indexOf(lochash);
+
+        //document title
+        var docTitle = title[slideloc];
+        document.title = "Great Nations Eat | "+docTitle;
+        if (lochash == ''){
+            document.title = "Great Nations Eat | Stories";
+        }
+
+
         if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you' && lochash != '#!/host-a-screening'){
 
-            var slideloc = slidetoHash.indexOf(lochash);
+
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
             jQuery("#container-slide-press").slick('slickGoTo', slideloc);
-
 
         }
 
@@ -255,6 +278,8 @@ jQuery(document).ready(function() {
             jQuery('#close-petition').click( function(){
               //  jQuery('#petition-overlay-container').AddClass('hidden');
             });
+            //doc title
+            document.title = "Great Nations Eat | Join";
 
         }
 
@@ -263,6 +288,8 @@ jQuery(document).ready(function() {
             jQuery('#donate-close').click( function(){
                 //jQuery('#donation-overlay-container').AddClass('hidden');
             });
+            //doc title
+            document.title = "Great Nations Eat | Donate";
 
         }
 
@@ -271,17 +298,26 @@ jQuery(document).ready(function() {
             jQuery('#thank-close').click( function(){
                 jQuery('#thank-container').AddClass('hidden');
             });
+            //doc title
+            document.title = "Great Nations Eat | Thank You";
         }
 
         if(lochash == '#!/host-a-screening'){
             jQuery('#screening-container').removeClass('hidden');
+            //doc title
+            document.title = "Great Nations Eat | Screening";
 
         }
+
+        //on swipe
+        slide.on('swipe', hashurl );
+
+
     }
 
     function hashurl(){
 
-        var currentSlide = slid.slick('slickCurrentSlide');
+        var currentSlide = slide.slick('slickCurrentSlide');
         var slidehas = slidetoHash[currentSlide];
         window.location.hash = slidehas;
     }

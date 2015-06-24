@@ -17,13 +17,13 @@ $img_url = file_create_url($node->field_backgroud_image['und'][0]['uri']);
 $body_content = $node->body['und'][0]['value'];
 $css_classes = $node->field_css_classes['und'][0]['value'];
 $nid = $node->vid;
-$title= $node->title;
+$title = $node->title;
 $alias = drupal_get_path_alias('node/'.$nid);
 ?>
-<div  title="<?php echo $alias ?>" data-hash="#!/<?php echo $alias ?>" id="<?php echo $alias ?>" class="node node-press-release <?php if($css_classes) echo $css_classes; ?>" <?php if($img_url)?>style="background-image: url('<?php echo $img_url; ?>')">
+<div title="<?php echo $title ?>"  data-hash="#!/<?php echo $alias ?>" id="<?php echo $alias ?>" class="node node-press-release <?php if($css_classes) echo $css_classes; ?>" <?php if($img_url)?>style="background-image: url('<?php echo $img_url; ?>')">
     <h2><a><?php echo $title;?></a></h2>
-    <div class="content">
+
         <?php echo $body_content ?>
-    </div>
+
 
 </div>

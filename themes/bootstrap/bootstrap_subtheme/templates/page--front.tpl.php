@@ -128,7 +128,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 
 <!-- PETITION OVERLAY -->
-<div id="petition-overlay-container" class="petition-overlay-container">
+<div id="petition-overlay-container" class="petition-overlay-container hidden">
     <div class='full_overlay'></div>
     <div class="petition-container">
         <span id="close-petition" class="close-petition"></span>
@@ -139,20 +139,31 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
         <h2 class="petition-cta">Add your name to the list of americans who demand we do better.</h2>
         <div class="petition-form-container">
-            <form id="petition-form" name="petition-form">
+            <form id="petition-form" class="overlay-form" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
+                <input type="hidden" name="api_key" id="api_key" value="sosapikey" />
+                <input type="hidden" name="v" id="v" value="1.0" />
+                <input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
+                <input type="hidden" name="login_name" id="login_name" value="apatt" />
+                <input type="hidden" name="login_password" id="login_password" value="test123456" />
+                <input type="hidden" name="response_format" id="response_format" value="json" />
+                <input type="hidden" name="add_group_ids" id="add_group_ids" value="104402, 104361" />
+                <input type="hidden" name="name.first" id="first-name-overlay" />
+                <input type="hidden" name="name.last" id="last-name-overlay" />
                 <div class="col-sm-4 col-xs-6">
-                    <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input" placeholder="Judy Reeder"/>
-                    <label class="petition-label">(Name)</label>
+                    <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input nameOverlay"/>
+                    <label class="petition-label">Full Name</label>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                    <span class="petition-x">X</span><input id="petition-email" name="email" class="petition-input" placeholder="jreeder@hotmail.com"/>
-                    <label class="petition-label">(Email)</label>
+                    <span class="petition-x">X</span><input id="petition-email" name="primary_email" class="petition-input emailOverlay"/>
+                    <label class="petition-label">Email (Required)</label>
                 </div>
                 <div class="col-sm-4 col-xs-12 zip">
-                    <span class="petition-x">X</span><input id="petition-zip" name="zip" class="petition-input" placeholder="98270" />
-                    <label class="petition-label">(Zip)</label>
+                    <span class="petition-x">X</span><input id="petition-zip" name="primary_address.zip" class="petition-input" />
+                    <label class="petition-label">Zip Code</label>
                 </div>
-                <button id="overlay-submit" class="petition-submit">Join The Movement</button>
+                <div class="petition-sub">
+                    <button id="overlay-submit" class="petition-submit">Join The Movement</button>
+                </div>
             </form>
         </div>
     </div>
@@ -174,7 +185,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" id="donate-func-col">
     <div class="donation-dynamic-container">
         <div class="static-donation-container">
 
@@ -434,7 +445,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                             </div>
                             <div class="form-group">
-                               <!-- <input type="hidden" name="df_preview" value="test">-->
+                                <input type="hidden" name="df_preview" value="test">
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                         </div>
@@ -442,194 +453,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 </div>
             </form>
             <!-- end donation form -->
-            <?php /*
-            <nav class="donate-page-selector">
-                <div class="amount active"></div>
-                <div class="billing"></div>
-                <div class="cc-info"></div>
-            </nav>
-            */?>
 
         </div>
-        <?php /*
-        <div class="donate-amount-container" style="display: none">
-            <form class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
-                <input type="hidden" name="method" id="method" value="donate" />
-                <input type="hidden" name="form_id" id="form_id" value="" />
-                <input type="hidden" name="validate" value="true" />
-                <fieldset class="donate-amount-form" id="donation_level">
-                    <legend class="donate-amount-header">Select an amount</legend>
-                    <!-- Gets overwritten by convio-start.js - used for local testing-->
-                    <ul class="donate-amount-ul">
-                        <li><input type="radio" name="level_id" value="15628" /> <label class="donate-amount">$5</label></li>
-                        <li><input type="radio" name="level_id" value="15629" /> <label class="donate-amount">$10</label></li>
-                        <li><input type="radio" name="level_id" value="15630" /> <label class="donate-amount">$20</label></li>
-                        <li><input type="radio" name="level_id" value="15631" /> <label class="donate-amount">$30</label></li>
-                        <li><input type="radio" name="level_id" value="15632" /> <label class="donate-amount">$50</label></li>
-                        <li><input type="radio" name="level_id" value="15633" /> <label class="donate-amount">$100</label></li>
-                        <li><input type="radio" name="level_id" value="15634" /> <label class="donate-amount">$200</label></li>
-                        <li><input type="radio" name="level_id" value="15635" /> <label class="donate-amount">$500</label></li>
-                        <li><input type="radio" id="level-other" name="level_id" value="15633" /><label for="level-other" class="level-other">other amount</label></li>
-                        <li class="other-input-li"><input type="text" id="other-amount" name="other_amount" class="other-amount" disabled /></li>
-                    </ul>
-
-                </fieldset>
-
-                <fieldset class="donate-billing-info" style="display:none;">
-                    <legend class="billing-info-header">Billing Info</legend>
-                    <input type="text" placeholder="First Name*" name="billing.name.first" class="input-half">
-                    <input type="text" placeholder="Last Name*" name="billing.name.last" class="input-half">
-                    <input type="text" placeholder="Billing Street 1*" name="billing.address.street1" class="input-full">
-                    <input type="text" placeholder="Street 2" name="billing.address.street2" class="input-full">
-                    <input type="text" placeholder="City*" name="billing.address.city" class="input-full">
-
-                    <div>
-                        <select name="billing.address.state" class="input-full">
-                            <option>State</option>
-                            <option value="AK">AK</option>
-                            <option value="AL">AL</option>
-                            <option value="AR">AR</option>
-                            <option value="AZ">AZ</option>
-                            <option value="CA">CA</option>
-                            <option value="CO">CO</option>
-                            <option value="CT">CT</option>
-                            <option value="DC">DC</option>
-                            <option value="DE">DE</option>
-                            <option value="FL">FL</option>
-                            <option value="GA">GA</option>
-                            <option value="HI">HI</option>
-                            <option value="IA">IA</option>
-                            <option value="ID">ID</option>
-                            <option value="IL">IL</option>
-                            <option value="IN">IN</option>
-                            <option value="KS">KS</option>
-                            <option value="KY">KY</option>
-                            <option value="LA">LA</option>
-                            <option value="MA">MA</option>
-                            <option value="MD">MD</option>
-                            <option value="ME">ME</option>
-                            <option value="MI">MI</option>
-                            <option value="MN">MN</option>
-                            <option value="MO">MO</option>
-                            <option value="MS">MS</option>
-                            <option value="MT">MT</option>
-                            <option value="NC">NC</option>
-                            <option value="ND">ND</option>
-                            <option value="NE">NE</option>
-                            <option value="NH">NH</option>
-                            <option value="NJ">NJ</option>
-                            <option value="NM">NM</option>
-                            <option value="NV">NV</option>
-                            <option value="NY">NY</option>
-                            <option value="OH">OH</option>
-                            <option value="OK">OK</option>
-                            <option value="OR">OR</option>
-                            <option value="PA">PA</option>
-                            <option value="RI">RI</option>
-                            <option value="SC">SC</option>
-                            <option value="SD">SD</option>
-                            <option value="TN">TN</option>
-                            <option value="TX">TX</option>
-                            <option value="UT">UT</option>
-                            <option value="VA">VA</option>
-                            <option value="VT">VT</option>
-                            <option value="WA">WA</option>
-                            <option value="WI">WI</option>
-                            <option value="WV">WV</option>
-                            <option value="WY">WY</option>
-                            <option value="AS">AS</option>
-                            <option value="FM">FM</option>
-                            <option value="GU">GU</option>
-                            <option value="MH">MH</option>
-                            <option value="MP">MP</option>
-                            <option value="PR">PR</option>
-                            <option value="PW">PW</option>
-                            <option value="VI">VI</option>
-                            <option value="AA">AA</option>
-                            <option value="AE">AE</option>
-                            <option value="AP">AP</option>
-                            <option value="AB">AB</option>
-                            <option value="BC">BC</option>
-                            <option value="MB">MB</option>
-                            <option value="NB">NB</option>
-                            <option value="NL">NL</option>
-                            <option value="NS">NS</option>
-                            <option value="NT">NT</option>
-                            <option value="NU">NU</option>
-                            <option value="ON">ON</option>
-                            <option value="PE">PE</option>
-                            <option value="QC">QC</option>
-                            <option value="SK">SK</option>
-                            <option value="YT">YT</option>
-                            <option value="None">None</option>
-                        </select>
-                    </div>
-                    <input type="text" placeholder="Zip/Postal Code" name="billing.address.zip" class="input-full">
-                    <input type="text" placeholder="Email Address*" name="donor.email" class="input-full">
-
-                    <div class="checkbox-wrap">
-                        <label>
-                            <input type="checkbox" name="donor.email_opt_in" value="true" checked> Yes, I'd like to receive email from American Health Society
-                        </label>
-                    </div>
-                    <div class="checkbox-wrap">
-                        <label>
-                            <input type="checkbox" name="df_preview" value="true" checked> Test Drive?
-                        </label>
-                    </div>
-                </fieldset>
-                <fieldset class="donate-cc-info" style="display:none;">
-                    <legend class="cc-info-header">Payment Information</legend>
-                    <input type="text" placeholder="Card Number" name="card_number" class="card-number">
-                    <input type="text" placeholder="CVV" name="card_cvv" class="card-cvv">
-                    <div>
-                        <label>Expiration Date:</label>
-                        <div>
-                            <select name="card_exp_date_month">
-                                <option>Month</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
-                        <div class="small-12 large-3 pull-3 columns">
-                            <select name="card_exp_date_year">
-                                <option>Year</option>
-                                <option value="2013">2013</option>
-                                <option value="2014">2014</option>
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-
-                    <div>
-                        <input type="hidden" name="df_preview" value="test">
-                        <button type="submit" class="btn btn-success complete-donation" id="donate-submit">Complete Donation</button>
-                    </div>
-                </fieldset>
-        </div>
-        </form>
-        <!--<nav class="next-step1">NEXT STEP</nav>
-        <nav class="prev-step1" style="display:none;">PREVIOUS STEP</nav>
-        <nav class="next-step2" style="display:none;">NEXT STEP</nav>
-        <nav class="prev-step2" style="display:none;">PREVIOUS STEP</nav>-->
-        */?>
-
         </div>
     </div>
 </div>
@@ -682,7 +507,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function() {
-        jQuery('.add-voice').click(function() {
+        jQuery('.leaf.visible-xs.join').click(function() {
+            jQuery('#petition-overlay-container').removeClass('hidden');
+        });
+        jQuery('.story-join').click(function() {
             jQuery('#petition-overlay-container').removeClass('hidden');
         });
         /**********DONATION HIDE COPY*********/
@@ -699,8 +527,23 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             donateFunc.removeClass('full-width');
             donateCopy.removeClass('hidden');
         });
+
+        //reset from donation
+        jQuery('#donate-nav').click(function() {
+            jQuery('.donation-form')[0].reset();
+        });
+
+        //petition overlay
+        var petOverlay = jQuery("#petition-overlay-container");
+        if( window.location.hash == ''){
+            petOverlay.removeClass('hidden');
+        }
+
+
+
     });
 </script>
+
 <script type="text/javascript">
 
     var formId = "12860";
@@ -712,8 +555,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var petitionButton2  = document.getElementById('join-act');
     var thankContainer   = document.getElementById('thank-container');
     var thankClose 	     = document.getElementById('thank-close');
-    var storySubmit      = document.getElementById('story-submit');
-    var overlaySubmit    = document.getElementById('overlay-submit');
     var donateButton   = document.getElementById('donate-nav');
     var donateOverlay  = document.getElementById('donation-overlay-container');
     var donateClose 	 = document.getElementById('donate-close');
@@ -723,22 +564,16 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var screeningSubmit = document.getElementById('screening-submit');
     var screeningButton  = document.getElementById('host-screening');
     var orientation;
+
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
     });
-   /* screeningButton.addEventListener('click', function() {
+    screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
-    });*/
+    });
     screeningSubmit.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
         thankContainer.classList.remove('hidden');
-    });
-    storySubmit.addEventListener('click', function () {
-        thankContainer.classList.remove('hidden');
-    });
-    overlaySubmit.addEventListener('click', function () {
-        thankContainer.classList.remove('hidden');
-        petitionOverlay.classList.add('hidden');
     });
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
@@ -772,6 +607,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     console.log(window.location);
 </script>
 
-<script src="/api/test/luminateExtend/examples/bootstrap/js/luminateExtend.js"></script>
-<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
+
 <script src="/sites/all/themes/bootstrap/js/convio.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
