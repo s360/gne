@@ -709,7 +709,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
-                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code"  />
+                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code*"  />
                                 </div>
                             </div>
                             </div>
@@ -846,17 +846,20 @@
 		});
 		jQuery('#act-add-voice').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
-		})
-	/**********DONATION HIDE COPY*********/
+		});
+	/**********DONATION*********/
 		var nextDonate = jQuery('#key-next-step');
 		var donateCopy = jQuery('#donate-copy-col');
 		var donateFunc = jQuery('#donate-func-col');
 		var stepOne    = jQuery('#step-one');
+		var amountSelected = false;
+		
 
 		nextDonate.click(function() {
 			donateCopy.addClass('hidden');
 			donateFunc.addClass('full-width');
 		});
+		
 		stepOne.click(function() { 
 			donateFunc.removeClass('full-width');
 			donateCopy.removeClass('hidden');
