@@ -1595,7 +1595,7 @@ nav{
 		padding: 10px 20px;
 	}
 	.col-sm-4.col-xs-12.zip {
-		/*clear: both;*/
+		clear: both;
 	}
 	.petition-label {
 		display: block;
