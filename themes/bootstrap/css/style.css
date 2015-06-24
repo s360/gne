@@ -1598,7 +1598,7 @@ nav{
 		padding: 10px 20px;
 	}
 	.col-sm-4.col-xs-12.zip {
-		clear: both;
+
 	}
 	.petition-label {
 		display: block;
@@ -1615,6 +1615,11 @@ nav{
 	#petition-zip {
 		width: 12%;
 	}
+
+  petition-sub{
+    width: 100%;
+    clear: both;
+  }
 }
 
 .screening-overlay-container {
