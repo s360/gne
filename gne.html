@@ -518,10 +518,10 @@
                         <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
                     </div>
                 </div>
             </div>
@@ -852,6 +852,8 @@
 		var donateCopy = jQuery('#donate-copy-col');
 		var donateFunc = jQuery('#donate-func-col');
 		var stepOne    = jQuery('#step-one');
+		var stepTwo    = jQuery('#step-two');
+		var stepThree  = jQuery('#step-three');
 		var amountSelected = false;
 		
 
@@ -863,6 +865,13 @@
 		stepOne.click(function() { 
 			donateFunc.removeClass('full-width');
 			donateCopy.removeClass('hidden');
+		});
+
+		stepTwo.add(stepThree).click(function() {
+			if(jQuery(this).css('cursor', 'pointer')) {
+				donateCopy.addClass('hidden');
+				donateFunc.addClass('full-width');
+			}
 		});
 
         //reset from donation
