@@ -424,6 +424,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/arrow_left.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26122,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_left.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_left.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/arrow_right.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18142,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_right.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_right.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/arrows.png": {
 		"fileType": 32768,
 		"ignore": 0,
