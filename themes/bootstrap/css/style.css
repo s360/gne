@@ -1243,6 +1243,10 @@ nav{
     font-size: 2.75em;
     margin: 0;
   }
+  .col-sm-4.about-left,
+  .col-sm-3.about-right {
+    top: 5px;
+  }
 }
 @media (max-width: 1024px) and (orientation:landscape){
   .body-copy {
