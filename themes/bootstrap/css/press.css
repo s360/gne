@@ -222,3 +222,10 @@
 .content.main {
 	margin-top: 0!important;
 }
+
+.contact-info {
+	margin-top: 13px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	color: white;
+}
