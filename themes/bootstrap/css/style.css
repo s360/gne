@@ -349,7 +349,11 @@ nav{
 
 
 }
-
+@media (max-width: 768px) and (-webkit-device-pixel-ratio: 2){
+	.col-sm-3.story-col {
+		width: 35%;
+	}
+}
 @media (max-width: 768px){
 .col-sm-3.story-col {
     position: relative;
