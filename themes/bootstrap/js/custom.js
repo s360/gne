@@ -259,13 +259,18 @@ jQuery(document).ready(function() {
     function gotohash(e) {
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash);
+
         //document title
         var docTitle = title[slideloc];
         document.title = "Great Nations Eat | "+docTitle;
+        if (lochash == ''){
+            document.title = "Great Nations Eat | Stories";
+        }
+
 
         if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you' && lochash != '#!/host-a-screening'){
 
-            
+
             jQuery("#container-slide-home").slick('slickGoTo', slideloc);
             jQuery("#container-slide-press").slick('slickGoTo', slideloc);
 
