@@ -24,16 +24,16 @@ jQuery(document).ready(function($) {
 
     var lochash = window.location.hash;
 
+/*
     if (lochash == ''){
-
         var tags = "<script type='text/javascript'>" + " var axel = Math.random() + ''; var a = axel * 10000000000000; docum" + "</" + "script>";
         $('#tags').append(tags);
-        /*var tags = "<script type='text/javascript'>";
+        var tags = "<script type='text/javascript'>";
         tags+="var axel = Math.random() + '';";
         tags+="<";
         tags+="/script>";
-*/
         $( "#tags" ).append( tags );
     }
+*/
 
 });
