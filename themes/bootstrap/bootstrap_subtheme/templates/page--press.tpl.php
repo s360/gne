@@ -130,7 +130,9 @@ drupal_add_css($directory.'/css/press.css', array('group' => CSS_THEME, 'every_p
 
     <footer id="footer">
         <?php //print render($page['footer']); ?>
-        <div class="social pull-left"></div>
+        <div class="social pull-left">
+        	<p class="contact-info">For all press inquiries, please call Christy Felling at 202-649-4340 or email info@greatnationseat.org</p>
+        </div>
         <div class="copyright pull-right">
             <ul>
                 <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>

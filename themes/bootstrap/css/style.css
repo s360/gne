@@ -1516,6 +1516,11 @@ nav{
 .petition-x {
 	color: steelblue;
 }
+
+  .col-sm-4.col-xs-6.petition{
+    z-index: 10;
+  }
+
 @media (min-width: 768px){
 	.petition-overlay-container .petition-container {
 	 	height: 75%;
@@ -1592,9 +1597,11 @@ nav{
 	}
 	.petition-container {
 		padding: 10px 20px;
-	}
-	.col-sm-4.col-xs-12.zip {
 
+	}
+
+	.col-sm-4.col-xs-12.zip {
+    height: auto;
 	}
 	.petition-label {
 		display: block;
