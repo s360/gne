@@ -125,6 +125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 .navbar-default .navbar-toggle .icon-bar{
     background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2)
 }
 #wrap-page .navbar-default .navbar-toggle .icon-bar{
     background-color: #666666;
@@ -374,6 +375,18 @@ nav{
   margin-left: 0px;
   width: 100%;
   }
+  .story-copy.two.quote {
+  color: steelblue;
+  margin-left: 50px;
+  display: none;
+}
+
+.story-two-quote {
+  color: steelblue;
+  text-align: right;
+  display: none;
+}
+
 }
 
 
@@ -1243,6 +1256,10 @@ nav{
     font-size: 2.75em;
     margin: 0;
   }
+  .col-sm-4.about-left,
+  .col-sm-3.about-right {
+    top: 5px;
+  }
 }
 @media (max-width: 1024px) and (orientation:landscape){
   .body-copy {
@@ -1287,6 +1304,7 @@ nav{
 		z-index: 10;
 		height: 100%;
   	margin-top: -50px;
+    padding: 0 50px;
 	}
 	.act-mobile-header-container {
 		text-align: center;
