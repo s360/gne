@@ -232,3 +232,46 @@
 	margin-left: 20px;
 	color: white;
 }
+
+.press-audio-copy {
+	text-align: center;
+	display: inline-block;
+}
+
+.audio-button.play-button {
+	cursor: pointer;
+  border-style: dashed;
+  border-color: transparent;
+  border-width: 0.53em;
+  display: -moz-inline-box;
+  display: inline-block;
+  /* Use font-size to control the size of the arrow. */
+  font-size: 35px;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 0;
+    border-left-width: 1em;
+  border-left-style: solid;
+  border-left-color: black;
+  left: 0.25em;
+}
+
+.audio-button {
+	line-height: 0;
+  position: relative;
+  vertical-align: middle;
+	cursor: pointer;
+	width: 19px;
+  height: 20px;
+  margin-left: 10px;
+  border-left: 6px solid black;
+  border-right: 6px solid black;
+  display: inline-block;
+}
+
+.media-container {
+	position: relative;
+  text-align: center;
+}

@@ -4,10 +4,6 @@
 
 
 jQuery(document).ready(function($) {
-		function validateEmail(email) {
-			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-			return validator.test(email);
-		}
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.setup-content'),
         allNextBtn = $('.nextBtn');
@@ -28,11 +24,7 @@ jQuery(document).ready(function($) {
             $target.find('input:eq(0)').focus();
         }
     });
-      // email = curInputs[6].value;
-      // if(!validateEmail(email)) {
-      // 	alert('bad email');
-      // 	return false;
-      // }else{
+
     allNextBtn.click(function(){
       var curStep = $(this).closest(".setup-content"),
           curStepBtn = curStep.attr("id"),
