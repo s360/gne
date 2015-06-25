@@ -534,27 +534,42 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 </div>
 <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.leaf.visible-xs.join').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
-        });
-        jQuery('.story-join').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
-        });
-        /**********DONATION HIDE COPY*********/
-        var nextDonate = jQuery('#key-next-step');
-        var donateCopy = jQuery('#donate-copy-col');
-        var donateFunc = jQuery('#donate-func-col');
-        var stepOne    = jQuery('#step-one');
+	jQuery(document).ready(function() {
+		jQuery('.leaf.visible-xs.join').click(function() {
+			jQuery('#petition-overlay-container').removeClass('hidden');
+		});
+		jQuery('.story-join').click(function() {
+			jQuery('#petition-overlay-container').removeClass('hidden');
+		});
+		jQuery('#act-add-voice').click(function() {
+			jQuery('#petition-overlay-container').removeClass('hidden');
+		});
+	/**********DONATION*********/
+		var nextDonate = jQuery('#key-next-step');
+		var donateCopy = jQuery('#donate-copy-col');
+		var donateFunc = jQuery('#donate-func-col');
+		var stepOne    = jQuery('#step-one');
+		var stepTwo    = jQuery('#step-two');
+		var stepThree  = jQuery('#step-three');
+		var amountSelected = false;
+		
 
-        nextDonate.click(function() {
-            donateCopy.addClass('hidden');
-            donateFunc.addClass('full-width');
-        });
-        stepOne.click(function() {
-            donateFunc.removeClass('full-width');
-            donateCopy.removeClass('hidden');
-        });
+		nextDonate.click(function() {
+			donateCopy.addClass('hidden');
+			donateFunc.addClass('full-width');
+		});
+		
+		stepOne.click(function() { 
+			donateFunc.removeClass('full-width');
+			donateCopy.removeClass('hidden');
+		});
+
+		stepTwo.add(stepThree).click(function() {
+			if(jQuery(this).css('cursor', 'pointer')) {
+				donateCopy.addClass('hidden');
+				donateFunc.addClass('full-width');
+			}
+		});
 
         //reset from donation
         jQuery('#donate-nav').click(function() {
@@ -566,10 +581,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         if( window.location.hash == ''){
             petOverlay.removeClass('hidden');
         }
-
-
-
-    });
+	});
 </script>
 
 <script type="text/javascript">
