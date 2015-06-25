@@ -481,7 +481,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </div>
 </div>
 <div id="donate-thank-container" class="thankyou-overlay-container hidden">
-    <span id="thank-close"></span>
+    <span id="thank-donate-close"></span>
     <img class="thank-image" src="/sites/all/themes/bootstrap/images/donate-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
         <div class='sp_14354 sp_fb_large' ></div>
@@ -572,24 +572,28 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
     var formId = "12860";
 
-    // TODO: if petition showing and mobile - header should hide
-    var petitionOverlay  = document.getElementById('petition-overlay-container');
-    var petitionClose 	 = document.getElementById('close-petition');
-    var petitionButton   = document.getElementById('join');
-    var petitionButton2  = document.getElementById('join-act');
-    var thankContainer   = document.getElementById('thank-container');
-    var thankClose 	     = document.getElementById('thank-close');
-    var donateButton   = document.getElementById('donate-nav');
-    var donateOverlay  = document.getElementById('donation-overlay-container');
-    var donateClose 	 = document.getElementById('donate-close');
-    var screeningClose  = document.getElementById('screening-close');
-    var screeningOverlay = document.getElementById('screening-container');
-    var screeningSubmit = document.getElementById('screening-submit');
-    var screeningButton  = document.getElementById('host-screening');
+    var petitionOverlay  			 = document.getElementById('petition-overlay-container');
+    var petitionClose 	 			 = document.getElementById('close-petition');
+    var petitionButton   			 = document.getElementById('join');
+    var petitionButton2  			 = document.getElementById('join-act');
+    var thankContainer   			 = document.getElementById('thank-container');
+    var donateThankContainer   = document.getElementById('donate-thank-container');
+    var thankClose 	     			 = document.getElementById('thank-close');
+    var donateThankClose 			 = document.getElementById('thank-donate-close');
+    var donateButton   	 			 = document.getElementById('donate-nav');
+    var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
+    var donateClose 	 	 			 = document.getElementById('donate-close');
+    var screeningClose   			 = document.getElementById('screening-close');
+    var screeningOverlay 			 = document.getElementById('screening-container');
+    var screeningSubmit  			 = document.getElementById('screening-submit');
+    var screeningButton  			 = document.getElementById('host-screening');
     var orientation;
 
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
+    });
+    donateThankClose.addEventListener('click', function() {
+        donateThankContainer.classList.add('hidden');
     });
     screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
