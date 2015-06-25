@@ -42,7 +42,7 @@ if(lochash == "#!/donate" ) {
 
 jQuery(function(){
     jQuery('#overlay-submit').bind('click', function(){
-        
+
     });
 });
 
