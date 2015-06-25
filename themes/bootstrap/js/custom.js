@@ -357,7 +357,7 @@ jQuery(document).ready(function() {
 			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 			return validator.test(email);
 		}
-		var hideOnSuccess = jQuery('.petition-overlay-container, .add-voice, .petition-form-container-story');
+		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story');
 
     var overlaySubmit = jQuery('#overlay-submit');
     var petitionOverlayForm = jQuery('#petition-form');
@@ -380,7 +380,6 @@ jQuery(document).ready(function() {
     jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).add(screeningForm).on('submit', function(e) {
 	    e.preventDefault();
 	    if(jQuery(this).hasClass('overlay-form')){
-	    	console.log('overlay submit');
 		  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -404,7 +403,6 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			jQuery('#join').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('error');
@@ -438,7 +436,6 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			//jQuery(storyOneForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
@@ -494,7 +491,6 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			//jQuery(storyTwoForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
@@ -530,7 +526,6 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			//jQuery(storyThreeForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
