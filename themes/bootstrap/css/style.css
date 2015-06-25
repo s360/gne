@@ -734,6 +734,9 @@ nav{
  ========== 3d. Story Page 3 ===============
  ===========================================
  */
+ .cta {
+ 	text-align: center;
+ }
 .petition-form-container-story {
 	padding: 0 35px;
 	text-align: center;
@@ -773,9 +776,7 @@ nav{
   margin: 15vh auto 10px auto;
  }
 
- #adriana-3 .cta{
 
- }
 
   #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     font-family: 'oswald', open-sans;
@@ -2204,6 +2205,9 @@ nav{
 	font-size: 1.1em;
 	letter-spacing: 2px;
 }
+.donate-join {
+	display: block;
+}
 
 @media( min-width: 953px){
 	.sp_fb_large, .sp_tw_large {
@@ -2246,3 +2250,5 @@ nav{
 	color: #eeeeee !important;
 	cursor: not-allowed !important;
 }
+
+
