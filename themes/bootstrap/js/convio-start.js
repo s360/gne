@@ -136,7 +136,7 @@
                 }
                 else {
 
-                    thankContainer.classList.remove('hidden');
+                    $('#donate-thank-container').classList.remove('hidden');
                     // donateOverlay.classList.add('hidden');
 
                     $('.donation-loading').remove();

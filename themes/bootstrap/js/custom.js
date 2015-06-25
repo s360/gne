@@ -465,7 +465,7 @@ jQuery(document).ready(function() {
 		    		function(data) {
 		    			console.log('submit success');
 		    			console.log(data);
-		    			jQuery(screeningForm).hide();
+		    			jQuery('#screening-container').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
