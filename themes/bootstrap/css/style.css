@@ -788,7 +788,7 @@ nav{
     font-size: 1em;
     letter-spacing: 0.1em;
 }
-.story-join, .donate-join{
+.story-join{
 	display: none;
 }
 @media (max-width: 1300px){

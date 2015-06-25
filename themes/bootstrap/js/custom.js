@@ -358,7 +358,7 @@ jQuery(document).ready(function() {
 			return validator.test(email);
 		}
 		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story, .story-join');
-		var showOnSuccess = jQuery('.donate-join, .story-share');
+		var showOnSuccess = jQuery('.donate-join, .story-share, .add-donate');
 
     var overlaySubmit = jQuery('#overlay-submit');
     var petitionOverlayForm = jQuery('#petition-form');
