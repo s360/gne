@@ -458,7 +458,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                             </div>
                             <div class="form-group">
-                                <!-- <input type="hidden" name="df_preview" value="test"> -->
+                                <input type="hidden" name="df_preview" value="test">
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                             <!-- Begin DigiCert site seal HTML and JavaScript -->
