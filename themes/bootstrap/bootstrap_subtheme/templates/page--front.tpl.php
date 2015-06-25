@@ -450,15 +450,23 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
     </div>
     <div class="screening-form-container col-md-6">
-
-        <form name="screening-form" class="screening-form">
-            <input type="text" class="screening-input half one" placeholder="First Name" />
-            <input type="text" class="screening-input half" placeholder="Last Name" />
+        <form id="screening-form" name="screening-form" class="screening-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
+        		<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
+						<input type="hidden" name="v" id="v" value="1.0" />
+						<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
+						<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
+						<input type="hidden" name="login_password" id="login_password" value="test123456" /> 
+						<input type="hidden" name="response_format" id="response_format" value="json" />
+						<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361,104423" />
+            
+            <input type="text" class="screening-input half one" name="name.first" placeholder="First Name" />
+            <input type="text" class="screening-input half" name="name.last" placeholder="Last Name" />
             <input type="text" class="screening-input" placeholder="organization" />
-            <input type="text" class="screening-input" placeholder="Email Address" />
-            <input type="text" class="screening-input" placeholder="Contact Number" />
+            <input type="text" class="screening-input email" name="primary_email" placeholder="Email Address" />
+            <input type="text" class="screening-input" name="" placeholder="Contact Number" />
             <button id="screening-submit" class="btn-content screening">Submit Form</button>
         </form>
+    </div>
     </div>
 </div>
 <div class="donation-overlay-image" style="display:none;"></div>

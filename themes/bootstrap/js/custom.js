@@ -370,10 +370,13 @@ jQuery(document).ready(function() {
     var storyThreeForm = jQuery('#petition-form-4');
     var storyThreeSubmit = jQuery('#story-submit-4');
 
+    var screeningForm = jQuery('#screening-form');
+    var screeningSubmit = jQuery('#screening-submit');
+
     var thankyouContainer = jQuery('#thank-container');
 
 
-    jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).on('submit', function(e) {
+    jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).add(screeningForm).on('submit', function(e) {
 	    e.preventDefault();
 	    if(jQuery(this).hasClass('overlay-form')){
 	    	console.log('overlay submit');
@@ -452,8 +455,30 @@ jQuery(document).ready(function() {
 	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
+	    }else if (jQuery(this).hasClass('screening-form')) {
+		    var userEmail = jQuery('.screening-input.email').val();
+		    if ( validateEmail(userEmail) ) {
+		    	jQuery(screeningSubmit).hide();
+		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery.post(jQuery(this).attr('action'),
+		    	jQuery(this).serialize(),
+		    		function(data) {
+		    			console.log('submit success');
+		    			console.log(data);
+		    			jQuery(screeningForm).hide();
+		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			// jQuery(thankyou).removeClass('hidden');
+		    		}).error(function(data) {
+		    			console.log('form error');
+		    			// jQuery(error).show();	
+		    			// jQuery('#petition-form').hide();
+		    		});
+	    	} else {
+	    		console.log('invalid email');
+	    		// jQuery(invalidEmail).removeClass('hidden');
+	    	}
+
 	    }else if (jQuery(this).hasClass('petition-form-3')) {
-	    	console.log('story 2 submit');
 		  	var fullName = jQuery('.petition-input.name3').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
