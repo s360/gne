@@ -402,6 +402,7 @@ jQuery(document).ready(function() {
 		    			console.log('submit success');
 		    			console.log(data);
 		    			jQuery('#petition-overlay-container').hide();
+		    			jQuery('#join').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
