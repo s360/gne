@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
         var tags ='<script type="text/javascript"> ';
             tags +='var axel = Math.random() + "";';
             tags +='var a = axel * 10000000000000;';
-            tags +="document.write('<iframe src=\"https://4652923.fls.doubleclick.net/activityi;src=4652923;type=2015_0;cat=home0;ord=' + a + '?\" width=\"1\" height=\"1\" frameborder=\"0\" style=\"display:none\"></iframe>');";
+            tags +="document.write(\"<iframe src=\"https://4652923.fls.doubleclick.net/activityi;src=4652923;type=2015_0;cat=home0;ord=' + a + '?\" width=\"1\" height=\"1\" frameborder=\"0\" style=\"display:none\"></iframe>\");";
             tags +="<noscript>";
             tags += "<iframe src=\"https://4652923.fls.doubleclick.net/activityi;src=4652923;type=2015_0;cat=home0;ord=1?\" width=\"1\" height=\"1\" frameborder=\"0\" style=\"display:none\"></iframe>";
             tags +="</noscript>";
