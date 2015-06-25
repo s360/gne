@@ -2113,7 +2113,7 @@ nav{
 }
 .thank-image {
 	clear:both;
-	padding-top: 75px;
+	padding-top: 20vh;
 }
 .thankyou-overlay-container{
  	top: 0;
@@ -2123,7 +2123,7 @@ nav{
  	position: absolute;
  	border: 3px solid #f20016;
  	/*padding: 100px 60px;*/
- 	padding: 30px 70px 10px 70px;
+ 	padding: 20px 70px 10px 70px;
  	text-align: center
 }
 .thank-share-container {
