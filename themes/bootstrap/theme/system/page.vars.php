@@ -16,8 +16,12 @@ function bootstrap_preprocess_page(&$variables) {
         $variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
     }
 
+    if(arg(1) == 42) {  //For node 2
+        $variables['theme_hook_suggestions'][] =  'page__404';
+    }
 
-  // Add information about the number of sidebars.
+
+    // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = ' class="col-sm-6"';
   }
