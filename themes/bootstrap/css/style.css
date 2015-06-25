@@ -1812,6 +1812,13 @@ nav{
  #donation_level {
   text-align: center;
  }
+ #donation_level > div.break-line {
+    display:inline;
+ }
+ #donation_level > div.break-line:after {
+    content:"\a";
+    white-space: pre;
+ }
 .stepwizard {
     display: table;
     width: 100%;
