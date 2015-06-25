@@ -6,6 +6,12 @@
 
 jQuery(document).ready(function() {
 
+		//close lightbox on click anywhere
+		jQuery('body').click(function() {
+			if(!jQuery("#petition-overlay-container").hasClass('hidden')) {
+    		jQuery("#petition-overlay-container").addClass('hidden');
+    	}
+		});
     /*jQuery.fn.reverse = [].reverse;
 		
     jQuery.fn.sliderPage = function() {
