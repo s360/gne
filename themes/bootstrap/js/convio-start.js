@@ -63,8 +63,22 @@
                     $('#other-amount').attr('disabled', 'disabled');
                     $('#other-amount').removeAttr('name');
                     $('#wrap-amount_other').css('display', 'none');
+		    $('#key-next-step').removeClass('btnDisabledHref');
                 }
+		
             });
+
+	    $('body').on('keypress', 'input[name="other_amount"]', function(event){
+	  	if ( event.which == 13 ) {
+	  	   event.preventDefault();
+	  	}
+		var val = parseInt($(this).val());
+		if(val > 0){
+			$('#key-next-step').removeClass('btnDisabledHref');
+		} else {
+			$('#key-next-step').addClass('btnDisabledHref');
+		}
+	    });
 
             $('.donation-form').submit(function () {
                 window.scrollTo(0, 0);

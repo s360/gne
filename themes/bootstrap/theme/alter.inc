@@ -212,10 +212,10 @@ function bootstrap_js_alter(&$js) {
     $js[$donate]['group'] = JS_THEME;
     $js[$donate]['scope'] = 'footer';
 
-    $tags = $theme_path . '/js/tags.js';
+   /* $tags = $theme_path . '/js/tags.js';
     $js[$tags] = drupal_js_defaults($tags);
     $js[$tags]['group'] = JS_THEME;
-    $js[$tags]['scope'] = 'footer';
+    $js[$tags]['scope'] = 'footer';*/
 
   if (!empty($excludes)) {
     $js = array_diff_key($js, drupal_map_assoc($excludes));

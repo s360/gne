@@ -215,7 +215,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <h3 style="text-align: center;"> Select Amount</h3>
 							
 							<!-- AMOUNT FROM CONVIO -->
-							 <div id="donation_level"></div>
+							 <div id="donation_level">
+								
+							 </div>
+							 
+                             
 
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             <a id="key-next-step" href="#" class="nextBtn">Next Step</a>
@@ -416,7 +420,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="hidden" name="df_preview" value="test">
+                                <!-- <input type="hidden" name="df_preview" value="test"> //-->
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                             <!-- Begin DigiCert site seal HTML and JavaScript -->
@@ -511,9 +515,22 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		var stepTwo    = jQuery('#step-two');
 		var stepThree  = jQuery('#step-three');
 		var amountSelected = false;
-
-
-		nextDonate.click(function() {
+		
+		if(!jQuery('body').find('.wrap-amount').find('input[type="radio"]').is(':checked')){
+			nextDonate.addClass('btnDisabledHref');
+		} else {
+			nextDonate.removeClass('btnDisabledHref');
+		}
+		
+		nextDonate.click(function(e) {
+			if(jQuery(this).hasClass('btnDisabledHref')){
+				e.preventDefault();
+				return;
+			}
+			if(jQuery('input[name="other_amount"]').length > 0 && !jQuery('input[name="other_amount"]').val()){
+				e.preventDefault();
+				return;
+			}
 			donateCopy.addClass('hidden');
 			donateFunc.addClass('full-width');
 		});

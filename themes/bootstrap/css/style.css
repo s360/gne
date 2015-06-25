@@ -2236,3 +2236,8 @@ nav{
 /*    }*/
 
 /*}*/
+
+.btnDisabledHref, .btnDisabledHref:hover {
+	color: #eeeeee !important;
+	cursor: not-allowed !important;
+}
