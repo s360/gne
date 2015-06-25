@@ -1921,6 +1921,8 @@ nav{
 }
 
 .donate-arrow{
+  float: right;
+  margin-top: 38px;
   padding: 0 10px
 }
 .setup-content{
