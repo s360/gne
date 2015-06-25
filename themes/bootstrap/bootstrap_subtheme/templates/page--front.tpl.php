@@ -582,7 +582,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var donateButton   = document.getElementById('donate-nav');
     var donateOverlay  = document.getElementById('donation-overlay-container');
     var donateClose 	 = document.getElementById('donate-close');
-    var donateSubmit    = document.getElementById('donate-submit');
     var screeningClose  = document.getElementById('screening-close');
     var screeningOverlay = document.getElementById('screening-container');
     var screeningSubmit = document.getElementById('screening-submit');

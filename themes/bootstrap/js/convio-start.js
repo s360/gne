@@ -137,7 +137,7 @@
                 else {
 
                     thankContainer.classList.remove('hidden');
-                    donateOverlay.classList.add('hidden');
+                    // donateOverlay.classList.add('hidden');
 
                     $('.donation-loading').remove();
                     $('.donation-form').before('<div class="alert alert-success">' +
