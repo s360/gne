@@ -144,6 +144,22 @@ drupal_add_css($directory.'/css/press.css', array('group' => CSS_THEME, 'every_p
     </footer>
 
 </div>
+<script type="text/javascript">
+var playButton = jQuery('#play');
+playButton.click(function() {
+	jQuery(this).toggleClass('play-button')
+});
+function play() {
+    var audio = document.getElementById('press-audio');
+    
+    //remove play button add pause
+    if (audio.paused) {
+        audio.play();
+    }else{
+        audio.pause();
+    }
+}
+</script>
 <script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
