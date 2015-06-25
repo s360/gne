@@ -16,7 +16,7 @@ function bootstrap_preprocess_page(&$variables) {
         $variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
     }
 
-    if(arg(1) == 42) {  //For node 2
+    if(arg(1) == 49) {  //For node 2
         $variables['theme_hook_suggestions'][] =  'page__404';
     }
 
