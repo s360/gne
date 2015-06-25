@@ -357,6 +357,8 @@ jQuery(document).ready(function() {
 			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 			return validator.test(email);
 		}
+		var donateJoinButtons = jQuery('.donate-join');
+		donatejoinButtons.click('#donation-overlay-container').removeClass('hidden');
 		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story, .story-join');
 		var showOnSuccess = jQuery('.donate-join, .story-share, .add-donate, .thank-arrows');
 
