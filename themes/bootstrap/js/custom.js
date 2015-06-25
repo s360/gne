@@ -357,7 +357,7 @@ jQuery(document).ready(function() {
 			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 			return validator.test(email);
 		}
-		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story');
+		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story, .story-join');
 
     var overlaySubmit = jQuery('#overlay-submit');
     var petitionOverlayForm = jQuery('#petition-form');
