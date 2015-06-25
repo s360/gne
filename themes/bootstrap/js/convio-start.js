@@ -25,9 +25,11 @@
                         for (var i = 0; i < data.getDonationFormInfoResponse.donationLevels.donationLevel.length; i++) {
                             var donationLevel = data.getDonationFormInfoResponse.donationLevels.donationLevel[i];
                             var donateAmount = donationLevel.amount.formatted;
+                            var linebreakClass = "";
+                            if (i === 2) { linebreakClass = " break-line"; }
 
                             if (donationLevel.userSpecified === "true") {
-                                html += '<div class="radio-wrap wrap-amount">' +
+                                html += '<div class="radio-wrap wrap-amount' + linebreakClass + '">' +
                                 '<input type="radio" id="level-other" name="level_id" value="' + donationLevel.level_id + '">' +
                                 '<label class="donation_amount donation_amount_other " for="level-other"> Other </label>' +
                                 '</div>' +
@@ -36,7 +38,7 @@
                                 '<input type="text" id="other-amount" class="other-amount" name="other_amount" disabled>' +
                                 '</div>';
                             } else {
-                                html += '<div class="radio-wrap wrap-amount">' +
+                                html += '<div class="radio-wrap wrap-amount' + linebreakClass + '">' +
                                 '<input type="radio" id="'+ donationLevel.level_id +'" name="level_id" value="' + donationLevel.level_id + '"> ' +
                                 '<label class="donation_amount" for="'+ donationLevel.level_id +'" >' +
                                 donateAmount.substr(0, donateAmount.length-3) +
@@ -61,8 +63,22 @@
                     $('#other-amount').attr('disabled', 'disabled');
                     $('#other-amount').removeAttr('name');
                     $('#wrap-amount_other').css('display', 'none');
+		    $('#key-next-step').removeClass('btnDisabledHref');
                 }
+		
             });
+
+	    $('body').on('keypress', 'input[name="other_amount"]', function(event){
+	  	if ( event.which == 13 ) {
+	  	   event.preventDefault();
+	  	}
+		var val = parseInt($(this).val());
+		if(val > 0){
+			$('#key-next-step').removeClass('btnDisabledHref');
+		} else {
+			$('#key-next-step').addClass('btnDisabledHref');
+		}
+	    });
 
             $('.donation-form').submit(function () {
                 window.scrollTo(0, 0);

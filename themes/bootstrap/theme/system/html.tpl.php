@@ -62,11 +62,11 @@
   <title><?php print $head_title; ?></title>
 
     <!-- fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='/sites/all/fonts/fonts.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:700,600,400,300' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
 
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/style-ie.css" />
@@ -80,6 +80,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
+  <script src="//c.shpg.org/303/sp.js"></script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 <div id="tags"></div>
