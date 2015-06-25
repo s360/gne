@@ -2207,6 +2207,7 @@ nav{
 }
 .donate-join {
 	display: block;
+	margin-top: 20px;
 }
 
 @media( min-width: 953px){
