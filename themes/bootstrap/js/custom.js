@@ -7,8 +7,8 @@
 jQuery(document).ready(function() {
 
 		//close lightbox on click anywhere
-		jQuery('body').click(function() {
-			if(!jQuery("#petition-overlay-container").hasClass('hidden')) {
+		jQuery('body').click(function(e) {
+			if(!jQuery("#petition-overlay-container").hasClass('hidden') && !jQuery(e.target).closest('#petition-overlay-container').length) {
     		jQuery("#petition-overlay-container").addClass('hidden');
     	}
 		});
