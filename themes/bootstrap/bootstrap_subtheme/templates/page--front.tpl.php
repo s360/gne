@@ -463,7 +463,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <input type="text" class="screening-input half" name="name.last" placeholder="Last Name" />
             <input type="text" class="screening-input" placeholder="organization" />
             <input type="text" class="screening-input email" name="primary_email" placeholder="Email Address" />
-            <input type="text" class="screening-input" name="" placeholder="Contact Number" />
+            <input type="text" class="screening-input" name="work_phone" placeholder="Contact Number" />
             <button id="screening-submit" class="btn-content screening">Submit Form</button>
         </form>
     </div>
