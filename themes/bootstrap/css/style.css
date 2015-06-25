@@ -978,7 +978,9 @@ nav{
 }
 @media (max-width: 768px){
 	.col-sm-5.about {
-  	background-color: rgba(0, 0, 0, 0.8)
+  	background-color: rgba(0, 0, 0, 0.8);
+    overflow-y:auto;
+    padding-bottom: 10px;
 	}
 	.mobile-about-overlay.visible-xs {
 		background: url('../images/About_Classroom.jpg');
