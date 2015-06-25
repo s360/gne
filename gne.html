@@ -358,7 +358,7 @@
 		<h1 class="about-header">About hunger in america</h1>
 		<div class="about-content">
 			<p class="about-copy first">From city neighborhoods to rural farmsteads, families in every community across the nation struggle to put food on the table, or are limited to cheap, unhealthy foods.</p>
-			<h2 class="about-subheader">The problem isn't lack of food</h2>
+			<h4 class="about-subheader">The problem isn't lack of food</h4>
 			<p class="about-copy">This country produces more than enough food to feed every citizen. In fact, as much as 40 percent of the food we produce goes to waste.</p>
 			<h2 class="about-subheader">The problem isn't lack of money</h2>
 			<p class="about-copy">We are one of the world's wealthiest nations, with ample resources to feed those without enough to eat.</p>
@@ -378,7 +378,8 @@
       Great Nations Eat is a growing partnership of nonprofits, filmmakers, media companies and others, led by MediaVest, Share Our Strength and the filmmakers behind "A Place at the Table."</p><br>
       </div>
       <div class='col-md-6'>
-      <p><b>A PLACE AT THE TABLE</b><br> 
+      <h4>A PLACE AT THE TABLE</h4>
+      <p> 
       Great Nations Eat was inspired by "A Place at the Table," a documentary film that tells the story of hunger in America by looking at its impact on the lives of real families. Directed by Lori Silverbush and Kristi Jacobson, and featuring well-known hunger advocates like Jeff Bridges and Tom Colicchio, the film was released in 2013 by Magnolia Pictures and Participant Media to critical acclaim.</p>
          <div class="logos">
           <img class="nkh-logo" src="themes/bootstrap/images/nkh-logo.gif">
@@ -518,10 +519,10 @@
                         <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
                     </div>
                 </div>
             </div>
@@ -709,7 +710,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
-                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code"  />
+                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code*"  />
                                 </div>
                             </div>
                             </div>
@@ -781,6 +782,14 @@
                                <!-- <input type="hidden" name="df_preview" value="test">-->
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
+                            <!-- Begin DigiCert site seal HTML and JavaScript -->
+                            <div id="DigiCertClickID_d6BMwOpS" data-language="en">
+                              <a href="https://www.digicert.com/ssl-certificate.htm">SSL Certificates</a>
+                            </div>
+                            <script type="text/javascript">
+                            var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_d6BMwOpS", "5", "s", "black", "d6BMwOpS"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+                            </script>
+                            <!-- End DigiCert site seal HTML and JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -823,6 +832,16 @@
     </div>
 </div>
 
+<div id="donate-thank-container" class="thankyou-overlay-container hidden">
+    <span id="thank-close"></span>
+    <img class="thank-image" src="/sites/all/themes/bootstrap/images/donate-thank.png" alt="Thank you image" />
+    <div class="thank-share-container">
+        <div class='sp_14354 sp_fb_large' ></div>
+        <img class="thank-arrows hidden-xs" src="/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
+        <div class='sp_14355 sp_tw_large' ></div>
+    </div>
+</div>
+
 <footer id="footer">
       <div class="social pull-left"></div>
     <div class="copyright pull-right">
@@ -846,20 +865,32 @@
 		});
 		jQuery('#act-add-voice').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
-		})
-	/**********DONATION HIDE COPY*********/
+		});
+	/**********DONATION*********/
 		var nextDonate = jQuery('#key-next-step');
 		var donateCopy = jQuery('#donate-copy-col');
 		var donateFunc = jQuery('#donate-func-col');
 		var stepOne    = jQuery('#step-one');
+		var stepTwo    = jQuery('#step-two');
+		var stepThree  = jQuery('#step-three');
+		var amountSelected = false;
+		
 
 		nextDonate.click(function() {
 			donateCopy.addClass('hidden');
 			donateFunc.addClass('full-width');
 		});
+		
 		stepOne.click(function() { 
 			donateFunc.removeClass('full-width');
 			donateCopy.removeClass('hidden');
+		});
+
+		stepTwo.add(stepThree).click(function() {
+			if(jQuery(this).css('cursor', 'pointer')) {
+				donateCopy.addClass('hidden');
+				donateFunc.addClass('full-width');
+			}
 		});
 
         //reset from donation

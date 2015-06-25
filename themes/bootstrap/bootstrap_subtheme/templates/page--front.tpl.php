@@ -376,7 +376,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                                 <div class="col-md-6 ">
                                     <label class="sr-only control-label">Zip/Postal Code</label>
-                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code"  />
+                                    <input maxlength="200" type="text" required="required" name="billing.address.zip" class="form-control" placeholder="Zip/Postal Code*"  />
                                 </div>
                             </div>
                             </div>
