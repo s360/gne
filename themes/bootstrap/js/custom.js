@@ -357,6 +357,7 @@ jQuery(document).ready(function() {
 			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 			return validator.test(email);
 		}
+		var hideOnSuccess = jQuery('.petition-overlay-container, .add-voice, .petition-form-container-story');
 
     var overlaySubmit = jQuery('#overlay-submit');
     var petitionOverlayForm = jQuery('#petition-form');
@@ -402,12 +403,10 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery('#petition-overlay-container').hide();
+		    			hideOnSuccess.hide();
+		    			//jQuery('#petition-overlay-container').hide();
 		    			jQuery('#join').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
