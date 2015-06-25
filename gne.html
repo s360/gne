@@ -923,7 +923,6 @@
     var donateButton   = document.getElementById('donate-nav');
     var donateOverlay  = document.getElementById('donation-overlay-container');
     var donateClose 	 = document.getElementById('donate-close');
-    var donateSubmit    = document.getElementById('donate-submit');
     var screeningClose  = document.getElementById('screening-close');
     var screeningOverlay = document.getElementById('screening-container');
     var screeningSubmit = document.getElementById('screening-submit');
@@ -935,10 +934,10 @@
     screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
     });
-    screeningSubmit.addEventListener('click', function() {
-        screeningOverlay.classList.add('hidden');
-        thankContainer.classList.remove('hidden');
-    });
+    // screeningSubmit.addEventListener('click', function() {
+    //     screeningOverlay.classList.add('hidden');
+    //     thankContainer.classList.remove('hidden');
+    // });
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });

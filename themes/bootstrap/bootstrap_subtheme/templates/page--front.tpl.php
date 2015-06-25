@@ -595,10 +595,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
     });
-    screeningSubmit.addEventListener('click', function() {
-        screeningOverlay.classList.add('hidden');
-        thankContainer.classList.remove('hidden');
-    });
+
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
