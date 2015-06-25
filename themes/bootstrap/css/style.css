@@ -407,13 +407,13 @@ nav{
   width: 100%;
   }
   .story-copy.two.quote {
-  color: steelblue;
+  color: #1268b3;
   margin-left: 50px;
   display: none;
 }
 
 .story-two-quote {
-  color: steelblue;
+  color: #1268b3;
   text-align: right;
   display: none;
 }
@@ -1898,7 +1898,7 @@ nav{
 
 
 .wrap-amount input[type="radio"]:checked + label.donation_amount{
-    background: steelblue;
+    background: #1268b3;
     color: #ffffff;
 }
 .form-group {
@@ -2113,7 +2113,7 @@ nav{
 }
 .thank-image {
 	clear:both;
-	padding-top: 20vh;
+	padding-top: 14vh;
 }
 .thankyou-overlay-container{
  	top: 0;
@@ -2129,8 +2129,8 @@ nav{
 .thank-share-container {
 	padding: 10px 0;
 	margin-top: 20px;
-	border-top: 5px solid steelblue;
-	border-bottom: 5px solid steelblue;
+	border-top: 5px solid #1268b3;
+	border-bottom: 5px solid #1268b3;
 }
 .thank-facebook-share,
 .thank-twitter-share {
