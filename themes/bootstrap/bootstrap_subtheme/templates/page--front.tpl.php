@@ -572,6 +572,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
     var formId = "12860";
 
+    //TODO: Clean this up and put in .js file
+
     var petitionOverlay  			 = document.getElementById('petition-overlay-container');
     var petitionClose 	 			 = document.getElementById('close-petition');
     var petitionButton   			 = document.getElementById('join');
@@ -617,6 +619,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     screeningClose.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
     })
+
+    //TODO: Refresh browser on mobile rotate - utilize cookies/local storage to prevent petition overlay from showing up again
     if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
         console.log('portrait');
         orientation = 'portrait';

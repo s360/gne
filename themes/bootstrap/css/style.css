@@ -1540,7 +1540,7 @@ nav{
 .petition-container {
   overflow-y: auto;
 }
-.close-petition, #thank-close {
+.close-petition, #thank-close, #thank-donate-close {
 	cursor: pointer;
 	float: right;
   background: url(../images/x-icon.png);
@@ -2100,7 +2100,7 @@ nav{
 	}
 }
 /* END */
-#thank-close {
+#thank-close, #thank-donate-close {
 	float: right;
 	cursor: pointer;
 }
