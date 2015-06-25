@@ -404,13 +404,10 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			//jQuery('#petition-overlay-container').hide();
 		    			jQuery('#join').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
-		    			console.log('form error');
-		    			// jQuery(error).show();	
-		    			// jQuery('#petition-form').hide();
+		    			console.log('error');
 		    		});
 	    	} else {
 	    		console.log('invalid email');
@@ -440,11 +437,9 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery(storyOneForm).hide();
+		    			hideOnSuccess.hide();
+		    			//jQuery(storyOneForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -462,11 +457,9 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
+		    			hideOnSuccess.hide();
 		    			jQuery('#screening-container').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -500,11 +493,9 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery(storyTwoForm).hide();
+		    			hideOnSuccess.hide();
+		    			//jQuery(storyTwoForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -538,11 +529,9 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery(storyThreeForm).hide();
+		    			hideOnSuccess.hide();
+		    			//jQuery(storyThreeForm).hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
