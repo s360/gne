@@ -170,7 +170,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <!-- END PETITION OVERLAY -->
 <!-- DONATION OVERLAY -->
-<div id="donation-overlay-container" class="petition-overlay-container hidden">
+<div id="donation-overlay-container" class="donation-overlay-container hidden">
 <div class='full_overlay'></div>
 <div class="donation-container petition-container">
     <span id="donate-close" class="donate-close close-petition"></span>

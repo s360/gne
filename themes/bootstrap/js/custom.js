@@ -358,7 +358,7 @@ jQuery(document).ready(function() {
 			return validator.test(email);
 		}
 		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story, .story-join');
-		var storyDonate = jQuery('.donate-join');
+		var showOnSuccess = jQuery('.donate-join');
 
     var overlaySubmit = jQuery('#overlay-submit');
     var petitionOverlayForm = jQuery('#petition-form');
@@ -404,6 +404,7 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('error');
@@ -437,7 +438,7 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			storyDonate.removeClass('hidden');
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
@@ -457,7 +458,7 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			storyDonate.removeClass('hidden');
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery('#screening-container').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
@@ -494,7 +495,7 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			storyDonate.removeClass('hidden');
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
@@ -530,7 +531,7 @@ jQuery(document).ready(function() {
 		    	jQuery(this).serialize(),
 		    		function(data) {
 		    			hideOnSuccess.hide();
-		    			storyDonate.removeClass('hidden');
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
