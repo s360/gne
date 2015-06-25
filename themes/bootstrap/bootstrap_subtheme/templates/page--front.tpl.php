@@ -215,49 +215,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <h3 style="text-align: center;"> Select Amount</h3>
 							
 							<!-- AMOUNT FROM CONVIO -->
-							 <div id="donation_level">
-								<div class="radio-wrap wrap-amount"><input type="radio" id="16505" name="level_id" value="16505"> <label class="donation_amount" for="16505">$5.00</label></div>
-								<div class="radio-wrap wrap-amount"><input type="radio" id="16506" name="level_id" value="16506"> <label class="donation_amount" for="16506">$10.00</label></div>
-								<div class="radio-wrap wrap-amount break-line"><input type="radio" id="16507" name="level_id" value="16507"> <label class="donation_amount" for="16507">$20.00</label></div>
-								<div class="radio-wrap wrap-amount"><input type="radio" id="16508" name="level_id" value="16508"> <label class="donation_amount" for="16508">$50.00</label></div>
-								<div class="radio-wrap wrap-amount"><input type="radio" id="16509" name="level_id" value="16509"> <label class="donation_amount" for="16509">$100.00</label></div>
-								<div class="radio-wrap wrap-amount"><input type="radio" id="level-other" name="level_id" value="16510"><label class="donation_amount donation_amount_other " for="level-other"> Other </label></div>
-								<div id="wrap-amount_other" style="display: none;"><input type="text" id="other-amount" class="other-amount" disabled="disabled"></div>
-							 </div>
-							 
-                             <!--<div class="form-group row">
-                                <div class="wrap-amount">
-                                    <input type="radio" id="5" class="radio" name="level_id" value="16505">
-                                    <label class="donation_amount" for="5"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$5</label>
-                                </div>
-                                <div class="wrap-amount">
-                                    <input type="radio" id="10" class="radio" type="radio" name="level_id" value="16506" >
-                                    <label class="donation_amount" for="10"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$10</label>
-                                </div>
-                                 <div class="wrap-amount">
-                                     <input type="radio" id="50" class="radio" name="level_id" value="16507" >
-                                     <label class="donation_amount" for="50"  onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$50</label>
-                                 </div>
-                                </div>
-                                <div class="form-group row">
-
-                                <div class="wrap-amount">
-                                    <input type="radio" id="100" class="radio" name="level_id" value="16508">
-                                    <label class="donation_amount" for="100" style="  " onclick="document.getElementById('wrap-amount_other').style.display = 'none';">$100</label>
-                                </div>
-                                <div class="wrap-amount">
-                                    <input type="radio" id="level-other" name="level_id" value="16509" >
-                                    <label class="donation_amount"  for="level-other" style="  " onclick="document.getElementById('other-amount').disabled = false;document.getElementById('wrap-amount_other').style.display = 'block';">Other</label>
-                                </div>
-
-                                 </div>
-                            <div class="form-group row">
-                                <div id="wrap-amount_other" style="width: 100%; display: none;">
-                                    <input type="text" id="other-amount" name="other_amount" class="other-amount" disabled />
-                                </div>
-                            </div>
-							-->
-
+							 <div id="donation_level"></div>
 
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             <a id="key-next-step" href="#" class="nextBtn">Next Step</a>
