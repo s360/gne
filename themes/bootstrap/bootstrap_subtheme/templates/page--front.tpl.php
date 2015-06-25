@@ -181,7 +181,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <p class="donate-copy1 petition-subheader hidden-xs">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
             <p class="donate-copy2 petition-subheader hidden-xs"><b>Every $10 you give can provide up to 100 meals for a hungry child.</b></p>
             <p class="donate-copy3 petition-subheader hidden-xs">All donations to Great Nations Eat support No Kid Hungry’s efforts to feed kids healthy food, every day.</p>
-            <img src="themes/bootstrap/images/nkh-logo.gif">
+            <img src="/sites/all/themes/bootstrap/images/nkh-logo.gif">
 
         </div>
     </div>
@@ -259,9 +259,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 							-->
 
 
-                            <img src="themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             <a id="key-next-step" href="#" class="nextBtn">Next Step</a>
-                            <img src="themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                         </div>
                     </div>
                 </div>
@@ -398,9 +398,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <input maxlength="200" type="email" required="required" name="donor.email" class="form-control" placeholder="Email Address*" />
                                 </div>
                             </div>
-                            <img src="themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             <a href="#" class="nextBtn">Next Step</a>
-                            <img src="themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                         </div>
                     </div>
                 </div>
@@ -457,7 +457,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                             </div>
                             <div class="form-group">
-                               <!-- <input type="hidden" name="df_preview" value="test">-->
+                                <input type="hidden" name="df_preview" value="test">
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                             <!-- Begin DigiCert site seal HTML and JavaScript -->
