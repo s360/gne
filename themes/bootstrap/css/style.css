@@ -1166,7 +1166,7 @@ nav{
     padding-bottom:30px; 
   }
   #about-campaign{
-    background: url('../images/About_Boy.jpg');
+    background: url('../images/About_Boy.jpg')!important;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
