@@ -787,7 +787,7 @@ nav{
     font-size: 1em;
     letter-spacing: 0.1em;
 }
-.story-join, .story-donate {
+.story-join, .donate-join{
 	display: none;
 }
 @media (max-width: 1300px){
@@ -799,7 +799,7 @@ nav{
 
 
 @media (max-width: 992px){
-	.story-join, .story-donate {
+	.story-join, .donate-join{
 		display: block;
 	}
   #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
@@ -2186,7 +2186,7 @@ nav{
 	width: 100%;
 }
 
-.story-join, .story-donate {
+.story-join, .donate-join{
 	margin: 0 auto;
 	font-family: 'oswald', sans-serif;
 	padding: 15px 30px;
