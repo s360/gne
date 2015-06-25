@@ -248,6 +248,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--404.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--404.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--front.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
