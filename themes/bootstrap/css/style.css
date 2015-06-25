@@ -1809,6 +1809,9 @@ nav{
  ========== 9. Donation ====================
  ===========================================
  **/
+ #donation_level {
+  text-align: center;
+ }
 .stepwizard {
     display: table;
     width: 100%;
