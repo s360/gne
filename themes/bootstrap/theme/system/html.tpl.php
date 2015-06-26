@@ -84,7 +84,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/tags.js"></script>
+<script src="/sites/all/themes/bootstrap/js/tags.js"></script>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
