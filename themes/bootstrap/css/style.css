@@ -595,10 +595,10 @@ nav{
 		width: 33.33333333333333%;
 	}
 	.col-sm-4.col-xs-4.onethird.one {
-		background-position: center;
+		background-position: right;
 	}
 	.col-sm-4.col-xs-4.onethird.three {
-		background-position: center;
+		background-position: right;
 	}
 	.page1-title {
 		font-size: 16px;
