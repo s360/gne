@@ -37,3 +37,5 @@ xmlrpc.php
 /themes/.DS_Store
 
 /config.codekit
+
+.idea/
