@@ -744,6 +744,9 @@ nav{
     width: 80%;
     margin: 0 10%;
 }
+.media-container {
+    margin-top: 400px;
+}
 
 /**
  ===========================================
@@ -2204,6 +2207,12 @@ cursor: pointer;
 		width: 100%;
 	}
 }
+@media (max-width: 981px) {
+    .media-container {
+        margin-top: 0px !important;
+    }
+}
+
 @media (max-width: 768px){
 	.thankyou-overlay-container {
 		width: 100%;
