@@ -2327,13 +2327,17 @@ cursor: pointer;
 }
 
 @media(max-width: 768px){
+  .mobile_social{
+    position: relative;
+  }
+
   .sp_fb_large{
     display: none;
   }
 
   .sp_fb_small{
-    display: block;
-    float: left;
+    display: absolute;
+    left:0;
   }
 
     .sp_tw_large{
@@ -2341,8 +2345,8 @@ cursor: pointer;
   }
 
   .sp_tw_small{
-    display: block;
-    float: right;
+    display: absolute;
+    right:0;
   }
 
 }
