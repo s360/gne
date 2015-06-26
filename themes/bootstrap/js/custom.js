@@ -297,6 +297,8 @@ jQuery(document).ready(function() {
         }
 
         if(lochash == '#!/join'){
+            jQuery('#donation-overlay-container').addClass('hidden');
+            jQuery('#screening-container').addClass('hidden');
             jQuery('#petition-overlay-container').removeClass('hidden');
             jQuery('#close-petition').click( function(){
               //  jQuery('#petition-overlay-container').AddClass('hidden');
@@ -307,6 +309,8 @@ jQuery(document).ready(function() {
         }
 
         if(lochash == '#!/donate'){
+            jQuery('#petition-overlay-container').addClass('hidden');
+            jQuery('#screening-container').addClass('hidden');
             jQuery('#donation-overlay-container').removeClass('hidden');
             jQuery('#donate-close').click( function(){
                 //jQuery('#donation-overlay-container').AddClass('hidden');
@@ -326,6 +330,8 @@ jQuery(document).ready(function() {
         }
 
         if(lochash == '#!/host-a-screening'){
+            jQuery('#donation-overlay-container').addClass('hidden');
+            jQuery('#petition-overlay-container').addClass('hidden');
             jQuery('#screening-container').removeClass('hidden');
             //doc title
             document.title = "Great Nations Eat | Screening";
