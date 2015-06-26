@@ -15,6 +15,7 @@ jQuery(document).ready(function($) {
         e.preventDefault();
         var $target = $($(this).attr('href')),
             $item = $(this);
+        jQuery("#step-one").removeAttr("disabled");
 
         if (!$item.hasClass('disabled')) {
             navListItems.removeClass('btn-primary').addClass('btn-default');
