@@ -1912,12 +1912,15 @@ nav{
     font-family: 'Oswald', sans-serif;
 }
 .nextBtn{
+cursor: pointer;
+}
+.nextBtn-old {
     float: right;
     font-family: 'Oswald', sans-serif;
     color: #e71e25;
     text-transform: uppercase;
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 30px;	
 }
 
 .donate-arrow{

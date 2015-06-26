@@ -6,7 +6,7 @@
 jQuery(document).ready(function($) {
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.setup-content'),
-        allNextBtn = $('.nextBtn, .donate-arrow');
+        allNextBtn = $('.nextBtn');
         btnDOnate = $('#donate-nav');
 
     allWells.hide();
