@@ -14,7 +14,7 @@
       <input type="hidden" name="send_registration_email" id="send_registration_email" value="false" />
       */
 		var formId = 12181;
-        var traker = '<iframe id="traker-donate" src="https://4652923.fls.doubleclick.net/activityi;src=4652923;type=apatt;cat=donate1;qty=1;cost=[Revenue];ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+        var tracking = '<iframe id="tracking-donate" src="https://4652923.fls.doubleclick.net/activityi;src=4652923;type=apatt;cat=donate1;qty=1;cost=[Revenue];ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
         /* UI handlers for the donation form example */
         if ($('.donation-form').length > 0) {
             luminateExtend.api.request({
@@ -150,13 +150,13 @@
                     '<p>Thank you for your donation of $' + data.donationResponse.donation.amount.decimal + '.</p>' +
                     (typeof data.donationResponse.donation.confirmation_code === 'string' ? '<p>Your confirmation code is ' + data.donationResponse.donation.confirmation_code + '.</p>' : '') +
                     '</div>');
-                    var trakerHtml = traker.replace('[OrderID]', data.donationResponse.donation.transaction_id).replace('[Revenue]', data.donationResponse.donation.amount.decimal);
+                    var trackingHtml = tracking.replace('[OrderID]', data.donationResponse.donation.transaction_id).replace('[Revenue]', data.donationResponse.donation.amount.decimal);
                     
-                    if($('#traker-donate').length > 0) $('#traker-donate').remove();
+                    if($('#tracking-donate').length > 0) $('#tracking-donate').remove();
 
-                    console.log(trakerHtml);
+                    console.log(trackingHtml);
                     
-                    $(trakerHtml).appendTo('body');
+                    $(trackingHtml).appendTo('body');
                 }
             }
         };
