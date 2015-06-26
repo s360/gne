@@ -65,8 +65,8 @@ h2 a{
 }
 
 input {
-    -webkit-appearance: none;
-    border-radius: 0;
+/*    -webkit-appearance: none;
+*/  border-radius: 0;
     -webkit-border-radius:0px;
 }
 
