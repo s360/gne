@@ -2305,3 +2305,44 @@ cursor: pointer;
 }
 
 
+/*Social Share*/
+
+@media(min-width: 768px){
+  .sp_fb_large{
+    display: block;
+  }
+
+  .sp_fb_small{
+    display: none;
+  }
+
+    .sp_tw_large{
+    display: block;
+  }
+
+  .sp_tw_small{
+    display: none;
+  }
+
+}
+
+@media(max-width: 768px){
+  .sp_fb_large{
+    display: none;
+  }
+
+  .sp_fb_small{
+    display: block;
+    float: left;
+  }
+
+    .sp_tw_large{
+    display: none;
+  }
+
+  .sp_tw_small{
+    display: block;
+    float: right;
+  }
+
+}
