@@ -2162,7 +2162,7 @@ cursor: pointer;
  	border: 3px solid #f20016;
  	/*padding: 100px 60px;*/
  	padding: 20px 70px 10px 70px;
- 	text-align: center
+ 	text-align: center;
 }
 .thank-share-container {
 	padding: 10px 0;
@@ -2219,7 +2219,9 @@ cursor: pointer;
   .thankyou-overlay-container{
 
   padding: 0px 60px;
-  text-align: center
+  text-align: center;
+      /* added by Abe: fix for mobile device */
+      margin-top: 80px;
 }
 }
 
