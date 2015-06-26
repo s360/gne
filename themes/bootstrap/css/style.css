@@ -568,22 +568,22 @@ nav{
 	height: 100%;
 }
 .col-sm-4.onethird.one {
-	background: url('../images/Sgt-Hanno-01.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 65%;
+    background: url('../images/Sgt-Hanno-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
 }
 .col-sm-4.onethird.two {
-	background: url('../images/Adriana_04.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+    background: url('../images/Adriana_04.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .col-sm-4.onethird.three {
-	background: url('../images/Jahnique_01.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 70% top;
+    background: url('../images/Jahnique_01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
 }
 .col-sm-4.page1-btn-container {
 	margin-top: 50px;
