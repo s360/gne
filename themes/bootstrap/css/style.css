@@ -79,6 +79,22 @@ h2 {
   font-weight: 700;
 }
 
+body{
+
+}
+
+@media (max-width: 768px){
+.main-container{
+  padding-top: 80px;
+  margin-top: -80px;
+  height: 100vh;
+  background: #fff;
+}
+.petition-container{
+  margin-top: 80px
+}
+}
+
 
 /**
  ===========================================
@@ -1540,6 +1556,7 @@ nav{
   top: 0;
   left: 0;
   opacity: 0.75;
+
 }
 
 .petition-overlay-container .petition-container, .donation-overlay-container .petition-container {
