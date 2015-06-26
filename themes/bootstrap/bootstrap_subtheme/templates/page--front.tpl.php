@@ -422,6 +422,17 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                 </div>
                             </div>
+                            <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/>
+        									  <input type="radio" id="sustaining_gift" name="sustaining.frequency" value="monthly" />
+                						<div id="sustaining_duration_field" style="display:none;"><br />
+        											<label for="sustaining_duration">Continue giving </label>
+        											<select name="sustaining.duration" id="sustaining_duration">
+					      						    <option value="3">3 months</option>
+					      						    <option value="6">6 months</option>
+					      						    <option value="12">1 year</option>
+					      						    <option value="0">Indefinitely</option>
+					      						  </select><br />
+       											</div>
                             <div class="form-group">
                             <input type="hidden" name="send_receipt" value="true">
                                 <input type="hidden" name="df_preview" value="test">
