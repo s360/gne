@@ -140,7 +140,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
         <h2 class="petition-cta">Add your name to the list of americans who demand we do better.</h2>
         <div class="petition-form-container">
-            <form id="petition-form" class="overlay-form" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
+            <form id="petition-form" class="overlay-form" name="petition-form" method="POST" action="https://greatnationseat.org/api/convio/post.php">
             <input type="hidden" name="api_key" id="api_key" value="sosapikey" />
         		<input type="hidden" name="v" id="v" value="1.0" />
         		<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
@@ -150,11 +150,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361" />
         		<input type="hidden" name="name.first" id="first-name-overlay" />
        			<input type="hidden" name="name.last" id="last-name-overlay" />
-                <div class="col-sm-4 col-xs-6 petition">
+                <div class="col-sm-4 col-xs-12 petition">
                     <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input nameOverlay"/>
                     <label class="petition-label">Full Name</label>
                 </div>
-                <div class="col-sm-4 col-xs-6 petition">
+                <div class="col-sm-4 col-xs-12 petition">
                     <span class="petition-x">X</span><input id="petition-email" name="primary_email" class="petition-input emailOverlay"/>
                     <label class="petition-label">Email (Required)</label>
                 </div>
@@ -465,7 +465,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
     </div>
     <div class="screening-form-container col-md-6">
-        <form id="screening-form" name="screening-form" class="screening-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
+        <form id="screening-form" name="screening-form" class="screening-form" method="POST" action="https://greatnationseat.org/api/convio/post.php">
         		<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
 						<input type="hidden" name="v" id="v" value="1.0" />
 						<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
@@ -512,7 +512,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <ul>
             <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" class="fb-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
             <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
-            <li><a target="_blank" href="http://greatnationseat.org/privacy.html">Privacy</a></li>
+            <li><a target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
             <li><a href="#">&copy; 2015 GreatNationsEat.org</a></li>
         </ul>
     </div>
@@ -665,7 +665,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         console.log('change');
         console.log(window.orientation);
     }, false);
-    console.log(window.location);
+    //console.log(window.location);
 </script>
 
 
