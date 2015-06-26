@@ -744,9 +744,6 @@ nav{
     width: 80%;
     margin: 0 10%;
 }
-.media-container {
-    margin-top: 400px;
-}
 
 /**
  ===========================================
@@ -804,7 +801,7 @@ nav{
     letter-spacing: 1px;
     width: 100%;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size: 1em;
     letter-spacing: 0.1em;
 }
@@ -2222,7 +2219,7 @@ cursor: pointer;
 		z-index: 10000;
 	}
 	 .thank-image {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
   }
   .thankyou-overlay-container{
@@ -2256,6 +2253,7 @@ cursor: pointer;
 .donate-join {
 	display: block;
 	margin-top: 20px;
+  clear: both;
 }
 
 @media( min-width: 953px){
@@ -2308,3 +2306,52 @@ cursor: pointer;
 }
 
 
+/*Social Share*/
+
+@media(min-width: 768px){
+  .sp_fb_large{
+    display: block;
+  }
+
+  .sp_fb_small{
+    display: none;
+  }
+
+    .sp_tw_large{
+    display: block;
+  }
+
+  .sp_tw_small{
+    display: none;
+  }
+
+}
+
+@media(max-width: 768px){
+  .mobile_social{
+    position: relative;
+    width: 50%;
+    margin: 0 25%;
+  }
+
+  .sp_fb_large{
+    display: none;
+  }
+
+  .sp_fb_small{
+    display: block;
+    float: left;
+    padding-top: 9px;
+  }
+
+    .sp_tw_large{
+    display: none;
+  }
+
+  .sp_tw_small{
+    display: block;
+    float: right;
+    padding-top: 9px;
+  }
+
+}
