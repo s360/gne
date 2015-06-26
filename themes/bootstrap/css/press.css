@@ -279,6 +279,11 @@
   display: inline-block;
 }
 
+.press-copy-header {
+	text-align: center;
+  width: 80%;
+  margin: 15px auto;
+}
 p.press-contact-info {
 	font-family: 'Open Sans', sans-serif;
   font-size: 12px;
