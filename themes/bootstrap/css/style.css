@@ -2253,6 +2253,7 @@ cursor: pointer;
 .donate-join {
 	display: block;
 	margin-top: 20px;
+  clear: both;
 }
 
 @media( min-width: 953px){
@@ -2329,6 +2330,8 @@ cursor: pointer;
 @media(max-width: 768px){
   .mobile_social{
     position: relative;
+    width: 50%;
+    margin: 0 25%;
   }
 
   .sp_fb_large{
@@ -2336,8 +2339,8 @@ cursor: pointer;
   }
 
   .sp_fb_small{
-    display: absolute;
-    left:0;
+    display: block;
+    float: left;
   }
 
     .sp_tw_large{
@@ -2345,8 +2348,8 @@ cursor: pointer;
   }
 
   .sp_tw_small{
-    display: absolute;
-    right:0;
+    display: block;
+    float: right;
   }
 
 }
