@@ -1192,8 +1192,8 @@ nav{
 }
 
 .col-md-8.about-main img.nkh-logo-white{
-     width: 30%;
-    margin: 5px 35%;
+     width: 20%;
+    margin: 5px 40%;
     display: block;
 }
 }
@@ -1712,6 +1712,7 @@ nav{
 
 	.col-sm-4.col-xs-12.zip {
     height: auto;
+    margin-bottom: 20px;
 	}
 	.petition-label {
     color: #1268b3;
