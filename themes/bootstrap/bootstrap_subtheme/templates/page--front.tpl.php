@@ -75,6 +75,7 @@
  */
 ?>
 <?php
+drupal_set_title("Unite and Fight To End Hunger");
 drupal_add_css($directory.'/js/slick/slick.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 ?>
@@ -421,8 +422,20 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                 </div>
                             </div>
+                            <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/>
+        									  <input type="radio" id="sustaining_gift" name="sustaining.frequency" value="monthly"/> Monthly Gift<br/>
+                						<div id="sustaining_duration_field" style="display:none;"><br />
+        											<label for="sustaining_duration">Continue giving </label>
+        											<select name="sustaining.duration" id="sustaining_duration">
+					      						    <option value="3">3 months</option>
+					      						    <option value="6">6 months</option>
+					      						    <option value="12">1 year</option>
+					      						    <option value="0">Indefinitely</option>
+					      						  </select><br />
+       											</div>
                             <div class="form-group">
-                                <input type="hidden" name="df_preview" value="test">
+                            <input type="hidden" name="send_receipt" value="true">
+                                <!-- <input type="hidden" name="df_preview" value="test"> -->
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
                             <!-- Begin DigiCert site seal HTML and JavaScript -->
@@ -511,6 +524,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		jQuery('.leaf.visible-xs.join').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
+		jQuery('#donate-navbar').click(function(e) {
+			e.preventDefault();
+			jQuery('#donation-overlay-container').removeClass('hidden');
+		});
 		jQuery('.story-join').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
@@ -525,7 +542,21 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		var stepTwo    = jQuery('#step-two');
 		var stepThree  = jQuery('#step-three');
 		var amountSelected = false;
-		
+
+		function showIfChecked(checkCtrl, targetDiv) {
+	    if (document.getElementById(checkCtrl).checked == true) {
+	      document.getElementById(targetDiv).style.display = "inline";
+	    } else {
+	      document.getElementById(targetDiv).style.display = "none";
+	    }
+  	}
+		jQuery('#one_time_gift').click(function() {
+			showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		});
+		jQuery('#sustaining_gift').click(function() {
+			showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		});
+
 		if(!jQuery('body').find('.wrap-amount').find('input[type="radio"]').is(':checked')){
 			nextDonate.addClass('btnDisabledHref');
 		} else {
