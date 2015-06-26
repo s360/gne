@@ -21,6 +21,23 @@
     list-style: none;
     padding-left: 0px;
 }
+.node-press-release h2 {
+	text-align: center;
+}
+.node-press-release h2 {
+	margin-bottom: 30px	
+}
+
+.node-press-release h2 a{
+  text-transform: uppercase;
+  font-family: "Ultra";
+  letter-spacing: 3px;
+  font-size: 1em;
+  cursor: default;
+  text-decoration: none;
+  color: #e61e26;
+	
+}
 .node-press-release .content{
     margin-top: 64px;
 }
