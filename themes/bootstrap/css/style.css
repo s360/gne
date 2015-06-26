@@ -595,10 +595,10 @@ nav{
 		width: 33.33333333333333%;
 	}
 	.col-sm-4.col-xs-4.onethird.one {
-		background-position: center;
+		background-position: right;
 	}
 	.col-sm-4.col-xs-4.onethird.three {
-		background-position: center;
+		background-position: left;
 	}
 	.page1-title {
 		font-size: 16px;
@@ -2289,4 +2289,16 @@ cursor: pointer;
 	cursor: not-allowed !important;
 }
 
+
+@media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .main-container{
+    height: 80%;
+  }
+}
+
+@media screen and (device-width: 414px){
+  .main-container{
+    height: 80%;
+  }
+}
 
