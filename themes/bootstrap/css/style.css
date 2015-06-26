@@ -595,10 +595,10 @@ nav{
 		width: 33.33333333333333%;
 	}
 	.col-sm-4.col-xs-4.onethird.one {
-		background-position: center;
+		background-position: right;
 	}
 	.col-sm-4.col-xs-4.onethird.three {
-		background-position: center;
+		background-position: right;
 	}
 	.page1-title {
 		font-size: 16px;
@@ -2151,7 +2151,7 @@ cursor: pointer;
 }
 .thank-image {
 	clear:both;
-	padding-top: 14vh;
+	padding-top: 8vh;
 }
 .thankyou-overlay-container{
  	top: 0;
@@ -2173,7 +2173,7 @@ cursor: pointer;
 .thank-facebook-share,
 .thank-twitter-share {
   margin-top: 7px;
-  padding: 13px;
+  padding: 14px;
   margin-left: 10px;
   color: #ffffff;
   background: #f20016;
@@ -2287,6 +2287,13 @@ cursor: pointer;
 .btnDisabledHref, .btnDisabledHref:hover {
 	color: #eeeeee !important;
 	cursor: not-allowed !important;
+}
+
+
+@media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .main-container{
+    height: 70%;
+  }
 }
 
 

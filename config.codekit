@@ -257,6 +257,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--front.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--front.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--press.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -937,7 +946,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 543773,
+		"initialSize": 421175,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_01.png",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Jahnique_01.png",
 		"outputPathIsOutsideProject": 0,
@@ -992,7 +1001,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 833500,
+		"initialSize": 172931,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.jpg",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/Sgt-Hanno-01.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1043,12 +1052,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/themes\/bootstrap\/js\/convio-start.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/convio-start.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/convio-start-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/themes\/bootstrap\/js\/convio.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/convio.js",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/convio-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/themes\/bootstrap\/js\/custom.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/js\/custom.js",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/js\/min\/custom-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1617,6 +1648,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/theme\/system\/html-tag.vars.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/themes\/bootstrap\/theme\/system\/html.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/theme\/system\/html.tpl.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
