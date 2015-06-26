@@ -11,6 +11,9 @@ jQuery(document).ready(function() {
 			if(!jQuery("#petition-overlay-container").hasClass('hidden') && jQuery(e.target).hasClass('full_overlay')) {
     		jQuery("#petition-overlay-container").addClass('hidden');
     	}
+    	if(jQuery(".top-navigation").hasClass('in')) {
+    		jQuery('.top-navigation').removeClass('in');
+    	}
 		});
     /*jQuery.fn.reverse = [].reverse;
 		
