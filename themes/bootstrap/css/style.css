@@ -760,7 +760,7 @@ nav{
 	padding: 0 35px;
 	text-align: center;
 }
- #adriana-3 .page3-img{
+ #adrianna-3 .page3-img{
     background: url('../images/adriana-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -773,7 +773,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    background-position: center;
+    background-position: right;
  }
 
   #jahnique-3 .page3-img{
@@ -784,7 +784,7 @@ nav{
     background-position: center;
  }
 
-  #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
+  #adrianna-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
     background: #FBFFFF;
     height: 100%;
     margin-top: -11px;
@@ -797,7 +797,7 @@ nav{
 
 
 
-  #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
+  #adrianna-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     font-family: 'oswald', open-sans;
     color: #1268b3;
     text-transform: uppercase;
@@ -823,41 +823,41 @@ nav{
 	.story-join, .donate-join{
 		display: block;
 	}
-  #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
+  #adrianna-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
     width: 100%;
     float: left;
     margin-top: 0;
     padding-top: 10px;
   }
-  #adriana-3 .col-md-5, #hanno-3 .col-md-5, #jahnique-3 .col-md-5{
+  #adrianna-3 .col-md-5, #hanno-3 .col-md-5, #jahnique-3 .col-md-5{
     width: 100%;
     float: left;
   }
-   #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
+   #adrianna-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
     background-size: cover;
     background-repeat: no-repeat;
     height: 60%;
     background-position: center;
  }
 
-  #adriana-3 .col-md-7 .petition-form-container-story, #hanno-3 .col-md-7 .petition-form-container-story, #jahnique-3 .col-md-7 .petition-form-container-story, .story-cta{
+  #adrianna-3 .col-md-7 .petition-form-container-story, #hanno-3 .col-md-7 .petition-form-container-story, #jahnique-3 .col-md-7 .petition-form-container-story, .story-cta{
     display: none!important;
   }
 }
 
 /*@media(max-width: 992px) and (orientation: portrait) {
-   #adriana-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
+   #adrianna-3 .page3-img, #hanno-3 .page3-img, #jahnique-3 .page3-img{
     height: 60%;
     background-position: center !important;
 
  }
-  #adriana-3 .cta, #hanno-3 .cta, #jahnique-3 .cta{
+  #adrianna-3 .cta, #hanno-3 .cta, #jahnique-3 .cta{
     height: 40%;
     background-position: top;
 		padding-top: 10px;
  }
 
-/*   #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
+/*   #adrianna-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     cursor: pointer;
    }*/
 
@@ -1088,8 +1088,8 @@ nav{
 }
 
 .col-md-8.about-main img.nkh-logo{
-    width: 15%;
-    margin: 5px 42.5%;
+    width: 40%;
+    margin: 5px 30%;
 }
 
 .col-md-8.about-main img.nkh-logo-white{
@@ -1211,8 +1211,8 @@ nav{
 }
 
 .col-md-8.about-main img.nkh-logo-white{
-     width: 20%;
-    margin: 5px 40%;
+     width: 40%;
+    margin: 5px 30%;
     display: block;
 }
 }
