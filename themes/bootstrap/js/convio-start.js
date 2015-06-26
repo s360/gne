@@ -139,9 +139,10 @@
                     $('.donation-form').show();
                 }
                 else {
-
+                	$('#donate-close').click(function() {
                     $('#donate-thank-container').removeClass('hidden');
                     $('#donation-overlay-container').addClass('hidden');
+                	});
                     $('.donation-loading').remove();
                     $('.donation-form').before('<div class="alert alert-success">' +
                     'Your donation has been processed!' +
