@@ -75,6 +75,7 @@
  */
 ?>
 <?php
+drupal_set_title("Unite and Fight To End Hunger");
 drupal_add_css($directory.'/js/slick/slick.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 ?>
@@ -146,7 +147,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         		<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
         		<input type="hidden" name="login_password" id="login_password" value="test123456" /> 
         		<input type="hidden" name="response_format" id="response_format" value="json" />
-        		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402, 104361" />
+        		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361" />
         		<input type="hidden" name="name.first" id="first-name-overlay" />
        			<input type="hidden" name="name.last" id="last-name-overlay" />
                 <div class="col-sm-4 col-xs-6 petition">
@@ -170,7 +171,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <!-- END PETITION OVERLAY -->
 <!-- DONATION OVERLAY -->
-<div id="donation-overlay-container" class="petition-overlay-container hidden">
+<div id="donation-overlay-container" class="donation-overlay-container hidden">
 <div class='full_overlay'></div>
 <div class="donation-container petition-container">
     <span id="donate-close" class="donate-close close-petition"></span>
@@ -220,10 +221,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 							 </div>
 							 
                              
-
+		<div class="nextBtn">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
-                            <a id="key-next-step" href="#" class="nextBtn">Next Step</a>
+                            <a id="key-next-step" href="#" class="nextBtn-old">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -360,10 +362,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <input maxlength="200" type="email" required="required" name="donor.email" class="form-control" placeholder="Email Address*" />
                                 </div>
                             </div>
-
+	<div class="nextBtn">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
-                            <a href="#" class="nextBtn">Next Step</a>
+                            <a href="#" class="nextBtn-old">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -419,7 +422,19 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                 </div>
                             </div>
+                            <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/>
+        									  <input type="radio" id="sustaining_gift" name="sustaining.frequency" value="monthly" />
+                						<div id="sustaining_duration_field" style="display:none;"><br />
+        											<label for="sustaining_duration">Continue giving </label>
+        											<select name="sustaining.duration" id="sustaining_duration">
+					      						    <option value="3">3 months</option>
+					      						    <option value="6">6 months</option>
+					      						    <option value="12">1 year</option>
+					      						    <option value="0">Indefinitely</option>
+					      						  </select><br />
+       											</div>
                             <div class="form-group">
+                            <input type="hidden" name="send_receipt" value="true">
                                 <input type="hidden" name="df_preview" value="test">
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
@@ -450,15 +465,23 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
     </div>
     <div class="screening-form-container col-md-6">
-
-        <form name="screening-form" class="screening-form">
-            <input type="text" class="screening-input half one" placeholder="First Name" />
-            <input type="text" class="screening-input half" placeholder="Last Name" />
+        <form id="screening-form" name="screening-form" class="screening-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
+        		<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
+						<input type="hidden" name="v" id="v" value="1.0" />
+						<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
+						<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
+						<input type="hidden" name="login_password" id="login_password" value="test123456" /> 
+						<input type="hidden" name="response_format" id="response_format" value="json" />
+						<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361,104423" />
+            
+            <input type="text" class="screening-input half one" name="name.first" placeholder="First Name" required/>
+            <input type="text" class="screening-input half" name="name.last" placeholder="Last Name"required />
             <input type="text" class="screening-input" placeholder="organization" />
-            <input type="text" class="screening-input" placeholder="Email Address" />
-            <input type="text" class="screening-input" placeholder="Contact Number" />
+            <input type="text" class="screening-input email" name="primary_email" placeholder="Email Address" required/>
+            <input type="text" class="screening-input" name="home_phone" placeholder="Contact Number" />
             <button id="screening-submit" class="btn-content screening">Submit Form</button>
         </form>
+    </div>
     </div>
 </div>
 <div class="donation-overlay-image" style="display:none;"></div>
@@ -473,7 +496,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </div>
 </div>
 <div id="donate-thank-container" class="thankyou-overlay-container hidden">
-    <span id="thank-close"></span>
+    <span id="thank-donate-close"></span>
     <img class="thank-image" src="/sites/all/themes/bootstrap/images/donate-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
         <div class='sp_14354 sp_fb_large' ></div>
@@ -500,6 +523,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 	jQuery(document).ready(function() {
 		jQuery('.leaf.visible-xs.join').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
+		});
+		jQuery('#donate-navbar').click(function(e) {
+			e.preventDefault();
+			jQuery('#donation-overlay-container').removeClass('hidden');
 		});
 		jQuery('.story-join').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
@@ -564,33 +591,35 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
     var formId = "12860";
 
-    // TODO: if petition showing and mobile - header should hide
-    var petitionOverlay  = document.getElementById('petition-overlay-container');
-    var petitionClose 	 = document.getElementById('close-petition');
-    var petitionButton   = document.getElementById('join');
-    var petitionButton2  = document.getElementById('join-act');
-    var thankContainer   = document.getElementById('thank-container');
-    var thankClose 	     = document.getElementById('thank-close');
-    var donateButton   = document.getElementById('donate-nav');
-    var donateOverlay  = document.getElementById('donation-overlay-container');
-    var donateClose 	 = document.getElementById('donate-close');
-    var donateSubmit    = document.getElementById('donate-submit');
-    var screeningClose  = document.getElementById('screening-close');
-    var screeningOverlay = document.getElementById('screening-container');
-    var screeningSubmit = document.getElementById('screening-submit');
-    var screeningButton  = document.getElementById('host-screening');
+    //TODO: Clean this up and put in .js file
+
+    var petitionOverlay  			 = document.getElementById('petition-overlay-container');
+    var petitionClose 	 			 = document.getElementById('close-petition');
+    var petitionButton   			 = document.getElementById('join');
+    var petitionButton2  			 = document.getElementById('join-act');
+    var thankContainer   			 = document.getElementById('thank-container');
+    var donateThankContainer   = document.getElementById('donate-thank-container');
+    var thankClose 	     			 = document.getElementById('thank-close');
+    var donateThankClose 			 = document.getElementById('thank-donate-close');
+    var donateButton   	 			 = document.getElementById('donate-nav');
+    var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
+    var donateClose 	 	 			 = document.getElementById('donate-close');
+    var screeningClose   			 = document.getElementById('screening-close');
+    var screeningOverlay 			 = document.getElementById('screening-container');
+    var screeningSubmit  			 = document.getElementById('screening-submit');
+    var screeningButton  			 = document.getElementById('host-screening');
     var orientation;
 
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
     });
+    donateThankClose.addEventListener('click', function() {
+        donateThankContainer.classList.add('hidden');
+    });
     screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
     });
-    screeningSubmit.addEventListener('click', function() {
-        screeningOverlay.classList.add('hidden');
-        thankContainer.classList.remove('hidden');
-    });
+
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
@@ -609,6 +638,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     screeningClose.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
     })
+
+    //TODO: Refresh browser on mobile rotate - utilize cookies/local storage to prevent petition overlay from showing up again
     if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
         console.log('portrait');
         orientation = 'portrait';

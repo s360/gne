@@ -6,6 +6,15 @@
 
 jQuery(document).ready(function() {
 
+		//close lightbox on click anywhere
+		jQuery('body').click(function(e) {
+			if(!jQuery("#petition-overlay-container").hasClass('hidden') && jQuery(e.target).hasClass('full_overlay')) {
+    		jQuery("#petition-overlay-container").addClass('hidden');
+    	}
+    	if(jQuery('.top-navigation').hasClass('in') && !jQuery(e.target).hasClass('navbar-toggle') && !jQuery(e.target).hasClass('icon-bar')) {
+    		jQuery('.top-navigation').removeClass('in');
+    	}
+		});
     /*jQuery.fn.reverse = [].reverse;
 		
     jQuery.fn.sliderPage = function() {
@@ -153,13 +162,13 @@ jQuery(document).ready(function() {
         return false;
     });
 
-    jQuery('input.zip_sub.mobile').click(function(event) {
-        var zip = jQuery('.zipcode.mobile').val();
-        var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
-        //window.location.href=url;
-        window.open(url, '_blank');
-        return false;
-    });
+    // jQuery('input.zip_sub.mobile').click(function(event) {
+    //     var zip = jQuery('.zipcode.mobile').val();
+    //     var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
+    //     //window.location.href=url;
+    //     window.open(url, '_blank');
+    //     return false;
+    // });
 
     jQuery( ".navbar-toggle" ).click(function() {
         jQuery('.top-navigation').toggleClass('in');
@@ -357,6 +366,12 @@ jQuery(document).ready(function() {
 			var validator = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 			return validator.test(email);
 		}
+		var donateJoinButtons = jQuery('.donate-join');
+		donateJoinButtons.click(function() {
+			jQuery('#donation-overlay-container').removeClass('hidden');
+		});
+		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story, .story-join');
+		var showOnSuccess = jQuery('.donate-join, .story-share, .add-donate, .thank-arrows');
 
     var overlaySubmit = jQuery('#overlay-submit');
     var petitionOverlayForm = jQuery('#petition-form');
@@ -370,13 +385,15 @@ jQuery(document).ready(function() {
     var storyThreeForm = jQuery('#petition-form-4');
     var storyThreeSubmit = jQuery('#story-submit-4');
 
+    var screeningForm = jQuery('#screening-form');
+    var screeningSubmit = jQuery('#screening-submit');
+
     var thankyouContainer = jQuery('#thank-container');
 
 
-    jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).on('submit', function(e) {
+    jQuery(petitionOverlayForm).add(storyOneForm).add(storyTwoForm).add(storyThreeForm).add(screeningForm).on('submit', function(e) {
 	    e.preventDefault();
 	    if(jQuery(this).hasClass('overlay-form')){
-	    	console.log('overlay submit');
 		  	var fullName = jQuery('.petition-input.nameOverlay').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -399,15 +416,11 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery('#petition-overlay-container').hide();
+		    			hideOnSuccess.hide();
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
-		    			console.log('form error');
-		    			// jQuery(error).show();	
-		    			// jQuery('#petition-form').hide();
+		    			console.log('error');
 		    		});
 	    	} else {
 	    		console.log('invalid email');
@@ -437,11 +450,9 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery(storyOneForm).hide();
+		    			hideOnSuccess.hide();
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -451,8 +462,29 @@ jQuery(document).ready(function() {
 	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
+	    }else if (jQuery(this).hasClass('screening-form')) {
+		    var userEmail = jQuery('.screening-input.email').val();
+		    if ( validateEmail(userEmail) ) {
+		    	jQuery(screeningSubmit).hide();
+		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery.post(jQuery(this).attr('action'),
+		    	jQuery(this).serialize(),
+		    		function(data) {
+		    			hideOnSuccess.hide();
+		    			showOnSuccess.removeClass('hidden');
+		    			jQuery('#screening-container').hide();
+		    			jQuery(thankyouContainer).removeClass('hidden');
+		    		}).error(function(data) {
+		    			console.log('form error');
+		    			// jQuery(error).show();	
+		    			// jQuery('#petition-form').hide();
+		    		});
+	    	} else {
+	    		console.log('invalid email');
+	    		// jQuery(invalidEmail).removeClass('hidden');
+	    	}
+
 	    }else if (jQuery(this).hasClass('petition-form-3')) {
-	    	console.log('story 2 submit');
 		  	var fullName = jQuery('.petition-input.name3').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -475,11 +507,9 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery(storyTwoForm).hide();
+		    			hideOnSuccess.hide();
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -513,11 +543,9 @@ jQuery(document).ready(function() {
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
-		    			console.log('submit success');
-		    			console.log(data);
-		    			jQuery(storyThreeForm).hide();
+		    			hideOnSuccess.hide();
+		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
-		    			// jQuery(thankyou).removeClass('hidden');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	

@@ -9,13 +9,33 @@
     });
 
     $(function () {
-				var formId = 12181;
+/* for email maybe?
+    	<input type="hidden" name="send_receipt" id="send_receipt" value="false" />
+      <input type="hidden" name="send_registration_email" id="send_registration_email" value="false" />
 
+
+
+       <input type="radio" id="one_time_gift"   name="sustaining.frequency" value="" checked="true" onclick="showIfChecked('sustaining_gift', 'sustaining_duration_field');" />
+        One-time gift<br />
+        <input type="radio" id="sustaining_gift" name="sustaining.frequency" value="monthly" onclick="showIfChecked('sustaining_gift', 'sustaining_duration_field');" />
+                <div id="sustaining_duration_field" style="display:none;"><br />
+        <label for="sustaining_duration">Continue giving </label>
+        <select name="sustaining.duration" id="sustaining_duration">
+          <option value="3">3 months</option>
+          <option value="6">6 months</option>
+          <option value="12">1 year</option>
+          <option value="0">Indefinitely</option>
+        </select><br />
+        </div>
+      */
+				var formId = 12181;
+				var sustaining = 0;
+				var frequency = 'one-time';
         /* UI handlers for the donation form example */
         if ($('.donation-form').length > 0) {
             luminateExtend.api.request({
                 api: 'CRDonationAPI',
-                data: 'method=getDonationFormInfo&form_id=' + formId,
+                data: 'method=getDonationFormInfo&form_id=' + formId + '&sustaining.duration=' + sustaining + '&sustaining.frequency=monthly',
                 callback: function (data) {
                     //console.log(data.getDonationFormInfoResponse.donationLevels);
                     var donationLevelEl = $('#donation_level');
@@ -136,8 +156,7 @@
                 }
                 else {
 
-                    thankContainer.classList.remove('hidden');
-                    donateOverlay.classList.add('hidden');
+                    $('#donate-thank-container').removeClass('hidden');
 
                     $('.donation-loading').remove();
                     $('.donation-form').before('<div class="alert alert-success">' +

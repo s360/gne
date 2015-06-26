@@ -407,13 +407,13 @@ nav{
   width: 100%;
   }
   .story-copy.two.quote {
-  color: steelblue;
+  color: #1268b3;
   margin-left: 50px;
   display: none;
 }
 
 .story-two-quote {
-  color: steelblue;
+  color: #1268b3;
   text-align: right;
   display: none;
 }
@@ -734,6 +734,9 @@ nav{
  ========== 3d. Story Page 3 ===============
  ===========================================
  */
+ .cta {
+ 	text-align: center;
+ }
 .petition-form-container-story {
 	padding: 0 35px;
 	text-align: center;
@@ -743,6 +746,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    background-position: center;
  }
 
   #hanno-3 .page3-img{
@@ -750,7 +754,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    background-position: right;
+    background-position: center;
  }
 
   #jahnique-3 .page3-img{
@@ -758,7 +762,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    background-position: -140px;
+    background-position: center;
  }
 
   #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
@@ -772,9 +776,7 @@ nav{
   margin: 15vh auto 10px auto;
  }
 
- #adriana-3 .cta{
 
- }
 
   #adriana-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     font-family: 'oswald', open-sans;
@@ -787,7 +789,7 @@ nav{
     font-size: 1em;
     letter-spacing: 0.1em;
 }
-.story-join {
+.story-join{
 	display: none;
 }
 @media (max-width: 1300px){
@@ -799,7 +801,7 @@ nav{
 
 
 @media (max-width: 992px){
-	.story-join {
+	.story-join, .donate-join{
 		display: block;
 	}
   #adriana-3 .col-md-7, #hanno-3 .col-md-7, #jahnique-3 .col-md-7{
@@ -906,7 +908,7 @@ nav{
 	background: url('../images/About_Classroom.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: -550px;
+	background-position: -350px;
 }
 .col-sm-3.about-right {
 	margin-top: -5px;
@@ -914,7 +916,7 @@ nav{
 	background: url('../images/About_Boy.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: -320px;
+	background-position: left;
 }
 .col-sm-5.about {
 	background-color: #ffffff;
@@ -1022,7 +1024,7 @@ nav{
   background: url('../images/About_Boy.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -800px;
+  background-position: center;
   margin-top: -10px;
  }
 
@@ -1067,8 +1069,8 @@ nav{
 }
 
 .col-md-8.about-main img.nkh-logo{
-    width: 30%;
-    margin: 5px 35%;
+    width: 20%;
+    margin: 5px 40%;
 }
 
 .col-md-8.about-main img.nkh-logo-white{
@@ -1166,7 +1168,7 @@ nav{
     padding-bottom:30px; 
   }
   #about-campaign{
-    background: url('../images/About_Boy.jpg');
+    background: url('../images/About_Boy.jpg')!important;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -1190,8 +1192,8 @@ nav{
 }
 
 .col-md-8.about-main img.nkh-logo-white{
-     width: 30%;
-    margin: 5px 35%;
+     width: 20%;
+    margin: 5px 40%;
     display: block;
 }
 }
@@ -1219,7 +1221,7 @@ nav{
 	    height: 100%;
 	    background-repeat: no-repeat;
 	    background-size: cover;
-	    background-position: right;
+	    background-position: center;
 	    margin-top: -154px;
 	}
 	
@@ -1453,6 +1455,18 @@ nav{
 	  white-space: nowrap;
 	}
 }
+/* iPad-specific */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait) {
+  div#act div.col-md-4.crowd.hidden-xs {
+    display:none!important;
+  }
+  div#act .act-content form .zip_sub {
+    margin-bottom: 0;
+  }
+  div#act div.col-md-4.act-content.hidden-xs {
+    padding-bottom: 0;
+  }
+}
 
 
 /**
@@ -1528,7 +1542,7 @@ nav{
   opacity: 0.75;
 }
 
-.petition-overlay-container .petition-container {
+.petition-overlay-container .petition-container, .donation-overlay-container .petition-container {
  	top: 0;
  	left: 0;
  	right: 0;
@@ -1540,7 +1554,7 @@ nav{
 .petition-container {
   overflow-y: auto;
 }
-.close-petition, #thank-close {
+.close-petition, #thank-close, #thank-donate-close {
 	cursor: pointer;
 	float: right;
   background: url(../images/x-icon.png);
@@ -1609,7 +1623,7 @@ nav{
   }
 
 @media (min-width: 768px){
-	.petition-overlay-container .petition-container {
+	.petition-overlay-container .petition-container, .donation-overlay-container .petition-container {
 	 	height: 75%;
 	 	width: 70%;
 	 	margin: auto;
@@ -1617,6 +1631,8 @@ nav{
 	}
 	.petition-container, .screening-overlay-container{
 		padding: 30px 70px 10px 70px;
+    max-height: 700px;
+    max-width: 1170px
 	}
 
 	.petition-header {
@@ -1672,7 +1688,7 @@ nav{
 	#petition-logo {
 		height: 30px;
 	}
-	.petition-overlay-container .petition-container{
+	.petition-overlay-container .petition-container, .donation-overlay-container .petition-container{
 		width: 100%;
 		height: 100%;
 		top: 0;
@@ -1696,6 +1712,7 @@ nav{
 
 	.col-sm-4.col-xs-12.zip {
     height: auto;
+    margin-bottom: 20px;
 	}
 	.petition-label {
     color: #1268b3;
@@ -1713,12 +1730,16 @@ nav{
 		font-size: 12px;
 	}
 	#petition-zip {
-		width: 12%;
+
 	}
 
   petition-sub{
     width: 100%;
     clear: both;
+  }
+
+  #thank-close{
+    margin-top: 12px;
   }
 }
 
@@ -1894,7 +1915,7 @@ nav{
 
 
 .wrap-amount input[type="radio"]:checked + label.donation_amount{
-    background: steelblue;
+    background: #1268b3;
     color: #ffffff;
 }
 .form-group {
@@ -1908,12 +1929,15 @@ nav{
     font-family: 'Oswald', sans-serif;
 }
 .nextBtn{
+cursor: pointer;
+}
+.nextBtn-old {
     float: right;
     font-family: 'Oswald', sans-serif;
     color: #e71e25;
     text-transform: uppercase;
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 30px;	
 }
 
 .donate-arrow{
@@ -1998,6 +2022,7 @@ nav{
         display: none;
     }
 }
+
 @media (min-width: 768px){
      /*.slider-nav{
         width: 300px;
@@ -2010,7 +2035,7 @@ nav{
         display: block;
     }
     .top-navigation{
-        right: 115px;
+        right: 165px;
     }
 }
 
@@ -2100,7 +2125,7 @@ nav{
 	}
 }
 /* END */
-#thank-close {
+#thank-close, #thank-donate-close {
 	float: right;
 	cursor: pointer;
 }
@@ -2109,6 +2134,7 @@ nav{
 }
 .thank-image {
 	clear:both;
+	padding-top: 14vh;
 }
 .thankyou-overlay-container{
  	top: 0;
@@ -2117,14 +2143,15 @@ nav{
  	background-color: #ffffff;
  	position: absolute;
  	border: 3px solid #f20016;
- 	padding: 100px 60px;
+ 	/*padding: 100px 60px;*/
+ 	padding: 20px 70px 10px 70px;
  	text-align: center
 }
 .thank-share-container {
 	padding: 10px 0;
 	margin-top: 20px;
-	border-top: 5px solid steelblue;
-	border-bottom: 5px solid steelblue;
+	border-top: 5px solid #1268b3;
+	border-bottom: 5px solid #1268b3;
 }
 .thank-facebook-share,
 .thank-twitter-share {
@@ -2153,9 +2180,7 @@ nav{
 	 	margin: auto;
 	 	bottom: 50px;
 	}
-	.thank-image {
 
-	}
 }
 @media (max-width: 1090px){
 	.thank-image {
@@ -2170,9 +2195,10 @@ nav{
 		bottom: 0;
 		z-index: 10000;
 	}
-	.thank-image {
-
-	}
+	 .thank-image {
+    width: 60%;
+    margin: 0 auto;
+  }
   .thankyou-overlay-container{
 
   padding: 0px 60px;
@@ -2184,7 +2210,7 @@ nav{
 	width: 100%;
 }
 
-.story-join {
+.story-join, .donate-join{
 	margin: 0 auto;
 	font-family: 'oswald', sans-serif;
 	padding: 15px 30px;
@@ -2198,6 +2224,10 @@ nav{
 	white-space: nowrap;
 	font-size: 1.1em;
 	letter-spacing: 2px;
+}
+.donate-join {
+	display: block;
+	margin-top: 20px;
 }
 
 @media( min-width: 953px){
@@ -2241,3 +2271,5 @@ nav{
 	color: #eeeeee !important;
 	cursor: not-allowed !important;
 }
+
+

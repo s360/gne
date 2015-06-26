@@ -19,7 +19,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   
   <link rel="apple-touch-icon" sizes="57x57" href="themes/bootstrap/images/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="themes/bootstrap/images/favicon/apple-touch-icon-60x60.png">
@@ -202,6 +202,7 @@
 	 <img class="story-cta" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/Divided_Animated.gif">
 	 <h4 class="add-voice">Add Your Name to the list of americans that demand we do better</h4>
 	 <button class="story-join">Join The Movement</button>
+	 <button class="donate-join hidden">Donate</button>
 	</div>
 <div class="petition-form-container-story">
 <form id="petition-form-2" class="petition-form-2" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
@@ -262,6 +263,8 @@
 	<img class="story-cta" src="themes/bootstrap/images/Divided_Animated.gif">
 	<h4 class="add-voice">Add Your Name to the list of americans that demand we do better</h4>
 	<button class="story-join">Join The Movement</button>
+	<h4 class="add-donate hidden">Take action to help end hunger.</h4>
+	<button class="donate-join hidden">Donate</button>
   </div>
   <div class="petition-form-container-story">
 		<form id="petition-form-3" class="petition-form-3" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
@@ -320,6 +323,7 @@
          <img class="story-cta" src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/images/Divided_Animated.gif">
          <h4 class="add-voice">Add Your Name to the list of americans that demand we do better</h4>
          <button class="story-join">Join The Movement</button>
+         <button class="donate-join hidden">Donate</button>
         </div>
         <div class="petition-form-container-story">
           <form id="petition-form-4" class="petition-form-4" name="petition-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
@@ -381,9 +385,11 @@
       <h4>A PLACE AT THE TABLE</h4>
       <p> 
       Great Nations Eat was inspired by "A Place at the Table," a documentary film that tells the story of hunger in America by looking at its impact on the lives of real families. Directed by Lori Silverbush and Kristi Jacobson, and featuring well-known hunger advocates like Jeff Bridges and Tom Colicchio, the film was released in 2013 by Magnolia Pictures and Participant Media to critical acclaim.</p>
+
+      <!-- Galen -->
          <div class="logos">
-          <img class="nkh-logo" src="themes/bootstrap/images/nkh-logo.gif">
-          <img class="nkh-logo-white" src="themes/bootstrap/images/nkh-logo-white.gif">
+          <img class="nkh-logo" src="themes/bootstrap/images/sos-logo-color.gif">
+          <img class="nkh-logo-white" src="themes/bootstrap/images/sos-logo-white.gif">
         </div>
       </div>
       <div class="screening">
@@ -410,7 +416,9 @@
 			<p>Enter your zip code to find actions you can take to end hunger in your community.</p>
 			<form><input type="text" name="zipcode" class="zipcode" placeholder="Enter zip code"/>
   		<input type="submit"  class="zip_sub"/></form>
-			<a href="#" class="graphic-slogan"><img src="/sites/all/themes/bootstrap/images/grphc_slogan.jpg"></a>
+
+      <!-- Galen -->
+			<a href="#!/stories" class="graphic-slogan"><img src="/sites/all/themes/bootstrap/images/grphc_slogan.jpg"></a>
 			</div>
 			<div class="col-md-4 crowd hidden-xs"></div>
 			<div class="col-md-12 visible-xs act">
@@ -471,11 +479,11 @@
         		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402, 104361" />
         		<input type="hidden" name="name.first" id="first-name-overlay" />
        			<input type="hidden" name="name.last" id="last-name-overlay" />
-                <div class="col-sm-4 col-xs-6 petition">
+                <div class="col-sm-4 col-xs-12 petition">
                     <span class="petition-x">X</span><input id="petition-name" name="name" class="petition-input nameOverlay"/>
                     <label class="petition-label">Full Name</label>
                 </div>
-                <div class="col-sm-4 col-xs-6 petition">
+                <div class="col-sm-4 col-xs-12 petition">
                     <span class="petition-x">X</span><input id="petition-email" name="primary_email" class="petition-input emailOverlay"/>
                     <label class="petition-label">Email (Required)</label>
                 </div>
@@ -808,13 +816,20 @@
         <p class="screening-p">Please enter your information and we'll contact you about hosting a screening of "A Place at the Table" in your community</p>
     </div>
     <div class="screening-form-container col-md-6">
-
-        <form name="screening-form" class="screening-form">
-            <input type="text" class="screening-input half one" placeholder="First Name" />
-            <input type="text" class="screening-input half" placeholder="Last Name" />
+        <form id="screening-form" name="screening-form" class="screening-form" method="POST" action="http://greatnationseat.org/api/convio/post.php">
+        		<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
+						<input type="hidden" name="v" id="v" value="1.0" />
+						<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
+						<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
+						<input type="hidden" name="login_password" id="login_password" value="test123456" /> 
+						<input type="hidden" name="response_format" id="response_format" value="json" />
+						<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361,104423" />
+            
+            <input type="text" class="screening-input half one" name="name.first" placeholder="First Name" />
+            <input type="text" class="screening-input half" name="name.last" placeholder="Last Name" />
             <input type="text" class="screening-input" placeholder="organization" />
-            <input type="text" class="screening-input" placeholder="Email Address" />
-            <input type="text" class="screening-input" placeholder="Contact Number" />
+            <input type="text" class="screening-input email" name="primary_email" placeholder="Email Address" />
+            <input type="text" class="screening-input" name="" placeholder="Contact Number" />
             <button id="screening-submit" class="btn-content screening">Submit Form</button>
         </form>
     </div>
@@ -847,6 +862,7 @@
         <ul>
             <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><img id="social-footer" src="/sites/all/themes/bootstrap/images/FB-button.png" alt="facebook"></a></li>
             <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><img id="social-footer" src="/sites/all/themes/bootstrap/images/TW-button.png" alt="Twitter"></a></li>
+            <li><a href="http://greatnationseat.org/press">Press Page</a></li>
             <li><a target="_blank" href="http://greatnationseat.org/privacy.html">Privacy</a></li>
             <li><a href="#">&copy; 2015 GreatNationsEat.org</a></li>
         </ul>
@@ -916,7 +932,6 @@
     var donateButton   = document.getElementById('donate-nav');
     var donateOverlay  = document.getElementById('donation-overlay-container');
     var donateClose 	 = document.getElementById('donate-close');
-    var donateSubmit    = document.getElementById('donate-submit');
     var screeningClose  = document.getElementById('screening-close');
     var screeningOverlay = document.getElementById('screening-container');
     var screeningSubmit = document.getElementById('screening-submit');
@@ -928,10 +943,10 @@
     screeningButton.addEventListener('click', function() {
         screeningOverlay.classList.remove('hidden');
     });
-    screeningSubmit.addEventListener('click', function() {
-        screeningOverlay.classList.add('hidden');
-        thankContainer.classList.remove('hidden');
-    });
+    // screeningSubmit.addEventListener('click', function() {
+    //     screeningOverlay.classList.add('hidden');
+    //     thankContainer.classList.remove('hidden');
+    // });
     petitionButton.addEventListener('click', function() {
         petitionOverlay.classList.remove('hidden');
     });
