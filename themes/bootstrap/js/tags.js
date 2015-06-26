@@ -51,7 +51,6 @@ jQuery( document ).ready(function() {
     jQuery(".petition-submit").click( function() { dc_tracker('join0') });
     jQuery(".fb-footer").click( function() { dc_tracker('share_fb') });
     jQuery(".tw-footer").click( function() { dc_tracker('share_tw') });
-    
     /*
     function gotohash(e) {
         if(lochash == "#!/donate" ) {
