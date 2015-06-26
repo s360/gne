@@ -423,7 +423,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 </div>
                             </div>
                             <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/>
-        									  <input type="radio" id="sustaining_gift" name="sustaining.frequency" value="monthly" />
+        									  <input type="radio" id="sustaining_gift" name="sustaining.frequency" value="monthly"/> Monthly Gift<br/>
                 						<div id="sustaining_duration_field" style="display:none;"><br />
         											<label for="sustaining_duration">Continue giving </label>
         											<select name="sustaining.duration" id="sustaining_duration">
@@ -510,8 +510,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     <div class="social pull-left"></div>
     <div class="copyright pull-right">
         <ul>
-            <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
-            <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" class="fb-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
+            <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
             <li><a target="_blank" href="http://greatnationseat.org/privacy.html">Privacy</a></li>
             <li><a href="#">&copy; 2015 GreatNationsEat.org</a></li>
         </ul>
@@ -542,7 +542,21 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		var stepTwo    = jQuery('#step-two');
 		var stepThree  = jQuery('#step-three');
 		var amountSelected = false;
-		
+
+		function showIfChecked(checkCtrl, targetDiv) {
+	    if (document.getElementById(checkCtrl).checked == true) {
+	      document.getElementById(targetDiv).style.display = "inline";
+	    } else {
+	      document.getElementById(targetDiv).style.display = "none";
+	    }
+  	}
+		jQuery('#one_time_gift').click(function() {
+			showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		});
+		jQuery('#sustaining_gift').click(function() {
+			showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		});
+
 		if(!jQuery('body').find('.wrap-amount').find('input[type="radio"]').is(':checked')){
 			nextDonate.addClass('btnDisabledHref');
 		} else {
@@ -589,7 +603,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 <script type="text/javascript">
 
-    var formId = "12860";
+    var formId = "12181";
 
     //TODO: Clean this up and put in .js file
 

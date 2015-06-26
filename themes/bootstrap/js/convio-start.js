@@ -12,30 +12,14 @@
 /* for email maybe?
     	<input type="hidden" name="send_receipt" id="send_receipt" value="false" />
       <input type="hidden" name="send_registration_email" id="send_registration_email" value="false" />
-
-
-
-       <input type="radio" id="one_time_gift"   name="sustaining.frequency" value="" checked="true" onclick="showIfChecked('sustaining_gift', 'sustaining_duration_field');" />
-        One-time gift<br />
-        <input type="radio" id="sustaining_gift" name="sustaining.frequency" value="monthly" onclick="showIfChecked('sustaining_gift', 'sustaining_duration_field');" />
-                <div id="sustaining_duration_field" style="display:none;"><br />
-        <label for="sustaining_duration">Continue giving </label>
-        <select name="sustaining.duration" id="sustaining_duration">
-          <option value="3">3 months</option>
-          <option value="6">6 months</option>
-          <option value="12">1 year</option>
-          <option value="0">Indefinitely</option>
-        </select><br />
-        </div>
       */
-				var formId = 12181;
-				var sustaining = 0;
-				var frequency = 'one-time';
+		var formId = 12181;
+        var traker = '<iframe id="traker-donate" src="https://4652923.fls.doubleclick.net/activityi;src=4652923;type=apatt;cat=donate1;qty=1;cost=[Revenue];ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
         /* UI handlers for the donation form example */
         if ($('.donation-form').length > 0) {
             luminateExtend.api.request({
                 api: 'CRDonationAPI',
-                data: 'method=getDonationFormInfo&form_id=' + formId + '&sustaining.duration=' + sustaining + '&sustaining.frequency=monthly',
+                data: 'method=getDonationFormInfo&form_id=' + formId,
                 callback: function (data) {
                     //console.log(data.getDonationFormInfoResponse.donationLevels);
                     var donationLevelEl = $('#donation_level');
@@ -88,17 +72,17 @@
 		
             });
 
-	    $('body').on('keypress', 'input[name="other_amount"]', function(event){
-	  	if ( event.which == 13 ) {
-	  	   event.preventDefault();
-	  	}
-		var val = parseInt($(this).val());
-		if(val > 0){
-			$('#key-next-step').removeClass('btnDisabledHref');
-		} else {
-			$('#key-next-step').addClass('btnDisabledHref');
-		}
-	    });
+    	    $('body').on('keypress', 'input[name="other_amount"]', function(event){
+        	  	if ( event.which == 13 ) {
+        	  	   event.preventDefault();
+        	  	}
+        		var val = parseInt($(this).val());
+        		if(val > 0){
+        			$('#key-next-step').removeClass('btnDisabledHref');
+        		} else {
+        			$('#key-next-step').addClass('btnDisabledHref');
+        		}
+    	    });
 
             $('.donation-form').submit(function () {
                 window.scrollTo(0, 0);
@@ -128,13 +112,13 @@
 
                 $('.donation-loading').remove();
                 $('.donation-form').show();
-		$('#donate-submit').prop('disabled', false);
+		        $('#donate-submit').prop('disabled', false);
             },
             success: function (data) {
             	  console.log('donate success');
             		console.log(data);
                 $('#donation-errors').remove();
-		$('#donate-submit').prop('disabled', false);
+		          $('#donate-submit').prop('disabled', false);
                 if (data.donationResponse.errors) {
                     $('.donation-form').prepend('<div id="donation-errors">' +
                     ((data.donationResponse.errors.message) ? ('<div class="alert alert-danger">' +
@@ -166,6 +150,13 @@
                     '<p>Thank you for your donation of $' + data.donationResponse.donation.amount.decimal + '.</p>' +
                     (typeof data.donationResponse.donation.confirmation_code === 'string' ? '<p>Your confirmation code is ' + data.donationResponse.donation.confirmation_code + '.</p>' : '') +
                     '</div>');
+                    var trakerHtml = traker.replace('[OrderID]', data.donationResponse.donation.transaction_id).replace('[Revenue]', data.donationResponse.donation.amount.decimal);
+                    
+                    if($('#traker-donate').length > 0) $('#traker-donate').remove();
+
+                    console.log(trakerHtml);
+                    
+                    $(trakerHtml).appendTo('body');
                 }
             }
         };

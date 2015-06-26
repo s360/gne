@@ -145,13 +145,9 @@ drupal_add_css($directory.'/css/press.css', array('group' => CSS_THEME, 'every_p
 
 </div>
 <script type="text/javascript">
-var playButton = jQuery('#play');
-playButton.click(function() {
-	jQuery(this).toggleClass('play-button')
-});
 function play() {
     var audio = document.getElementById('press-audio');
-    
+    jQuery('#play').toggleClass('play-button')
     //remove play button add pause
     if (audio.paused) {
         audio.play();
