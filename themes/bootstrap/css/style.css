@@ -598,7 +598,7 @@ nav{
 		background-position: right;
 	}
 	.col-sm-4.col-xs-4.onethird.three {
-		background-position: center;
+		background-position: right;
 	}
 	.page1-title {
 		font-size: 16px;
@@ -2151,7 +2151,7 @@ cursor: pointer;
 }
 .thank-image {
 	clear:both;
-	padding-top: 14vh;
+	padding-top: 8vh;
 }
 .thankyou-overlay-container{
  	top: 0;
@@ -2292,13 +2292,8 @@ cursor: pointer;
 
 @media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
   .main-container{
-    height: 80%;
+    height: 70%;
   }
 }
 
-@media screen and (device-width: 414px){
-  .main-container{
-    height: 80%;
-  }
-}
 
