@@ -75,7 +75,7 @@
  */
 ?>
 <?php
-drupal_set_title("Great Nations Eat - Unite and Fight To End Hunger");
+drupal_set_title("Unite and Fight To End Hunger");
 drupal_add_css($directory.'/js/slick/slick.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEME, 'every_page' => FALSE));
 ?>
