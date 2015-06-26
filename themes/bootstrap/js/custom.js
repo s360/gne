@@ -155,7 +155,7 @@ jQuery(document).ready(function() {
     //act submit
 
     jQuery('input.zip_sub').click(function(event) {
-        var zip = jQuery('.zipcode').val();
+        var zip = jQuery(this).prev('.zipcode').val();
         var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
         //window.location.href=url;
         window.open(url, '_blank');
