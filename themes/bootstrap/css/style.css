@@ -1455,6 +1455,18 @@ nav{
 	  white-space: nowrap;
 	}
 }
+/* iPad-specific */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait) {
+  div#act div.col-md-4.crowd.hidden-xs {
+    display:none!important;
+  }
+  div#act .act-content form .zip_sub {
+    margin-bottom: 0;
+  }
+  div#act div.col-md-4.act-content.hidden-xs {
+    padding-bottom: 0;
+  }
+}
 
 
 /**
