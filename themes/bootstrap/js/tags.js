@@ -49,8 +49,8 @@ jQuery( document ).ready(function() {
     jQuery("#donate-nav").click( function() { dc_tracker('donate0') });
     jQuery("input.zip_sub").click( function() { dc_tracker('involve0') });
     jQuery(".petition-submit").click( function() { dc_tracker('join0') });
-    jQuery("#social-footer").attr("facebook").click( function() { dc_tracker('share_fb') });
-    jQuery("#social-footer").attr("Twitter").click( function() { dc_tracker('share_tw') });
+    jQuery(".fb-footer").click( function() { dc_tracker('share_fb') });
+    jQuery(".tw-footer").click( function() { dc_tracker('share_tw') });
     /*
     function gotohash(e) {
         if(lochash == "#!/donate" ) {
