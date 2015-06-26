@@ -908,7 +908,7 @@ nav{
 	background: url('../images/About_Classroom.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: -550px;
+	background-position: -350px;
 }
 .col-sm-3.about-right {
 	margin-top: -5px;
@@ -916,7 +916,7 @@ nav{
 	background: url('../images/About_Boy.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: -320px;
+	background-position: left;
 }
 .col-sm-5.about {
 	background-color: #ffffff;
@@ -1024,7 +1024,7 @@ nav{
   background: url('../images/About_Boy.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -800px;
+  background-position: center;
   margin-top: -10px;
  }
 
@@ -1221,7 +1221,7 @@ nav{
 	    height: 100%;
 	    background-repeat: no-repeat;
 	    background-size: cover;
-	    background-position: right;
+	    background-position: center;
 	    margin-top: -154px;
 	}
 	
