@@ -81,9 +81,10 @@
   <![endif]-->
   <?php print $scripts; ?>
   <script src="//c.shpg.org/303/sp.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-<div id="tags"></div>
+<script src="http://dev.greatnationseat.com/sites/all/themes/bootstrap/js/tags.js"></script>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
