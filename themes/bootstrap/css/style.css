@@ -2341,6 +2341,7 @@ cursor: pointer;
   .sp_fb_small{
     display: block;
     float: left;
+    padding-top: 9px;
   }
 
     .sp_tw_large{
@@ -2350,6 +2351,7 @@ cursor: pointer;
   .sp_tw_small{
     display: block;
     float: right;
+    padding-top: 9px;
   }
 
 }
