@@ -2353,5 +2353,11 @@ cursor: pointer;
     float: right;
     padding-top: 9px;
   }
+  .thank-share-container .sp_fb_large, .thank-share-container .sp_tw_large{
+    display: block;
+  }
+
 
 }
+
+
