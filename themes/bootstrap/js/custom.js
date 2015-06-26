@@ -170,6 +170,12 @@ jQuery(document).ready(function() {
     //     return false;
     // });
 
+    //add class mobile on menu
+
+    jQuery("#block-system-main-menu > ul > li.leaf > a.mobile").each(function(){
+       jQuery(this).parent('li').addClass('visible-xs');
+    });
+
     jQuery( ".navbar-toggle" ).click(function() {
         jQuery('.top-navigation').toggleClass('in');
     });
