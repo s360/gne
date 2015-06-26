@@ -21,23 +21,6 @@
     list-style: none;
     padding-left: 0px;
 }
-.node-press-release h2 {
-	text-align: center;
-}
-.node-press-release h2 {
-	margin-bottom: 30px	
-}
-
-.node-press-release h2 a{
-  text-transform: uppercase;
-  font-family: "Ultra";
-  letter-spacing: 3px;
-  font-size: 1em;
-  cursor: default;
-  text-decoration: none;
-  color: #e61e26;
-	
-}
 .node-press-release .content{
     margin-top: 64px;
 }
@@ -151,6 +134,11 @@
 .landing-copy {
 	text-align: center;
   display: inline-block;
+  font-family: 'oswald', open-sans;
+  color: #1268b3;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: .05em;
 }
 .landing-copy-container {
 	margin-bottom: 10px;
@@ -163,11 +151,8 @@
 	font-size: 14px!important;
 }
 
-.col-md-6.press-page.left {
-	padding-left: 8%;
-}
-.col-md-6.press-page.right {
-	padding-right: 8%;
+.col-md-12.press-page {
+	padding: 0 10%;
 }
 
 .blue-arrow {
