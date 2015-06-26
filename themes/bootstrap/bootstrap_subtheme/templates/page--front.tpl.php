@@ -512,6 +512,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		jQuery('.leaf.visible-xs.join').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
+		jQuery('#donate-navbar').click(function(e) {
+			e.preventDefault();
+			jQuery('#donation-overlay-container').removeClass('hidden');
+		});
 		jQuery('.story-join').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
