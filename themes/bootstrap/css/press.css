@@ -150,8 +150,8 @@
 
 .landing-copy {
 	text-align: center;
-	width:60%;
-  margin: 40px auto;
+  width: 60%;
+  display: inline-block;
 }
 .landing-copy-container {
 	margin-bottom: 10px;
@@ -276,8 +276,10 @@
 }
 
 .media-container {
+	width: 100%;
 	position: relative;
   text-align: center;
+  display: inline-block;
 }
 
 /*Social Share*/
