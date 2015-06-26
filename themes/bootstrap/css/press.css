@@ -41,11 +41,6 @@
 .node-press-release .content{
     margin-top: 64px;
 }
-.node-press-release p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 21px;
-    line-height: 42px;
-}
 .node-readmore.first.last{
     display: none;
 }
@@ -264,12 +259,13 @@
 }
 
 .audio-button {
+	margin-bottom: 10px;
 	line-height: 0;
   position: relative;
   vertical-align: middle;
 	cursor: pointer;
-	width: 19px;
-  height: 20px;
+	width: 24px;
+  height: 36px;
   margin-left: 10px;
   border-left: 6px solid #1268b3;;
   border-right: 6px solid #1268b3;;
@@ -281,4 +277,10 @@
 	position: relative;
   text-align: center;
   display: inline-block;
+}
+
+p.press-contact-info {
+	font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
 }
