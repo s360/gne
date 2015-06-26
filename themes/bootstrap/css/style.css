@@ -2308,3 +2308,44 @@ cursor: pointer;
 }
 
 
+/*Social Share*/
+
+@media(min-width: 768px){
+  .sb_fb_large{
+    display: block;
+  }
+
+  .sb_fb_small{
+    display: none;
+  }
+
+    .sb_tw_large{
+    display: block;
+  }
+
+  .sb_tw_small{
+    display: none;
+  }
+
+}
+
+@media(max-width: 768px){
+  .sb_fb_large{
+    display: none;
+  }
+
+  .sb_fb_small{
+    display: block;
+    float: left;
+  }
+
+    .sb_tw_large{
+    display: none;
+  }
+
+  .sb_tw_small{
+    display: block;
+    float: right;
+  }
+
+}
