@@ -595,7 +595,7 @@ nav{
 		width: 33.33333333333333%;
 	}
 	.col-sm-4.col-xs-4.onethird.one {
-		background-position: right;
+		background-position: center;
 	}
 	.col-sm-4.col-xs-4.onethird.three {
 		background-position: center;
@@ -2292,13 +2292,8 @@ cursor: pointer;
 
 @media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
   .main-container{
-    height: 80%;
+    height: 70%;
   }
 }
 
-@media screen and (device-width: 414px){
-  .main-container{
-    height: 80%;
-  }
-}
 
