@@ -2395,3 +2395,39 @@ h1.page-header{
   }
  
 }
+
+/**
+ ===========================================
+ ========== 11. Partners ===================
+ ===========================================
+ **/
+
+ #partners{
+  padding: 0 5%;
+  padding-top: 50px;
+ }
+
+ .partner-logo{
+  width: 15%;
+  height: 120px;
+  margin: 10px 5%;
+  float: left;
+ }
+
+.partner-logo img{
+  width: 100%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.partners_title{
+  margin-bottom: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #f20016;
+  font-family: 'Ultra', georgia bold, serif bold;
+  letter-spacing: .05em;
+}
