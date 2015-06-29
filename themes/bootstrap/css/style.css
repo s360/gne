@@ -2363,7 +2363,7 @@ cursor: pointer;
 }
 
 
-.petition-subheader.two.404{
+.petition-subheader.two.error-page{
   text-align: left;
   color: #1a1a1a;
   font-family: open-sans, sans-serif;
@@ -2375,6 +2375,6 @@ cursor: pointer;
   font-smoothing: antialiased;
 }
 
-.petition-form-container-story.404{
+.petition-form-container-story.error-page{
   padding:10px 0;
 }
