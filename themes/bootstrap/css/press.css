@@ -295,9 +295,9 @@ p.press-contact-info {
 
 .node{
   overflow-y: auto; 
-  height: 100vh;
+  height: 100% !important;
 }
 
-#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
+/*#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
   height: auto !important;
-}
+}*/
