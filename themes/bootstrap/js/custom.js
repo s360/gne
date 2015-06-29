@@ -6,11 +6,7 @@
 
 jQuery(document).ready(function() {
 
-        //redirect
-        /*var page = location.pathname.replace(/\//g,'');
-        if(page != ''){
-            location.replace("/#!/"+page)
-        }*/
+
 
 		//close lightbox on click anywhere
 		jQuery('body').click(function(e) {
@@ -241,6 +237,23 @@ jQuery(document).ready(function() {
 
     jQuery(".slick-prev").addClass("arrow_left");
     jQuery(".slick-next").addClass("arrow_right");
+
+    //redirect
+    var page = location.pathname;
+    //exists sslide
+    if(!jQuery('.slick-track').length && !jQuery("#404").length && jQuery(".node").attr('data-hash', "#!"+page).length){
+
+        if(jQuery('.node-press-release').length){
+            location.replace("/press/#!"+page)
+        }
+        else if(jQuery('.node-home').length){
+            location.replace("/#!"+page)
+        }
+        else{}
+
+
+
+    }
 
     var dataHash = jQuery('.slick-slide').map( function() {
         if(!jQuery(this).hasClass("slick-cloned")){
