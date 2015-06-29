@@ -2363,3 +2363,18 @@ cursor: pointer;
 }
 
 
+.petition-subheader.two.404{
+  text-align: left;
+  color: #1a1a1a;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.petition-form-container-story.404{
+  padding:10px 0;
+}
