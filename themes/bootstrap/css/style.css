@@ -2385,11 +2385,13 @@ h1.page-header{
   display: none;
 }
 
+ .footer{
+    display: none;
+  }
+
 @media (max-width: 768px){
   .petition-form-container.error-page .petition-input{
     width: auto;
   }
-  .footer{
-    display: none;
-  }
+ 
 }
