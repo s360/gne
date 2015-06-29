@@ -295,12 +295,15 @@ p.press-contact-info {
 
 /*@media(min-width: 768px){*/
   #30-second-spot-slovenia, #30-second-spot-china, #30-second-spot-germany, #15-second-spot, #print{
-    overflow-y: auto; 
     height: auto !important;
+  }
+
+  .node{
+    overflow-y: auto; 
   }
   
   .view-content{
-  overflow-y: hidden;
+    overflow-y: hidden;
   }
 
 
