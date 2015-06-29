@@ -245,11 +245,9 @@ jQuery(document).ready(function() {
 
         if(jQuery('.node-press-release').length){
             location.replace("/press/#!"+page)
-            console.log('switch: ' + page);
         }
         else if(jQuery('.node-home').length){
             location.replace("/#!"+page)
-            console.log('switch: ' + page);
         }
         else{}
 
@@ -280,11 +278,34 @@ jQuery(document).ready(function() {
     if (pagePress.length){
         var slide = pagePress;
     }
-
+    
+    var lastPSA;
     function gotohash(e) {
-    	console.log('gotohash: ' + e);
+    	//if(lastPSA) do reload code
+    	//var lastPSA;
+    	//if lochash === 1 lastPSA = #psa-1
+   //  	$("iframe").each(function() { 
+   //      var src= $(this).attr('src');
+   //      $(this).attr('src',src);  
+			// });
+    	//
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash);
+        console.log(slideloc);
+
+        if(slideloc === 0 ) {
+        	console.log('slide 0');
+        	lastPSA = jQuery('#PSA-1');
+        	console.log(lastPSA);
+        }else if (slideloc === 1) {
+        	lastPSA = jQuery('#PSA-1');
+        	console.log(lastPSA);
+        }else if (slideloc === 2) {
+        	lastPSA = jQuery('#PSA-3');
+        	console.log(lastPSA);
+        }else {
+        	console.log('else');
+        }
 
         //document title
         var docTitle = title[slideloc];
@@ -353,7 +374,6 @@ jQuery(document).ready(function() {
     }
 
     function hashurl(){
-    		console.log('hashurl');
         var currentSlide = slide.slick('slickCurrentSlide');
         var slidehas = slidetoHash[currentSlide];
         window.location.hash = slidehas;
@@ -447,7 +467,6 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else if(jQuery(this).hasClass('petition-form-2')) {
-	    	console.log('story 1 submit');
 		  	var fullName = jQuery('.petition-input.name2').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -540,7 +559,6 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else {
-	    	console.log('story 3 submit');
 		  	var fullName = jQuery('.petition-input.name4').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
