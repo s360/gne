@@ -298,7 +298,7 @@ jQuery(document).ready(function() {
         	lastPSA = jQuery('#PSA-1');
         	console.log(lastPSA);
         }else if (slideloc === 1) {
-        	lastPSA = jQuery('#PSA-1');
+        	lastPSA = jQuery('#PSA-2');
         	console.log(lastPSA);
         }else if (slideloc === 2) {
         	lastPSA = jQuery('#PSA-3');
