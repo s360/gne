@@ -216,7 +216,8 @@ jQuery(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.slider-nav .view-press .view-content ul',
-        appendArrows: false       
+        appendArrows: false,
+        adaptiveHeight:true
 
     });
 
@@ -226,7 +227,8 @@ jQuery(document).ready(function() {
         asNavFor: ['#container-slide-press', ''],
         dots: true,
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        adaptiveHeight:true
     });
 
     /*jQuery('#homepage .slider-nav .view-content ul').slick({
