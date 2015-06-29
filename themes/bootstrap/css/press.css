@@ -115,8 +115,7 @@
 }
 
 .slick-list {
-	overflow-y: inherit!important;
-	overflow-x: hidden;
+
 }
 
 /*.col-md-4.psa_copy {
@@ -296,6 +295,7 @@ p.press-contact-info {
 
 .node{
   overflow-y: auto; 
+  height: 100vh;
 }
 
 #30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
