@@ -2192,7 +2192,7 @@ cursor: pointer;
 }
 @media (min-width: 768px){
 	.thankyou-overlay-container {
-	 	height: 70%;
+	 	height: 75%;
 	 	width: 70%;
 	 	margin: auto;
 	 	bottom: 50px;
