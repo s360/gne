@@ -2256,14 +2256,7 @@ cursor: pointer;
   clear: both;
 }
 
-@media( min-width: 953px){
-	.sp_fb_large, .sp_tw_large {
-		display: inline-block;
-	}
-	.thank-arrows.hidden-xs {
-		display: inline-block!important;
-	}
-}
+
 @media( max-width: 953px){
 	.sp_fb_large, .sp_tw_large {
 		display: block;
@@ -2310,7 +2303,7 @@ cursor: pointer;
 
 @media(min-width: 768px){
   .sp_fb_large{
-    display: block;
+    display: inline-block;
   }
 
   .sp_fb_small{
@@ -2318,7 +2311,7 @@ cursor: pointer;
   }
 
     .sp_tw_large{
-    display: block;
+    display: inline-block;
   }
 
   .sp_tw_small{
@@ -2358,6 +2351,15 @@ cursor: pointer;
   }
 
 
+}
+
+@media( min-width: 953px){
+  .sp_fb_large, .sp_tw_large {
+    display: inline-block;
+  }
+  .thank-arrows.hidden-xs {
+    display: inline-block!important;
+  }
 }
 
 
