@@ -315,7 +315,6 @@ p.press-contact-info {
 @media(max-width: 768px){
   .node{
     overflow-y: auto; 
-    height: 150vh !important;
   }
   
   .view-content{
