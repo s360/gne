@@ -99,7 +99,7 @@
 	text-align: center;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
+/*  padding-top: 25px;*/
   height: 0;
 }
 
@@ -288,4 +288,16 @@ p.press-contact-info {
 	font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   line-height: 15px;
+}
+
+.view-content{
+  overflow-y: hidden;
+}
+
+.node{
+  overflow-y: auto; 
+}
+
+#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
+  height: auto !important;
 }
