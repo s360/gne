@@ -99,7 +99,7 @@
 	text-align: center;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
+/*  padding-top: 25px;*/
   height: 0;
 }
 
@@ -296,4 +296,8 @@ p.press-contact-info {
 
 .node{
   overflow-y: auto; 
+}
+
+#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
+  height: auto;
 }
