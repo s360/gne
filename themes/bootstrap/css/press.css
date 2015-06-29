@@ -289,3 +289,11 @@ p.press-contact-info {
   font-size: 12px;
   line-height: 15px;
 }
+
+.view-content{
+  overflow-y: hidden;
+}
+
+.node{
+  overflow-y: auto; 
+}
