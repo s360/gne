@@ -2034,7 +2034,7 @@ cursor: pointer;
 /*
 =================== 1.Media (min-width: 768px) =
 */
-@media (max-width: 500px){
+@media (max-width: 768px){
     .btn-donate{
         display: none;
     }
