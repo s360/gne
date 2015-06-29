@@ -2327,18 +2327,20 @@ cursor: pointer;
     margin: 0 auto;
   }
 
-  .sp_fb_large{
+  .sp_fb_large,
+  .sp_tw_large{
     display: none;
+  }
+
+  .sp_fb_large.story-share.not-found,
+  .sp_tw_large.story-share.not-found{
+		display: block;
   }
 
   .sp_fb_small{
     display: block;
     float: left;
     padding-top: 9px;
-  }
-
-    .sp_tw_large{
-    display: none;
   }
 
   .sp_tw_small{
