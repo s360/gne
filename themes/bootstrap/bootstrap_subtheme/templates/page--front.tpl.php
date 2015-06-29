@@ -514,7 +514,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
             <li><a target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
             <li><a target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
-            <li><a href="#" style="text-decoration:none; cursor: default;">&copy; 2015 GreatNationsEat.org - a campaign of Share Our Strength</a></li>
+            <li><a href="#" style="text-decoration:none; cursor: default;">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
         </ul>
     </div>
 </footer>
