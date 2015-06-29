@@ -2380,6 +2380,9 @@ cursor: pointer;
 }
 @media (max-width: 768px){
   .petition-form-container.error-page .petition-input{
-    width: 100%;
+    width: auto;
+  }
+  .footer{
+    display: none;
   }
 }
