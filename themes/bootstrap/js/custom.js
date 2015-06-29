@@ -281,30 +281,23 @@ jQuery(document).ready(function() {
     
     var lastPSA;
     function gotohash(e) {
-    	//if(lastPSA) do reload code
-    	//var lastPSA;
-    	//if lochash === 1 lastPSA = #psa-1
-   //  	$("iframe").each(function() { 
-   //      var src= $(this).attr('src');
-   //      $(this).attr('src',src);  
-			// });
-    	//
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash);
         console.log(slideloc);
-
+				if(lastPSA){
+					lastPSA[0].src = lastPSA[0].src;
+				}
+        
         if(slideloc === 0 || slideloc === -1) {
-        	console.log('slide 0');
         	lastPSA = jQuery('#PSA-1');
-        	console.log(lastPSA);
         }else if (slideloc === 1) {
         	lastPSA = jQuery('#PSA-2');
-        	console.log(lastPSA);
         }else if (slideloc === 2) {
         	lastPSA = jQuery('#PSA-3');
-        	console.log(lastPSA);
+        }else if (slideloc === 3) {
+        	lastPSA = jQuery('#PSA-4');
         }else {
-        	console.log('else');
+        	console.log ('else')
         }
 
         //document title
