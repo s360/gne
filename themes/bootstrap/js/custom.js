@@ -293,7 +293,7 @@ jQuery(document).ready(function() {
         var slideloc = slidetoHash.indexOf(lochash);
         console.log(slideloc);
 
-        if(slideloc === 0 ) {
+        if(slideloc === 0 || slideloc === -1) {
         	console.log('slide 0');
         	lastPSA = jQuery('#PSA-1');
         	console.log(lastPSA);
