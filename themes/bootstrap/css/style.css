@@ -2378,3 +2378,8 @@ cursor: pointer;
 .petition-form-container-story.error-page{
   padding:10px 0;
 }
+@media (max-width: 768px){
+  .petition-form-container.error-page .petition-input{
+    width: 100%;
+  }
+}
