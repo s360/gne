@@ -283,23 +283,23 @@ jQuery(document).ready(function() {
     function gotohash(e) {
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash);
-        console.log(slideloc);
-				if(lastPSA){
-					lastPSA[0].src = lastPSA[0].src;
+        if(jQuery('#container-slide-press').length != 0){
+					if(lastPSA){
+						lastPSA[0].src = lastPSA[0].src;
+					}
+	        
+	        if(slideloc === 0 || slideloc === -1) {
+	        	lastPSA = jQuery('#PSA-1');
+	        }else if (slideloc === 1) {
+	        	lastPSA = jQuery('#PSA-2');
+	        }else if (slideloc === 2) {
+	        	lastPSA = jQuery('#PSA-3');
+	        }else if (slideloc === 3) {
+	        	lastPSA = jQuery('#PSA-4');
+	        }else {
+	        	console.log ('else')
+	        }
 				}
-        
-        if(slideloc === 0 || slideloc === -1) {
-        	lastPSA = jQuery('#PSA-1');
-        }else if (slideloc === 1) {
-        	lastPSA = jQuery('#PSA-2');
-        }else if (slideloc === 2) {
-        	lastPSA = jQuery('#PSA-3');
-        }else if (slideloc === 3) {
-        	lastPSA = jQuery('#PSA-4');
-        }else {
-        	console.log ('else')
-        }
-
         //document title
         var docTitle = title[slideloc];
         document.title = "Great Nations Eat | "+docTitle;
