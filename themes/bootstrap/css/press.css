@@ -312,3 +312,21 @@ p.press-contact-info {
   }
 }
 
+@media(max-width: 768px){
+  .node{
+    overflow-y: auto; 
+    height: 100vh !important;
+  }
+  
+  .view-content{
+  overflow-y: hidden;
+  }
+
+  /*#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
+    height: auto !important;
+  }*/
+
+  #press-release{
+    height: 873px !important;
+  }
+}
