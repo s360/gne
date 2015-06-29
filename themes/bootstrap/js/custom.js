@@ -6,6 +6,12 @@
 
 jQuery(document).ready(function() {
 
+        //redirect
+        var page = location.pathname.replace(/\//g,'');
+        if(page != ''){
+            location.replace("/#!/"+page)
+        }
+
 		//close lightbox on click anywhere
 		jQuery('body').click(function(e) {
 			if(!jQuery("#petition-overlay-container").hasClass('hidden') && jQuery(e.target).hasClass('full_overlay')) {
@@ -202,8 +208,8 @@ jQuery(document).ready(function() {
     });
 
 
-    //slide
 
+    //slide
     jQuery('#container-slide-home').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -231,25 +237,7 @@ jQuery(document).ready(function() {
         adaptiveHeight:true
     });
 
-    /*jQuery('#homepage .slider-nav .view-content ul').slick({
-        slidesToShow: 20,
-        slidesToScroll: 20,
-        asNavFor: ['#container-slide-home', ''],
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });*/
 
-
-    /*jQuery('.slider-nav #nav-home').slick({
-        slidesToShow: 20,
-        slidesToScroll: 20,
-        asNavFor: ['#container-slide-home', ''],
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
-    */
 
     jQuery(".slick-prev").addClass("arrow_left");
     jQuery(".slick-next").addClass("arrow_right");
