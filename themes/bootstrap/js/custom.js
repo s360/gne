@@ -7,10 +7,10 @@
 jQuery(document).ready(function() {
 
         //redirect
-        var page = location.pathname.replace(/\//g,'');
+        /*var page = location.pathname.replace(/\//g,'');
         if(page != ''){
             location.replace("/#!/"+page)
-        }
+        }*/
 
 		//close lightbox on click anywhere
 		jQuery('body').click(function(e) {
