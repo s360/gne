@@ -26,6 +26,9 @@ jQuery( document ).ready(function() {
     jQuery(".fb-footer").click( function() { dc_tracker('share_fb') });
     jQuery(".tw-footer").click( function() { dc_tracker('share_tw') });
 
+    jQuery("#overlay-submit").click(function(){ga('send', 'event', 'button', 'join');});
+    jQuery("#screening-submit").click(function(){ga('send', 'event', 'button', 'host-a-screening');});
+
 });
 
 
