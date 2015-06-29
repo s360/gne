@@ -500,7 +500,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     <img class="thank-image" src="/sites/all/themes/bootstrap/images/donate-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
         <div class='sp_14354 sp_fb_large' ></div>
-        <img class="thank-arrows hidden-xs" src="/images/arrows.png" alt="thank arrows"/>
+        <img class="thank-arrows hidden-xs" src="/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
         <div class='sp_14355 sp_tw_large' ></div>
     </div>
 </div>
