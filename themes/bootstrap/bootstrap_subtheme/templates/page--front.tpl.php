@@ -488,10 +488,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 <div class="donation-overlay" style="display:none;"></div>
 <div id="thank-container" class="thankyou-overlay-container hidden">
     <span id="thank-close"></span>
-    <img class="thank-image" src="/sites/all/themes/bootstrap/images/join-thank.png" alt="Thank you image" />
+    <img class="thank-image" src="/images/join-thank.png" alt="Thank you image" />
     <div class="thank-share-container">
         <div class='sp_14354 sp_fb_large' ></div>
-        <img class="thank-arrows hidden-xs" src="/sites/all/themes/bootstrap/images/arrows.png" alt="thank arrows"/>
+        <img class="thank-arrows hidden-xs" src="/images/arrows.png" alt="thank arrows"/>
         <div class='sp_14355 sp_tw_large' ></div>
     </div>
 </div>
