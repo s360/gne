@@ -289,23 +289,32 @@ p.press-contact-info {
   line-height: 15px;
 }
 
-.view-content{
-  overflow-y: hidden;
-}
-
-.node{
-  overflow-y: auto; 
-  height: auto !important;
-}
-
-/*#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
-  height: auto !important;
-}*/
-
-#press-release{
-  height: 873px !important;
-}
-
 .node-press-release .content{
-  margin-top: 0;
+  margin-top: 10px;
 }
+
+/*@media(min-width: 768px){*/
+  #30-second-spot-slovenia, #30-second-spot-china, #30-second-spot-germany, #15-second-spot, #print{
+    height: auto !important;
+  }
+
+  .node{
+    overflow-y: auto; 
+  }
+  
+  .view-content{
+    overflow-y: hidden;
+  }
+
+
+
+/*@media(max-width: 768px){
+  #30-second-spot-slovenia, #30-second-spot-china, #30-second-spot-germany, #15-second-spot, #print{
+    overflow-y: auto; 
+  }
+  
+  .view-content{
+  overflow-y: hidden;
+  }
+
+}*/
