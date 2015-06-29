@@ -245,9 +245,11 @@ jQuery(document).ready(function() {
 
         if(jQuery('.node-press-release').length){
             location.replace("/press/#!"+page)
+            console.log('switch: ' + page);
         }
         else if(jQuery('.node-home').length){
             location.replace("/#!"+page)
+            console.log('switch: ' + page);
         }
         else{}
 
@@ -280,6 +282,7 @@ jQuery(document).ready(function() {
     }
 
     function gotohash(e) {
+    	console.log('gotohash: ' + e);
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash);
 
@@ -350,7 +353,7 @@ jQuery(document).ready(function() {
     }
 
     function hashurl(){
-
+    		console.log('hashurl');
         var currentSlide = slide.slick('slickCurrentSlide');
         var slidehas = slidetoHash[currentSlide];
         window.location.hash = slidehas;

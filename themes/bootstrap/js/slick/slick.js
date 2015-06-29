@@ -1140,7 +1140,7 @@
     Slick.prototype.goTo = Slick.prototype.slickGoTo = function(slide, dontAnimate) {
 
         var _ = this;
-
+        console.log('slick goto');
         _.changeSlide({
             data: {
                 message: 'index',
