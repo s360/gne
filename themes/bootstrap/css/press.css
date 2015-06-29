@@ -293,8 +293,8 @@ p.press-contact-info {
   margin-top: 10px;
 }
 
-@media(min-width: 768px){
-  .node{
+/*@media(min-width: 768px){*/
+  #30-second-spot-slovenia, #30-second-spot-china, #30-second-spot-germany, #15-second-spot, #print{
     overflow-y: auto; 
     height: auto !important;
   }
@@ -303,17 +303,10 @@ p.press-contact-info {
   overflow-y: hidden;
   }
 
-  /*#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
-    height: auto !important;
-  }*/
 
-  #press-release{
-    height: 873px !important;
-  }
-}
 
-@media(max-width: 768px){
-  .node{
+/*@media(max-width: 768px){
+  #30-second-spot-slovenia, #30-second-spot-china, #30-second-spot-germany, #15-second-spot, #print{
     overflow-y: auto; 
   }
   
@@ -321,10 +314,4 @@ p.press-contact-info {
   overflow-y: hidden;
   }
 
-  /*#30-second-spot-slovenia, #30-second-spot-germany, 30-second-spot-china{
-    height: auto !important;
-  }*/
-
-  #press-release{
-  }
-}
+}*/
