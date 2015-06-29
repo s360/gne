@@ -216,8 +216,7 @@ jQuery(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.slider-nav .view-press .view-content ul',
-        appendArrows: false,
-        adaptiveHeight:true
+        appendArrows: false       
 
     });
 
