@@ -278,11 +278,28 @@ jQuery(document).ready(function() {
     if (pagePress.length){
         var slide = pagePress;
     }
-
+    
+    var lastPSA;
     function gotohash(e) {
         var lochash = window.location.hash;
         var slideloc = slidetoHash.indexOf(lochash);
-
+        if(jQuery('#container-slide-press').length != 0){
+					if(lastPSA){
+						lastPSA[0].src = lastPSA[0].src;
+					}
+	        
+	        if(slideloc === 0 || slideloc === -1) {
+	        	lastPSA = jQuery('#PSA-1');
+	        }else if (slideloc === 1) {
+	        	lastPSA = jQuery('#PSA-2');
+	        }else if (slideloc === 2) {
+	        	lastPSA = jQuery('#PSA-3');
+	        }else if (slideloc === 3) {
+	        	lastPSA = jQuery('#PSA-4');
+	        }else {
+	        	console.log ('else')
+	        }
+				}
         //document title
         var docTitle = title[slideloc];
         document.title = "Great Nations Eat | "+docTitle;
@@ -350,7 +367,6 @@ jQuery(document).ready(function() {
     }
 
     function hashurl(){
-
         var currentSlide = slide.slick('slickCurrentSlide');
         var slidehas = slidetoHash[currentSlide];
         window.location.hash = slidehas;
@@ -444,7 +460,6 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else if(jQuery(this).hasClass('petition-form-2')) {
-	    	console.log('story 1 submit');
 		  	var fullName = jQuery('.petition-input.name2').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -537,7 +552,6 @@ jQuery(document).ready(function() {
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    	}
 	    }else {
-	    	console.log('story 3 submit');
 		  	var fullName = jQuery('.petition-input.name4').val().trim();
 		    var userLastName =  fullName.split(' ').slice(-1).join(' ');
 		    var userFirstName = fullName.split(' ').slice(0, -1).join(' ');

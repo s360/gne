@@ -2034,7 +2034,7 @@ cursor: pointer;
 /*
 =================== 1.Media (min-width: 768px) =
 */
-@media (max-width: 500px){
+@media (max-width: 768px){
     .btn-donate{
         display: none;
     }
@@ -2192,7 +2192,7 @@ cursor: pointer;
 }
 @media (min-width: 768px){
 	.thankyou-overlay-container {
-	 	height: 70%;
+	 	height: 75%;
 	 	width: 70%;
 	 	margin: auto;
 	 	bottom: 50px;
@@ -2256,14 +2256,7 @@ cursor: pointer;
   clear: both;
 }
 
-@media( min-width: 953px){
-	.sp_fb_large, .sp_tw_large {
-		display: inline-block;
-	}
-	.thank-arrows.hidden-xs {
-		display: inline-block!important;
-	}
-}
+
 @media( max-width: 953px){
 	.sp_fb_large, .sp_tw_large {
 		display: block;
@@ -2310,7 +2303,7 @@ cursor: pointer;
 
 @media(min-width: 768px){
   .sp_fb_large{
-    display: block;
+    display: inline-block;
   }
 
   .sp_fb_small{
@@ -2318,7 +2311,7 @@ cursor: pointer;
   }
 
     .sp_tw_large{
-    display: block;
+    display: inline-block;
   }
 
   .sp_tw_small{
@@ -2334,18 +2327,20 @@ cursor: pointer;
     margin: 0 auto;
   }
 
-  .sp_fb_large{
+  .sp_fb_large,
+  .sp_tw_large{
     display: none;
+  }
+
+  .sp_fb_large.story-share.not-found,
+  .sp_tw_large.story-share.not-found{
+		display: block;
   }
 
   .sp_fb_small{
     display: block;
     float: left;
     padding-top: 9px;
-  }
-
-    .sp_tw_large{
-    display: none;
   }
 
   .sp_tw_small{
@@ -2360,4 +2355,81 @@ cursor: pointer;
 
 }
 
+@media( min-width: 953px){
+  .sp_fb_large, .sp_tw_large {
+    display: inline-block;
+  }
+  .thank-arrows.hidden-xs {
+    display: inline-block!important;
+  }
+}
 
+
+.petition-subheader.two.error-page{
+  text-align: left;
+  color: #1a1a1a;
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.petition-form-container-story.error-page{
+  padding:10px 0;
+}
+header#page-header{
+  display: none;
+}
+h1.page-header{
+  display: none;
+}
+
+ .footer{
+    display: none;
+  }
+
+@media (max-width: 768px){
+  .petition-form-container.error-page .petition-input{
+    width: auto;
+  }
+ 
+}
+
+/**
+ ===========================================
+ ========== 11. Partners ===================
+ ===========================================
+ **/
+
+ #partners{
+  padding: 0 5%;
+  padding-top: 50px;
+ }
+
+ .partner-logo{
+  width: 15%;
+  height: 120px;
+  margin: 10px 5%;
+  float: left;
+ }
+
+.partner-logo img{
+  width: 100%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.partners_title{
+  margin-bottom: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #f20016;
+  font-family: 'Ultra', georgia bold, serif bold;
+  letter-spacing: .05em;
+}

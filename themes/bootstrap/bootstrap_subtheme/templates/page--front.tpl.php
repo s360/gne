@@ -474,10 +474,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 						<input type="hidden" name="response_format" id="response_format" value="json" />
 						<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361,104423" />
             
-            <input type="text" class="screening-input half one" name="name.first" placeholder="First Name" required/>
-            <input type="text" class="screening-input half" name="name.last" placeholder="Last Name"required />
-            <input type="text" class="screening-input" placeholder="organization" />
-            <input type="text" class="screening-input email" name="primary_email" placeholder="Email Address" required/>
+            <input type="text" class="screening-input half one" name="name.first" placeholder="First Name*" required/>
+            <input type="text" class="screening-input half" name="name.last" placeholder="Last Name*"required />
+            <input type="text" class="screening-input" placeholder="Organization" />
+            <input type="text" class="screening-input email" name="primary_email" placeholder="Email Address*" required/>
             <input type="text" class="screening-input" name="home_phone" placeholder="Contact Number" />
             <button id="screening-submit" class="btn-content screening">Submit Form</button>
         </form>
@@ -514,7 +514,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
             <li><a target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
             <li><a target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
-            <li><a href="#">&copy; 2015 GreatNationsEat.org</a></li>
+            <li><a href="#" style="text-decoration:none; cursor: default;">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
         </ul>
     </div>
 </footer>
