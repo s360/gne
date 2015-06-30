@@ -937,6 +937,7 @@ nav{
 .col-sm-5.about {
 	background-color: #ffffff;
 	height: 100%;
+	
 }
 
 .about-header {
@@ -997,8 +998,9 @@ nav{
 @media (max-width: 768px){
 	.col-sm-5.about {
   	background-color: rgba(0, 0, 0, 0.8);
-    overflow-y:auto;
-    padding-bottom: 10px;
+    	overflow-y:auto;
+    	padding-top: 50px;
+	padding-bottom: 10px;
 	}
 	.mobile-about-overlay.visible-xs {
 		background: url('../images/About_Classroom.jpg');
@@ -1403,7 +1405,7 @@ nav{
   	text-transform: uppercase;
   	color: #f20016;
   	font-family: Ultra, georgia bold, serif bold;
-  	margin-top: 50px;
+  	margin-top: 0;
   	padding-top: 50px;
 	}
 	.act-subheader {
