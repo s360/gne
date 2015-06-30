@@ -1363,7 +1363,7 @@ nav{
     font-size: 0.8em;
   }
   .about-container {
-    padding-top: 5px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 1024px){
