@@ -158,19 +158,15 @@ jQuery(document).ready(function() {
 
 		function zipCheck(zip) {
 			var validator = /^[0-9]+$/;
-			validator.test(zip);
+			return validator.test(zip);
 		}
     jQuery('input.zip_sub').click(function(event) {
         var zip = jQuery(this).prev('.zipcode').val();
         if (zipCheck(zip)){
-        	console.log('valid');
-        	console.log(zip);
         	var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
         	window.open(url, '_blank');
         	return false;
         }else {
-        	console.log('invalid');
-        	console.log(zip);
         	return false;
         }
     });
