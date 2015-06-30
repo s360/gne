@@ -22,13 +22,19 @@ jQuery( document ).ready(function() {
     //jQuery("#overlay-submit").click( function() { dc_tracker('join0') });
     jQuery("#donate-nav").click( function() { dc_tracker('donate0') });
     jQuery("input.zip_sub").click( function() { dc_tracker('involve0') });
-    jQuery(".petition-submit").click( function() { dc_tracker('join0') });
+    //jQuery(".petition-submit").not('#donate-submit').click( function() { dc_tracker('join0') });
+    jQuery("#overlay-submit").click( function() { dc_tracker('join0') });
+    jQuery("#story-submit-2").click( function() { dc_tracker('join0') });
+    jQuery("#story-submit-3").click( function() { dc_tracker('join0') });
+    jQuery("#story-submit-4").click( function() { dc_tracker('join0') });
     jQuery(".fb-footer").click( function() { dc_tracker('share_fb') });
     jQuery(".tw-footer").click( function() { dc_tracker('share_tw') });
 
     jQuery("#overlay-submit").click(function(){ga('send', 'event', 'button', 'join');});
     jQuery("#screening-submit").click(function(){ga('send', 'event', 'button', 'host-a-screening');});
-
 });
+
+jQuery(document).on('click','.sp_fb_large a',function(){dc_tracker('share_fb');})
+jQuery(document).on('click','.sp_tw_large a',function(){dc_tracker('share_tw');})
 
 
