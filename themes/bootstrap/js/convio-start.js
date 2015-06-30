@@ -144,7 +144,7 @@
                     $('#donation-overlay-container').addClass('hidden');
                 	});
 
-                    ga('send', 'event', 'button', 'donate');
+                    ga('send', 'event', 'donate', 'successful donation');
 
                     $('.donation-loading').remove();
                     $('.donation-form').before('<div class="alert alert-success">' +

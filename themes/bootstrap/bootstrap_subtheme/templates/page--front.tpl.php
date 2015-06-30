@@ -182,7 +182,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <p class="donate-copy1 petition-subheader hidden-xs">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
             <p class="donate-copy2 petition-subheader hidden-xs"><b>Every $10 you give can provide up to 100 meals for a hungry child.</b></p>
             <p class="donate-copy3 petition-subheader hidden-xs">All donations to Great Nations Eat support No Kid Hungry’s efforts to feed kids healthy food, every day.</p>
-            <img src="/sites/all/themes/bootstrap/images/sos-logo-color.gif" />
+            <img src="/sites/all/themes/bootstrap/images/nkh-logo.gif" />
 
         </div>
     </div>
@@ -364,7 +364,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             </div>
 	<div class="nextBtn">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
-                            <a href="#" class="nextBtn-old">Next Step</a>
+                            <a href="#" class="nextBtn-old step2">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             </div>
                         </div>
@@ -512,8 +512,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <ul>
             <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" class="fb-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
             <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
-            <li><a target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
-            <li><a target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
+            <li><a class="press-footer" target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
+            <li><a class="privacy-footer" target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
             <li><a href="#" style="text-decoration:none; cursor: default;">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
         </ul>
     </div>
