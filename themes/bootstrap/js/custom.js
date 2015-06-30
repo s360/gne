@@ -163,10 +163,12 @@ jQuery(document).ready(function() {
     jQuery('input.zip_sub').click(function(event) {
         var zip = jQuery(this).prev('.zipcode').val();
         if (zipCheck(zip)){
+        	jQuery('.zip-error').addClass('hidden');
         	var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
         	window.open(url, '_blank');
         	return false;
         }else {
+        	jQuery('.zip-error').removeClass('hidden');
         	return false;
         }
     });
