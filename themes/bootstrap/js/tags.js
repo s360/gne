@@ -28,7 +28,9 @@ jQuery( document ).ready(function() {
 
     jQuery("#overlay-submit").click(function(){ga('send', 'event', 'button', 'join');});
     jQuery("#screening-submit").click(function(){ga('send', 'event', 'button', 'host-a-screening');});
-
 });
+
+jQuery(document).on('click','.sp_fb_large a',function(){dc_tracker('share_fb');})
+jQuery(document).on('click','.sp_tw_large a',function(){dc_tracker('share_tw');})
 
 
