@@ -2450,13 +2450,26 @@ h1.page-header{
  }
 }
 
+  .partner_content ul{
+    list-style: none;
+  }
+
+  .partner_content ul li{
+    font-size: 1.2em;
+  }
+
 @media (min-width: 768px){
-  .partner_content p{
-      -webkit-column-count: 3; /* Chrome, Safari, Opera */
-      -moz-column-count: 3; /* Firefox */
-      column-count: 3;
-       -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
-      -moz-column-gap: 30px; /* Firefox */
-      column-gap: 30px;
+  .partner_content ul{
+    list-style: none;
+      column-gap: 10px;
+  }
+  .partner_content.long ul{
+    list-style: none;
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+       -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+      -moz-column-gap: 20px; /* Firefox */
+      column-gap: 20px;
   }
 }
