@@ -156,21 +156,24 @@ jQuery(document).ready(function() {
 
     //act submit
 
+		function zipCheck(zip) {
+			var validator = /^[0-9]+$/;
+			validator.test(zip);
+		}
     jQuery('input.zip_sub').click(function(event) {
         var zip = jQuery(this).prev('.zipcode').val();
-        var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
-        //window.location.href=url;
-        window.open(url, '_blank');
-        return false;
+        if (zipCheck(zip)){
+        	console.log('valid');
+        	console.log(zip);
+        	var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
+        	window.open(url, '_blank');
+        	return false;
+        }else {
+        	console.log('invalid');
+        	console.log(zip);
+        	return false;
+        }
     });
-
-    // jQuery('input.zip_sub.mobile').click(function(event) {
-    //     var zip = jQuery('.zipcode.mobile').val();
-    //     var url= 'http://actioncenter.nokidhungry.org/actions/altzip/'+zip;
-    //     //window.location.href=url;
-    //     window.open(url, '_blank');
-    //     return false;
-    // });
 
     //add class mobile on menu
 
