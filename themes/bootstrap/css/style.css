@@ -834,7 +834,7 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     height: 60%;
-    background-position: center;
+    background-position: top;
  }
 
   #adrianna-3 .col-md-7 .petition-form-container-story, #hanno-3 .col-md-7 .petition-form-container-story, #jahnique-3 .col-md-7 .petition-form-container-story, .story-cta{
@@ -1363,7 +1363,7 @@ nav{
     font-size: 0.8em;
   }
   .about-container {
-    padding-top: 5px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 1024px){
@@ -1403,7 +1403,7 @@ nav{
   	text-transform: uppercase;
   	color: #f20016;
   	font-family: Ultra, georgia bold, serif bold;
-  	margin-top: 50px;
+  	margin-top: 0px;
   	padding-top: 50px;
 	}
 	.act-subheader {
@@ -2111,7 +2111,7 @@ cursor: pointer;
 	    border:none;
 	    border-left: solid 0px #f20016 !important;
 	    border-bottom: solid 0px #f20016 !important;
-	    margin: 0px;
+	    margin:50px 0px 0px 0px;
       background-color: pink;
 	    background: url(../images/arrow_left.png);
       background-repeat: no-repeat;
@@ -2131,7 +2131,7 @@ cursor: pointer;
       border:none;
       border-left: solid 0px #f20016 !important;
       border-bottom: solid 0px #f20016 !important;
-      margin: 0px;
+      margin:50px 0px 0px 0px;
       background-color: pink;
       background: url(../images/arrow_right.png);
       background-repeat: no-repeat;
