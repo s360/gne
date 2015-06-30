@@ -2132,6 +2132,7 @@ cursor: pointer;
       border-left: solid 0px #f20016 !important;
       border-bottom: solid 0px #f20016 !important;
       margin:50px 0px 0px 0px;
+
       background-color: pink;
       background: url(../images/arrow_right.png);
       background-repeat: no-repeat;
@@ -2404,15 +2405,16 @@ h1.page-header{
  ===========================================
  **/
 
- #partners{
+ .partners{
   padding: 0 5%;
   padding-top: 50px;
+  overflow-y: auto; 
  }
 
  .partner-logo{
-  width: 15%;
+  width: 20%;
   height: 120px;
-  margin: 10px 5%;
+  margin: 10px 2.5%;
   float: left;
  }
 
@@ -2432,4 +2434,29 @@ h1.page-header{
   color: #f20016;
   font-family: 'Ultra', georgia bold, serif bold;
   letter-spacing: .05em;
+}
+
+
+@media (max-width: 768px){
+  .partners{
+    padding: 0 10%;
+    padding-top: 50px;
+  }
+  .partner-logo{
+    width: 40%;
+    height: 200px;
+    margin: 10px 5%;
+    float: left;
+ }
+}
+
+@media (min-width: 768px){
+  .partner_content p{
+      -webkit-column-count: 3; /* Chrome, Safari, Opera */
+      -moz-column-count: 3; /* Firefox */
+      column-count: 3;
+       -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+      -moz-column-gap: 30px; /* Firefox */
+      column-gap: 30px;
+  }
 }
