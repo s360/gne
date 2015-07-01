@@ -2407,8 +2407,8 @@ h1.page-header{
  ===========================================
  **/
 
- .partners{
-  padding: 20px 5%;
+ #partners{
+  padding: 0px 5%;
   padding-top: 50px;
   overflow-y: auto; 
   height: 100%;
