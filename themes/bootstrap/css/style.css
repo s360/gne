@@ -2432,6 +2432,11 @@ h1.page-header{
 }
 
 
+
+.partners_page_1{
+ height: 75%;
+}
+
 @media (max-width: 768px){
   .partners{
     padding: 0 10%;
@@ -2454,15 +2459,25 @@ h1.page-header{
   }
 
 @media (min-width: 768px){
+  .partner_content{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
   .partner_content ul{
     list-style: none;
       column-gap: 10px;
   }
   .partner_content.long ul{
     list-style: none;
-      -webkit-column-count: 2; /* Chrome, Safari, Opera */
-      -moz-column-count: 2; /* Firefox */
-      column-count: 2;
+  -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4;
+  -webkit-column-width: 200px;
+     -moz-column-width: 200px;
+          column-width: 200px;
        -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
       -moz-column-gap: 20px; /* Firefox */
       column-gap: 20px;
