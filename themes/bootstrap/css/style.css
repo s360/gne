@@ -2042,11 +2042,11 @@ cursor: pointer;
         display: none;
     }
 }
-@media (max-width: 768px) and (-webkit-device-pixel-ratio: 2){
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)  {
     .btn-donate{
         display: none;
-    }
-}
+    }	
+  }
 
 @media (min-width: 768px){
      /*.slider-nav{
