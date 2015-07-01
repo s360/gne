@@ -121,8 +121,8 @@
 		          $('#donate-submit').prop('disabled', false);
                 if (data.donationResponse.errors) {
                     $('.donation-form').prepend('<div id="donation-errors">' +
-                    ((data.donationResponse.errors.message) ? ('<div class="alert alert-danger">' +
-                    data.donationResponse.errors.message +
+                    ((data.donationResponse.errors.fieldError) ? ('<div class="alert alert-danger">' +
+                    data.donationResponse.errors.fieldError +
                     '</div>') : '') +
                     '</div>');
 
