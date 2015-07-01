@@ -142,12 +142,13 @@
                     $('.donation-form').show();
                 }
                 else {
-                	$('#donate-close').click(function() {
-                    $('#donate-thank-container').removeClass('hidden');
-                    $('#donation-overlay-container').addClass('hidden');
-                	});
-
-                    ga('send', 'event', 'donate', 'successful donation');
+									ga('send', 'event', 'donate', 'successful donation');
+									$('.form-control.card-number').val('');
+									$('.card-cvv.form-control').val('');
+									$('#donate-close').click(function() {
+									  $('#donate-thank-container').removeClass('hidden');
+									  $('#donation-overlay-container').addClass('hidden');
+									});
 
                     $('.donation-loading').remove();
                     $('.donation-form').before('<div class="alert alert-success">' +
