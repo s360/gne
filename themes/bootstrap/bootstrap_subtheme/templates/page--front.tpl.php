@@ -601,6 +601,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
     var formId = "12181";
 
+
     //TODO: Clean this up and put in .js file
 
     var petitionOverlay  			 = document.getElementById('petition-overlay-container');
@@ -618,7 +619,12 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var screeningOverlay 			 = document.getElementById('screening-container');
     var screeningSubmit  			 = document.getElementById('screening-submit');
     var screeningButton  			 = document.getElementById('host-screening');
-    var orientation;
+    
+    //Hide overlay if user revisiting page 
+    var hasSeenOverlay = document.cookie.replace(/(?:(?:^|.*;\s*)seenOverlay\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
+    if (hasSeenOverlay) {
+    	petitionOverlay.classList.add('hidden');
+    }
 
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
@@ -650,13 +656,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     })
 </script>
 <script type="text/javascript"> 
-	
-	
-	var hasSeenOverlay = document.cookie.replace(/(?:(?:^|.*;\s*)seenOverlay\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
-	console.log('has seen overlay:');
-	console.log(hasSeenOverlay);
 	// RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES 
-	if(hasSeenOverlay){
   	window.onorientationchange = function() { 
   	  var orientation = window.orientation; 
   	    switch(orientation) { 
@@ -667,10 +667,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
   	      case -90: window.location.reload(); 
   	      break; 
   	    } 
-  	};
 	}
 	//document.cookie = 'seenOverlay=true; max-age=600; domain=.greatnationseat.org';
-  document.cookie = 'seenOverlay=true; max-age=6';
+  document.cookie = 'seenOverlay=true; max-age=10';
 </script>
 
 <script src="/sites/all/themes/bootstrap/js/convio.js"></script>
