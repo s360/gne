@@ -652,7 +652,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 <script type="text/javascript"> 
 // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
 		// docCookies.setItem('seenOverlay', 'yes', 600, null, ".greatnationseat.org", null);
-		docCookies.setItem('seenOverlay', 'yes', 600, null, null, null);
+		docCookies.setItem('seenOverlay', 'yes', 600);
+		console.log(docCookies.keys());
     window.onorientationchange = function() { 
         var orientation = window.orientation; 
             switch(orientation) { 
