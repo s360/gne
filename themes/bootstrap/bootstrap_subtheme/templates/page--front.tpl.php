@@ -441,14 +441,14 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         </div>
         </div>
     </div>
-    <div class="col-md-12">                            <!-- Begin DigiCert site seal HTML and JavaScript -->
-                            <div id="DigiCertClickID_d6BMwOpS" data-language="en">
-                              <a href="https://www.digicert.com/ssl-certificate.htm">SSL Certificates</a>
-                            </div>
-                            <script type="text/javascript">
-                            var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_d6BMwOpS", "5", "s", "black", "d6BMwOpS"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
-                            </script>
-                            <!-- End DigiCert site seal HTML and JavaScript --></div>
+    <div class="col-md-12 ssl-container">                            <!-- Begin DigiCert site seal HTML and JavaScript -->
+      <div id="DigiCertClickID_d6BMwOpS" class="digicert-container" data-language="en">
+        <a href="https://www.digicert.com/ssl-certificate.htm">SSL Certificates</a>
+      </div>
+      <script type="text/javascript">
+      var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_d6BMwOpS", "5", "s", "black", "d6BMwOpS"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+      </script>
+      <!-- End DigiCert site seal HTML and JavaScript --></div>
 </div>
 </div>
 
