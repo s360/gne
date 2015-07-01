@@ -263,9 +263,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label class="sr-only control-label">State</label>
+                                    <label class="sr-only control-label">State*</label>
                                     <select name="billing.address.state" class="input-full form-control">
-                                        <option >State</option>
+                                        <option >State*</option>
                                         <option value="AK">AK</option>
                                         <option value="AL">AL</option>
                                         <option value="AR">AR</option>
