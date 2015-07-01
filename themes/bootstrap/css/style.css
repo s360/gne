@@ -2401,9 +2401,10 @@ h1.page-header{
  **/
 
  .partners{
-  padding: 0 5%;
+  padding: 0 0 0 5%;
   padding-top: 50px;
   overflow-y: auto; 
+  height: 100%;
  }
 
 
@@ -2437,6 +2438,14 @@ h1.page-header{
  height: 75%;
 }
 
+.partner_content h4{
+  text-transform: uppercase;
+  color: #f20016;
+  font-family: Ultra, georgia bold, serif bold;
+  font-size: 1.2em;
+  letter-spacing: .1em;
+}
+
 @media (max-width: 768px){
   .partners{
     padding: 0 10%;
@@ -2460,7 +2469,7 @@ h1.page-header{
 
 @media (min-width: 768px){
 
-  
+
 .partner_logos{
   margin-top: 80px
 }
@@ -2483,9 +2492,9 @@ h1.page-header{
   -webkit-column-width: 200px;
      -moz-column-width: 200px;
           column-width: 200px;
-       -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
-      -moz-column-gap: 20px; /* Firefox */
-      column-gap: 20px;
+       -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+      -moz-column-gap: 40px; /* Firefox */
+      column-gap: 40px;
   }
 }
 
