@@ -232,7 +232,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 <div class="row setup-content " id="step-2">
                     <div class="col-xs-12">
                         <div class="col-md-12">
-                            <h3 style="text-align: center">Enter your Information</h3>
+                            <h3 style="text-align: center">Billing Information</h3>
                             <div class="form-inline">
                                 <div class="form-group">
                                     <div class="col-md-6">
@@ -256,12 +256,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                <label class="sr-only control-label">Street 2</label>
-                                <input maxlength="200" type="text"   name="billing.address.street2" class="form-control" placeholder="Street 2" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
                                 <label class="sr-only control-label">City*</label>
                                 <input maxlength="200" type="text" required="required"  name="billing.address.city" class="form-control" placeholder="City*" />
                                 </div>
@@ -269,9 +263,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label class="sr-only control-label">State</label>
+                                    <label class="sr-only control-label">State*</label>
                                     <select name="billing.address.state" class="input-full form-control">
-                                        <option >State</option>
+                                        <option >State*</option>
                                         <option value="AK">AK</option>
                                         <option value="AL">AL</option>
                                         <option value="AR">AR</option>
@@ -391,7 +385,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 <div class="form-group">
                                     <div class="col-md-3">
                                         <select name="card_exp_date_month" class="form-control">
-                                            <option>Month</option>
+                                            <option>Month*</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -408,7 +402,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                     <div class="col-md-4">
                                         <select name="card_exp_date_year" class="form-control">
-                                            <option>Year</option>
+                                            <option>Year*</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                             <option value="2017">2017</option>
