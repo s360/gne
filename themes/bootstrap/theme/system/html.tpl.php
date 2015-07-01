@@ -49,7 +49,7 @@
 <head profile="<?php print $grddl_profile; ?>">
   <meta name="fragment" content="!">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=viewport-height">
   <meta name="google-site-verification" content="SBYFBO6sZv5-QsdCdeTDfdKT4M2bqesp6A_q8WNxwK0" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-57x57.png">
