@@ -122,13 +122,7 @@
                 if (data.donationResponse.errors) {
                     $('.donation-form').prepend('<div id="donation-errors">' +
                     ((data.donationResponse.errors.message) ? ('<div class="alert alert-danger">' +
-                    if(data.donationResponse.errors.fieldError) {
-                    	data.donationResponse.errors.fieldError
-                    }else if(data.donationResponse.errors.declineUserMessage) {
-                    	data.donationResponse.errors.declineUserMessage
-                    }else {
-                    	data.donationResponse.errors.message
-                    }+
+                    data.donationResponse.errors.fieldError +
                     '</div>') : '') +
                     '</div>');
 
