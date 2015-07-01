@@ -663,7 +663,18 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     }, false);
     //console.log(window.location);
 </script>
-
+<script type="text/javascript"> // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
+    window.onorientationchange = function() { 
+        var orientation = window.orientation; 
+            switch(orientation) { 
+                case 0: window.location.reload(); 
+                break; 
+                case 90: window.location.reload(); 
+                break; 
+                case -90: window.location.reload(); 
+                break; } 
+    };
+</script>
 
 <script src="/sites/all/themes/bootstrap/js/convio.js"></script>
 <script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
