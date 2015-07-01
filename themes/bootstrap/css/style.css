@@ -2412,8 +2412,8 @@ h1.page-header{
  ===========================================
  **/
 
- .partners{
-  padding: 0 5%;
+ #partners, #digital-partners, #broadcast-partners, #print-partners, #print-partners-2, #ooh-partners{
+  padding: 0px 5%;
   padding-top: 50px;
   overflow-y: auto; 
   height: 100%;
