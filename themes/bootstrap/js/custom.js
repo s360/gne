@@ -118,7 +118,7 @@ jQuery(document).ready(function() {
     jQuery('#scrolling-page').sliderPage()*/;
 
     //homepage fullpag
-    var toolbar = 64;
+    //var toolbar = 64;
     var menu = 51;
     var window_height = jQuery(window).height();
     var window_width =jQuery(window).width();
