@@ -256,12 +256,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                <label class="sr-only control-label">Street 2</label>
-                                <input maxlength="200" type="text"   name="billing.address.street2" class="form-control" placeholder="Street 2" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
                                 <label class="sr-only control-label">City*</label>
                                 <input maxlength="200" type="text" required="required"  name="billing.address.city" class="form-control" placeholder="City*" />
                                 </div>
