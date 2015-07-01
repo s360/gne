@@ -1138,6 +1138,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/partner_logos\/jbj.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56420,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/jbj.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/jbj.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/partner_logos\/mode-media.png": {
 		"fileType": 32768,
 		"ignore": 1,
