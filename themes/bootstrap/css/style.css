@@ -2042,26 +2042,19 @@ cursor: pointer;
         display: none;
     }
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)  {
-    .btn-donate{
-        display: none;
-    }	
-  }
 
 @media (min-width: 768px){
-     /*.slider-nav{
-        width: 300px;
-        margin-top: -350px;
-    }
-     .slider-nav{
-        margin-top: 0px;
-    }*/
     .btn-donate{
         display: block;
     }
     .top-navigation{
         right: 165px;
     }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)  {
+    .btn-donate{
+        display: none;
+    }	
 }
 
 /**
