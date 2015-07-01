@@ -648,22 +648,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     screeningClose.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
     })
-
-    //TODO: Refresh browser on mobile rotate - utilize cookies/local storage to prevent petition overlay from showing up again
-    if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
-        console.log('portrait');
-        orientation = 'portrait';
-    }else {
-        console.log('landscape');
-        orientation = 'landscape';
-    }
-    window.addEventListener('orientationchange', function() {
-        console.log('change');
-        console.log(window.orientation);
-    }, false);
-    //console.log(window.location);
 </script>
-<script type="text/javascript"> // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
+<script type="text/javascript"> 
+// RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
+		// docCookies.setItem('seenOverlay', 'yes', 600, null, ".greatnationseat.org", null);
+		docCookies.setItem('seenOverlay', 'yes', 600, null, null, null);
     window.onorientationchange = function() { 
         var orientation = window.orientation; 
             switch(orientation) { 
