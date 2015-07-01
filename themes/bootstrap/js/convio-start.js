@@ -115,16 +115,19 @@
 		        $('#donate-submit').prop('disabled', false);
             },
             success: function (data) {
-            	  console.log('donate success');
+            	var donationErrorMessage = '';
             		console.log(data);
                 $('#donation-errors').remove();
-		          $('#donate-submit').prop('disabled', false);
+		          	$('#donate-submit').prop('disabled', false);
                 if (data.donationResponse.errors) {
-                    $('.donation-form').prepend('<div id="donation-errors">' +
-                    ((data.donationResponse.errors.message) ? ('<div class="alert alert-danger">' +
-                    data.donationResponse.errors.message +
-                    '</div>') : '') +
-                    '</div>');
+                	if(data.donationResponse.errors.fieldError) {
+                		donationErrorMessage += data.donationResponse.errors.fieldError;
+                	}else if (data.donationResponse.errors.declineUserMessage) {
+                		donationErrorMessage += data.donationResponse.errors.declineUserMessage;
+                	} else {
+                		donationErrorMessage += (data.donationResponse.errors.message + ' Please check your info.');
+                	}
+                  $('.donation-form').prepend('<div id="donation-errors">' + '<div class="alert alert-danger">' + donationErrorMessage + '</div>' + '</div>');
 
                     /*if (data.donationResponse.errors.fieldError) {
                         var fieldErrors = luminateExtend.utils.ensureArray(data.donationResponse.errors.fieldError);

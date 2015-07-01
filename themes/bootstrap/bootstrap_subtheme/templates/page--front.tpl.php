@@ -232,7 +232,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 <div class="row setup-content " id="step-2">
                     <div class="col-xs-12">
                         <div class="col-md-12">
-                            <h3 style="text-align: center">Enter your Information</h3>
+                            <h3 style="text-align: center">Billing Information</h3>
                             <div class="form-inline">
                                 <div class="form-group">
                                     <div class="col-md-6">
@@ -256,12 +256,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                <label class="sr-only control-label">Street 2</label>
-                                <input maxlength="200" type="text"   name="billing.address.street2" class="form-control" placeholder="Street 2" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
                                 <label class="sr-only control-label">City*</label>
                                 <input maxlength="200" type="text" required="required"  name="billing.address.city" class="form-control" placeholder="City*" />
                                 </div>
@@ -269,9 +263,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-inline">
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label class="sr-only control-label">State</label>
+                                    <label class="sr-only control-label">State*</label>
                                     <select name="billing.address.state" class="input-full form-control">
-                                        <option >State</option>
+                                        <option >State*</option>
                                         <option value="AK">AK</option>
                                         <option value="AL">AL</option>
                                         <option value="AR">AR</option>
@@ -383,7 +377,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Credit Card Number*</label>
-                                    <input maxlength="200" type="text" name="card_number" required="required" class="form-control card-number" placeholder="Credit Card Number*" />
+                                    <input maxlength="200" type="text" name="card_number" required="required" class="form-control card-number" placeholder="Credit Card Number*" autocomplete="off" />
 
                                 </div>
                             </div>
@@ -391,7 +385,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 <div class="form-group">
                                     <div class="col-md-3">
                                         <select name="card_exp_date_month" class="form-control">
-                                            <option>Month</option>
+                                            <option>Month*</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -408,7 +402,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                     <div class="col-md-4">
                                         <select name="card_exp_date_year" class="form-control">
-                                            <option>Year</option>
+                                            <option>Year*</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                             <option value="2017">2017</option>
@@ -418,7 +412,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                     <div class="col-md-5 ">
                                         <label class="sr-only control-label">CVV Code*</label>
-                                        <input maxlength="200" type="text" required="required" name="card_cvv" class="card-cvv form-control" placeholder="CVV Code*"  />
+                                        <input maxlength="200" type="text" required="required" name="card_cvv" class="card-cvv form-control" placeholder="CVV Code*" autocomplete="off" />
                                     </div>
                                 </div>
                             </div>
@@ -438,14 +432,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                 <!-- <input type="hidden" name="df_preview" value="test"> -->
                                 <button id="donate-submit" class="petition-submit complete-donation" style="width: 100%;">Donate to help end hunger</button>
                             </div>
-                            <!-- Begin DigiCert site seal HTML and JavaScript -->
-                            <div id="DigiCertClickID_d6BMwOpS" data-language="en">
-                              <a href="https://www.digicert.com/ssl-certificate.htm">SSL Certificates</a>
-                            </div>
-                            <script type="text/javascript">
-                            var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_d6BMwOpS", "5", "s", "black", "d6BMwOpS"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
-                            </script>
-                            <!-- End DigiCert site seal HTML and JavaScript -->
+
                         </div>
                     </div>
                 </div>
@@ -454,6 +441,14 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         </div>
         </div>
     </div>
+    <div class="col-md-12 ssl-container">                            <!-- Begin DigiCert site seal HTML and JavaScript -->
+      <div id="DigiCertClickID_d6BMwOpS" class="digicert-container" data-language="en">
+        <a href="https://www.digicert.com/ssl-certificate.htm">SSL Certificates</a>
+      </div>
+      <script type="text/javascript">
+      var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_d6BMwOpS", "5", "s", "black", "d6BMwOpS"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+      </script>
+      <!-- End DigiCert site seal HTML and JavaScript --></div>
 </div>
 </div>
 
@@ -512,7 +507,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <ul>
             <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" class="fb-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
             <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCG9wH0Fv57djKxjC0UhEehQ/feed"><?php print '<img id="social-footer" class="yt-footer" src="'.base_path() . path_to_theme() .'/images/YT-button.png" alt="youtube">'; ?></a></li>
+            <li><a target="_blank" href="https://instagram.com/greatnationseat"><?php print '<img id="social-footer" class="in-footer" src="'.base_path() . path_to_theme() .'/images/IN-button.png" alt="instagram">'; ?></a></li>
             <li><a class="press-footer" target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
+            <li><a href="mailto:info@greatnationseat.org?subject=Great Nations Eat website">Contact</a></li>
             <li><a class="privacy-footer" target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
             <li><a href="#" style="text-decoration:none; cursor: default;">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
         </ul>
@@ -606,6 +604,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
     var formId = "12181";
 
+
     //TODO: Clean this up and put in .js file
 
     var petitionOverlay  			 = document.getElementById('petition-overlay-container');
@@ -623,7 +622,12 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var screeningOverlay 			 = document.getElementById('screening-container');
     var screeningSubmit  			 = document.getElementById('screening-submit');
     var screeningButton  			 = document.getElementById('host-screening');
-    var orientation;
+    
+    //Hide overlay if user revisiting page 
+    var hasSeenOverlay = document.cookie.replace(/(?:(?:^|.*;\s*)seenOverlay\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
+    if (hasSeenOverlay) {
+    	petitionOverlay.classList.add('hidden');
+    }
 
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
@@ -653,22 +657,23 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     screeningClose.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
     })
-
-    //TODO: Refresh browser on mobile rotate - utilize cookies/local storage to prevent petition overlay from showing up again
-    if(window.innerHeight > window.innerWidth && window.innerWidth < 768){
-        console.log('portrait');
-        orientation = 'portrait';
-    }else {
-        console.log('landscape');
-        orientation = 'landscape';
-    }
-    window.addEventListener('orientationchange', function() {
-        console.log('change');
-        console.log(window.orientation);
-    }, false);
-    //console.log(window.location);
 </script>
-
+<script type="text/javascript"> 
+	// RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES 
+  	window.onorientationchange = function() { 
+  	  var orientation = window.orientation; 
+  	    switch(orientation) { 
+  	      case 0: window.location.reload(); 
+  	      break; 
+  	      case 90: window.location.reload(); 
+  	      break; 
+  	      case -90: window.location.reload(); 
+  	      break; 
+  	    } 
+	}
+	//document.cookie = 'seenOverlay=true; max-age=3600; domain=.greatnationseat.org';
+  document.cookie = 'seenOverlay=true; max-age=3600';
+</script>
 
 <script src="/sites/all/themes/bootstrap/js/convio.js"></script>
 <script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>

@@ -951,6 +951,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/IN-button.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8068,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/IN-button.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/IN-button.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/Jahnique_01.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1138,6 +1149,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/partner_logos\/jbj.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56420,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/jbj.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/jbj.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/partner_logos\/mode-media.png": {
 		"fileType": 32768,
 		"ignore": 1,
@@ -1255,6 +1277,17 @@
 		"initialSize": 993,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/x-icon.png",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/x-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/YT-button.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7631,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/YT-button.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/YT-button.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
