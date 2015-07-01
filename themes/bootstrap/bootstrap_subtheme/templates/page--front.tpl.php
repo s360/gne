@@ -507,6 +507,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <ul>
             <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" class="fb-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
             <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCG9wH0Fv57djKxjC0UhEehQ/feed"><?php print '<img id="social-footer" class="yt-footer" src="'.base_path() . path_to_theme() .'/images/yt-button.png" alt="youtube">'; ?></a></li>
+            <li><a target="_blank" href="https://instagram.com/greatnationseat"><?php print '<img id="social-footer" class="in-footer" src="'.base_path() . path_to_theme() .'/images/in-button.png" alt="instagram">'; ?></a></li>
             <li><a class="press-footer" target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
             <li><a href="mailto:info@greatnationseat.org?subject=Great Nations Eat website">Contact</a></li>
             <li><a class="privacy-footer" target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
