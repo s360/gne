@@ -2406,10 +2406,10 @@ h1.page-header{
   overflow-y: auto; 
  }
 
+
  .partner-logo{
   width: 15%;
-  height: 120px;
-  margin: 10px 2%;
+  margin: 5px 2%;
   float: left;
  }
 
@@ -2459,6 +2459,11 @@ h1.page-header{
   }
 
 @media (min-width: 768px){
+
+  
+.partner_logos{
+  margin-top: 80px
+}
   .partner_content{
   position: relative;
   top: 50%;
