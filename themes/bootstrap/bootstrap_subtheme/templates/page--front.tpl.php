@@ -377,7 +377,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <label class="sr-only control-label">Credit Card Number*</label>
-                                    <input maxlength="200" type="text" name="card_number" required="required" class="form-control card-number" placeholder="Credit Card Number*" />
+                                    <input maxlength="200" type="text" name="card_number" required="required" class="form-control card-number" placeholder="Credit Card Number*" autocomplete="off" />
 
                                 </div>
                             </div>
@@ -412,7 +412,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                     <div class="col-md-5 ">
                                         <label class="sr-only control-label">CVV Code*</label>
-                                        <input maxlength="200" type="text" required="required" name="card_cvv" class="card-cvv form-control" placeholder="CVV Code*"  />
+                                        <input maxlength="200" type="text" required="required" name="card_cvv" class="card-cvv form-control" placeholder="CVV Code*" autocomplete="off" />
                                     </div>
                                 </div>
                             </div>
