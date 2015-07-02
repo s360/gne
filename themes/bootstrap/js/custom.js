@@ -10,11 +10,46 @@ function getParameterByName(name) {
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return "";
+}
 
 jQuery(document).ready(function() {
+        var utm_source = getParameterByName("utm_source");
+        var utm_medium = getParameterByName("utm_medium");
+        if (utm_source !== "") {
+            createCookie("utm_source", utm_source, 1);
+        }
+        else {
+            utm_source = readCookie("utm_source");
+        }
+        if (utm_medium !== "") {
+            createCookie("utm_medium", utm_medium, 1);
+        }
+        else {
+            utm_medium = readCookie("utm_medium");
+        }
         //Set source tracking for petition form
-        jQuery('.ref_source').val(getParameterByName("utm_source"));
-        jQuery('.ref_sub_source').val(getParameterByName("utm_medium"));
+
+        jQuery('.ref_source').val(utm_source);
+        jQuery('.ref_sub_source').val(utm_medium);
 
 		//close lightbox on click anywhere
 		jQuery('body').click(function(e) {
