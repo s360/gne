@@ -185,10 +185,10 @@ jQuery(document).ready(function() {
 
     jQuery(".slider-nav .menu li a").click(function(){
         jQuery('.top-navigation').toggleClass('in');
+        var href = jQuery(this).attr('href');
+        setTimeout(function() {window.location = href}, 1000);
+        return false;
     });
-
-    
-
 
 
     //slide
