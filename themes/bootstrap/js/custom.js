@@ -4,9 +4,17 @@
 
 'use strict';
 
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 jQuery(document).ready(function() {
-
-
+        //Set source tracking for petition form
+        jQuery('.ref_source').val(getParameterByName("utm_source"));
+        jQuery('.ref_sub_source').val(getParameterByName("utm_medium"));
 
 		//close lightbox on click anywhere
 		jQuery('body').click(function(e) {
