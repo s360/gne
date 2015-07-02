@@ -144,8 +144,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <input type="hidden" name="api_key" id="api_key" value="sosapikey" />
         		<input type="hidden" name="v" id="v" value="1.0" />
         		<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
-        		<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
-        		<input type="hidden" name="login_password" id="login_password" value="test123456" /> 
         		<input type="hidden" name="response_format" id="response_format" value="json" />
         		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361" />
                 <input type="hidden" name="source" class="ref_source" value="" />
@@ -211,6 +209,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
                 <input type="hidden" name="method" id="method" value="donate">
 								<input type="hidden" name="form_id" id="form_id" value="12181">
+								<input type="hidden" name="source" class="ref_source" value="">
+								<input type="hidden" name="sub_source" class="ref_sub_source" value="">
 								<input type="hidden" name="validate" value="true">
                 <div class="row setup-content" id="step-1">
                     <div class="col-xs-12">
@@ -466,11 +466,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         		<input type="hidden" name="api_key" id="api_key" value="sosapikey" />
 						<input type="hidden" name="v" id="v" value="1.0" />
 						<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
-						<input type="hidden" name="login_name" id="login_name" value="apatt" /> 
-						<input type="hidden" name="login_password" id="login_password" value="test123456" /> 
 						<input type="hidden" name="response_format" id="response_format" value="json" />
 						<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361,104423" />
-            
+                    <input type="hidden" name="source" class="ref_source" value="" />
+                    <input type="hidden" name="sub_source" class="ref_sub_source" value="" />
+
             <input type="text" class="screening-input half one" name="name.first" placeholder="First Name*" required/>
             <input type="text" class="screening-input half" name="name.last" placeholder="Last Name*"required />
             <input type="text" class="screening-input" placeholder="Organization" />
