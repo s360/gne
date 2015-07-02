@@ -17,105 +17,7 @@ jQuery(document).ready(function() {
     		jQuery('.top-navigation').removeClass('in');
     	}
 		});
-    /*jQuery.fn.reverse = [].reverse;
-		
-    jQuery.fn.sliderPage = function() {
 
-        var container = 'div#scrolling-page-container';
-        var next_btn = '#next-scrolling-page';
-        var prev_btn = '#prev-scrolling-page';
-        var total_row = this.find(container).children().length;
-        var $children_row = this.find(container).children();
-
-        this.find(container).children().css({
-            display: 'none',
-            opacity: 1
-        });
-
-        this.find(container).children().first().css({
-            display: 'block',
-            opacity: 1
-        }).addClass('active').addClass('first');
-
-        this.find(container).children().last().addClass('last');
-
-
-
-        jQuery(next_btn).on('click', function(e) {
-
-            var found = false;
-            var ok = false;
-
-            jQuery(container).children().each(function(index) {
-
-                if(found == true)
-                {
-                    jQuery(this).addClass('active').css({
-                        display: 'block',
-                        opacity: 1
-                    });
-
-                    found = false;
-                    ok = true;
-
-                }
-
-                if(jQuery(this).hasClass('active') && ok == false && !jQuery(this).hasClass('last'))
-                {
-                    jQuery(this).removeClass('active').css({
-                        display: 'none',
-                        opacity: 0
-                    });
-
-                    found = true;
-
-                }
-
-            });
-
-        });
-
-
-
-        jQuery(prev_btn).on('click', function(e) {
-
-            var found = false;
-            var ok = false;
-
-            jQuery(container).children().reverse().each(function(index) {
-
-                if(found == true)
-                {
-                    jQuery(this).addClass('active').css({
-                        display: 'block',
-                        opacity: 1
-                    });
-
-                    found = false;
-                    ok = true;
-
-                }
-
-                if(jQuery(this).hasClass('active') && ok == false && !jQuery(this).hasClass('first'))
-                {
-                    jQuery(this).removeClass('active').css({
-                        display: 'none',
-                        opacity: 1
-                    });
-
-                    found = true;
-
-                }
-
-            });
-
-        });
-
-        return this;
-
-    };
-
-    jQuery('#scrolling-page').sliderPage()*/;
 
     //homepage fullpag
     var toolbar = 64;
@@ -192,33 +94,28 @@ jQuery(document).ready(function() {
 
 
     //slide
-    jQuery('#container-slide-home').slick({
+
+    var pageHome = jQuery('#container-slide-home');
+    var pagePress = jQuery('#container-slide-press');
+    var pagePartner = jQuery('#container-slide-partner');
+
+    if (pageHome.length){
+        var slide = pageHome;
+    }
+    if (pagePress.length){
+        var slide = pagePress;
+    }
+    if (pagePartner.length){
+        var slide = pagePartner;
+    }
+
+    jQuery(slide).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '#homepage .slider-nav .view-content ul',
-        appendArrows: false
-
-    });
-
-    jQuery('#container-slide-press').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '.slider-nav .view-press .view-content ul',
         appendArrows: false,
         adaptiveHeight:true
 
     });
-
-    jQuery('.slider-nav .view-press .view-content ul').slick({
-        slidesToShow: 20,
-        slidesToScroll: 20,
-        asNavFor: ['#container-slide-press', ''],
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true,
-        adaptiveHeight:true
-    });
-
 
 
     jQuery(".slick-prev").addClass("arrow_left");
@@ -255,16 +152,7 @@ jQuery(document).ready(function() {
 
     var slidetoHash = dataHash;
 
-    var pageHome = jQuery('#container-slide-home');
-    var pagePress = jQuery('#container-slide-press');
 
-    if (pageHome.length){
-        var slide = pageHome;
-    }
-    if (pagePress.length){
-        var slide = pagePress;
-    }
-    
     var lastPSA;
     function gotohash(e) {
         var lochash = window.location.hash;
@@ -359,17 +247,13 @@ jQuery(document).ready(function() {
     }
 
     function prev(e){
-        jQuery("#container-slide-home").slick('slickPrev');
-        jQuery("#container-slide-press").slick('slickPrev');
-
+        jQuery(slide).slick('slickPrev');
         hashurl();
 
     }
 
     function next(e){
-        jQuery("#container-slide-home").slick('slickNext');
-        jQuery("#container-slide-press").slick('slickNext');
-
+        jQuery(slide).slick('slickNext');
         hashurl();
     }
 
