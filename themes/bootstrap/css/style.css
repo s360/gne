@@ -1634,7 +1634,9 @@ nav{
 	text-align: center
 }
 .petition-input {
-	font-family: 'Homemade Apple', cursive;
+	font-family: 'Playfair Display', cursive;
+  font-weight: 700;
+  font-style: italic;
   font-size: 1.2em;
 	border: none;
 	background-color: #ffffff;

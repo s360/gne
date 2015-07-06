@@ -70,7 +70,7 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans:700,600,400,300' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
 
 
     <!--[if IE]>
