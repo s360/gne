@@ -918,7 +918,7 @@ nav{
  ===========================================
  **/
 
-.col-sm-4.about-left {
+.col-md-4.about-left {
 	margin-top: -5px;
 	height: 100%;
 	background: url('../images/About_Classroom.jpg');
@@ -926,7 +926,7 @@ nav{
 	background-size: cover;
 	background-position: -900px;
 }
-.col-sm-3.about-right {
+.col-md-3.about-right {
 	margin-top: -5px;
 	height: 100%;
 	background: url('../images/About_Boy.jpg');
@@ -934,7 +934,7 @@ nav{
 	background-size: cover;
 	background-position: left;
 }
-.col-sm-5.about {
+.col-md-5.about {
 	background-color: #ffffff;
 	height: 100%;
 }
@@ -959,6 +959,9 @@ nav{
   letter-spacing: .1em;
 }
 @media (min-width: 992px){
+	.mobile-about-overlay {
+		display: none;
+	}
 	.about-container {
 		padding: 70px 20px;	
 		width: 80%;
@@ -987,7 +990,7 @@ nav{
 	.about-copy.first {
 		line-height: 1.5 !important;
 	}
-	.col-sm-5.about {
+	.col-md-5.about {
 		background-color: #ffffff;
 	}
 	.about-container {
@@ -995,12 +998,19 @@ nav{
 	}
 }
 @media (max-width: 992px){
-	.col-sm-5.about {
+	.mobile-about-overlay {
+		display: block;
+	}
+	.col-md-4.about-left,
+	.col-md-3.about-right {
+		display: none;
+	}
+	.col-md-5.about {
   	background-color: rgba(0, 0, 0, 0.8);
     overflow-y:auto;
     padding-bottom: 10px;
 	}
-	.mobile-about-overlay.visible-xs {
+	.mobile-about-overlay {
 		background: url('../images/About_Classroom.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
