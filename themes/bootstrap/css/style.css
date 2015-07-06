@@ -1889,17 +1889,20 @@ font-family: "Open Sans", Arial, Helvetica, sans-serif;
 .stepwizard-row a{
     opacity: 1 !important;
 }
-/*.stepwizard-row:before {*/
-/*    top: 15px;*/
-/*    bottom: 0;*/
-/*    position: absolute;*/
-/*    content: " ";*/
-/*    width: 66%;*/
-/*    height: 1px;*/
-/*    background-color: #ccc;*/
-/*    z-order: 0;*/
-/*    left: 100px;*/
-/*}*/
+
+/*Lines for donate*/
+.stepwizard-step:nth-child(1):after, .stepwizard-step:nth-child(2):after {
+    top: 15px; 
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+    
+}
+
 .stepwizard-step {
     display: table-cell;
     text-align: center;
