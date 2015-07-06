@@ -52,6 +52,7 @@ body {
   
 h2 a{
  font-family: 'Oswald', Impact, Charcoal, sans-serif;
+ font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -75,6 +76,7 @@ p, h3 {
 }
 h2 {
  font-family: 'Oswald', Impact, Charcoal, sans-serif;
+ font-weight: 700;
   letter-spacing: 0.1em;
   font-weight: 700;
 }
@@ -124,6 +126,7 @@ body{
   text-transform: uppercase;
   text-decoration: none;
  font-family: 'Oswald', Impact, Charcoal, sans-serif;
+ font-weight: 700;
   letter-spacing: 2px;
   font-size: 0.8em;
   border: none;
@@ -164,6 +167,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 nav{
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -239,6 +243,7 @@ nav{
 .slider-nav .block-title{
     text-transform: uppercase;
     font-family: 'Oswald', Impact, Charcoal, sans-serif;
+    font-weight: 700;
     font-size: 27px;
     margin-top: 13px !important;
     margin-bottom: 30px;
@@ -531,6 +536,7 @@ nav{
 .page1-title {
 	color: #00aeef;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 2.5em;
   letter-spacing: .05em;
@@ -543,6 +549,7 @@ nav{
   margin-top: 7px;
   padding: 13px;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-left: 10px;
@@ -557,6 +564,7 @@ nav{
   margin-top: 7px;
   padding: 13px;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin-left: 10px;
@@ -795,6 +803,7 @@ nav{
 
   #adrianna-3 .cta h4, #hanno-3 .cta h4, #jahnique-3 .cta h4{
     font-family: 'Oswald', Impact, Charcoal, sans-serif;
+    font-weight: 700;
 
     color: #1268b3;
     text-transform: uppercase;
@@ -941,6 +950,7 @@ nav{
 
 .about-header {
 	font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
 	color: #1268b3;
 	margin-top: 0;
 	text-transform: uppercase;
@@ -1063,6 +1073,7 @@ nav{
 
 .col-md-8.about-main h1{
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   color: #1268b3;
   margin-top: 40px;
   text-transform: uppercase;
@@ -1259,6 +1270,7 @@ nav{
 	    text-decoration: none;
 	    margin-bottom: 50px;
 	   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+     font-weight: 700;
       letter-spacing: 2px;
 	    font-size: 1.1em;
 	    white-space: nowrap;
@@ -1313,6 +1325,7 @@ nav{
 	    text-transform: uppercase;
 	    text-decoration: none;
 	   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+     font-weight: 700;
       letter-spacing: 2px;
 	    font-size: 1.1em;
 	    border: none;
@@ -1434,6 +1447,7 @@ nav{
 	  text-transform: uppercase;
 	  text-decoration: none;
 	 font-family: 'Oswald', Impact, Charcoal, sans-serif;
+   font-weight: 700;
   letter-spacing: 2px;
 	  font-size: 1.1em;
 	  border: none;
@@ -1474,6 +1488,7 @@ nav{
 	  text-decoration: none;
 	  margin-bottom: 50px;
 	 font-family: 'Oswald', Impact, Charcoal, sans-serif;
+   font-weight: 700;
   letter-spacing: 2px;
 	  font-size: 1.1em;
 	  white-space: nowrap;
@@ -1530,6 +1545,7 @@ nav{
   text-align: left;
   color: #1268b3;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 2.5em;
   letter-spacing: .05em;
@@ -1598,6 +1614,7 @@ nav{
 	text-align: center;
   color: #1268b3;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 2.5em;
   letter-spacing: .05em;
@@ -1605,6 +1622,7 @@ nav{
 .petition-cta {
   text-align: center;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 2em;
   line-height: 1.5em;
@@ -1630,6 +1648,7 @@ nav{
  
 .petition-submit {
 	font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   padding: 15px 30px;
 	color: #ffffff;
 	background: #f20016;
@@ -1822,6 +1841,7 @@ font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 .screening-header {
 	font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;
   color: #1268b3;
   margin-top: 0;
   text-transform: uppercase;
@@ -1880,7 +1900,7 @@ font-family: "Open Sans", Arial, Helvetica, sans-serif;
     display: table;
     width: 100%;
     position: relative;
-    margin-top: 30px;
+    margin-top: 30px; 
     margin-bottom: 10px;
 }
 .stepwizard-row {
@@ -1945,7 +1965,8 @@ font-family: "Open Sans", Arial, Helvetica, sans-serif;
   border: 1px solid #000000;
   border-radius: 50%;
   padding: 22px 0px;
-  font-family: 'Oswald', Impact, Charcoal, sans-serif;  
+  font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;  
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
@@ -1966,6 +1987,7 @@ font-family: "Open Sans", Arial, Helvetica, sans-serif;
     margin-left: 118px;
     padding: 5px;
     font-family: 'Oswald', Impact, Charcoal, sans-serif;
+    font-weight: 700;
 }
 .nextBtn{
 cursor: pointer;
@@ -1973,6 +1995,7 @@ cursor: pointer;
 .nextBtn-old {
     float: right;
     font-family: 'Oswald', Impact, Charcoal, sans-serif;
+    font-weight: 700;
     color: #e71e25;
     text-transform: uppercase;
     font-size: 20px;
@@ -2034,6 +2057,7 @@ cursor: pointer;
     height: 50px;
     padding: 15px 0px;
     font-family: 'Oswald', Impact, Charcoal, sans-serif;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     font-size: 1em;
@@ -2203,7 +2227,8 @@ cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
- font-family: 'Oswald', Impact, Charcoal, sans-serif; 
+ font-family: 'Oswald', Impact, Charcoal, sans-serif;
+ font-weight: 700; 
  letter-spacing: 2px;
   font-size: 0.8em;
   border: none;
@@ -2259,7 +2284,8 @@ cursor: pointer;
 
 .story-join, .donate-join{
 	margin: 0 auto;
-	font-family: 'Oswald', Impact, Charcoal, sans-serif;	
+	font-family: 'Oswald', Impact, Charcoal, sans-serif;
+  font-weight: 700;	
   padding: 15px 30px;
 	color: #ffffff;
 	background: #f20016;
