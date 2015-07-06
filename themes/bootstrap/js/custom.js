@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
         jQuery('.ref_source').val(utm_source);
         jQuery('.ref_sub_source').val(utm_medium);
 
-		//close lightbox on click anywhere
+		//close petition lightbox on click anywhere
 		jQuery('body').click(function(e) {
 			if(!jQuery("#petition-overlay-container").hasClass('hidden') && jQuery(e.target).hasClass('full_overlay')) {
     		jQuery("#petition-overlay-container").addClass('hidden');
@@ -59,6 +59,12 @@ jQuery(document).ready(function() {
     	if(jQuery('.top-navigation').hasClass('in') && !jQuery(e.target).hasClass('navbar-toggle') && !jQuery(e.target).hasClass('icon-bar')) {
     		jQuery('.top-navigation').removeClass('in');
     	}
+		});
+
+		jQuery('.icon-bar').add('.navbar-toggle').click(function() {
+			if(!jQuery("#petition-overlay-container").hasClass('hidden')) {
+				jQuery('#petition-overlay-container').addClass('hidden');
+			}
 		});
 
 
