@@ -234,7 +234,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 <div class="row setup-content " id="step-2">
                     <div class="col-xs-12">
                         <div class="col-md-12">
-                            <h3 style="text-align: center">Billing Information</h3>
+                            <h3 style="text-align: center">Enter Billing Information</h3>
                             <div class="form-inline">
                                 <div class="form-group">
                                     <div class="col-md-6">
