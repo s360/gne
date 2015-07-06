@@ -47,11 +47,13 @@
   "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces;?>>
 <head profile="<?php print $grddl_profile; ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <meta name="fragment" content="!">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=viewport-height">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
   <meta name="google-site-verification" content="SBYFBO6sZv5-QsdCdeTDfdKT4M2bqesp6A_q8WNxwK0" />
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta></head>
   <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-72x72.png">
@@ -67,7 +69,9 @@
     <link href='/sites/all/fonts/fonts.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:700,600,400,300' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
+
 
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="/<?php echo $directory; ?>/css/style-ie.css" />
