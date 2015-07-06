@@ -365,6 +365,7 @@ jQuery(document).ready(function() {
 		    			hideOnSuccess.hide();
 		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			ga('send', 'event', 'button', 'join-confirmation');
 		    		}).error(function(data) {
 		    			console.log('error');
 		    		});
@@ -398,6 +399,7 @@ jQuery(document).ready(function() {
 		    			hideOnSuccess.hide();
 		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			ga('send', 'event', 'button', 'join-confirmation');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -419,6 +421,7 @@ jQuery(document).ready(function() {
 		    			showOnSuccess.removeClass('hidden');
 		    			jQuery('#screening-container').hide();
 		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			ga('send', 'event', 'button', 'join-confirmation');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -455,6 +458,7 @@ jQuery(document).ready(function() {
 		    			hideOnSuccess.hide();
 		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			ga('send', 'event', 'button', 'join-confirmation');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
@@ -490,6 +494,7 @@ jQuery(document).ready(function() {
 		    			hideOnSuccess.hide();
 		    			showOnSuccess.removeClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
+		    			ga('send', 'event', 'button', 'join-confirmation');
 		    		}).error(function(data) {
 		    			console.log('form error');
 		    			// jQuery(error).show();	
