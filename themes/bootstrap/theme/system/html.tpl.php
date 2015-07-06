@@ -50,7 +50,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <meta name="fragment" content="!">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=viewport-height">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
   <meta name="google-site-verification" content="SBYFBO6sZv5-QsdCdeTDfdKT4M2bqesp6A_q8WNxwK0" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta></head>
