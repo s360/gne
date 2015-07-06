@@ -65,6 +65,12 @@ jQuery(document).ready(function() {
 			if(!jQuery("#petition-overlay-container").hasClass('hidden')) {
 				jQuery('#petition-overlay-container').addClass('hidden');
 			}
+			if(!jQuery('#donation-overlay-container').hasClass('hidden')) {
+				jQuery('#donation-overlay-container').addClass('hidden');
+			}
+			if(!jQuery('#screening-container').hasClass('hidden')) {
+				jQuery('#screening-container').addClass('hidden');
+			}
 		});
 
 
