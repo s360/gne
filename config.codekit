@@ -480,6 +480,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/themes\/bootstrap\/images\/arrow_left_desk.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20251,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_left_desk.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_left_desk.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/themes\/bootstrap\/images\/arrow_right.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -487,6 +498,17 @@
 		"initialSize": 18142,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_right.png",
 		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_right.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/themes\/bootstrap\/images\/arrow_right_desk.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20381,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_right_desk.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/arrow_right_desk.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
