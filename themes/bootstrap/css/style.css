@@ -924,7 +924,7 @@ nav{
 	background: url('../images/About_Classroom.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: -350px;
+	background-position: -900px;
 }
 .col-sm-3.about-right {
 	margin-top: -5px;
@@ -1874,7 +1874,7 @@ font-family: "Open Sans", Arial, Helvetica, sans-serif;
     opacity: 1 !important;
 }
 /*.stepwizard-row:before {*/
-/*    top: 14px;*/
+/*    top: 15px;*/
 /*    bottom: 0;*/
 /*    position: absolute;*/
 /*    content: " ";*/

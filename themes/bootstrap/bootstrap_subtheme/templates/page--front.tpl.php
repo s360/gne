@@ -674,7 +674,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
   	    } 
 	}
 	//document.cookie = 'seenOverlay=true; max-age=3600; domain=.greatnationseat.org';
-  document.cookie = 'seenOverlay=true; max-age=3600';
+  document.cookie = 'seenOverlay=true; max-age=60';
 </script>
 
 <script src="/sites/all/themes/bootstrap/js/convio.js"></script>
