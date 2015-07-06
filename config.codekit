@@ -239,6 +239,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/node--partner.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/node--partner.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/node--press_release.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -275,6 +284,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--partner.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--partner.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/page--press.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -298,6 +316,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--homepage2--page.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--partner--page.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/bootstrap_subtheme\/templates\/views-view--partner--page.tpl.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
