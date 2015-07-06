@@ -70,7 +70,7 @@ input {
     -webkit-border-radius:0px;
 }
 
-p {
+p, h3 {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 h2 {
@@ -1749,6 +1749,7 @@ nav{
 	}
 	.petition-submit {
 		font-size: 12px;
+    margin-top: 10px;
 	}
 	#petition-zip {
 
@@ -1850,6 +1851,11 @@ font-family: "Open Sans", Arial, Helvetica, sans-serif;
  ========== 9. Donation ====================
  ===========================================
  **/
+
+.form-control{
+  margin-bottom: 20px;
+}
+
  #donation_level {
   text-align: center;
  }
@@ -2063,6 +2069,7 @@ cursor: pointer;
  ===========================================
  **/
 @media (min-width: 768px){
+
  .arrow_left{
     -webkit-transform:rotate(45deg);
     -moz-transform:rotate(45deg);
