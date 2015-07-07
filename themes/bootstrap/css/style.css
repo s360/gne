@@ -1049,6 +1049,16 @@ nav{
 	}
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+	.about-header {
+		margin-top: 45px;
+	}
+
+	.about-copy {
+		margin-bottom: 35px;
+	}
+}
+
 /**
  ===========================================
  ========== 6.a About Campaign =============
