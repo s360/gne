@@ -1634,10 +1634,7 @@ nav{
 	text-align: center
 }
 .petition-input {
-	font-family: 'Playfair Display', cursive;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.2em;
+	font-family: 'La Belle Aurore', cursive;
 	border: none;
 	background-color: #ffffff;
 	padding-left: 10px;
@@ -1748,12 +1745,14 @@ nav{
 		bottom: 0;
 		z-index: 10000;
 	}
-
+	.petition-container {
+		margin-top: 120px;
+	}
   .close-petition {
-  height: 20px;
-  width: 20px;
-  margin-right: 0;
-}
+  	height: 20px;
+  	width: 20px;
+  	margin-right: 0;
+	}
 	.logo-container-mobile {
 		text-align:center;
 		clear: both;
@@ -1783,11 +1782,8 @@ nav{
 		font-size: 12px;
     margin-top: 10px;
 	}
-	#petition-zip {
 
-	}
-
-  petition-sub{
+  .petition-sub{
     width: 100%;
     clear: both;
   }
@@ -2110,7 +2106,7 @@ cursor: pointer;
  **/
 @media (min-width: 768px){
 
-/* .arrow_left{
+ .arrow_left{
     -webkit-transform:rotate(45deg);
     -moz-transform:rotate(45deg);
     transform:rotate(45deg);
@@ -2124,7 +2120,7 @@ cursor: pointer;
 
 	}	
 
-	.arrow_right:after{
+	.arrow_right{
     -webkit-transform:rotate(45deg);
     -moz-transform:rotate(45deg);
     transform:rotate(45deg);
@@ -2135,57 +2131,7 @@ cursor: pointer;
     border-top: solid 5px #f20016;
     margin:10px;
     background: none;
-	}*/
-
-    .btn-nav{
-    position: absolute;
-    top: 0;
-    padding: 0;
-    width: 100%
-    pointer-events:none;
-    color: transparent;
-    }
-    .arrow_left{
-      -webkit-transform:rotate(0deg);
-      -moz-transform:rotate(0deg);
-      transform:rotate(0deg);
-      left: 0px !important;
-      width: 64px !important;
-      height: 100vh !important;
-      top: 0px;
-      border:none;
-      border-left: solid 0px #f20016 !important;
-      border-bottom: solid 0px #f20016 !important;
-      margin:0px 0px 0px 10px;
-      background-color: pink;
-      background: url(../images/arrow_left_desk.png);
-      background-repeat: no-repeat;
-      background-size: 100%; 
-      background-position: center;
-      padding: 0px 8px;
-      -webkit-appearance: none;
-    }
-  .arrow_right {
-      -webkit-transform:rotate(0deg);
-      -moz-transform:rotate(0deg);
-      transform:rotate(0deg);
-      right: 0px !important;
-      width: 64px !important;
-      height: 100vh !important;
-      top: 0px;
-      border:none;
-      border-left: solid 0px #f20016 !important;
-      border-bottom: solid 0px #f20016 !important;
-      margin:0px 10px 0px 0px;
-
-      background-color: pink;
-      background: url(../images/arrow_right_desk.png);
-      background-repeat: no-repeat;
-      background-size:100%; 
-      background-position: center;
-      padding: 0px 8px;
-      -webkit-appearance: none;
-  }
+	}
 }
 
 @media (max-width: 768px){
