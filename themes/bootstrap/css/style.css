@@ -2186,6 +2186,7 @@ cursor: pointer;
 	  padding: 0px 8px;
 	  -webkit-appearance: none;
  	}
+ }
 @media (max-width: 768px){
   .btn-nav{
     position: absolute;
