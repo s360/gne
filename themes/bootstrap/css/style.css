@@ -2646,3 +2646,7 @@ h1.page-header{
 .zip-error {
 	color: #f20016;
 }
+
+.petition-error {
+	border-bottom: 1px solid red;
+}

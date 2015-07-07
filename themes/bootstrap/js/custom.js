@@ -328,6 +328,9 @@ jQuery(document).ready(function() {
 		donateJoinButtons.click(function() {
 			jQuery('#donation-overlay-container').removeClass('hidden');
 		});
+		
+		//var invalidEmail = jQuery('.overlay-invalid-email');
+
 		var hideOnSuccess = jQuery('#join, .petition-overlay-container, .add-voice, .petition-form-container-story, .story-join');
 		var showOnSuccess = jQuery('.donate-join, .story-share, .add-donate, .thank-arrows');
 
@@ -370,7 +373,7 @@ jQuery(document).ready(function() {
 		    }
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(overlaySubmit).hide();
-		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery('.petition-input.emailOverlay').removeClass('petition-error');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -384,6 +387,7 @@ jQuery(document).ready(function() {
 	    	} else {
 	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
+	    		jQuery('.petition-input.emailOverlay').addClass('petition-error');
 	    	}
 	    }else if(jQuery(this).hasClass('petition-form-2')) {
 		  	var fullName = jQuery('.petition-input.name2').val().trim();
