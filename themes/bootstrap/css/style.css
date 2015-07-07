@@ -2322,11 +2322,10 @@ cursor: pointer;
     margin: 0 auto;
   }
   .thankyou-overlay-container{
-
   padding: 0px 60px;
   text-align: center;
-      /* added by Abe: fix for mobile device */
-      margin-top: 80px;
+  /* added by Abe: fix for mobile device */
+  margin-top:1200px;
 }
 }
 
