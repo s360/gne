@@ -2535,6 +2535,16 @@ h1.page-header{
   letter-spacing: .05em;
 }
 
+.node.node-partner > h2 > a {
+	margin-bottom: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f20016;
+  font-family: 'Ultra', georgia bold, serif bold;
+  letter-spacing: .05em;
+}
+
 
 
 .partners_page_1{
