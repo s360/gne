@@ -515,7 +515,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <li><a class="press-footer" target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
             <li><a href="mailto:info@greatnationseat.org?subject=Great Nations Eat website">Contact</a></li>
             <li><a class="privacy-footer" target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
-            <li><a href="#" style="text-decoration:none; cursor: default;">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
+            <li><a href="http://www.nokidhungry.org/" target="_blank" style="text-decoration:none;">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
         </ul>
     </div>
 </footer>

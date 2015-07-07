@@ -1049,6 +1049,16 @@ nav{
 	}
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+	.about-header {
+		margin-top: 45px;
+	}
+
+	.about-copy {
+		margin-bottom: 35px;
+	}
+}
+
 /**
  ===========================================
  ========== 6.a About Campaign =============
@@ -1758,6 +1768,7 @@ nav{
 		height: 100%;
 		top: 0;
 		bottom: 0;
+		padding: 10px;
 		z-index: 10000;
 	}
 	.petition-container {
@@ -2634,4 +2645,8 @@ h1.page-header{
  **/
 .zip-error {
 	color: #f20016;
+}
+
+.petition-error {
+	border-bottom: 1px solid red;
 }
