@@ -1539,6 +1539,7 @@ nav{
 .donation-copy-container img{
   width: 40%;
   margin: 10px 30%;
+  margin-top: 0px;
 }
 
 .donation-copy-container h1{
@@ -1566,10 +1567,15 @@ nav{
 	}
 }
 @media (max-width: 768px){
+	.donate-copy3.petition-subheader.stay-small{
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
   .donation-copy-container img{
-  width: 40%;
-  margin: 10px 30%;
-}
+  	width: 40%;
+  	margin: 10px 30%;
+	}
 }
 
 /**
@@ -1648,7 +1654,15 @@ nav{
   font-weight: 400;
   text-align: center;
 }
- 
+.petition-subheader {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	text-align: center;
+  font-size: 1em;
+  letter-spacing: .05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
 .petition-submit {
 	font-family: 'Oswald', Impact, Charcoal, sans-serif;
   font-weight: 700;
@@ -1693,16 +1707,7 @@ nav{
 		margin-top: 30px;
 	}
 	
-	.petition-subheader {
-		font-family: "Open Sans", Arial, Helvetica, sans-serif;
-		text-align: center;
 
-    font-size: 1em;
-    letter-spacing: .05em;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-	}
 	
 	.petition-subheader.two {
 		margin-bottom: 40px;
@@ -1738,6 +1743,10 @@ nav{
 
 }
 @media (max-width: 768px){
+	.petition-subheader { 
+		text-align: center;
+	}
+
 	#petition-logo {
 		height: 30px;
 	}
@@ -1887,8 +1896,13 @@ nav{
 
 .form-control{
   margin-bottom: 20px;
-}
-
+}/*
+.impact-partner {
+	margin-bottom: 0px;
+	margin-top: 15px;
+	text-align: center;
+	font-weight: bold;
+}*/
  #donation_level {
   text-align: center;
  }
