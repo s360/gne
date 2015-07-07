@@ -136,7 +136,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
 
         <h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
-        <p class="petition-subheader hidden-xs">Hunger exists in every community and affects 1 in 6 Americans.</p>
+        <p class="petition-subheader">Hunger exists in every community and affects 1 in 6 Americans.</p>
         <p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
         <h2 class="petition-cta">Add your name to the list of americans who demand we do better.</h2>
         <div class="petition-form-container">
@@ -181,7 +181,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <h1 class="donate-title petition-header hidden-xs">HUNGER HURTS KIDS EVERY DAY.</h1>
             <p class="donate-copy1 petition-subheader hidden-xs">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
             <p class="donate-copy2 petition-subheader hidden-xs"><b>Every $10 you give can provide up to 100 meals for a hungry child.</b></p>
-            <p class="donate-copy3 petition-subheader hidden-xs">All donations to Great Nations Eat support No Kid Hungry’s efforts to feed kids healthy food, every day.</p>
+            <p class="donate-copy3 petition-subheader stay-small">All donations to Great Nations Eat support No Kid Hungry’s efforts to feed kids healthy food, every day.</p>
             <img src="/sites/all/themes/bootstrap/images/nkh-logo.gif" />
 
         </div>

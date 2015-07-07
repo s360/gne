@@ -1539,6 +1539,7 @@ nav{
 .donation-copy-container img{
   width: 40%;
   margin: 10px 30%;
+  margin-top: 0px;
 }
 
 .donation-copy-container h1{
@@ -1566,10 +1567,16 @@ nav{
 	}
 }
 @media (max-width: 768px){
+	.donate-copy3.petition-subheader.stay-small{
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 10px;
+		text-align: center;
+	}
   .donation-copy-container img{
-  width: 40%;
-  margin: 10px 30%;
-}
+  	width: 40%;
+  	margin: 10px 30%;
+	}
 }
 
 /**
@@ -1648,7 +1655,15 @@ nav{
   font-weight: 400;
   text-align: center;
 }
- 
+.petition-subheader {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	text-align: center;
+  font-size: 1em;
+  letter-spacing: .05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
 .petition-submit {
 	font-family: 'Oswald', Impact, Charcoal, sans-serif;
   font-weight: 700;
@@ -1693,16 +1708,7 @@ nav{
 		margin-top: 30px;
 	}
 	
-	.petition-subheader {
-		font-family: "Open Sans", Arial, Helvetica, sans-serif;
-		text-align: center;
 
-    font-size: 1em;
-    letter-spacing: .05em;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-	}
 	
 	.petition-subheader.two {
 		margin-bottom: 40px;
@@ -1738,6 +1744,12 @@ nav{
 
 }
 @media (max-width: 768px){
+	.petition-subheader { 
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+
 	#petition-logo {
 		height: 30px;
 	}
@@ -1887,8 +1899,13 @@ nav{
 
 .form-control{
   margin-bottom: 20px;
-}
-
+}/*
+.impact-partner {
+	margin-bottom: 0px;
+	margin-top: 15px;
+	text-align: center;
+	font-weight: bold;
+}*/
  #donation_level {
   text-align: center;
  }
@@ -2322,11 +2339,10 @@ cursor: pointer;
     margin: 0 auto;
   }
   .thankyou-overlay-container{
-
   padding: 0px 60px;
   text-align: center;
-      /* added by Abe: fix for mobile device */
-      margin-top: 80px;
+  /* added by Abe: fix for mobile device */
+  margin-top:1200px;
 }
 }
 
@@ -2530,6 +2546,16 @@ h1.page-header{
   margin-bottom: 20px;
   text-align: left;
   text-transform: uppercase;
+  color: #f20016;
+  font-family: 'Ultra', georgia bold, serif bold;
+  letter-spacing: .05em;
+}
+
+.node.node-partner > h2 > a {
+	margin-bottom: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
   color: #f20016;
   font-family: 'Ultra', georgia bold, serif bold;
   letter-spacing: .05em;
