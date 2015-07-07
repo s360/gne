@@ -1768,6 +1768,7 @@ nav{
 		height: 100%;
 		top: 0;
 		bottom: 0;
+		padding: 10px;
 		z-index: 10000;
 	}
 	.petition-container {
