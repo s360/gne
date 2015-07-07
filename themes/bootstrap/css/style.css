@@ -1746,7 +1746,8 @@ nav{
 		z-index: 10000;
 	}
 	.petition-container {
-		margin-top: 120px;
+		margin-top: 120px!important;
+		max-height: 100%!important;
 	}
   .close-petition {
   	height: 20px;
@@ -1821,7 +1822,7 @@ nav{
 	color: #999;
 	text-align: left;
 	font-size: 1em;
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	text-transform:none;
 	font-style: italic;
 	width: 100%;
