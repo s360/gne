@@ -136,7 +136,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
 
         <h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
-        <p class="petition-subheader hidden-xs">Hunger exists in every community and affects 1 in 6 Americans.</p>
+        <p class="petition-subheader">Hunger exists in every community and affects 1 in 6 Americans.</p>
         <p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
         <h2 class="petition-cta">Add your name to the list of americans who demand we do better.</h2>
         <div class="petition-form-container">
