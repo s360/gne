@@ -1745,6 +1745,8 @@ nav{
 @media (max-width: 768px){
 	.petition-subheader { 
 		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 0px;
 	}
 
 	#petition-logo {
