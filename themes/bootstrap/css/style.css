@@ -1137,12 +1137,14 @@ nav{
 
 .col-md-8.about-main img.nkh-logo{
     width: 26%;
-    margin: 5px 30px 5px 10%;
+    /*margin: 5px 30px 5px 10%;*/
     float: left;
 }
 
 .about_inline{
-
+  width: 64%;
+  float: left;
+  padding: 5px 20px 0 10% !important;
 }
 
 .col-md-8.about-main img.nkh-logo-white{
@@ -1214,6 +1216,12 @@ nav{
 }
 
 @media (max-width: 992px){
+
+.about_inline{
+  width: 100%;
+  float: none;
+  padding: 5px 10% !important;
+}
   .col-md-8.about-main h1{
     font-size: 1.5em;
     letter-spacing: .05em;
@@ -1263,7 +1271,7 @@ nav{
 
 .col-md-8.about-main img.nkh-logo-white{
      width: 40%;
-    margin: 5px 30%;
+    margin: 5px 30% 20px 30%;
     display: block;
 }
 }
