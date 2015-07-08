@@ -1046,6 +1046,10 @@ nav{
 	.about-copy {
 		color: #ffffff;
 		font-size: 1em;
+  	letter-spacing: .05em;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-font-smoothing: antialiased;
+  	font-smoothing: antialiased;
 	}
 }
 
@@ -1058,12 +1062,18 @@ nav{
 
 	.about-copy {
 		margin-bottom: 35px;
+		font-size: 1em;
+  	letter-spacing: .05em;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-font-smoothing: antialiased;
+  	font-smoothing: antialiased;
 	}
-	.about-container {
+	.about-container{
 		padding: 40px 100px 0 100px;
 	}
 	.col-md-8.about-main {
 		padding-top: 45px;
+		padding: 40px 85px 0 85px;
 	}
 }
 
