@@ -2652,7 +2652,7 @@ h1.page-header{
 }
 
 /*iPhone 4 fix*/
-@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+/*@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	.col-sm-4.onethird.one {
 		background-position: 85%;
 	}
@@ -2662,7 +2662,7 @@ h1.page-header{
 	.col-sm-4.onethird.three {
 		background-position: 80%;
 	}
-}
+}*/
 
 @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
 	.col-sm-4.onethird.one {
