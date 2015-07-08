@@ -1050,12 +1050,20 @@ nav{
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-	.about-header {
+	.about-header,
+	.col-md-8.about-main h1
+	 {
 		margin-top: 45px;
 	}
 
 	.about-copy {
 		margin-bottom: 35px;
+	}
+	.about-container {
+		padding: 40px 100px 0 100px;
+	}
+	.col-md-8.about-main {
+		padding-top: 45px;
 	}
 }
 
