@@ -2625,16 +2625,16 @@ h1.page-header{
 @media (min-width: 769px){
 
 
-.partner_logos{
-  margin-top: 80px
-}
-  .partner_content{
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+	.partner_logos{
+	  margin-top: 80px
+	}
+	  .partner_content{
+	  position: relative;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
   .partner_content ul{
     list-style: none;
       column-gap: 10px;
@@ -2652,7 +2652,24 @@ h1.page-header{
       column-gap: 40px;
   }
 }
-
+/*Ipad 1,2,mini*/
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) {
+	.partner-logo {
+	  width: 20%;
+	  height: 100px;
+	  margin: 10px 2%;
+	  float: left;
+	}
+}
+/*ipad 3,4*/
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+	.partner-logo {
+	  width: 20%;
+	  height: 100px;
+	  margin: 10px 2%;
+	  float: left;
+	}	
+}
 /**
  ===========================================
  =============== 12. Error==================
