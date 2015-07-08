@@ -178,9 +178,10 @@
 	margin: 0 auto;
 	line-height: 1.4em;
 	color: #1a1a1a;
+  padding: 10px 0 30px;
 }
 .node-press-release .press-page-copy.first {
-  padding: 10px 0 30px;
+  
 }
 
 .videoWrapper,
