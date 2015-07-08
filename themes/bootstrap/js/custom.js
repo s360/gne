@@ -87,16 +87,18 @@ jQuery(document).ready(function() {
         notoolbar();
     }
 
-    jQuery(window).resize(function() {
-    	console.log('RESIZE');
+    jQuery(window).resize(function() {	
     	if(jQuery('body').hasClass('toolbar-drawer')){
+    		console.log('RESIZE1');
         intoolbar();
     	}else{
+    		console.log('RESIZE2');
         notoolbar();
     	}
     });
 
     function intoolbar(){
+    	console.log('intoolbar');
         jQuery("#homepage").css({"height": window_height_2});
         jQuery("#wrap-page").css({"height": window_height_2});
         jQuery(".node").css({"height": window_height_2});
@@ -107,6 +109,7 @@ jQuery(document).ready(function() {
     }
 
     function notoolbar(){
+    		console.log('notoolbar');
         jQuery("#homepage").css({"height": window_height});
         jQuery("#wrap-page").css({"height": window_height});
         jQuery(".node").css({"height": window_height});
