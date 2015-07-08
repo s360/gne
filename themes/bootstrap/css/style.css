@@ -1046,10 +1046,6 @@ nav{
 	.about-copy {
 		color: #ffffff;
 		font-size: 1em;
-  	letter-spacing: .05em;
-  	-webkit-font-smoothing: antialiased;
-  	-moz-font-smoothing: antialiased;
-  	font-smoothing: antialiased;
 	}
 }
 
@@ -1062,17 +1058,12 @@ nav{
 
 	.about-copy {
 		margin-bottom: 35px;
-		font-size: 1em;
-  	letter-spacing: .05em;
-  	-webkit-font-smoothing: antialiased;
-  	-moz-font-smoothing: antialiased;
-  	font-smoothing: antialiased;
 	}
-	.about-container{
+	.about-container {
 		padding: 40px 100px 0 100px;
 	}
 	.col-md-8.about-main {
-		padding: 45px 85px 0 85px!important;
+		padding-top: 45px;
 	}
 }
 
@@ -2212,7 +2203,7 @@ cursor: pointer;
     transform:rotate(0deg);
     left: 0px !important;
     width: 64px !important;
-    height: 100% !important;
+    height: 100vh !important;
     top: 0px;
     border:none;
     border-left: solid 0px #f20016 !important;
@@ -2232,7 +2223,7 @@ cursor: pointer;
 	  transform:rotate(0deg);
 	  right: 0px !important;
 	  width: 64px !important;
-	  height: 100% !important;
+	  height: 100vh !important;
 	  top: 0px;
 	  border:none;
 	  border-left: solid 0px #f20016 !important;
