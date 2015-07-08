@@ -88,11 +88,11 @@ jQuery(document).ready(function() {
     }
 
     jQuery(window).resize(function() {	
+    	window_height = jQuery(window).height();
+    	window_height_2 =jQuery(window).height()-toolbar;
     	if(jQuery('body').hasClass('toolbar-drawer')){
-    		console.log('RESIZE1');
         intoolbar();
     	}else{
-    		console.log('RESIZE2');
         notoolbar();
     	}
     });
