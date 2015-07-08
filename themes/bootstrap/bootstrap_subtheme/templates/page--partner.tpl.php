@@ -108,20 +108,22 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </div>
 
 
-    <footer id="footer">
-        <?php //print render($page['footer']); ?>
-        <div class="social pull-left">
-        	<p class="contact-info">For all press inquiries, please call Christy Felling at 202-649-4340 or email info@greatnationseat.org</p>
-        </div>
-        <div class="copyright pull-right">
-            <ul>
-                <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" class="fb-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
-                <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
-                <li><a target="_blank" href="http://greatnationseat.org/privacy.html">Privacy</a></li>
-                <li><a href="#">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
-            </ul>
-        </div>
-    </footer>
+<footer id="footer">
+  <?php //print render($page['footer']); ?>
+    <div class="social pull-left"></div>
+    <div class="copyright pull-right">
+        <ul>
+            <li><a target="_blank" href="https://www.facebook.com/GreatNationsEat"><?php print '<img id="social-footer" class="fb-footer" src="'.base_path() . path_to_theme() .'/images/FB-button.png" alt="facebook">'; ?></a></li>
+            <li><a target="_blank" href="https://twitter.com/GreatNationsEat"><?php print '<img id="social-footer" class="tw-footer" src="'.base_path() . path_to_theme() .'/images/TW-button.png" alt="Twitter">'; ?></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCG9wH0Fv57djKxjC0UhEehQ/feed"><?php print '<img id="social-footer" class="yt-footer" src="'.base_path() . path_to_theme() .'/images/YT-button.png" alt="youtube">'; ?></a></li>
+            <li><a target="_blank" href="https://instagram.com/greatnationseat"><?php print '<img id="social-footer" class="in-footer" src="'.base_path() . path_to_theme() .'/images/IN-button.png" alt="instagram">'; ?></a></li>
+            <li><a class="press-footer" target="_blank" href="https://greatnationseat.org/press/">Press</a></li>
+            <li><a href="mailto:info@greatnationseat.org?subject=Great Nations Eat website">Contact</a></li>
+            <li><a class="privacy-footer" target="_blank" href="https://greatnationseat.org/privacy.html">Privacy</a></li>
+            <li><a href="http://www.nokidhungry.org/" target="_blank" style="text-decoration:none;">&copy; 2015 GreatNationsEat.org - A Campaign of Share Our Strength</a></li>
+        </ul>
+    </div>
+</footer>
 
 </div>
 <script>
