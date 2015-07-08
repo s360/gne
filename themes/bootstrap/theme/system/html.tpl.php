@@ -54,7 +54,7 @@
   <meta name="google-site-verification" content="SBYFBO6sZv5-QsdCdeTDfdKT4M2bqesp6A_q8WNxwK0" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-touch-fullscreen" content="yes">
-  <meta></head>
+</head>
   <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-72x72.png">
