@@ -87,6 +87,15 @@ jQuery(document).ready(function() {
         notoolbar();
     }
 
+    jQuery(window).resize(function() {
+    	console.log('RESIZE');
+    	if(jQuery('body').hasClass('toolbar-drawer')){
+        intoolbar();
+    	}else{
+        notoolbar();
+    	}
+    });
+
     function intoolbar(){
         jQuery("#homepage").css({"height": window_height_2});
         jQuery("#wrap-page").css({"height": window_height_2});
