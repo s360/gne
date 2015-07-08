@@ -1123,9 +1123,16 @@ nav{
     font-smoothing: antialiased;
 }
 
+
+
 .col-md-8.about-main img.nkh-logo{
     width: 26%;
-    margin: 5px 30%;
+    margin: 5px 0;
+    float: left;
+}
+
+.about_inline{
+  
 }
 
 .col-md-8.about-main img.nkh-logo-white{
