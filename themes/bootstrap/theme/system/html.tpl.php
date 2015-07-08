@@ -53,7 +53,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
   <meta name="google-site-verification" content="SBYFBO6sZv5-QsdCdeTDfdKT4M2bqesp6A_q8WNxwK0" />
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-touch-fullscreen" content="yes">
 </head>
   <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/bootstrap/images/favicon/apple-touch-icon-60x60.png">
