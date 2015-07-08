@@ -2700,7 +2700,7 @@ h1.page-header{
 	border-bottom: 1px solid red;
 }
 
-/*iPhone 4 fix*/
+
 /*@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	.col-sm-4.onethird.one {
 		background-position: 85%;
@@ -2712,7 +2712,7 @@ h1.page-header{
 		background-position: 80%;
 	}
 }*/
-
+/*iPhone 4 fix*/
 @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
 	.col-sm-4.onethird.one {
 		background-position: 0px 20px;
@@ -2730,7 +2730,7 @@ h1.page-header{
 	height: 100%!important;
 }
 
-.node {
+.node.node-partner {
 	height: 100%!important;
 	overflow: inherit!important;
 }
