@@ -1127,12 +1127,14 @@ nav{
 
 .col-md-8.about-main img.nkh-logo{
     width: 26%;
-    margin: 5px 30px 5px 10%;
+    /*margin: 5px 30px 5px 10%;*/
     float: left;
 }
 
 .about_inline{
-
+  width: 64%;
+  float: left;
+  padding: 5px 30px 0 10%;
 }
 
 .col-md-8.about-main img.nkh-logo-white{
