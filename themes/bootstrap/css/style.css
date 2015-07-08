@@ -2718,3 +2718,19 @@ h1.page-header{
 		background-position: 0px 20px;
 	}
 }
+
+
+/*PARTNER PAGE FIX TODO: Move this to proper place*/
+
+#wrap-page {
+	height: initial!important;
+}
+
+.main-container {
+	height: 100%!important;
+}
+
+.node {
+	height: 100%!important;
+	overflow: inherit!important;
+}
