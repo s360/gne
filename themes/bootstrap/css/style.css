@@ -1576,7 +1576,7 @@ nav{
 		padding: 0 10%;
 	}
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
 	.donate-copy3.petition-subheader.stay-small{
 		width: 80%;
 		margin: 0 auto;
