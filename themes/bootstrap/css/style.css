@@ -129,7 +129,7 @@ body{
  font-weight: 700;
   letter-spacing: 2px;
   font-size: 0.8em;
-  border: none;
+  border: 1px solid #f20016;
 }
 .btn-donate:hover {
 	background: #fff;
