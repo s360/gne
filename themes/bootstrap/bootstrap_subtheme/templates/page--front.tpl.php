@@ -145,7 +145,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         		<input type="hidden" name="v" id="v" value="1.0" />
         		<input type="hidden" name="add_interest_ids" id="add_interest_ids" value="2641" />
         		<input type="hidden" name="response_format" id="response_format" value="json" />
-        		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361" />
+        		<input type="hidden" name="add_group_ids" id="add_group_ids" value="104402,104361,104881" />
                 <input type="hidden" name="source" class="ref_source" value="" />
                 <input type="hidden" name="sub_source" class="ref_sub_source" value="" />
         		<input type="hidden" name="name.first" id="first-name-overlay" />
