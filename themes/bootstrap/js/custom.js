@@ -514,7 +514,7 @@ jQuery(document).ready(function() {
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(storyThreeSubmit).hide();
 		    	jQuery('.petition-input.email4').removeClass('petition-error');
-		    	jQuery('.story-4-error').addClass('hidden');
+		    	jQuery('.story-3-error').addClass('hidden');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -530,7 +530,7 @@ jQuery(document).ready(function() {
 	    	} else {
 	    		console.log('invalid email');
 	    		jQuery('.petition-input.email4').addClass('petition-error');
-	    		jQuery('.story-4-error').removeClass('hidden');
+	    		jQuery('.story-3-error').removeClass('hidden');
 	    	}
 	    }
     });
