@@ -131,6 +131,11 @@ body{
   font-size: 0.8em;
   border: none;
 }
+.btn-donate:hover {
+	background: #fff;
+	color: #f20016;
+	border: 1px solid #f20016;
+}
 .navbar-default{
     background-color: transparent;
     border: 0px;
