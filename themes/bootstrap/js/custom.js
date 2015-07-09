@@ -121,7 +121,7 @@ jQuery(document).ready(function() {
 			var validator = /^[0-9]+$/;
 			return validator.test(zip);
 		}
-    jQuery('input.zip_sub').click(function(event) {
+    jQuery('a.zip_sub').click(function(event) {
         var zip = jQuery(this).prev('.zipcode').val();
         if (zipCheck(zip)){
         	jQuery('.zip-error').addClass('hidden');
