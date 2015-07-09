@@ -449,7 +449,7 @@ jQuery(document).ready(function() {
 		    		});
 	    	} else {
 	    		console.log('invalid email');
-	    		jQuery('.screening-input.email').addClass('petition-error');
+	    		jQuery('.screening-input.email').addClass('petition-error-box');
 	    	}
 
 	    }else if (jQuery(this).hasClass('petition-form-3')) {
