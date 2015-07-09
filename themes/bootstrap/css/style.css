@@ -1551,6 +1551,9 @@ nav{
   div#act div.col-md-4.act-content.hidden-xs {
     padding-bottom: 0;
   }
+  div.logo-container-mobile.visible-xs {
+  	display: block!important;
+  }
 }
 
 
