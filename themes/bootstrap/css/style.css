@@ -1075,7 +1075,11 @@ nav{
 		padding: 45px 85px 0 85px!important;
 	}
 }
-
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape) {
+	.about-content {
+		padding-left: 0px;
+	}
+}
 /**
  ===========================================
  ========== 6.a About Campaign =============
