@@ -87,14 +87,21 @@ jQuery(document).ready(function() {
         notoolbar();
     }
 
-    function intoolbar(){
-        jQuery("#homepage").css({"height": window_height_2});
-        jQuery("#container-slide-home").css({"height": window_height_2});
-        jQuery("#container-slide-home .views-row").css({"height": window_height_2});
+    // jQuery(window).resize(function() {	
+    // 	window_height = jQuery(window).height();
+    // 	window_height_2 =jQuery(window).height()-toolbar;
+    // 	if(jQuery('body').hasClass('toolbar-drawer')){
+    //     intoolbar();
+    // 	}else{
+    //     notoolbar();
+    // 	}
+    // });
 
+    function intoolbar(){
+    	console.log('intoolbar');
+        jQuery("#homepage").css({"height": window_height_2});
         jQuery("#wrap-page").css({"height": window_height_2});
-        jQuery("#container-slide-press").css({"height": window_height_2});
-        jQuery(".node-press-release").css({"height": window_height_2});
+        jQuery(".node").css({"height": window_height_2});
 
         if (window_height <= 700){
             jQuery('.petition-container').css({"height": "auto", "z-index": "99999"});
@@ -102,13 +109,10 @@ jQuery(document).ready(function() {
     }
 
     function notoolbar(){
+    		console.log('notoolbar');
         jQuery("#homepage").css({"height": window_height});
-        jQuery("#container-slide-home").css({"height": window_height});
-        jQuery("#container-slide-home .views-row").css({"height": window_height});
-
         jQuery("#wrap-page").css({"height": window_height});
-        jQuery("#container-slide-press").css({"height": window_height});
-        jQuery(".node-press-release").css({"height": window_height});
+        jQuery(".node").css({"height": window_height});
     }
 
     //act submit

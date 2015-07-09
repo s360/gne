@@ -644,7 +644,7 @@ nav{
 		position: relative;
  	 	width: 100%;
   	height: 30%;
-  	background-position: inherit;
+  	background-position: top;
 	}
 	.col-sm-4.col-xs-4.onethird.one {
   	margin-top: 55px;	
@@ -1007,7 +1007,7 @@ nav{
 		background-color: #ffffff;
 	}
 }
-@media (max-width: 992px){
+@media screen and (max-width: 992px) and (orientation: portrait){
 	.mobile-about-overlay {
 		display: block;
 	}
@@ -1046,19 +1046,40 @@ nav{
 	.about-copy {
 		color: #ffffff;
 		font-size: 1em;
+  	letter-spacing: .05em;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-font-smoothing: antialiased;
+  	font-smoothing: antialiased;
 	}
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-	.about-header {
+	.about-header,
+	.col-md-8.about-main h1
+	 {
 		margin-top: 45px;
 	}
 
 	.about-copy {
 		margin-bottom: 35px;
+		font-size: 1em;
+  	letter-spacing: .05em;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-font-smoothing: antialiased;
+  	font-smoothing: antialiased;
+	}
+	.about-container{
+		padding: 40px 100px 0 100px;
+	}
+	.col-md-8.about-main {
+		padding: 45px 85px 0 85px!important;
 	}
 }
-
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape) {
+	.about-content {
+		padding-left: 0px;
+	}
+}
 /**
  ===========================================
  ========== 6.a About Campaign =============
@@ -1087,7 +1108,7 @@ nav{
   color: #1268b3;
   margin-top: 40px;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   font-size: 2.5em;
   letter-spacing: .05em;
 }
@@ -1115,9 +1136,18 @@ nav{
     font-smoothing: antialiased;
 }
 
+
+
 .col-md-8.about-main img.nkh-logo{
-    width: 40%;
-    margin: 5px 30%;
+    width: 26%;
+    /*margin: 5px 30px 5px 10%;*/
+    float: left;
+}
+
+.about_inline{
+  width: 74%;
+  float: left;
+  padding: 5px 20px 0 10% !important;
 }
 
 .col-md-8.about-main img.nkh-logo-white{
@@ -1189,6 +1219,12 @@ nav{
 }
 
 @media (max-width: 992px){
+
+.about_inline{
+  width: 100%;
+  float: none;
+  padding: 5px 10% !important;
+}
   .col-md-8.about-main h1{
     font-size: 1.5em;
     letter-spacing: .05em;
@@ -1238,7 +1274,7 @@ nav{
 
 .col-md-8.about-main img.nkh-logo-white{
      width: 40%;
-    margin: 5px 30%;
+    margin: 5px 30% 20px 30%;
     display: block;
 }
 }
@@ -1576,7 +1612,7 @@ nav{
 		padding: 0 10%;
 	}
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
 	.donate-copy3.petition-subheader.stay-small{
 		width: 80%;
 		margin: 0 auto;
@@ -2533,7 +2569,6 @@ h1.page-header{
  #partners, #digital-partners, #broadcast-partners, #print-partners, #print-partners-2, #ooh-partners{
   padding: 0px 5%;
   padding-top: 50px;
-  overflow-y: auto; 
   height: 100%;
  }
 
@@ -2607,19 +2642,19 @@ h1.page-header{
     font-size: 1.2em;
   }
 
-@media (min-width: 768px){
+@media (min-width: 769px){
 
 
-.partner_logos{
-  margin-top: 80px
-}
-  .partner_content{
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+	.partner_logos{
+	  margin-top: 80px
+	}
+	  .partner_content{
+	  position: relative;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
   .partner_content ul{
     list-style: none;
       column-gap: 10px;
@@ -2637,7 +2672,24 @@ h1.page-header{
       column-gap: 40px;
   }
 }
-
+/*Ipad 1,2,mini*/
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) {
+	.partner-logo {
+	  width: 20%;
+	  height: 100px;
+	  margin: 10px 2%;
+	  float: left;
+	}
+}
+/*ipad 3,4*/
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+	.partner-logo {
+	  width: 20%;
+	  height: 100px;
+	  margin: 10px 2%;
+	  float: left;
+	}	
+}
 /**
  ===========================================
  =============== 12. Error==================
@@ -2651,7 +2703,7 @@ h1.page-header{
 	border-bottom: 1px solid red;
 }
 
-/*iPhone 4 fix*/
+
 /*@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	.col-sm-4.onethird.one {
 		background-position: 85%;
@@ -2663,9 +2715,27 @@ h1.page-header{
 		background-position: 80%;
 	}
 }*/
-
+/*iPhone 4 fix*/
 @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
 	.col-sm-4.onethird.one {
 		background-position: 0px 20px;
+	}
+}
+
+
+/*PARTNER PAGE FIX TODO: Move this to proper place*/
+
+#wrap-page {
+	height: initial!important;
+}
+
+.main-container {
+	height: 100%!important;
+}
+
+@media(max-width: 768px) {
+	.node.node-partner {
+		height: 100%!important;
+		overflow: inherit!important;
 	}
 }
