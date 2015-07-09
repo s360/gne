@@ -2727,17 +2727,6 @@ h1.page-header{
 	color: red;
 }
 
-/*@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
-	.col-sm-4.onethird.one {
-		background-position: 85%;
-	}
-	.col-sm-4.onethird.two { 
-		background-position: 42%;
-	}
-	.col-sm-4.onethird.three {
-		background-position: 80%;
-	}
-}*/
 /*iPhone 4 fix*/
 @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
 	.col-sm-4.onethird.one {
@@ -2746,7 +2735,7 @@ h1.page-header{
 }
 
 
-/*PARTNER PAGE FIX TODO: Move this to proper place*/
+/*PARTNER/PRESS PAGE FIX TODO: Move this to proper place*/
 
 #wrap-page {
 	height: initial!important;

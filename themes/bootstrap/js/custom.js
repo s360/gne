@@ -98,7 +98,6 @@ jQuery(document).ready(function() {
     // });
 
     function intoolbar(){
-    	console.log('intoolbar');
         jQuery("#homepage").css({"height": window_height_2});
         jQuery("#wrap-page").css({"height": window_height_2});
         jQuery(".node").css({"height": window_height_2});
@@ -109,7 +108,6 @@ jQuery(document).ready(function() {
     }
 
     function notoolbar(){
-    		console.log('notoolbar');
         jQuery("#homepage").css({"height": window_height});
         jQuery("#wrap-page").css({"height": window_height});
         jQuery(".node").css({"height": window_height});
@@ -389,7 +387,6 @@ jQuery(document).ready(function() {
 		    			console.log('error');
 		    		});
 	    	} else {
-	    		console.log('invalid email');
 	    		// jQuery(invalidEmail).removeClass('hidden');
 	    		jQuery('.petition-input.emailOverlay').addClass('petition-error');
 	    	}
@@ -427,7 +424,6 @@ jQuery(document).ready(function() {
 		    			// jQuery('#petition-form').hide();
 		    		});
 	    	} else {
-	    		console.log('invalid email');
 	    		jQuery('.petition-input.email2').addClass('petition-error');
 	    		jQuery('.story-1-error').removeClass('hidden');
 	    	}
@@ -451,7 +447,6 @@ jQuery(document).ready(function() {
 		    			// jQuery('#petition-form').hide();
 		    		});
 	    	} else {
-	    		console.log('invalid email');
 	    		jQuery('.screening-input.email').addClass('petition-error-box');
 	    		jQuery('.screening-email-error').removeClass('hidden');
 	    	}
@@ -490,7 +485,6 @@ jQuery(document).ready(function() {
 		    			// jQuery('#petition-form').hide();
 		    		});
 	    	} else {
-	    		console.log('invalid email');
 	    		jQuery('.petition-input.email3').addClass('petition-error');
 	    		jQuery('.story-2-error').removeClass('hidden');
 	    	}
@@ -528,7 +522,6 @@ jQuery(document).ready(function() {
 		    			// jQuery('#petition-form').hide();
 		    		});
 	    	} else {
-	    		console.log('invalid email');
 	    		jQuery('.petition-input.email4').addClass('petition-error');
 	    		jQuery('.story-3-error').removeClass('hidden');
 	    	}
