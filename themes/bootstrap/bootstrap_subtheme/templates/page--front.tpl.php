@@ -475,6 +475,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <input type="text" class="screening-input half one" name="name.first" placeholder="First Name*" required/>
             <input type="text" class="screening-input half" name="name.last" placeholder="Last Name*"required />
             <input type="text" class="screening-input" placeholder="Organization" />
+            <span class="screening-email-error hidden">*Invalid Email</span>
             <input type="text" class="screening-input email" name="primary_email" placeholder="Email Address*" required/>
             <input type="text" class="screening-input" name="home_phone" placeholder="Contact Number" />
             <button id="screening-submit" class="btn-content screening">Submit Form</button>

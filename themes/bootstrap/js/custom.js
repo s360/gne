@@ -434,6 +434,7 @@ jQuery(document).ready(function() {
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(screeningSubmit).hide();
 		    	jQuery('.screening-input.email').removeClass('petition-error-box');
+		    	jQuery('.screening-email-error').addClass('hidden');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -450,6 +451,7 @@ jQuery(document).ready(function() {
 	    	} else {
 	    		console.log('invalid email');
 	    		jQuery('.screening-input.email').addClass('petition-error-box');
+	    		jQuery('.screening-email-error').removeClass('hidden');
 	    	}
 
 	    }else if (jQuery(this).hasClass('petition-form-3')) {
