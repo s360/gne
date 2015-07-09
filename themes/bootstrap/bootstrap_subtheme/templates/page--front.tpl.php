@@ -660,7 +660,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     });
     screeningClose.addEventListener('click', function() {
         screeningOverlay.classList.add('hidden');
-    })
+    });
 </script>
 <script type="text/javascript"> 
 	// RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES 

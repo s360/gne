@@ -442,7 +442,7 @@ jQuery(document).ready(function() {
 		    		function(data) {
 		    			hideOnSuccess.hide();
 		    			showOnSuccess.removeClass('hidden');
-		    			jQuery('#screening-container').hide();
+		    			jQuery('#screening-container').addClass('hidden');
 		    			jQuery(thankyouContainer).removeClass('hidden');
 		    			ga('send', 'event', 'button', 'join-confirmation');
 		    		}).error(function(data) {
