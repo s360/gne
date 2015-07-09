@@ -968,7 +968,7 @@ nav{
   font-size: 1.2em;
   letter-spacing: .1em;
 }
-@media (min-width: 992px) and(orientation: portrait){
+@media (min-width: 992px){
 	.mobile-about-overlay {
 		display: none;
 	}
@@ -1007,7 +1007,7 @@ nav{
 		background-color: #ffffff;
 	}
 }
-@media (max-width: 992px){
+@media screen and (max-width: 992px) and (orientation: portrait){
 	.mobile-about-overlay {
 		display: block;
 	}
