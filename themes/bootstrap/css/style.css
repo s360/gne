@@ -2708,7 +2708,10 @@ h1.page-header{
 	border: 1px solid red;
 }
 
-.screening-email-error {
+.screening-email-error,
+.story-1-error,
+.story-2-error,
+.story-3-error {
 	color: red;
 }
 

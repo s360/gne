@@ -413,6 +413,7 @@ jQuery(document).ready(function() {
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(storyOneSubmit).hide();
 		    	jQuery('.petition-input.email2').removeClass('petition-error');
+		    	jQuery('.story-1-error').addClass('hidden');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -428,6 +429,7 @@ jQuery(document).ready(function() {
 	    	} else {
 	    		console.log('invalid email');
 	    		jQuery('.petition-input.email2').addClass('petition-error');
+	    		jQuery('.story-1-error').removeClass('hidden');
 	    	}
 	    }else if (jQuery(this).hasClass('screening-form')) {
 		    var userEmail = jQuery('.screening-input.email').val();
@@ -512,6 +514,7 @@ jQuery(document).ready(function() {
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(storyThreeSubmit).hide();
 		    	jQuery('.petition-input.email4').removeClass('petition-error');
+		    	jQuery('.story-4-error').addClass('hidden');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -527,6 +530,7 @@ jQuery(document).ready(function() {
 	    	} else {
 	    		console.log('invalid email');
 	    		jQuery('.petition-input.email4').addClass('petition-error');
+	    		jQuery('.story-4-error').removeClass('hidden');
 	    	}
 	    }
     });
