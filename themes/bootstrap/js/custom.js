@@ -87,15 +87,15 @@ jQuery(document).ready(function() {
         notoolbar();
     }
 
-    jQuery(window).resize(function() {	
-    	window_height = jQuery(window).height();
-    	window_height_2 =jQuery(window).height()-toolbar;
-    	if(jQuery('body').hasClass('toolbar-drawer')){
-        intoolbar();
-    	}else{
-        notoolbar();
-    	}
-    });
+    // jQuery(window).resize(function() {	
+    // 	window_height = jQuery(window).height();
+    // 	window_height_2 =jQuery(window).height()-toolbar;
+    // 	if(jQuery('body').hasClass('toolbar-drawer')){
+    //     intoolbar();
+    // 	}else{
+    //     notoolbar();
+    // 	}
+    // });
 
     function intoolbar(){
     	console.log('intoolbar');
