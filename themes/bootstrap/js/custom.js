@@ -433,7 +433,7 @@ jQuery(document).ready(function() {
 		    var userEmail = jQuery('.screening-input.email').val();
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(screeningSubmit).hide();
-		    	jQuery('.screening-input.email').removeClass('petition-error');
+		    	jQuery('.screening-input.email').removeClass('petition-error-box');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {

@@ -2703,6 +2703,9 @@ h1.page-header{
 	border-bottom: 1px solid red;
 }
 
+.petition-error-box {
+	border: 1px solid red;
+}
 
 /*@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	.col-sm-4.onethird.one {
