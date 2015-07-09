@@ -412,7 +412,7 @@ jQuery(document).ready(function() {
 		    }
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(storyOneSubmit).hide();
-		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery('.petition-input.email2').removeClass('petition-error');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -427,13 +427,13 @@ jQuery(document).ready(function() {
 		    		});
 	    	} else {
 	    		console.log('invalid email');
-	    		// jQuery(invalidEmail).removeClass('hidden');
+	    		jQuery('.petition-input.email2').addClass('petition-error');
 	    	}
 	    }else if (jQuery(this).hasClass('screening-form')) {
 		    var userEmail = jQuery('.screening-input.email').val();
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(screeningSubmit).hide();
-		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery('.screening-input.email').removeClass('petition-error');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -449,7 +449,7 @@ jQuery(document).ready(function() {
 		    		});
 	    	} else {
 	    		console.log('invalid email');
-	    		// jQuery(invalidEmail).removeClass('hidden');
+	    		jQuery('.screening-input.email').addClass('petition-error');
 	    	}
 
 	    }else if (jQuery(this).hasClass('petition-form-3')) {
@@ -471,7 +471,7 @@ jQuery(document).ready(function() {
 		    }
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(storyTwoSubmit).hide();
-		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery('.petition-input.email3').removeClass('petition-error');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -486,7 +486,7 @@ jQuery(document).ready(function() {
 		    		});
 	    	} else {
 	    		console.log('invalid email');
-	    		// jQuery(invalidEmail).removeClass('hidden');
+	    		jQuery('.petition-input.email3').addClass('petition-error');
 	    	}
 	    }else {
 		  	var fullName = jQuery('.petition-input.name4').val().trim();
@@ -507,7 +507,7 @@ jQuery(document).ready(function() {
 		    }
 		    if ( validateEmail(userEmail) ) {
 		    	jQuery(storyThreeSubmit).hide();
-		    	// jQuery(invalidEmail).addClass('hidden');
+		    	jQuery('.petition-input.email4').removeClass('petition-error');
 		    	jQuery.post(jQuery(this).attr('action'),
 		    	jQuery(this).serialize(),
 		    		function(data) {
@@ -522,7 +522,7 @@ jQuery(document).ready(function() {
 		    		});
 	    	} else {
 	    		console.log('invalid email');
-	    		// jQuery(invalidEmail).removeClass('hidden');
+	    		jQuery('.petition-input.email4').addClass('petition-error');
 	    	}
 	    }
     });
