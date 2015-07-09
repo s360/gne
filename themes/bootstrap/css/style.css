@@ -1730,7 +1730,7 @@ nav{
 	background: #f20016;
 	text-align: center;
 	text-transform: uppercase;
-	border: 0px;
+	border: 1px solid #f20016;
 	outline: none;	
 	white-space: nowrap;
 	font-size: 1.1em;
