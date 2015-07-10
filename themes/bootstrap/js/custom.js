@@ -115,9 +115,8 @@ jQuery(document).ready(function() {
         jQuery("#wrap-page").css({"height": window_height});
         jQuery(".node").css({"height": window_height});
     }
-
+});
     //act submit
-
 		function zipCheck(zip) {
 			var validator = /^[0-9]+$/;
 			return validator.test(zip);
