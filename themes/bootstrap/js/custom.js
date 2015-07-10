@@ -89,7 +89,7 @@ jQuery(document).ready(function() {
 
     jQuery(window).resize(function() {	
     	if(jQUery('.view-partner-page').length > 0) {
-    		console.log('partner page')
+    		console.log('partner page');
     		window_height = jQuery(window).height();
     		window_height_2 =jQuery(window).height()-toolbar;
     		if(jQuery('body').hasClass('toolbar-drawer')){
