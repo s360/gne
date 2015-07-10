@@ -2661,13 +2661,7 @@ h1.page-header{
 	.partner_logos{
 	  margin-top: 80px
 	}
-	  .partner_content{
-	  position: relative;
-	  top: 50%;
-	  -webkit-transform: translateY(-50%);
-	  -ms-transform: translateY(-50%);
-	  transform: translateY(-50%);
-	}
+
   .partner_content ul{
     list-style: none;
       column-gap: 10px;
@@ -2684,6 +2678,15 @@ h1.page-header{
       -moz-column-gap: 40px; /* Firefox */
       column-gap: 40px;
   }
+}
+@media (min-width: 890px) {
+ .partner_content{
+	  position: relative;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
 }
 /*Ipad 1,2,mini*/
 @media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) {
