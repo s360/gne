@@ -87,15 +87,18 @@ jQuery(document).ready(function() {
         notoolbar();
     }
 
-    // jQuery(window).resize(function() {	
-    // 	window_height = jQuery(window).height();
-    // 	window_height_2 =jQuery(window).height()-toolbar;
-    // 	if(jQuery('body').hasClass('toolbar-drawer')){
-    //     intoolbar();
-    // 	}else{
-    //     notoolbar();
-    // 	}
-    // });
+    jQuery(window).resize(function() {	
+    	if(jQUery('.view-partner-page').length > 0) {
+    		console.log('partner page')
+    		window_height = jQuery(window).height();
+    		window_height_2 =jQuery(window).height()-toolbar;
+    		if(jQuery('body').hasClass('toolbar-drawer')){
+      	  intoolbar();
+    		}else{
+      	  notoolbar();
+    		}
+  		}
+    });
 
     function intoolbar(){
         jQuery("#homepage").css({"height": window_height_2});
