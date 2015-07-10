@@ -2679,7 +2679,7 @@ h1.page-header{
       column-gap: 40px;
   }
 }
-@media (min-width: 890px) {
+@media (min-width: 1300px) {
  .partner_content{
 	  position: relative;
 	  top: 50%;
