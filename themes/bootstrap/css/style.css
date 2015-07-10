@@ -2693,6 +2693,9 @@ h1.page-header{
 	  margin: 10px 2%;
 	  float: left;
 	}
+	.petition-input {
+		width: 80%;
+	}
 }
 /*ipad 3,4*/
 @media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
@@ -2702,6 +2705,9 @@ h1.page-header{
 	  margin: 10px 2%;
 	  float: left;
 	}	
+	.petition-input {
+		width: 80%;
+	}
 }
 /**
  ===========================================
