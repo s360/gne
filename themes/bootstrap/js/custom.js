@@ -88,7 +88,7 @@ jQuery(document).ready(function() {
     }
 
     jQuery(window).resize(function() {	
-    	if(jQUery('.view-partner-page').length) {
+    	if(jQuery('.view-partner-page').length) {
     		console.log('partner page');
     		window_height = jQuery(window).height();
     		window_height_2 =jQuery(window).height()-toolbar;
