@@ -2746,7 +2746,7 @@ h1.page-header{
 
 /*PARTNER/PRESS PAGE FIX TODO: Move this to proper place*/
 
-/*#wrap-page {
+#wrap-page {
 	height: initial!important;
 }
 
@@ -2759,4 +2759,4 @@ h1.page-header{
 		height: 100%!important;
 		overflow: inherit!important;
 	}
-}*/
+}
