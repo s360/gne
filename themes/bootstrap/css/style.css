@@ -1579,9 +1579,6 @@ nav{
  	width: 100%;
  	text-align: center;
  	float: left;
-  position: absolute;
-  bottom: 10px;
-  z-index: -1;
 
  }
  .digicert-container {
@@ -1638,11 +1635,13 @@ nav{
 	#step-3 {
 		padding: 0 10%;
 	}
+  .ssl-container {
+    position: absolute;
+    bottom: 10px;
+    z-index: -1;
 
-  .ssl-container{
-    position: relative;
-    
-  }
+ }
+
 }
 @media (max-width: 767px){
 	.donate-copy3.petition-subheader.stay-small{
@@ -1655,6 +1654,11 @@ nav{
   	width: 40%;
   	margin: 10px 30%;
 	}
+
+    .ssl-container{
+    position: relative;
+    
+  }
 }
 
 /**
