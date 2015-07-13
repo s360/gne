@@ -2446,7 +2446,7 @@ cursor: pointer;
   clear: both;
 }
 
-.sp_fb_large a, sp_tw_large a{
+.sp_fb_large a, .sp_tw_large a{
   font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
