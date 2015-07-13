@@ -423,6 +423,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <!-- <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/> -->
         									  <div class="monthly-container">
         									  	<input type="checkbox" id="sustaining_gift" name="sustaining.frequency" value="monthly"/>&nbsp;Want to give monthly? A monthly gift does even more to help hungry kids.<br/>
+        									  	<input type="hidden" id="sustaining_duration" name="sustaining.duration" />
 														</div>
 <!--                 						<div id="sustaining_duration_field" style="display:none;"><br />
         											<label for="sustaining_duration">Continue giving </label>
@@ -551,19 +552,19 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		var stepThree  = jQuery('#step-three');
 		var amountSelected = false;
 
-		function showIfChecked(checkCtrl, targetDiv) {
-	    if (document.getElementById(checkCtrl).checked == true) {
-	      document.getElementById(targetDiv).style.display = "inline";
-	    } else {
-	      document.getElementById(targetDiv).style.display = "none";
-	    }
-  	}
-		jQuery('#one_time_gift').click(function() {
-			showIfChecked('sustaining_gift', 'sustaining_duration_field');
-		});
-		jQuery('#sustaining_gift').click(function() {
-			showIfChecked('sustaining_gift', 'sustaining_duration_field');
-		});
+		// function showIfChecked(checkCtrl, targetDiv) {
+	 //    if (document.getElementById(checkCtrl).checked == true) {
+	 //      document.getElementById(targetDiv).style.display = "inline";
+	 //    } else {
+	 //      document.getElementById(targetDiv).style.display = "none";
+	 //    }
+  // 	}
+		// jQuery('#one_time_gift').click(function() {
+		// 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		// });
+		// jQuery('#sustaining_gift').click(function() {
+		// 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		// });
 
 		if(!jQuery('body').find('.wrap-amount').find('input[type="radio"]').is(':checked')){
 			nextDonate.addClass('btnDisabledHref');
