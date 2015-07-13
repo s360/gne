@@ -422,7 +422,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             
                             <!-- <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/> -->
         									  <div class="monthly-container">
-        									  	<input type="checkbox" id="sustaining_gift" name="sustaining.frequency" value="monthly"/>&nbsp;Give monthly. A monthly gift does even more to help hungry kids.<br/>
+        									  	<input type="checkbox" id="sustaining_gift" name="sustaining.frequency" value="monthly"/>&nbsp;Want to give monthly? A monthly gift does even more to help hungry kids.<br/>
 														</div>
 <!--                 						<div id="sustaining_duration_field" style="display:none;"><br />
         											<label for="sustaining_duration">Continue giving </label>
