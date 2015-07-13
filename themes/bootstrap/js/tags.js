@@ -63,7 +63,7 @@ jQuery( document ).ready(function() {
     	ga('send', 'event', 'donate', 'donate - step one');
     	dc_tracker('donate1', 2551299);
     });
-    jQuery('.nextBtn-old.step2').click(function(){ 
+    jQuery('.nextBtn.step2').click(function(){ 
     	ga('send', 'event', 'donate', 'donate - step two');
     	dc_tracker('donate2', 2551127);
     });
