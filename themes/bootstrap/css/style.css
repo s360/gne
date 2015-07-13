@@ -2788,6 +2788,7 @@ h1.page-header{
 	height: initial!important;
 }
 
+/*main container sets height at 100% relative to #wrap-page*/
 .main-container {
 	height: 100%!important;
 }
@@ -2795,6 +2796,6 @@ h1.page-header{
 @media(max-width: 768px) {
 	.node.node-partner {
 		height: 100%!important;
-		overflow: inherit!important;
+		/*overflow: inherit!important;*/
 	}
 }
