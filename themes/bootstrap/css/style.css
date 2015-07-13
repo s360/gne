@@ -2016,6 +2016,10 @@ nav{
     
 }
 
+.monthly-container {
+	text-align: center;
+}
+
 .stepwizard-step {
     display: table-cell;
     text-align: center;
