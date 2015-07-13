@@ -2796,6 +2796,6 @@ h1.page-header{
 @media(max-width: 768px) {
 	.node.node-partner {
 		height: 100%!important;
-		/*overflow: inherit!important;*/
+		overflow: inherit!important;
 	}
 }
