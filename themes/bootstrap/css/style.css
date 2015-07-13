@@ -1581,6 +1581,7 @@ nav{
  	float: left;
   position: absolute;
   bottom: 10px;
+  z-index: -1;
  }
  .digicert-container {
  }
