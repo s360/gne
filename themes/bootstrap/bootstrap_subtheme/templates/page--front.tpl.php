@@ -223,9 +223,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 							 </div>
 							 
                              
-		<div class="nextBtn">
+		<div id="key-next-step" class="nextBtn">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
-                            <a id="key-next-step" href="#" class="nextBtn-old">Next Step</a>
+                            <a  href="#" class="nextBtn-old">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             </div>
                         </div>
