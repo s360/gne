@@ -88,6 +88,7 @@
                 window.scrollTo(0, 0);
                 if($('#sustaining_gift').prop('checked')){
                 	$('#sustaining_duration').value = '0';
+                	console.log('sustaining');
                 }
                 $('#form_id').val(formId);
                 $('#donate-submit').prop('disabled', true);
