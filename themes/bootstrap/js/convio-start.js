@@ -162,7 +162,6 @@
                     
                     if($('#tracking-donate').length > 0) $('#tracking-donate').remove();
 
-                    console.log(trackingHtml);
                     
                     $(trackingHtml).appendTo('body');
                 }
