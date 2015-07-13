@@ -227,7 +227,7 @@ nav{
 .top-navigation{
     display: block;
     float: left;
-    margin-top: -500px;
+    margin-top: -600px;
     transition: 1s;
     -webkit-transition: 1s;
     color: #ffffff;
