@@ -5,9 +5,15 @@
 
 var lochash = window.location.hash;
 
-function dc_tracker(cat_name) {
+function dc_tracker(cat_name, id) {
+		var a;
     var axel = Math.random() + "";
-    var a = axel * 10000000000000;
+    if(id){
+    	a = id;
+    }else {
+    	a = axel * 10000000000000;	
+    }
+    
    // document.write("<iframe src=\"https://4652923.fls.doubleclick.net/activityi;src=4652923;type=2015_0;cat="+cat_name+";ord=" + a + "?\" width=\"1\" height=\"1\" frameborder=\"0\" style=\"display:none\"><\/iframe>");
     iframe = jQuery('<iframe src="https://4652923.fls.doubleclick.net/activityi;src=4652923;type=2015_0;cat='+cat_name+';ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none">');
     iframe.appendTo('body');
@@ -20,15 +26,15 @@ if(location.pathname == "/" && lochash == '') {
 
 jQuery( document ).ready(function() {
     //jQuery("#overlay-submit").click( function() { dc_tracker('join0') });
-    jQuery('#donate-nav').click( function() { dc_tracker('donate0') });
-    jQuery('input.zip_sub').click( function() { dc_tracker('involve0') });
+    jQuery('#donate-nav').click( function() { dc_tracker('donate0', null) });
+    jQuery('input.zip_sub').click( function() { dc_tracker('involve0', null) });
     //jQuery('.petition-submit').not('#donate-submit').click( function() { dc_tracker('join0') });
-    jQuery('#overlay-submit').click( function() { dc_tracker('join0') });
-    jQuery('#story-submit-2').click( function() { dc_tracker('join0') });
-    jQuery('#story-submit-3').click( function() { dc_tracker('join0') });
-    jQuery('#story-submit-4').click( function() { dc_tracker('join0') });
-    jQuery('.fb-footer').click( function() { dc_tracker('share_fb') });
-    jQuery('.tw-footer').click( function() { dc_tracker('share_tw') });
+    jQuery('#overlay-submit').click( function() { dc_tracker('join0', null) });
+    jQuery('#story-submit-2').click( function() { dc_tracker('join0', null) });
+    jQuery('#story-submit-3').click( function() { dc_tracker('join0', null) });
+    jQuery('#story-submit-4').click( function() { dc_tracker('join0', null) });
+    jQuery('.fb-footer').click( function() { dc_tracker('share_fb', null) });
+    jQuery('.tw-footer').click( function() { dc_tracker('share_tw', null) });
 
     //GA Tags
     jQuery('#overlay-submit').click(function(){ ga('send', 'event', 'button', 'join'); });
@@ -51,8 +57,14 @@ jQuery( document ).ready(function() {
     jQuery('.help-kids').click(function(){ ga('send', 'event', 'act-page', 'help kids') });
 
     jQuery('#donate-submit').click(function(){ ga('send', 'event', 'donate', 'donate submit(click only)'); });
-    jQuery('#key-next-step').click(function(){ ga('send', 'event', 'donate', 'donate - step one')});
-    jQuery('.nextBtn-old.step2').click(function(){ ga('send', 'event', 'donate', 'donate - step two')});
+    jQuery('#key-next-step').click(function(){ 
+    	ga('send', 'event', 'donate', 'donate - step one');
+    	dc_tracker('donate1', 2551299);
+    });
+    jQuery('.nextBtn.step2').click(function(){ 
+    	ga('send', 'event', 'donate', 'donate - step two');
+    	dc_tracker('donate2', 2551127);
+    });
 
     
 

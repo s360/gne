@@ -174,6 +174,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 <div id="donation-overlay-container" class="donation-overlay-container hidden">
 <div class='full_overlay'></div>
 <div class="donation-container petition-container">
+    <div class="donation-relative">
     <span id="donate-close" class="donate-close close-petition"></span>
     <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
     <div class="col-md-6" id="donate-copy-col">
@@ -223,15 +224,15 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 							 </div>
 							 
                              
-		<div class="nextBtn">
+		<div id="key-next-step" class="nextBtn">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
-                            <a id="key-next-step" href="#" class="nextBtn-old">Next Step</a>
+                            <a  href="#" class="nextBtn-old">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row setup-content " id="step-2">
+                <div class="row setup-content" id="step-2">
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center">Enter Billing Information</h3>
@@ -358,9 +359,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <input maxlength="200" type="email" required="required" name="donor.email" class="form-control" placeholder="Email Address*" />
                                 </div>
                             </div>
-	<div class="nextBtn">
+	<div class="nextBtn step2">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
-                            <a href="#" class="nextBtn-old step2">Next Step</a>
+                            <a href="#" class="nextBtn-old">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             </div>
                         </div>
@@ -418,9 +419,13 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     </div>
                                 </div>
                             </div>
+                            
                             <!-- <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/> -->
-        									  <input type="checkbox" id="sustaining_gift" name="sustaining.frequency" value="monthly"/>&nbsp;A monthly gift does even more to help hungry kids.<br/>
-                						<div id="sustaining_duration_field" style="display:none;"><br />
+        									  <div class="monthly-container">
+        									  	<input type="checkbox" id="sustaining_gift" name="sustaining.frequency" value="monthly"/>&nbsp;Want to give monthly? A monthly gift does even more to help hungry kids.<br/>
+        									  	<input type="hidden" id="sustaining_duration" name="sustaining.duration" />
+														</div>
+<!--                 						<div id="sustaining_duration_field" style="display:none;"><br />
         											<label for="sustaining_duration">Continue giving </label>
         											<select name="sustaining.duration" id="sustaining_duration">
 					      						    <option value="3">3 months</option>
@@ -428,7 +433,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 					      						    <option value="12">1 year</option>
 					      						    <option value="0">Indefinitely</option>
 					      						  </select><br />
-       											</div>
+       											</div> -->
                             <div class="form-group">
                             <input type="hidden" name="send_receipt" value="true">
                                 <!-- <input type="hidden" name="df_preview" value="test"> -->
@@ -452,6 +457,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
       var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_d6BMwOpS", "5", "s", "black", "d6BMwOpS"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
       </script>
       <!-- End DigiCert site seal HTML and JavaScript --></div>
+</div>
 </div>
 </div>
 
@@ -545,20 +551,29 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		var stepTwo    = jQuery('#step-two');
 		var stepThree  = jQuery('#step-three');
 		var amountSelected = false;
-
-		function showIfChecked(checkCtrl, targetDiv) {
-	    if (document.getElementById(checkCtrl).checked == true) {
-	      document.getElementById(targetDiv).style.display = "inline";
-	    } else {
-	      document.getElementById(targetDiv).style.display = "none";
-	    }
-  	}
-		jQuery('#one_time_gift').click(function() {
-			showIfChecked('sustaining_gift', 'sustaining_duration_field');
-		});
+    
 		jQuery('#sustaining_gift').click(function() {
-			showIfChecked('sustaining_gift', 'sustaining_duration_field');
+    	if(jQuery('#sustaining_gift').prop('checked')){
+    		jQuery('#sustaining_duration').val('0');
+    		console.log('sustaining');
+    	}else {
+    		jQuery('#sustaining_duration').val('');
+    	}
 		});
+
+		// function showIfChecked(checkCtrl, targetDiv) {
+	 //    if (document.getElementById(checkCtrl).checked == true) {
+	 //      document.getElementById(targetDiv).style.display = "inline";
+	 //    } else {
+	 //      document.getElementById(targetDiv).style.display = "none";
+	 //    }
+  // 	}
+		// jQuery('#one_time_gift').click(function() {
+		// 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		// });
+		// jQuery('#sustaining_gift').click(function() {
+		// 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+		// });
 
 		if(!jQuery('body').find('.wrap-amount').find('input[type="radio"]').is(':checked')){
 			nextDonate.addClass('btnDisabledHref');

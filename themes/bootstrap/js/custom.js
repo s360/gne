@@ -87,15 +87,18 @@ jQuery(document).ready(function() {
         notoolbar();
     }
 
-    // jQuery(window).resize(function() {	
-    // 	window_height = jQuery(window).height();
-    // 	window_height_2 =jQuery(window).height()-toolbar;
-    // 	if(jQuery('body').hasClass('toolbar-drawer')){
-    //     intoolbar();
-    // 	}else{
-    //     notoolbar();
-    // 	}
-    // });
+    jQuery(window).resize(function() {	
+    	if(jQuery('.view-partner-page').length) {
+    		console.log('partner page');
+    		window_height = jQuery(window).height();
+    		window_height_2 =jQuery(window).height()-toolbar;
+    		if(jQuery('body').hasClass('toolbar-drawer')){
+      	  intoolbar();
+    		}else{
+      	  notoolbar();
+    		}
+  		}
+    });
 
     function intoolbar(){
         jQuery("#homepage").css({"height": window_height_2});
@@ -112,9 +115,7 @@ jQuery(document).ready(function() {
         jQuery("#wrap-page").css({"height": window_height});
         jQuery(".node").css({"height": window_height});
     }
-
     //act submit
-
 		function zipCheck(zip) {
 			var validator = /^[0-9]+$/;
 			return validator.test(zip);
