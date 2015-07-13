@@ -2785,7 +2785,7 @@ h1.page-header{
 /*PARTNER/PRESS PAGE FIX TODO: Move this to proper place*/
 
 #wrap-page {
-	/*height: initial!important;*/
+	height: initial!important;
 }
 
 /*main container sets height at 100% relative to #wrap-page*/
