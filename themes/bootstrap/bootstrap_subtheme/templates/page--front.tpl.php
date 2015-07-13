@@ -231,7 +231,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                         </div>
                     </div>
                 </div>
-                <div class="row setup-content " id="step-2">
+                <div class="row setup-content" id="step-2">
                     <div class="col-xs-12">
                         <div class="col-md-12">
                             <h3 style="text-align: center">Enter Billing Information</h3>
@@ -358,9 +358,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                                     <input maxlength="200" type="email" required="required" name="donor.email" class="form-control" placeholder="Email Address*" />
                                 </div>
                             </div>
-	<div class="nextBtn">
+	<div class="nextBtn step2">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
-                            <a href="#" class="nextBtn-old step2">Next Step</a>
+                            <a href="#" class="nextBtn-old">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             </div>
                         </div>
