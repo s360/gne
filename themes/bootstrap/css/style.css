@@ -646,7 +646,7 @@ nav{
 	}
 	.bottom-overlay {
     background-color: rgba(0,0,0,1);
-		height: 16%;
+		height: 90px;
   	top: 0;
   	padding-top: 17px;
 	}
@@ -655,11 +655,11 @@ nav{
 	.col-sm-4.col-xs-4.onethird.three{
 		position: relative;
  	 	width: 100%;
-  	height: 28%;
+  	height: 30%;
   	background-position: top;
 	}
 	.col-sm-4.col-xs-4.onethird.one {
-  	margin-top: 16%;	
+  	margin-top: 55px;	
 	}
 
 	.col-sm-4.page1-btn-container {
