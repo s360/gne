@@ -1880,6 +1880,8 @@ nav{
 	.petition-submit {
 		font-size: 12px;
     margin-top: 10px;
+    padding: 10px 0px;
+    width: 100%;
 	}
 
   .petition-sub{
