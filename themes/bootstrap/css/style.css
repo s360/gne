@@ -1276,63 +1276,73 @@ nav{
 
 @media (max-width: 992px){
 
-.about_inline{
-  width: 100%;
-  float: none;
-  padding: 5px 10% !important;
-}
-  .col-md-8.about-main h1{
-    font-size: 1.5em;
-    letter-spacing: .05em;
-    /*padding-top: 60px !important;
-    margin-bottom: 0;*/
-    padding: 0 !important;
-    margin-bottom: 10px;
-    padding-left: 14% !important;
-}
-  .col-md-4.about-img{
-    display: none;
-  }
-  .col-md-8.about-main{
-    width: 100%;
-    background: rgba(0,0,0,0.75);
-    height: 100%;
-    position: relative;
-    padding: 0;
-    margin-top:-40px;
-    top: 40px;
-    overflow-y:auto; 
-    padding-bottom:30px; 
-  }
-  #about-campaign{
-    background: url('../images/About_Boy.jpg')!important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-  }
-  .col-md-8.about-main .screening{
-    display: none;
-  }
-  .col-md-8.about-main p{
-    padding: 10px 10%;
-    -webkit-column-count: 1; 
-    -moz-column-count: 1;
-    column-count: 1;
-    line-height: 18px;
-    color: white;
-    height: 100%;
+	.about_inline{
+	  width: 100%;
+	  float: none;
+	  padding: 5px 10% !important;
+	}
+	  .col-md-8.about-main h1{
+	    font-size: 1.5em;
+	    letter-spacing: .05em;
+	    /*padding-top: 60px !important;
+	    margin-bottom: 0;*/
+	    padding: 0 !important;
+	    margin-bottom: 10px;
+	    padding-left: 14% !important;
+	}
+	  .col-md-4.about-img{
+	    display: none;
+	  }
+	  .col-md-8.about-main{
+	    width: 100%;
+	    background: rgba(0,0,0,0.75);
+	    height: 100%;
+	    position: relative;
+	    padding: 0;
+	    margin-top:-40px;
+	    top: 55px;
+	    overflow-y:auto; 
+	    padding-bottom:30px; 
+	  }
+	  #about-campaign{
+	    background: url('../images/About_Boy.jpg')!important;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 100%;
+	  }
+	  .col-md-8.about-main .screening{
+	    display: none;
+	  }
+	  .col-md-8.about-main p{
+	    padding: 10px 10%;
+	    -webkit-column-count: 1; 
+	    -moz-column-count: 1;
+	    column-count: 1;
+	    line-height: 18px;
+	    color: white;
+	    height: 100%;
+	}
+	
+	.col-md-8.about-main img.nkh-logo{
+	  
+	    display: none
+	}
+	
+	.col-md-8.about-main img.nkh-logo-white{
+	     width: 40%;
+	    margin: 5px 30% 20px 30%;
+	    display: block;
+	}
 }
 
-.col-md-8.about-main img.nkh-logo{
-  
-    display: none
-}
-
-.col-md-8.about-main img.nkh-logo-white{
-     width: 40%;
-    margin: 5px 30% 20px 30%;
-    display: block;
-}
+@media(max-width:768px) {
+	.about-top-overlay {
+		width: 100%;
+  	height: 50px;
+  	position: fixed;
+  	z-index: 500;
+  	background-color: black;
+	}
 }
 
 /**
