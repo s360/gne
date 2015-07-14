@@ -1343,6 +1343,9 @@ nav{
   	z-index: 500;
   	background-color: black;
 	}
+	.about-container {
+		padding-top: 55px;
+	}
 }
 
 /**
