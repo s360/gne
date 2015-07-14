@@ -1339,7 +1339,7 @@ nav{
 	.about-top-overlay {
 		width: 100%;
   	height: 50px;
-  	position: fixed;
+  	position: absolute;
   	z-index: 500;
   	background-color: black;
 	}
