@@ -411,47 +411,63 @@ nav{
 
 
 }
-@media (max-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
+
+@media (max-width: 768px){
+	.col-sm-3.story-col {
+	    position: relative;
+	    bottom: 0px;
+	}
+	.story-title {
+	    margin-bottom: 10px;
+	    margin-right: 10px;
+	    font-size: 2em;
+	    text-align: center;
+	}
+	
+	.story-copy {
+	   line-height: 15px;
+	}
+	
+	.story-copy-container {
+	    padding: 10px 40px;
+	    background-color: rgba(0, 0, 0, 0.9);
+	    clear: both;
+	  }
+	    .story-container {
+	  margin-left: 0px;
+	  width: 100%;
+	  }
+	  .story-copy.two.quote {
+	  color: #1268b3;
+	  margin-left: 50px;
+	  display: none;
+	}
+	
+	.story-two-quote {
+	  color: #1268b3;
+	  text-align: right;
+	  display: none;
+	}
+
+}
+/*iPad query*/
+@media (max-width: 768px) and (device-height: 1024px) {
 	.col-sm-3.story-col {
 		width: 35%;
 	}
-}
-@media (max-width: 768px){
-.col-sm-3.story-col {
-    position: relative;
-    bottom: 0px;
-}
-.story-title {
-    margin-bottom: 10px;
-    margin-right: 10px;
-    font-size: 2em;
-    text-align: center;
-}
-
-.story-copy {
-   line-height: 15px;
-}
-
-.story-copy-container {
-    padding: 10px 40px;
-    background-color: rgba(0, 0, 0, 0.9);
-    clear: both;
-  }
-    .story-container {
-  margin-left: 0px;
-  width: 100%;
-  }
-  .story-copy.two.quote {
-  color: #1268b3;
-  margin-left: 50px;
-  display: none;
-}
-
-.story-two-quote {
-  color: #1268b3;
-  text-align: right;
-  display: none;
-}
+	.story-copy-container {
+		padding: 20px 20px;
+	}
+	.story-title {
+		text-align: right;
+	}
+	.story-copy.two.quote {
+		margin-left: 0px;
+		display: block;
+	}
+	.story-two-quote {
+		display: block;
+	}
 
 }
 
