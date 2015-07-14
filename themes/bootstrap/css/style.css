@@ -45,7 +45,6 @@ RED - #e61e26
 a:hover {
 	text-decoration: none!important;
 }
-html,body { height: 100% }
 html,
 body {
   height: 100%;
@@ -770,6 +769,12 @@ nav{
 .col-md-4.animation img{
     width: 80%;
     margin: 0 10%;
+}
+
+@media(max-width: 768px){
+  .region.region-navigation .block-menu{
+    margin-left: 60px;
+  }
 }
 
 /**
