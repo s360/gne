@@ -663,8 +663,16 @@ nav{
   	height: 30%;
   	background-position: top;
 	}
+
+  .story_pics{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    padding-top: 90px;
+    width: 100%;
+  }
+
 	.col-sm-4.col-xs-4.onethird.one {
-  	margin-top: 55px;	
 	}
 
 	.col-sm-4.page1-btn-container {
