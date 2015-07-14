@@ -46,6 +46,12 @@ a:hover {
 	text-decoration: none!important;
 }
 html,body { height: 100% }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
 body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
