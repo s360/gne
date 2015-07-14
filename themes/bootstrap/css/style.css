@@ -1358,7 +1358,7 @@ nav{
 	}
 	
 	.act .col-md-4.act-content{
-	    padding: 50px;
+	      padding: 0px 50px 50px 60px;
 	}
 	.col-md-4.act-content.hidden-xs.left {
 		padding-left: 60px;
@@ -1390,7 +1390,7 @@ nav{
 	}
 	
 	.body-copy{
-	   margin: 60px 0 20px 0;
+	   margin: 0 0 20px 0;
 	   line-height: 1.5em;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
 
@@ -1400,6 +1400,10 @@ nav{
     -moz-font-smoothing: antialiased;
     font-smoothing: antialiased;
 	}
+
+  .act-btn{
+    margin: 10px 0 60px 0 !important;
+  }
 	
 	.act h1{
 	    letter-spacing: 4px;
