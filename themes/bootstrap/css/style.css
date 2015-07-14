@@ -2064,8 +2064,8 @@ nav{
     margin: 10px 10px;
     display: inline-block;
 }
-#wrap-amount_other #other-amount{
-    /*margin-top: 36px;*/
+#wrap-amount_other{
+    display: block !important;
 }
 .wrap-amount input[type="radio"]{
     opacity: 0;
