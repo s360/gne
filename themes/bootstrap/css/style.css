@@ -612,6 +612,13 @@ nav{
 	margin-top: 50px;
 }
 
+.story_pics{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
 /* Landscape Phone*/
 @media (max-width: 768px) and (orientation: landscape) {
 	.col-sm-4.onethird {
@@ -660,11 +667,19 @@ nav{
 	.col-sm-4.col-xs-4.onethird.three{
 		position: relative;
  	 	width: 100%;
-  	height: 30%;
+  	height: 33.33333333333333%;
   	background-position: top;
 	}
+
+  .story_pics{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    padding-top: 90px;
+    width: 100%;
+  }
+
 	.col-sm-4.col-xs-4.onethird.one {
-  	margin-top: 55px;	
 	}
 
 	.col-sm-4.page1-btn-container {
