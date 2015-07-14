@@ -45,7 +45,12 @@ RED - #e61e26
 a:hover {
 	text-decoration: none!important;
 }
-html,body { height: 100% }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
 body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
@@ -669,12 +674,13 @@ nav{
 		display: block;
 		position: absolute;
 		bottom: 20px;
-    width: 100%;
+    width: 92%;
 	 text-align: center;
 	}
 	.front-page-btn {
 		padding: 8px;
   	font-size: 0.7em;
+    margin-left: 0;
 	}
 }
 
@@ -763,6 +769,12 @@ nav{
 .col-md-4.animation img{
     width: 80%;
     margin: 0 10%;
+}
+
+@media(max-width: 768px){
+  .region.region-navigation .block-menu{
+    margin-left: 60px;
+  }
 }
 
 /**
@@ -1875,8 +1887,8 @@ nav{
 	.petition-input {
 		width: 50%;
 	}
-	.petition-cta {
-		font-size: 18px;
+	.petition-cta, .petition-header {
+		font-size: 16px;
 	}
 	.petition-submit {
 		font-size: 12px;
@@ -2063,8 +2075,8 @@ nav{
     margin: 10px 10px;
     display: inline-block;
 }
-#wrap-amount_other #other-amount{
-    /*margin-top: 36px;*/
+#wrap-amount_other{
+
 }
 .wrap-amount input[type="radio"]{
     opacity: 0;
