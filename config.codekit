@@ -1165,13 +1165,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/themes\/bootstrap\/images\/partner_logos\/Google.png": {
+	"\/themes\/bootstrap\/images\/partner_logos\/google.png": {
 		"fileType": 32768,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 16503,
-		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/Google.png",
-		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/Google.png",
+		"inputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/google.png",
+		"outputAbbreviatedPath": "\/themes\/bootstrap\/images\/partner_logos\/google.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
