@@ -61,7 +61,7 @@
                     $('#other-amount').attr('name', 'other_amount');
                     $('#other-amount').focus();
 
-                    $('#wrap-amount_other').css('display', 'inline-block');
+                    $('#wrap-amount_other').css('display', 'block');
                 }
                 else {
                     $('#other-amount').attr('disabled', 'disabled');

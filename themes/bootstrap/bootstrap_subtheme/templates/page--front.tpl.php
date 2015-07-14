@@ -135,9 +135,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <span id="close-petition" class="close-petition"></span>
         <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
 
-        <h1 class="petition-header hidden-xs">Hunger is closer than you think.</h1>
+        <h1 class="petition-header">Hunger is closer than you think.</h1>
         <p class="petition-subheader">Hunger exists in every community and affects 1 in 6 Americans.</p>
-        <p class="petition-subheader two hidden-xs">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
+        <p class="petition-subheader two">That doesn't happen in any other developed nation. It shouldn't happen here.</p>
         <h2 class="petition-cta">Add your name to the list of americans who demand we do better.</h2>
         <div class="petition-form-container">
             <form id="petition-form" class="overlay-form" name="petition-form" method="POST" action="https://greatnationseat.org/api/convio/post.php">

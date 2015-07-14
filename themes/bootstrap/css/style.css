@@ -45,7 +45,12 @@ RED - #e61e26
 a:hover {
 	text-decoration: none!important;
 }
-html,body { height: 100% }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
 body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
@@ -406,47 +411,63 @@ nav{
 
 
 }
-@media (max-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
+
+@media (max-width: 768px){
+	.col-sm-3.story-col {
+	    position: relative;
+	    bottom: 0px;
+	}
+	.story-title {
+	    margin-bottom: 10px;
+	    margin-right: 10px;
+	    font-size: 2em;
+	    text-align: center;
+	}
+	
+	.story-copy {
+	   line-height: 15px;
+	}
+	
+	.story-copy-container {
+	    padding: 10px 40px;
+	    background-color: rgba(0, 0, 0, 0.9);
+	    clear: both;
+	  }
+	    .story-container {
+	  margin-left: 0px;
+	  width: 100%;
+	  }
+	  .story-copy.two.quote {
+	  color: #1268b3;
+	  margin-left: 50px;
+	  display: none;
+	}
+	
+	.story-two-quote {
+	  color: #1268b3;
+	  text-align: right;
+	  display: none;
+	}
+
+}
+/*iPad query*/
+@media (max-width: 768px) and (device-height: 1024px) {
 	.col-sm-3.story-col {
 		width: 35%;
 	}
-}
-@media (max-width: 768px){
-.col-sm-3.story-col {
-    position: relative;
-    bottom: 0px;
-}
-.story-title {
-    margin-bottom: 10px;
-    margin-right: 10px;
-    font-size: 2em;
-    text-align: center;
-}
-
-.story-copy {
-   line-height: 15px;
-}
-
-.story-copy-container {
-    padding: 10px 40px;
-    background-color: rgba(0, 0, 0, 0.9);
-    clear: both;
-  }
-    .story-container {
-  margin-left: 0px;
-  width: 100%;
-  }
-  .story-copy.two.quote {
-  color: #1268b3;
-  margin-left: 50px;
-  display: none;
-}
-
-.story-two-quote {
-  color: #1268b3;
-  text-align: right;
-  display: none;
-}
+	.story-copy-container {
+		padding: 20px 20px;
+	}
+	.story-title {
+		text-align: right;
+	}
+	.story-copy.two.quote {
+		margin-left: 0px;
+		display: block;
+	}
+	.story-two-quote {
+		display: block;
+	}
 
 }
 
@@ -607,6 +628,13 @@ nav{
 	margin-top: 50px;
 }
 
+.story_pics{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
 /* Landscape Phone*/
 @media (max-width: 768px) and (orientation: landscape) {
 	.col-sm-4.onethird {
@@ -655,11 +683,19 @@ nav{
 	.col-sm-4.col-xs-4.onethird.three{
 		position: relative;
  	 	width: 100%;
-  	height: 30%;
+  	height: 33.33333333333333%;
   	background-position: top;
 	}
+
+  .story_pics{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    padding-top: 90px;
+    width: 100%;
+  }
+
 	.col-sm-4.col-xs-4.onethird.one {
-  	margin-top: 55px;	
 	}
 
 	.col-sm-4.page1-btn-container {
@@ -669,11 +705,13 @@ nav{
 		display: block;
 		position: absolute;
 		bottom: 20px;
-		left: 100px;
+    width: 92%;
+	 text-align: center;
 	}
 	.front-page-btn {
 		padding: 8px;
   	font-size: 0.7em;
+    margin-left: 0;
 	}
 }
 
@@ -762,6 +800,12 @@ nav{
 .col-md-4.animation img{
     width: 80%;
     margin: 0 10%;
+}
+
+@media(max-width: 768px){
+  .region.region-navigation .block-menu{
+    margin-left: 60px;
+  }
 }
 
 /**
@@ -1232,63 +1276,82 @@ nav{
 
 @media (max-width: 992px){
 
-.about_inline{
-  width: 100%;
-  float: none;
-  padding: 5px 10% !important;
-}
-  .col-md-8.about-main h1{
-    font-size: 1.5em;
-    letter-spacing: .05em;
-    /*padding-top: 60px !important;
-    margin-bottom: 0;*/
-    padding: 0 !important;
-    margin-bottom: 10px;
-    padding-left: 14% !important;
-}
-  .col-md-4.about-img{
-    display: none;
-  }
-  .col-md-8.about-main{
-    width: 100%;
-    background: rgba(0,0,0,0.75);
-    height: 100%;
-    position: relative;
-    padding: 0;
-    margin-top:-40px;
-    top: 40px;
-    overflow-y:auto; 
-    padding-bottom:30px; 
-  }
-  #about-campaign{
-    background: url('../images/About_Boy.jpg')!important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-  }
-  .col-md-8.about-main .screening{
-    display: none;
-  }
-  .col-md-8.about-main p{
-    padding: 10px 10%;
-    -webkit-column-count: 1; 
-    -moz-column-count: 1;
-    column-count: 1;
-    line-height: 18px;
-    color: white;
-    height: 100%;
+	.about_inline{
+	  width: 100%;
+	  float: none;
+	  padding: 5px 10% !important;
+	}
+	  .col-md-8.about-main h1{
+	    font-size: 1.5em;
+	    letter-spacing: .05em;
+	    /*padding-top: 60px !important;
+	    margin-bottom: 0;*/
+	    padding: 0 !important;
+	    margin-bottom: 10px;
+	    padding-left: 14% !important;
+	}
+	  .col-md-4.about-img{
+	    display: none;
+	  }
+	  .col-md-8.about-main{
+	    width: 100%;
+	    background: rgba(0,0,0,0.75);
+	    height: 100%;
+	    position: relative;
+	    padding: 0;
+	    margin-top:-40px;
+	    top: 55px;
+	    overflow-y:auto; 
+	    padding-bottom:30px; 
+	  }
+	  #about-campaign{
+	    background: url('../images/About_Boy.jpg')!important;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 100%;
+	  }
+	  .col-md-8.about-main .screening{
+	    display: none;
+	  }
+	  .col-md-8.about-main p{
+	    padding: 10px 10%;
+	    -webkit-column-count: 1; 
+	    -moz-column-count: 1;
+	    column-count: 1;
+	    line-height: 18px;
+	    color: white;
+	    height: 100%;
+	}
+	
+	.col-md-8.about-main img.nkh-logo{
+	  
+	    display: none
+	}
+	
+	.col-md-8.about-main img.nkh-logo-white{
+	     width: 40%;
+	    margin: 5px 30% 20px 30%;
+	    display: block;
+	}
 }
 
-.col-md-8.about-main img.nkh-logo{
-  
-    display: none
-}
-
-.col-md-8.about-main img.nkh-logo-white{
-     width: 40%;
-    margin: 5px 30% 20px 30%;
-    display: block;
-}
+@media(max-width:768px) {
+	.about-top-overlay {
+		width: 100%;
+  	height: 50px;
+  	position: absolute;
+  	z-index: 500;
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 1%, rgba(0,0,0,1) 37%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(0,0,0,1)), color-stop(37%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(0,0,0,1) 37%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(0,0,0,1) 37%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(0,0,0,1) 37%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 1%,rgba(0,0,0,1) 37%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+	.about-container {
+		padding-top: 55px;
+	}
 }
 
 /**
@@ -1304,7 +1367,7 @@ nav{
 	}
 	
 	.act .col-md-4.act-content{
-	    padding: 50px;
+	      padding: 0px 50px 50px 60px;
 	}
 	.col-md-4.act-content.hidden-xs.left {
 		padding-left: 60px;
@@ -1336,7 +1399,7 @@ nav{
 	}
 	
 	.body-copy{
-	   margin: 20px 0 60px 0;
+	   margin: 0 0 20px 0;
 	   line-height: 1.5em;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
 
@@ -1346,6 +1409,10 @@ nav{
     -moz-font-smoothing: antialiased;
     font-smoothing: antialiased;
 	}
+
+  .act-btn{
+    margin: 10px 0 60px 0 !important;
+  }
 	
 	.act h1{
 	    letter-spacing: 4px;
@@ -1361,7 +1428,7 @@ nav{
 	}
 	
 	.act-content h4{
-	    margin-bottom: 20px;
+	   margin: 65px 0 5px 0;
 	    text-transform: uppercase;
 	    color: #f20016;
 	    font-family: Ultra, georgia bold, serif bold;
@@ -1874,14 +1941,13 @@ nav{
 	.petition-input {
 		width: 50%;
 	}
-	.petition-cta {
-		font-size: 18px;
+	.petition-cta, .petition-header {
+		font-size: 16px;
 	}
 	.petition-submit {
 		font-size: 12px;
     margin-top: 10px;
-    padding: 10px 0px;
-    width: 100%;
+    padding: 10px 20px;
 	}
 
   .petition-sub{
@@ -2062,8 +2128,8 @@ nav{
     margin: 10px 10px;
     display: inline-block;
 }
-#wrap-amount_other #other-amount{
-    /*margin-top: 36px;*/
+#wrap-amount_other{
+
 }
 .wrap-amount input[type="radio"]{
     opacity: 0;
@@ -2200,9 +2266,9 @@ cursor: pointer;
     .btn-donate{
         display: block;
     }
-    .top-navigation{
+/*    .top-navigation{
         right: 165px;
-    }
+    }*/
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)  {
     .btn-donate{
@@ -2788,6 +2854,7 @@ h1.page-header{
 	height: initial!important;
 }
 
+/*main container sets height at 100% relative to #wrap-page*/
 .main-container {
 	height: 100%!important;
 }
