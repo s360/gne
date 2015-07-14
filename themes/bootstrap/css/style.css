@@ -1876,8 +1876,8 @@ nav{
 	.petition-input {
 		width: 50%;
 	}
-	.petition-cta {
-		font-size: 18px;
+	.petition-cta, .petition-header {
+		font-size: 16px;
 	}
 	.petition-submit {
 		font-size: 12px;
@@ -2065,7 +2065,7 @@ nav{
     display: inline-block;
 }
 #wrap-amount_other{
-\
+
 }
 .wrap-amount input[type="radio"]{
     opacity: 0;
