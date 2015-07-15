@@ -22,7 +22,7 @@
                 data: 'method=getDonationFormInfo&form_id=' + formId,
                 callback: function (data) {
                     //console.log(data.getDonationFormInfoResponse.donationLevels);
-                    var donationLevelEl = $('#donation_level');
+                    var donationLevelEl = $('.donation_level');
                     donationLevelEl.empty();
                     var html = "";
                     if (data.getDonationFormInfoResponse.donationLevels && data.getDonationFormInfoResponse.donationLevels.donationLevel.length > 0) {

@@ -58,7 +58,7 @@ $formID = $node->field_donation_form_id['und'][0]['value'];
             <h3 style="text-align: center;"> Select Amount</h3>
 
             <!-- AMOUNT FROM CONVIO -->
-            <div id="donation_level">
+            <div id="donation_level" class="donation_level">
 
             </div>
 
