@@ -87,7 +87,8 @@
             $('.donation-form').submit(function () {
                 window.scrollTo(0, 0);
                 $('#form_id').val(formId);
-                $('#donate-submit').prop('disabled', true);
+                //$('#donate-submit').prop('disabled', true);
+                $('.complete-donation').prop('disabled', true);
                 $(this).hide();
                 $(this).before('<div class="well donation-loading">' +
                 'Loading ...' +
@@ -112,13 +113,15 @@
 
                 $('.donation-loading').remove();
                 $('.donation-form').show();
-		        $('#donate-submit').prop('disabled', false);
+		        //$('#donate-submit').prop('disabled', false);
+                $('.complete-donation').prop('disabled', false);
             },
             success: function (data) {
             	var donationErrorMessage = '';
             		console.log(data);
                 $('#donation-errors').remove();
-		          	$('#donate-submit').prop('disabled', false);
+		          	//$('#donate-submit').prop('disabled', false);
+                    $('.complete-donation').prop('disabled', false);
                 if (data.donationResponse.errors) {
                 	if(data.donationResponse.errors.fieldError) {
                 		donationErrorMessage += data.donationResponse.errors.fieldError;
