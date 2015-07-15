@@ -252,6 +252,8 @@ jQuery(document).ready(function() {
         if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you' && lochash != '#!/host-a-screening'){
 
             var found = jQuery.inArray(lochash, dataHash) > -1;
+            console.log('found');
+            console.log(found);
 
            if (found === true){
                jQuery("#container-slide-home").slick('slickGoTo', slideloc);
