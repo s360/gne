@@ -259,24 +259,13 @@ $formID = $node->field_donation_form_id['und'][0]['value'];
                 </div>
             </div>
 
-            <!-- <input type="radio" id="one_time_gift" name="sustaining.frequency" value="" checked="true"/>One-time gift<br/> -->
             <div class="monthly-container">
                 <input type="checkbox" id="sustaining_gift" name="sustaining.frequency" value="monthly"/>&nbsp;Want to give monthly? A monthly gift does even more to help hungry kids.<br/>
                 <input type="hidden" id="sustaining_duration" name="sustaining.duration" />
             </div>
-            <!--                 						<div id="sustaining_duration_field" style="display:none;"><br />
-                                                                <label for="sustaining_duration">Continue giving </label>
-                                                                <select name="sustaining.duration" id="sustaining_duration">
-                                                                  <option value="3">3 months</option>
-                                                                  <option value="6">6 months</option>
-                                                                  <option value="12">1 year</option>
-                                                                  <option value="0">Indefinitely</option>
-                                                                </select><br />
-                                                               </div> -->
             <div class="form-group">
                 <input type="hidden" name="send_receipt" value="true">
                 <!-- <input type="hidden" name="df_preview" value="test"> -->
-                <!-- Galen -->
                 <button id="donate-submit" class="petition-submit complete-donation">Donate to help end hunger</button>
             </div>
 
