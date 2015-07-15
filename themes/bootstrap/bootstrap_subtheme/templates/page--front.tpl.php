@@ -509,7 +509,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <div class='sp_14355 sp_tw_large' ></div>
     </div>
 </div>
-
+<?php if (!empty($page['donation_form'])): ?>
+    <div id="block-donation-form-overlay">
+        <?php print render($page['donation_form']); ?>
+    </div>
+<?php endif; ?>
 <footer id="footer">
   <?php //print render($page['footer']); ?>
     <div class="social pull-left"></div>
@@ -636,6 +640,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var donateThankClose 			 = document.getElementById('thank-donate-close');
     var donateButton   	 			 = document.getElementById('donate-nav');
     var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
+    var donateOverlay2 	 			 = document.getElementById('block-donation-form-overlay');
     var donateClose 	 	 			 = document.getElementById('donate-close');
     var screeningClose   			 = document.getElementById('screening-close');
     var screeningOverlay 			 = document.getElementById('screening-container');
@@ -669,6 +674,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     });
     donateButton.addEventListener('click', function() {
         donateOverlay.classList.remove('hidden');
+        donateOverlay2.classList.add('hidden');
     });
     donateClose.addEventListener('click', function() {
         donateOverlay.classList.add('hidden');
