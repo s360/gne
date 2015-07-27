@@ -38,6 +38,7 @@ jQuery( document ).ready(function() {
 
     //GA Tags
     jQuery('#overlay-submit').click(function(){ ga('send', 'event', 'button', 'join'); });
+    jQuery('.petition-submit').click(function(){ ga('send', 'event', 'button', '404-join'); });
     jQuery('#story-submit-2').click(function(){ ga('send', 'event', 'button', 'hanno-join')});
     jQuery('#story-submit-3').click(function(){ ga('send', 'event', 'button', 'adrianna-join')});
     jQuery('#story-submit-4').click(function(){ ga('send', 'event', 'button', 'jahnique-join')});
@@ -51,7 +52,9 @@ jQuery( document ).ready(function() {
     jQuery('.sp_14426.sp_fb_small').click(function(){ ga('send', 'event', 'social-share', 'facebook - mobile(total)') });
     jQuery('.sp_14355.sp_tw_large').click(function() { ga('send', 'event', 'social-share', 'twitter(total)') });
     jQuery('.sp_14425.sp_tw_small').click(function() { ga('send', 'event', 'social-share', 'twitter - mobile(total)') });
-
+    jQuery('.sp_14354.sp_fb_large.story-share.not-found').click(function() { ga('send', 'event', 'social-share', 'facebook - 404)') });
+    jQuery('.sp_14355.sp_tw_large.story-share.not-found').click(function() { ga('send', 'event', 'social-share', 'twitter - 404)') });
+    
     jQuery('.zip_sub').click(function() { ga('send', 'event', 'act-page', 'zip code') });
     jQuery('.stand-up').click(function(){ ga('send', 'event', 'act-page', 'stand up') });
     jQuery('.help-kids').click(function(){ ga('send', 'event', 'act-page', 'help kids') });
