@@ -67,7 +67,8 @@
                     $('#other-amount').attr('disabled', 'disabled');
                     $('#other-amount').removeAttr('name');
                     $('#wrap-amount_other').css('display', 'none');
-		    $('#key-next-step').removeClass('btnDisabledHref');
+		    //$('#key-next-step').removeClass('btnDisabledHref');
+                    $('.key-next-step').removeClass('btnDisabledHref');
                 }
 		
             });
@@ -78,9 +79,11 @@
         	  	}
         		var val = parseInt($(this).val());
         		if(val > 0){
-        			$('#key-next-step').removeClass('btnDisabledHref');
+        			//$('#key-next-step').removeClass('btnDisabledHref');
+                    $('.key-next-step').removeClass('btnDisabledHref');
         		} else {
-        			$('#key-next-step').addClass('btnDisabledHref');
+        			//$('#key-next-step').addClass('btnDisabledHref');
+                    $('.key-next-step').addClass('btnDisabledHref');
         		}
     	    });
 
