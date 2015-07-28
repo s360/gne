@@ -171,6 +171,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <!-- END PETITION OVERLAY -->
 <!-- DONATION OVERLAY -->
+<?php /* ?>
 <div id="donation-overlay-container" class="donation-overlay-container hidden">
 <div class='full_overlay'></div>
 <div class="donation-container petition-container">
@@ -461,6 +462,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 </div>
 
+<?php */ ?>
 <div id="screening-container" class="screening-overlay-container hidden">
     <span id="screening-close"></span>
     <div class="screening-copy col-md-6">
@@ -511,7 +513,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <?php if (!empty($page['donation_form'])): ?>
     <div id="block-donation-form-overlay">
-        <?php //print render($page['donation_form']); ?>
+        <?php print render($page['donation_form']); ?>
     </div>
 <?php endif; ?>
 <footer id="footer">
