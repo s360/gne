@@ -48,7 +48,7 @@ $formID = $node->field_donation_form_id['und'][0]['value'];
 
 <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
 <input type="hidden" name="method" id="method" value="donate">
-<input type="hidden" name="form_id" id="form_id" value=<?php echo $formID?>>
+<input type="hidden" name="form_id" id="form_id" class="form_id" value=<?php echo $formID?>>
 <input type="hidden" name="source" class="ref_source" value="">
 <input type="hidden" name="sub_source" class="ref_sub_source" value="">
 <input type="hidden" name="validate" value="true">

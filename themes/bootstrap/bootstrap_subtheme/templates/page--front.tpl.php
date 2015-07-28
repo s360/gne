@@ -209,7 +209,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
             <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
                 <input type="hidden" name="method" id="method" value="donate">
-								<input type="hidden" name="form_id" id="form_id" value="12181">
+								<input type="hidden" name="form_id" id="form_id" class="form_id" value="12181">
 								<input type="hidden" name="source" class="ref_source" value="">
 								<input type="hidden" name="sub_source" class="ref_sub_source" value="">
 								<input type="hidden" name="validate" value="true">

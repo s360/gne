@@ -89,7 +89,8 @@
 
             $('.donation-form').submit(function () {
                 window.scrollTo(0, 0);
-                $('#form_id').val(formId);
+                //$('#form_id').val(formId);
+                $('.form_id').val(formId);
                 //$('#donate-submit').prop('disabled', true);
                 $('.complete-donation').prop('disabled', true);
                 $(this).hide();
