@@ -266,6 +266,7 @@ jQuery(document).ready(function() {
             jQuery("#block-donation-form-overlay .views-row .node").each(function(){
                 if (jQuery(this).attr("data-hash") === lochash){
                     jQuery(this).css('display', 'block');
+                    jQuery(this).addClass('show-donation');
                 }
 
             });

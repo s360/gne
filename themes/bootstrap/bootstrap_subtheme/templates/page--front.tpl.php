@@ -171,14 +171,14 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <!-- END PETITION OVERLAY -->
 <!-- DONATION OVERLAY -->
-<?php /* ?>
+
 <div id="donation-overlay-container" class="donation-overlay-container hidden">
 <div class='full_overlay'></div>
 <div class="donation-container petition-container">
     <div class="donation-relative">
     <span id="donate-close" class="donate-close close-petition"></span>
     <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
-    <div class="col-md-6" id="donate-copy-col">
+    <div class="col-md-6 donate-copy-col" id="donate-copy-col">
         <div class="donation-copy-container">
             <h1 class="donate-title petition-header hidden-xs">HUNGER HURTS KIDS EVERY DAY.</h1>
             <p class="donate-copy1 petition-subheader hidden-xs">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
@@ -188,7 +188,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
         </div>
     </div>
-    <div class="col-md-6" id="donate-func-col">
+    <div class="col-md-6 donate-func-col" id="donate-func-col">
     <div class="donation-dynamic-container">
         <div class="static-donation-container">
 
@@ -462,7 +462,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 </div>
 
-<?php */ ?>
+
 <div id="screening-container" class="screening-overlay-container hidden">
     <span id="screening-close"></span>
     <div class="screening-copy col-md-6">
@@ -513,7 +513,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <?php if (!empty($page['donation_form'])): ?>
     <div id="block-donation-form-overlay">
-        <?php print render($page['donation_form']); ?>
+        <?php //print render($page['donation_form']); ?>
     </div>
 <?php endif; ?>
 <footer id="footer">
@@ -549,11 +549,12 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		jQuery('#act-add-voice').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
+
 	/**********DONATION*********/
 		//var nextDonate = jQuery('#key-next-step');
         var nextDonate = jQuery('.key-next-step');
-		var donateCopy = jQuery('#donate-copy-col');
-		var donateFunc = jQuery('#donate-func-col');
+		var donateCopy = jQuery('.donate-copy-col');
+		var donateFunc = jQuery('.donate-func-col');
 		//var stepOne    = jQuery('#step-one');
         var stepOne    = jQuery('.step-one');
 		//var stepTwo    = jQuery('#step-two');
@@ -631,7 +632,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 <script type="text/javascript">
 
-    var formId = "12181";
+   // var formId = "12181";
 
 
     //TODO: Clean this up and put in .js file
@@ -706,8 +707,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
   document.cookie = 'seenOverlay=true; max-age=60';
 </script>
 
-<script src="/sites/all/themes/bootstrap/js/convio.js"></script>
-<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
+<!--<script src="/sites/all/themes/bootstrap/js/convio.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>-->
 <script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

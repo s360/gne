@@ -190,6 +190,17 @@ function bootstrap_js_alter(&$js) {
       }
     }
   }
+    /*convio */
+
+    $convio_start = $theme_path . '/js/convio-start.js';
+    $js[$convio_start] = drupal_js_defaults($convio_start);
+    $js[$convio_start]['group'] = JS_THEME;
+    $js[$convio_start]['scope'] = 'footer';
+
+    $convio = $theme_path . '/js/convio.js';
+    $js[$convio] = drupal_js_defaults($convio);
+    $js[$convio]['group'] = JS_THEME;
+    $js[$convio]['scope'] = 'footer';
 
   // Always add bootstrap.js last.
   $bootstrap = $theme_path . '/js/bootstrap.js';
@@ -211,6 +222,8 @@ function bootstrap_js_alter(&$js) {
     $js[$donate] = drupal_js_defaults($donate);
     $js[$donate]['group'] = JS_THEME;
     $js[$donate]['scope'] = 'footer';
+
+
 
    /* $tags = $theme_path . '/js/tags.js';
     $js[$tags] = drupal_js_defaults($tags);

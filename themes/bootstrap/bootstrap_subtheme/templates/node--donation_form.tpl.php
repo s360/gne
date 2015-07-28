@@ -20,13 +20,13 @@ $formID = $node->field_donation_form_id['und'][0]['value'];
 <div class="donation-relative">
 <span id="donate-close2" class="donate-close2 close-petition"></span>
 <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
-<div class="col-md-6" id="donate-copy-col">
+<div class="col-md-6 donate-copy-col" id="donate-copy-col">
     <div class="donation-copy-container">
         <?php echo $body_content ?>
 
     </div>
 </div>
-<div class="col-md-6" id="donate-func-col">
+<div class="col-md-6 donate-func-col" id="donate-func-col">
 <div class="donation-dynamic-container">
 <div class="static-donation-container">
 

@@ -13,7 +13,9 @@
     	<input type="hidden" name="send_receipt" id="send_receipt" value="false" />
       <input type="hidden" name="send_registration_email" id="send_registration_email" value="false" />
       */
-		var formId = 12181;
+
+		var formId = $('#form_id').val();
+        //console.log(formId);
         var tracking = '<iframe id="tracking-donate" src="https://4652923.fls.doubleclick.net/activityi;src=4652923;type=apatt;cat=donate1;qty=1;cost=[Revenue];ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
         /* UI handlers for the donation form example */
         if ($('.donation-form').length > 0) {
@@ -60,14 +62,13 @@
                     $('#other-amount').removeAttr('disabled');
                     $('#other-amount').attr('name', 'other_amount');
                     $('#other-amount').focus();
-
                     $('#wrap-amount_other').css('display', 'block');
                 }
                 else {
                     $('#other-amount').attr('disabled', 'disabled');
                     $('#other-amount').removeAttr('name');
                     $('#wrap-amount_other').css('display', 'none');
-		    //$('#key-next-step').removeClass('btnDisabledHref');
+		           //$('#key-next-step').removeClass('btnDisabledHref');
                     $('.key-next-step').removeClass('btnDisabledHref');
                 }
 		
