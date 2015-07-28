@@ -196,13 +196,13 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <div class="stepwizard">
                 <div class="stepwizard-row setup-panel">
                     <div class="stepwizard-step">
-                        <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                        <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle step-one">1</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle step-two" disabled="disabled">2</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle step-three" disabled="disabled">3</a>
                     </div>
                 </div>
             </div>
@@ -548,12 +548,16 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
 	/**********DONATION*********/
-		var nextDonate = jQuery('#key-next-step');
+		//var nextDonate = jQuery('#key-next-step');
+        var nextDonate = jQuery('.key-next-step');
 		var donateCopy = jQuery('#donate-copy-col');
 		var donateFunc = jQuery('#donate-func-col');
-		var stepOne    = jQuery('#step-one');
-		var stepTwo    = jQuery('#step-two');
-		var stepThree  = jQuery('#step-three');
+		//var stepOne    = jQuery('#step-one');
+        var stepOne    = jQuery('.step-one');
+		//var stepTwo    = jQuery('#step-two');
+        var stepTwo    = jQuery('.step-two');
+		//var stepThree  = jQuery('#step-three');
+        var stepThree  = jQuery('.step-three');
 		var amountSelected = false;
     
 		jQuery('#sustaining_gift').click(function() {

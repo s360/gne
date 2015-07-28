@@ -35,13 +35,13 @@ $formID = $node->field_donation_form_id['und'][0]['value'];
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
         <div class="stepwizard-step">
-            <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+            <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle step-one">1</a>
         </div>
         <div class="stepwizard-step">
-            <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+            <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle step-two" disabled="disabled">2</a>
         </div>
         <div class="stepwizard-step">
-            <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+            <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle step-three" disabled="disabled">3</a>
         </div>
     </div>
 </div>
@@ -63,7 +63,7 @@ $formID = $node->field_donation_form_id['und'][0]['value'];
             </div>
 
 
-            <div id="key-next-step" class="nextBtn">
+            <div id="key-next-step" class="key-next-step nextBtn">
                 <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                 <a  href="#" class="nextBtn-old">Next Step</a>
                 <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
