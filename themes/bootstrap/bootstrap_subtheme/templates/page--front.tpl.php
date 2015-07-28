@@ -511,7 +511,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <?php if (!empty($page['donation_form'])): ?>
     <div id="block-donation-form-overlay">
-        <?php print render($page['donation_form']); ?>
+        <?php //print render($page['donation_form']); ?>
     </div>
 <?php endif; ?>
 <footer id="footer">
