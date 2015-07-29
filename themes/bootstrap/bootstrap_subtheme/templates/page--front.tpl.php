@@ -171,7 +171,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <!-- END PETITION OVERLAY -->
 <!-- DONATION OVERLAY -->
-
 <div id="donation-overlay-container" class="donation-overlay-container hidden">
 <div class='full_overlay'></div>
 <div class="donation-container petition-container">
@@ -461,6 +460,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 </div>
 </div>
+<!-- END OF PRIMARY DONATION OVERLAY-->
 
 
 <div id="screening-container" class="screening-overlay-container hidden">
@@ -511,11 +511,13 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <div class='sp_14355 sp_tw_large' ></div>
     </div>
 </div>
+<!-- ADDITIONAL DONATION OVERLAY -->
 <?php if (!empty($page['donation_form'])): ?>
     <div id="block-donation-form-overlay">
         <?php print render($page['donation_form']); ?>
     </div>
 <?php endif; ?>
+<!-- END OF ADDITIONAL DONATION OVERLAY -->
 <footer id="footer">
   <?php //print render($page['footer']); ?>
     <div class="social pull-left"></div>
