@@ -271,7 +271,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var thankContainer   			 = document.getElementById('thank-container');
     var donateThankContainer   = document.getElementById('donate-thank-container');
     var thankClose 	     			 = document.getElementById('thank-close');
-    var donateThankClose 			 = document.getElementById('thank-donate-close');
+    //var donateThankClose 			 = document.getElementById('thank-donate-close');
     var donateButton   	 			 = document.getElementById('donate-nav');
     var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
     var donateOverlay2 	 			 = document.getElementById('block-donation-form-overlay');
@@ -281,9 +281,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var screeningSubmit  			 = document.getElementById('screening-submit');
     var screeningButton  			 = document.getElementById('host-screening');
 
-    donateThankClose.addEventListener('click', function() {
-        donateThankContainer.classList.add('hidden');
-    });
+    //donateThankClose.addEventListener('click', function() {
+    //    donateThankContainer.classList.add('hidden');
+    //});
     donateButton.addEventListener('click', function() {
         donateOverlay.classList.remove('hidden');
         donateOverlay2.classList.add('hidden');
