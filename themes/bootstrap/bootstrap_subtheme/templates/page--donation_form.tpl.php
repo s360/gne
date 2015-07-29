@@ -254,11 +254,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             jQuery('.donation-form')[0].reset();
         });
 
-        //petition overlay
-        var petOverlay = jQuery("#petition-overlay-container");
-        if( window.location.hash == ''){
-            petOverlay.removeClass('hidden');
-        }
     });
 </script>
 
@@ -286,24 +281,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var screeningSubmit  			 = document.getElementById('screening-submit');
     var screeningButton  			 = document.getElementById('host-screening');
 
-    thankClose.addEventListener('click', function() {
-        thankContainer.classList.add('hidden');
-    });
     donateThankClose.addEventListener('click', function() {
         donateThankContainer.classList.add('hidden');
-    });
-    screeningButton.addEventListener('click', function() {
-        screeningOverlay.classList.remove('hidden');
-    });
-
-    petitionButton.addEventListener('click', function() {
-        petitionOverlay.classList.remove('hidden');
-    });
-    petitionButton2.addEventListener('click', function() {
-        petitionOverlay.classList.remove('hidden');
-    });
-    petitionClose.addEventListener('click', function() {
-        petitionOverlay.classList.add('hidden');
     });
     donateButton.addEventListener('click', function() {
         donateOverlay.classList.remove('hidden');
@@ -311,9 +290,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     });
     donateClose.addEventListener('click', function() {
         donateOverlay.classList.add('hidden');
-    });
-    screeningClose.addEventListener('click', function() {
-        screeningOverlay.classList.add('hidden');
     });
 </script>
 <script type="text/javascript">
