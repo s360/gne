@@ -116,7 +116,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     </header>
     <div class="main-container">
         <div id="thestories">
-            <div class="page-custom-donation-container">
+            <div class="page1-container">
                 <div class="story_pics">
                     <div class="col-sm-4 col-xs-4 onethird one">
                         <div class="portrait-link one">
