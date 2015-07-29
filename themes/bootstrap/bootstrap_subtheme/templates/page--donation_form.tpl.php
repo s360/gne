@@ -124,17 +124,17 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                         </div>
                     </div>
                     <div class="col-sm-4 col-xs-4 onethird two">
-                        <div class="portrait-link two"><a href="#!/adrianna" class="front-page-btn">Adrianna's Story</a></div>
+                        <div class="portrait-link two"><a href="/#!/adrianna" class="front-page-btn">Adrianna's Story</a></div>
                     </div>
                     <div class="col-sm-4 col-xs-4 onethird three">
-                        <div class="portrait-link three"><a href="#!/jahnique" class="front-page-btn">Jahnique's Story</a></div>
+                        <div class="portrait-link three"><a href=/"#!/jahnique" class="front-page-btn">Jahnique's Story</a></div>
                     </div>
                 </div>
                 <div class="bottom-overlay">
                     <h2 class="page1-title">Meet real families struggling with hunger - every day.</h2>
-                    <div class="col-sm-4 col-xs-4 page1-btn-container"><a href="#!/hanno" class="front-page-btn">Sgt. Hanno's Story</a></div>
-                    <div class="col-sm-4 col-xs-4 page1-btn-container"><a href="#!/adrianna" class="front-page-btn">Adrianna's Story</a></div>
-                    <div class="col-sm-4 col-xs-4 page1-btn-container"><a href="#!/jahnique" class="front-page-btn">Jahnique's Story</a></div>
+                    <div class="col-sm-4 col-xs-4 page1-btn-container"><a href="/#!/hanno" class="front-page-btn">Sgt. Hanno's Story</a></div>
+                    <div class="col-sm-4 col-xs-4 page1-btn-container"><a href="/#!/adrianna" class="front-page-btn">Adrianna's Story</a></div>
+                    <div class="col-sm-4 col-xs-4 page1-btn-container"><a href="/#!/jahnique" class="front-page-btn">Jahnique's Story</a></div>
                 </div>
             </div></div>
         <div class="">
