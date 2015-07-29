@@ -595,7 +595,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		}
 		
 		nextDonate.click(function(e) {
-            console.log("Next pressed");
+            console.log("Next pressed from: " + $(this).parent().attr('id'));
 			if(jQuery(this).hasClass('btnDisabledHref')){
 				e.preventDefault();
 				return;
