@@ -320,7 +320,7 @@ jQuery(document).ready(function() {
         }
 
         //on swipe
-        slide.on('swipe', hashurl );
+        //slide.on('swipe', hashurl );
 
         //analytics page tracker
         ga('send', 'pageview', lochash)

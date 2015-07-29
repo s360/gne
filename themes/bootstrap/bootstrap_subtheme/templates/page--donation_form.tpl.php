@@ -286,12 +286,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var screeningSubmit  			 = document.getElementById('screening-submit');
     var screeningButton  			 = document.getElementById('host-screening');
 
-    //Hide overlay if user revisiting page
-    var hasSeenOverlay = document.cookie.replace(/(?:(?:^|.*;\s*)seenOverlay\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    if (hasSeenOverlay) {
-        petitionOverlay.classList.add('hidden');
-    }
-
     thankClose.addEventListener('click', function() {
         thankContainer.classList.add('hidden');
     });
@@ -335,8 +329,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 break;
         }
     }
-    //document.cookie = 'seenOverlay=true; max-age=3600; domain=.greatnationseat.org';
-    document.cookie = 'seenOverlay=true; max-age=60';
 </script>
 
 <script>
