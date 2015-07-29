@@ -65,8 +65,7 @@ jQuery(document).ready(function($) {
             nextStepWizard.removeAttr('disabled').trigger('click');
     });
 
-    $('div.setup-panel div a.btn-primary').trigger('click');
-
+    $('.setup-panel .step-one').trigger('click');
     if( window.location.hash == '#!/donate'){
         donate();
     }
