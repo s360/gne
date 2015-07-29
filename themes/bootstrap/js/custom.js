@@ -154,6 +154,9 @@ jQuery(document).ready(function() {
         return false;
     });
 
+    jQuery("#donate-close2").click(function(){
+       jQuery('.node-donation').addClass('hidden');
+    });
 
     //slide
 
@@ -263,13 +266,13 @@ jQuery(document).ready(function() {
            }
 
 
-            jQuery("#block-donation-form-overlay .views-row .node").each(function(){
+           /* jQuery("#block-donation-form-overlay .views-row .node").each(function(){
                 if (jQuery(this).attr("data-hash") === lochash){
                     jQuery(this).css('display', 'block');
                     jQuery(this).addClass('show-donation');
                 }
 
-            });
+            });*/
 
 
         }
