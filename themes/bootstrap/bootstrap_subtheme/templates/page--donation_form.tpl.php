@@ -167,18 +167,9 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 <script type="text/javascript">
     jQuery(document).ready(function() {
         jQuery('#stories').height(jQuery(window).height());
-        jQuery('.leaf.visible-xs.join').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
-        });
         jQuery('#donate-navbar').click(function(e) {
             e.preventDefault();
             jQuery('#donation-overlay-container').removeClass('hidden');
-        });
-        jQuery('.story-join').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
-        });
-        jQuery('#act-add-voice').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
         });
 
         /**********DONATION*********/
