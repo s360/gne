@@ -109,7 +109,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             </div>
         </div>
     </header>
-<div class="main-container container">
+<div class="main-container container" style="overflow-y: auto;">
 
     <header role="banner" id="page-header">
         <?php if (!empty($site_slogan)): ?>
