@@ -85,7 +85,28 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                     <?php print '<img src="'.base_path() . path_to_theme() .'/images/gne_logo.png">'; ?>
                 </a>
             </div>
+            <div class="pull-right">
 
+                <a href="/#!/donate" id="donate-nav" class="btn-donate" style="cursor: pointer">Donate</a>
+                <a href="/#!/join" id="join" class="btn-donate" style="margin-right: 5px;cursor: pointer;">Join</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="display: block">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+                    <div class="top-navigation">
+                        <nav role="navigation">
+                            <?php if (!empty($page['navigation'])): ?>
+                                <div class="slider-nav">
+                                    <?php print render($page['navigation']); ?>
+                                </div>
+                            <?php endif; ?>
+
+                        </nav>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
     </header>
 <div class="main-container container">
