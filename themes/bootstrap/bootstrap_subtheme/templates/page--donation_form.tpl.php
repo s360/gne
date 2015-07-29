@@ -240,7 +240,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </script>
 
 <script type="text/javascript">
-    jQuery('#donate-close2').click( function() { window.location("/#!/"); } );
+    jQuery('#donate-close2').click( function() { window.location = "/#!/"; } );
     // var formId = "12181";
 
 
