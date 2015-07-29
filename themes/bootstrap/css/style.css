@@ -2870,7 +2870,7 @@ h1.page-header{
 }
 @media( max-width: 768px) {
 	.node-donation {
-		top: 120px;
+		top: -120px;
 	}
 }
 #block-donation-form-overlay #step-1{
