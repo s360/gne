@@ -89,6 +89,28 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 
             </div>
+            <div class="pull-right">
+
+                <a href="/#!/donate" id="donate-nav" class="btn-donate" style="cursor: pointer">Donate</a>
+                <a href="/#!/join" id="join" class="btn-donate" style="margin-right: 5px;cursor: pointer;">Join</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="display: block">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+                    <div class="top-navigation">
+                        <nav role="navigation">
+                            <?php if (!empty($page['navigation'])): ?>
+                                <div class="slider-nav">
+                                    <?php print render($page['navigation']); ?>
+                                </div>
+                            <?php endif; ?>
+
+                        </nav>
+                    </div>
+                <?php endif; ?>
+            </div>
 
         </div>
     </header>
@@ -120,6 +142,180 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </footer>
 
 </div>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('.leaf.visible-xs.join').click(function() {
+            jQuery('#petition-overlay-container').removeClass('hidden');
+        });
+        jQuery('#donate-navbar').click(function(e) {
+            e.preventDefault();
+            jQuery('#donation-overlay-container').removeClass('hidden');
+        });
+        jQuery('.story-join').click(function() {
+            jQuery('#petition-overlay-container').removeClass('hidden');
+        });
+        jQuery('#act-add-voice').click(function() {
+            jQuery('#petition-overlay-container').removeClass('hidden');
+        });
+
+        /**********DONATION*********/
+        //var nextDonate = jQuery('#key-next-step');
+        var nextDonate = jQuery('.key-next-step');
+        var donateCopy = jQuery('.donate-copy-col');
+        var donateFunc = jQuery('.donate-func-col');
+        //var stepOne    = jQuery('#step-one');
+        var stepOne    = jQuery('.step-one');
+        //var stepTwo    = jQuery('#step-two');
+        var stepTwo    = jQuery('.step-two');
+        //var stepThree  = jQuery('#step-three');
+        var stepThree  = jQuery('.step-three');
+        var amountSelected = false;
+
+        jQuery('#sustaining_gift').click(function() {
+            if(jQuery('#sustaining_gift').prop('checked')){
+                jQuery('#sustaining_duration').val('0');
+                console.log('sustaining');
+            }else {
+                jQuery('#sustaining_duration').val('');
+            }
+        });
+
+        // function showIfChecked(checkCtrl, targetDiv) {
+        //    if (document.getElementById(checkCtrl).checked == true) {
+        //      document.getElementById(targetDiv).style.display = "inline";
+        //    } else {
+        //      document.getElementById(targetDiv).style.display = "none";
+        //    }
+        // 	}
+        // jQuery('#one_time_gift').click(function() {
+        // 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+        // });
+        // jQuery('#sustaining_gift').click(function() {
+        // 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+        // });
+
+        if(!jQuery('body').find('.wrap-amount').find('input[type="radio"]').is(':checked')){
+            nextDonate.addClass('btnDisabledHref');
+        } else {
+            nextDonate.removeClass('btnDisabledHref');
+        }
+
+        nextDonate.click(function(e) {
+            console.log("Next pressed from: " + jQuery(this).parent().attr('id'));
+            if(jQuery(this).hasClass('btnDisabledHref')){
+                e.preventDefault();
+                return;
+            }
+            if(jQuery('input[name="other_amount"]').length > 0 && !jQuery('input[name="other_amount"]').val()){
+                e.preventDefault();
+                return;
+            }
+            donateCopy.addClass('hidden');
+            donateFunc.addClass('full-width');
+        });
+
+        stepOne.click(function() {
+            donateFunc.removeClass('full-width');
+            donateCopy.removeClass('hidden');
+        });
+
+        stepTwo.add(stepThree).click(function() {
+            if(jQuery(this).css('cursor', 'pointer')) {
+                donateCopy.addClass('hidden');
+                donateFunc.addClass('full-width');
+            }
+        });
+
+        //reset from donation
+        jQuery('#donate-nav').click(function() {
+            jQuery('.donation-form')[0].reset();
+        });
+
+        //petition overlay
+        var petOverlay = jQuery("#petition-overlay-container");
+        if( window.location.hash == ''){
+            petOverlay.removeClass('hidden');
+        }
+    });
+</script>
+
+<script type="text/javascript">
+
+    // var formId = "12181";
+
+
+    //TODO: Clean this up and put in .js file
+
+    var petitionOverlay  			 = document.getElementById('petition-overlay-container');
+    var petitionClose 	 			 = document.getElementById('close-petition');
+    var petitionButton   			 = document.getElementById('join');
+    var petitionButton2  			 = document.getElementById('join-act');
+    var thankContainer   			 = document.getElementById('thank-container');
+    var donateThankContainer   = document.getElementById('donate-thank-container');
+    var thankClose 	     			 = document.getElementById('thank-close');
+    var donateThankClose 			 = document.getElementById('thank-donate-close');
+    var donateButton   	 			 = document.getElementById('donate-nav');
+    var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
+    var donateOverlay2 	 			 = document.getElementById('block-donation-form-overlay');
+    var donateClose 	 	 			 = document.getElementById('donate-close');
+    var screeningClose   			 = document.getElementById('screening-close');
+    var screeningOverlay 			 = document.getElementById('screening-container');
+    var screeningSubmit  			 = document.getElementById('screening-submit');
+    var screeningButton  			 = document.getElementById('host-screening');
+
+    //Hide overlay if user revisiting page
+    var hasSeenOverlay = document.cookie.replace(/(?:(?:^|.*;\s*)seenOverlay\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    if (hasSeenOverlay) {
+        petitionOverlay.classList.add('hidden');
+    }
+
+    thankClose.addEventListener('click', function() {
+        thankContainer.classList.add('hidden');
+    });
+    donateThankClose.addEventListener('click', function() {
+        donateThankContainer.classList.add('hidden');
+    });
+    screeningButton.addEventListener('click', function() {
+        screeningOverlay.classList.remove('hidden');
+    });
+
+    petitionButton.addEventListener('click', function() {
+        petitionOverlay.classList.remove('hidden');
+    });
+    petitionButton2.addEventListener('click', function() {
+        petitionOverlay.classList.remove('hidden');
+    });
+    petitionClose.addEventListener('click', function() {
+        petitionOverlay.classList.add('hidden');
+    });
+    donateButton.addEventListener('click', function() {
+        donateOverlay.classList.remove('hidden');
+        donateOverlay2.classList.add('hidden');
+    });
+    donateClose.addEventListener('click', function() {
+        donateOverlay.classList.add('hidden');
+    });
+    screeningClose.addEventListener('click', function() {
+        screeningOverlay.classList.add('hidden');
+    });
+</script>
+<script type="text/javascript">
+    // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES
+    window.onorientationchange = function() {
+        var orientation = window.orientation;
+        switch(orientation) {
+            case 0: window.location.reload();
+                break;
+            case 90: window.location.reload();
+                break;
+            case -90: window.location.reload();
+                break;
+        }
+    }
+    //document.cookie = 'seenOverlay=true; max-age=3600; domain=.greatnationseat.org';
+    document.cookie = 'seenOverlay=true; max-age=60';
+</script>
+
 <script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
