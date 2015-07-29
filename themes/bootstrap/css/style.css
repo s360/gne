@@ -2117,6 +2117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     padding: 6px 0;
     font-size: 12px;
     line-height: 1.428571429;
+    -webkit-border-radius: 15px;
     border-radius: 15px;
 }
 .stepwizard-step button[disabled] {
@@ -2127,6 +2128,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     /*float: left;*/
     /*width: 100px;*/
     /*height: 100px;*/
+    -webkit-border-radius: 50%;
     border-radius: 50%;
     margin: 10px 10px;
     display: inline-block;
@@ -2142,6 +2144,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   width: 75px;
   height: 75px;
   border: 1px solid #000000;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   padding: 22px 0px;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
