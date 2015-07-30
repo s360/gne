@@ -174,15 +174,15 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
         /**********DONATION*********/
         //var nextDonate = jQuery('#key-next-step');
-        var nextDonate = jQuery('.key-next-step');
-        var donateCopy = jQuery('.donate-copy-col');
-        var donateFunc = jQuery('.donate-func-col');
+        var nextDonate = jQuery('#key-next-step');
+        var donateCopy = jQuery('#donate-copy-col');
+        var donateFunc = jQuery('#donate-func-col');
         //var stepOne    = jQuery('#step-one');
-        var stepOne    = jQuery('.step-one');
+        var stepOne    = jQuery('#step-one');
         //var stepTwo    = jQuery('#step-two');
-        var stepTwo    = jQuery('.step-two');
+        var stepTwo    = jQuery('#step-two');
         //var stepThree  = jQuery('#step-three');
-        var stepThree  = jQuery('.step-three');
+        var stepThree  = jQuery('#step-three');
         var amountSelected = false;
 
         jQuery('#sustaining_gift').click(function() {
@@ -260,7 +260,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var thankContainer   			 = document.getElementById('thank-container');
     var donateThankContainer   = document.getElementById('donate-thank-container');
     var thankClose 	     			 = document.getElementById('thank-close');
-    //var donateThankClose 			 = document.getElementById('thank-donate-close');
     var donateButton   	 			 = document.getElementById('donate-nav');
     var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
     var donateOverlay2 	 			 = document.getElementById('block-donation-form-overlay');
