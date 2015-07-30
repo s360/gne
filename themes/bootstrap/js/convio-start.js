@@ -23,7 +23,6 @@
                 api: 'CRDonationAPI',
                 data: 'method=getDonationFormInfo&form_id=' + formId,
                 callback: function (data) {
-                    console.log("Pull donation levels");
                     //console.log(data.getDonationFormInfoResponse.donationLevels);
                     var donationLevelEl = $('.donation_level');
                     donationLevelEl.empty();

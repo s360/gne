@@ -188,7 +188,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         jQuery('#sustaining_gift').click(function() {
             if(jQuery('#sustaining_gift').prop('checked')){
                 jQuery('#sustaining_duration').val('0');
-                console.log('sustaining');
             }else {
                 jQuery('#sustaining_duration').val('');
             }
@@ -215,7 +214,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         }
 
         nextDonate.click(function(e) {
-            console.log("Next pressed from: " + jQuery(this).parent().attr('id'));
             if(jQuery(this).hasClass('btnDisabledHref')){
                 e.preventDefault();
                 return;
