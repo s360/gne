@@ -64,9 +64,13 @@ jQuery(document).ready(function($) {
         if (isValid)
             nextStepWizard.removeAttr('disabled').trigger('click');
     });
+
+    $('div.setup-panel div a.btn-primary').trigger('click');
+
     if( window.location.hash == '#!/donate'){
         donate();
     }
+
     btnDOnate.click(donate);
 
     jQuery("#donate-close").click(donate);
