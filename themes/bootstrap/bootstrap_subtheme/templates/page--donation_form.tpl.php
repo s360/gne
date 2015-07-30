@@ -166,21 +166,10 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function() {
-        jQuery('#donate-close2').click( function() { window.location = "/#!/"; } );
         jQuery('#stories').height(jQuery(window).height());
-
-        jQuery('.leaf.visible-xs.join').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
-        });
         jQuery('#donate-navbar').click(function(e) {
             e.preventDefault();
             jQuery('#donation-overlay-container').removeClass('hidden');
-        });
-        jQuery('.story-join').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
-        });
-        jQuery('#act-add-voice').click(function() {
-            jQuery('#petition-overlay-container').removeClass('hidden');
         });
 
         /**********DONATION*********/
@@ -195,6 +184,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         //var stepThree  = jQuery('#step-three');
         var stepThree  = jQuery('.step-three');
         var amountSelected = false;
+
         jQuery('#sustaining_gift').click(function() {
             if(jQuery('#sustaining_gift').prop('checked')){
                 jQuery('#sustaining_duration').val('0');
@@ -203,6 +193,20 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 jQuery('#sustaining_duration').val('');
             }
         });
+
+        // function showIfChecked(checkCtrl, targetDiv) {
+        //    if (document.getElementById(checkCtrl).checked == true) {
+        //      document.getElementById(targetDiv).style.display = "inline";
+        //    } else {
+        //      document.getElementById(targetDiv).style.display = "none";
+        //    }
+        // 	}
+        // jQuery('#one_time_gift').click(function() {
+        // 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+        // });
+        // jQuery('#sustaining_gift').click(function() {
+        // 	showIfChecked('sustaining_gift', 'sustaining_duration_field');
+        // });
 
         if(!jQuery('body').find('.wrap-amount').find('input[type="radio"]').is(':checked')){
             nextDonate.addClass('btnDisabledHref');
@@ -241,16 +245,11 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             jQuery('.donation-form')[0].reset();
         });
 
-        //petition overlay
-        var petOverlay = jQuery("#petition-overlay-container");
-        if( window.location.hash == ''){
-            petOverlay.removeClass('hidden');
-        }
     });
 </script>
 
 <script type="text/javascript">
-
+    jQuery('#donate-close2').click( function() { window.location = "/#!/"; } );
     // var formId = "12181";
 
 
@@ -263,7 +262,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var thankContainer   			 = document.getElementById('thank-container');
     var donateThankContainer   = document.getElementById('donate-thank-container');
     var thankClose 	     			 = document.getElementById('thank-close');
-    var donateThankClose 			 = document.getElementById('thank-donate-close');
+    //var donateThankClose 			 = document.getElementById('thank-donate-close');
     var donateButton   	 			 = document.getElementById('donate-nav');
     var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
     var donateOverlay2 	 			 = document.getElementById('block-donation-form-overlay');
@@ -273,40 +272,12 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var screeningSubmit  			 = document.getElementById('screening-submit');
     var screeningButton  			 = document.getElementById('host-screening');
 
-    //Hide overlay if user revisiting page
-    var hasSeenOverlay = document.cookie.replace(/(?:(?:^|.*;\s*)seenOverlay\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    if (hasSeenOverlay) {
-        petitionOverlay.classList.add('hidden');
-    }
-
-    thankClose.addEventListener('click', function() {
-        thankContainer.classList.add('hidden');
-    });
-    donateThankClose.addEventListener('click', function() {
-        donateThankContainer.classList.add('hidden');
-    });
-    screeningButton.addEventListener('click', function() {
-        screeningOverlay.classList.remove('hidden');
-    });
-
-    petitionButton.addEventListener('click', function() {
-        petitionOverlay.classList.remove('hidden');
-    });
-    petitionButton2.addEventListener('click', function() {
-        petitionOverlay.classList.remove('hidden');
-    });
-    petitionClose.addEventListener('click', function() {
-        petitionOverlay.classList.add('hidden');
-    });
+    //donateThankClose.addEventListener('click', function() {
+    //    donateThankContainer.classList.add('hidden');
+    //});
     donateButton.addEventListener('click', function() {
         donateOverlay.classList.remove('hidden');
         donateOverlay2.classList.add('hidden');
-    });
-    donateClose.addEventListener('click', function() {
-        donateOverlay.classList.add('hidden');
-    });
-    screeningClose.addEventListener('click', function() {
-        screeningOverlay.classList.add('hidden');
     });
 </script>
 <script type="text/javascript">
@@ -322,8 +293,6 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                 break;
         }
     }
-    //document.cookie = 'seenOverlay=true; max-age=3600; domain=.greatnationseat.org';
-    document.cookie = 'seenOverlay=true; max-age=60';
 </script>
 
 <script>
