@@ -244,6 +244,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         jQuery('#donate-nav').click(function() {
             jQuery('.donation-form')[0].reset();
         });
+        stepOne.trigger('click');
 
     });
 </script>
@@ -279,6 +280,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         donateOverlay.classList.remove('hidden');
         donateOverlay2.classList.add('hidden');
     });
+
 </script>
 <script type="text/javascript">
     // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES
