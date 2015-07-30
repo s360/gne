@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
             nextStepWizard.removeAttr('disabled').trigger('click');
     });
     console.log("Trigger click on donate");
-    jQuery("#step-one").trigger('click');
+    //jQuery("#step-one").trigger('click');
     if( window.location.hash == '#!/donate'){
         donate();
     }
