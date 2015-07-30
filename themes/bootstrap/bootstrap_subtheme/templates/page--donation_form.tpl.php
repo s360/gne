@@ -242,6 +242,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         jQuery('#donate-nav').click(function() {
             jQuery('.donation-form')[0].reset();
         });
+        donate();
     });
 </script>
 
