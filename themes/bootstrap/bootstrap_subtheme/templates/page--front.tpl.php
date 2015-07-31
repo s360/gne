@@ -177,7 +177,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     <div class="donation-relative">
     <span id="donate-close" class="donate-close close-petition"></span>
     <div class="logo-container-mobile visible-xs"><img id="petition-logo" src="/sites/all/themes/bootstrap/images/gne_logo.png" alt="logo" /></div>
-    <div class="col-md-6" id="donate-copy-col">
+    <div class="col-md-6 donate-copy-col" id="donate-copy-col">
         <div class="donation-copy-container">
             <h1 class="donate-title petition-header hidden-xs">HUNGER HURTS KIDS EVERY DAY.</h1>
             <p class="donate-copy1 petition-subheader hidden-xs">Your tax-deductible gift will provide vulnerable kids with nutritious food and teach their families how to cook healthy, affordable meals.</p>
@@ -187,7 +187,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
         </div>
     </div>
-    <div class="col-md-6" id="donate-func-col">
+    <div class="col-md-6 donate-func-col" id="donate-func-col">
     <div class="donation-dynamic-container">
         <div class="static-donation-container">
 
@@ -196,20 +196,20 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
             <div class="stepwizard">
                 <div class="stepwizard-row setup-panel">
                     <div class="stepwizard-step">
-                        <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                        <a id="step-one" href="#step-1" type="button" class="btn btn-primary btn-circle step-one">1</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <a id="step-two" href="#step-2" type="button" class="btn btn-default btn-circle step-two" disabled="disabled">2</a>
                     </div>
                     <div class="stepwizard-step">
-                        <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <a id="step-three" href="#step-3" type="button" class="btn btn-default btn-circle step-three" disabled="disabled">3</a>
                     </div>
                 </div>
             </div>
 
             <form role="form" class="luminateApi donation-form" method="POST" action="https://secure.nokidhungry.org/site/CRDonationAPI" data-luminateApi='{"callback": "donateCallback"}'>
                 <input type="hidden" name="method" id="method" value="donate">
-								<input type="hidden" name="form_id" id="form_id" value="12181">
+								<input type="hidden" name="form_id" id="form_id" class="form_id" value="12181">
 								<input type="hidden" name="source" class="ref_source" value="">
 								<input type="hidden" name="sub_source" class="ref_sub_source" value="">
 								<input type="hidden" name="validate" value="true">
@@ -219,12 +219,12 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
                             <h3 style="text-align: center;"> Select Amount</h3>
 							
 							<!-- AMOUNT FROM CONVIO -->
-							 <div id="donation_level">
+							 <div id="donation_level" class="donation_level">
 								
 							 </div>
 							 
                              
-		<div id="key-next-step" class="nextBtn">
+		<div id="key-next-step" class=" key-next-step nextBtn">
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
                             <a  href="#" class="nextBtn-old">Next Step</a>
                             <img src="/sites/all/themes/bootstrap/images/blue-arrow.png" class="donate-arrow">
@@ -460,6 +460,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 </div>
 </div>
 </div>
+<!-- END OF PRIMARY DONATION OVERLAY-->
+
 
 <div id="screening-container" class="screening-overlay-container hidden">
     <span id="screening-close"></span>
@@ -509,7 +511,13 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
         <div class='sp_14355 sp_tw_large' ></div>
     </div>
 </div>
-
+<!-- ADDITIONAL DONATION OVERLAY -->
+<?php /* if (!empty($page['donation_form'])): ?>
+    <div id="block-donation-form-overlay">
+        <?php print render($page['donation_form']); ?>
+    </div>
+<?php endif; */ ?>
+<!-- END OF ADDITIONAL DONATION OVERLAY -->
 <footer id="footer">
   <?php //print render($page['footer']); ?>
     <div class="social pull-left"></div>
@@ -543,13 +551,18 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		jQuery('#act-add-voice').click(function() {
 			jQuery('#petition-overlay-container').removeClass('hidden');
 		});
+
 	/**********DONATION*********/
-		var nextDonate = jQuery('#key-next-step');
-		var donateCopy = jQuery('#donate-copy-col');
-		var donateFunc = jQuery('#donate-func-col');
-		var stepOne    = jQuery('#step-one');
-		var stepTwo    = jQuery('#step-two');
-		var stepThree  = jQuery('#step-three');
+		//var nextDonate = jQuery('#key-next-step');
+        var nextDonate = jQuery('.key-next-step');
+		var donateCopy = jQuery('.donate-copy-col');
+		var donateFunc = jQuery('.donate-func-col');
+		//var stepOne    = jQuery('#step-one');
+        var stepOne    = jQuery('.step-one');
+		//var stepTwo    = jQuery('#step-two');
+        var stepTwo    = jQuery('.step-two');
+		//var stepThree  = jQuery('#step-three');
+        var stepThree  = jQuery('.step-three');
 		var amountSelected = false;
     
 		jQuery('#sustaining_gift').click(function() {
@@ -582,6 +595,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 		}
 		
 		nextDonate.click(function(e) {
+            console.log("Next pressed from: " + jQuery(this).parent().attr('id'));
 			if(jQuery(this).hasClass('btnDisabledHref')){
 				e.preventDefault();
 				return;
@@ -621,7 +635,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
 
 <script type="text/javascript">
 
-    var formId = "12181";
+   // var formId = "12181";
 
 
     //TODO: Clean this up and put in .js file
@@ -636,6 +650,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     var donateThankClose 			 = document.getElementById('thank-donate-close');
     var donateButton   	 			 = document.getElementById('donate-nav');
     var donateOverlay  	 			 = document.getElementById('donation-overlay-container');
+    var donateOverlay2 	 			 = document.getElementById('block-donation-form-overlay');
     var donateClose 	 	 			 = document.getElementById('donate-close');
     var screeningClose   			 = document.getElementById('screening-close');
     var screeningOverlay 			 = document.getElementById('screening-container');
@@ -669,6 +684,7 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
     });
     donateButton.addEventListener('click', function() {
         donateOverlay.classList.remove('hidden');
+        donateOverlay2.classList.add('hidden');
     });
     donateClose.addEventListener('click', function() {
         donateOverlay.classList.add('hidden');
@@ -694,8 +710,8 @@ drupal_add_css($directory.'/js/slick/slick-theme.css', array('group' => CSS_THEM
   document.cookie = 'seenOverlay=true; max-age=60';
 </script>
 
-<script src="/sites/all/themes/bootstrap/js/convio.js"></script>
-<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>
+<!--<script src="/sites/all/themes/bootstrap/js/convio.js"></script>
+<script src="/sites/all/themes/bootstrap/js/convio-start.js"></script>-->
 <script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

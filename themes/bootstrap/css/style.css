@@ -2117,6 +2117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     padding: 6px 0;
     font-size: 12px;
     line-height: 1.428571429;
+    -webkit-border-radius: 15px;
     border-radius: 15px;
 }
 .stepwizard-step button[disabled] {
@@ -2127,6 +2128,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     /*float: left;*/
     /*width: 100px;*/
     /*height: 100px;*/
+    -webkit-border-radius: 50%;
     border-radius: 50%;
     margin: 10px 10px;
     display: inline-block;
@@ -2142,6 +2144,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   width: 75px;
   height: 75px;
   border: 1px solid #000000;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   padding: 22px 0px;
   font-family: 'Oswald', Impact, Charcoal, sans-serif;
@@ -2843,6 +2846,39 @@ h1.page-header{
 	color: red;
 }
 
+/**
+ ===========================================
+ ========== 13. Donation form overlay ======
+ ===========================================
+ **/
+
+#block-donation-form-overlay{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+   /* left: 0px;
+    width: 100%;
+    pointer-events: none;*/
+}
+.region-donation-form .block-title{
+    display: none;
+}
+.node-donation{
+    /*display: none;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+@media( max-width: 768px) {
+	.node-donation {
+		top: -120px;
+	}
+}
+#block-donation-form-overlay #step-1{
+    display: block !important;
+}
 /*iPhone 4 fix*/
 @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
 	.col-sm-4.onethird.one {
@@ -2861,7 +2897,9 @@ h1.page-header{
 .main-container {
 	height: 100%!important;
 }
-
+.main-container .nav-tabs{
+    padding-top: 100px;
+}
 @media(max-width: 768px) {
 	.node.node-partner {
 		height: 100%!important;

@@ -13,7 +13,9 @@
     	<input type="hidden" name="send_receipt" id="send_receipt" value="false" />
       <input type="hidden" name="send_registration_email" id="send_registration_email" value="false" />
       */
-		var formId = 12181;
+
+		var formId = $('#form_id').val();
+        //console.log(formId);
         var tracking = '<iframe id="tracking-donate" src="https://4652923.fls.doubleclick.net/activityi;src=4652923;type=apatt;cat=donate1;qty=1;cost=[Revenue];ord=[OrderID]?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
         /* UI handlers for the donation form example */
         if ($('.donation-form').length > 0) {
@@ -22,7 +24,7 @@
                 data: 'method=getDonationFormInfo&form_id=' + formId,
                 callback: function (data) {
                     //console.log(data.getDonationFormInfoResponse.donationLevels);
-                    var donationLevelEl = $('#donation_level');
+                    var donationLevelEl = $('.donation_level');
                     donationLevelEl.empty();
                     var html = "";
                     if (data.getDonationFormInfoResponse.donationLevels && data.getDonationFormInfoResponse.donationLevels.donationLevel.length > 0) {
@@ -60,14 +62,14 @@
                     $('#other-amount').removeAttr('disabled');
                     $('#other-amount').attr('name', 'other_amount');
                     $('#other-amount').focus();
-
                     $('#wrap-amount_other').css('display', 'block');
                 }
                 else {
                     $('#other-amount').attr('disabled', 'disabled');
                     $('#other-amount').removeAttr('name');
                     $('#wrap-amount_other').css('display', 'none');
-		    $('#key-next-step').removeClass('btnDisabledHref');
+		           //$('#key-next-step').removeClass('btnDisabledHref');
+                    $('.key-next-step').removeClass('btnDisabledHref');
                 }
 		
             });
@@ -78,16 +80,20 @@
         	  	}
         		var val = parseInt($(this).val());
         		if(val > 0){
-        			$('#key-next-step').removeClass('btnDisabledHref');
+        			//$('#key-next-step').removeClass('btnDisabledHref');
+                    $('.key-next-step').removeClass('btnDisabledHref');
         		} else {
-        			$('#key-next-step').addClass('btnDisabledHref');
+        			//$('#key-next-step').addClass('btnDisabledHref');
+                    $('.key-next-step').addClass('btnDisabledHref');
         		}
     	    });
 
             $('.donation-form').submit(function () {
                 window.scrollTo(0, 0);
-                $('#form_id').val(formId);
-                $('#donate-submit').prop('disabled', true);
+                //$('#form_id').val(formId);
+                $('.form_id').val(formId);
+                //$('#donate-submit').prop('disabled', true);
+                $('.complete-donation').prop('disabled', true);
                 $(this).hide();
                 $(this).before('<div class="well donation-loading">' +
                 'Loading ...' +
@@ -112,13 +118,15 @@
 
                 $('.donation-loading').remove();
                 $('.donation-form').show();
-		        $('#donate-submit').prop('disabled', false);
+		        //$('#donate-submit').prop('disabled', false);
+                $('.complete-donation').prop('disabled', false);
             },
             success: function (data) {
             	var donationErrorMessage = '';
             		console.log(data);
                 $('#donation-errors').remove();
-		          	$('#donate-submit').prop('disabled', false);
+		          	//$('#donate-submit').prop('disabled', false);
+                    $('.complete-donation').prop('disabled', false);
                 if (data.donationResponse.errors) {
                 	if(data.donationResponse.errors.fieldError) {
                 		donationErrorMessage += data.donationResponse.errors.fieldError;

@@ -73,6 +73,10 @@ jQuery(document).ready(function() {
 			}
 		});
 
+        jQuery('.donate-close2').click(function(){
+            jQuery('#block-donation-form-overlay').addClass('hidden');
+        });
+
 
     //homepage fullpag
     var toolbar = 64;
@@ -150,6 +154,9 @@ jQuery(document).ready(function() {
         return false;
     });
 
+    jQuery("#donate-close2").click(function(){
+       jQuery('.node-donation').addClass('hidden');
+    });
 
     //slide
 
@@ -208,6 +215,11 @@ jQuery(document).ready(function() {
         }
     }).get();
 
+    var HashDonationForm = jQuery('#block-donation-form-overlay .views-row').map( function() {
+        return jQuery(this).find('.node ').attr('data-hash');
+    }).get();
+
+
     var slidetoHash = dataHash;
 
 
@@ -242,9 +254,26 @@ jQuery(document).ready(function() {
 
         if (lochash && lochash != '#!/join' && lochash != '#!/donate' && lochash != '#!/join-thank-you' && lochash != '#!/donate-thank-you' && lochash != '#!/host-a-screening'){
 
+            var found = jQuery.inArray(lochash, dataHash) > -1;
 
-            jQuery("#container-slide-home").slick('slickGoTo', slideloc);
-            jQuery("#container-slide-press").slick('slickGoTo', slideloc);
+           if (found === true){
+               jQuery("#container-slide-home").slick('slickGoTo', slideloc);
+               jQuery("#container-slide-press").slick('slickGoTo', slideloc);
+           }
+
+           if (found === false){
+               jQuery('#petition-overlay-container').addClass('hidden');
+           }
+
+
+           /* jQuery("#block-donation-form-overlay .views-row .node").each(function(){
+                if (jQuery(this).attr("data-hash") === lochash){
+                    jQuery(this).css('display', 'block');
+                    jQuery(this).addClass('show-donation');
+                }
+
+            });*/
+
 
         }
 
@@ -291,7 +320,7 @@ jQuery(document).ready(function() {
         }
 
         //on swipe
-        slide.on('swipe', hashurl );
+        //slide.on('swipe', hashurl );
 
         //analytics page tracker
         ga('send', 'pageview', lochash)
