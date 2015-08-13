@@ -250,7 +250,7 @@ jQuery(document).ready(function() {
         if (lochash == ''){
             document.title = "Great Nations Eat | Stories";
         }
-        if (window.location.path == '/thank-you' || lochash == '#!/thank-you') {
+        if (window.location.pathname == '/thank-you' || lochash == '#!/thank-you') {
         	document.title = "Great Nations Eat | Thank You";
         }
 
