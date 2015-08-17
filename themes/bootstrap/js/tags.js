@@ -62,11 +62,11 @@ jQuery( document ).ready(function() {
     jQuery('#donate-submit').click(function(){ ga('send', 'event', 'donate', 'donate submit(click only)'); });
     jQuery('#key-next-step').click(function(){ 
     	ga('send', 'event', 'donate', 'donate - step one');
-    	dc_tracker('donate1', 2551299);
+    	dc_tracker('donat0', null);
     });
     jQuery('.nextBtn.step2').click(function(){ 
     	ga('send', 'event', 'donate', 'donate - step two');
-    	dc_tracker('donate2', 2551127);
+    	dc_tracker('donat00', null);
     });
 
     
